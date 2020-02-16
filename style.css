@@ -6,6 +6,13 @@ body, html {
 }
 
 .bgimg-1 {
+    margin-top: 100px;
+    background-position: center;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.bgimg-2 {
     background-position: center;
     background-size: cover;
     background-image: url("images/aptPicLr.jpeg");
