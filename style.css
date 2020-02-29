@@ -374,10 +374,10 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 
 /* PROPERTY PAGE */
-.propertypage body {
+.IDX-page-listing {
     padding-top: 60px;
 }
-.propertypage #IDX-detailsTopNav {
+#IDX-detailsTopNav {
     height: auto;
     max-width: 400px;
     margin: 0 auto;
