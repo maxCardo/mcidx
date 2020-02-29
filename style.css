@@ -250,6 +250,12 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 #IDX-resultsRow .IDX-pageContainer .IDX-topActions div {
     padding: 0px;
 }
+
+.IDX-wrapper-standard .IDX-h2, .IDX-wrapper-standard h2 {
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+}
 @media (min-width: 535px) and (max-width: 992px) {
     #IDX-resultsRow .IDX-pageContainer .IDX-topActions div {
         width: 20%;
@@ -301,15 +307,21 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
         background: transparent;
     }
     .IDX-wrapper-standard .IDX-custom-map {
-        max-height: 82vh;
-        top:-25px;
+        max-height: 79.5vh;
+        top: -5px;
     }
     .IDX-wrapper-standard #IDX-resultsContent {
-        height: calc(92vh - 62px);
+        height: calc(90vh - 62px);
+        top:35px;
+    }
+    .IDX-resultsCellsContainer, #IDX-resultsCellsContent {
+        max-height: unset;
+        overflow-y: visible;
     }
     #IDX-resultsTopActions.IDX-topActions {
         width: 100%;
     }
+
 }
 
 @media (min-width: 992px) {
@@ -320,8 +332,10 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
         right: 0;
     }
     #IDX-resultsTopActions.IDX-topActions {
-        margin: 25px auto;
+        margin: 25px auto 10px 0;
+        top: -15px;
     }
+
 }
 @media (min-width: 992px) and (max-width: 1599px) {
     #IDX-main > div:last-child {
@@ -333,9 +347,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
         padding-top:0px;
 
     }
-    .IDX-resultsCellsContainer, #IDX-resultsCellsContent {
-        max-height: 55.5vh;
-    }
+
 }
 @media (min-width: 1240px) {
     .IDX-wrapper-standard #IDX-resultsTopActions > div {
@@ -349,6 +361,16 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     .IDX-wrapper-standard ul.IDX-resultsCellsContainer {
         padding: 5px;
     }
+    #IDX-resultsTopActions.IDX-topActions {
+        width: 450px;
+        margin-right: auto;
+        height: unset;
+    }
+    #IDX-resultsRow .IDX-pageContainer .IDX-topActions > div,
+    #IDX-resultsRow .IDX-pageContainer .IDX-topActions > div#IDX-resultsRefineSearchToggle a.IDX-refine-search--toggle#IDX-refineSearchFormToggle {
+        height: 30px;
+        line-height: 30px;
+    }
 }
 
 /* PROPERTY PAGE */
@@ -361,31 +383,42 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     margin: 0 auto;
 }
 
-.propertypage .IDX-wrapper-standard .IDX-topAction {
+.IDX-wrapper-standard #IDX-detailsTopActions #IDX-detailsActionSave,
+.IDX-wrapper-standard #IDX-detailsTopActions #IDX-detailsActionNew {
     display: block;
     float: none;
-    margin-left: 10px;
+    margin: 0 0 10px 0;
 }
-.propertypage #IDX-detailsTopActions {
+#IDX-detailsTopActions {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
-.propertypage .IDX-topAction a#IDX-saveProperty,
-.propertypage .IDX-topAction a#IDX-newSearch {
+.IDX-topAction a#IDX-saveProperty,
+.IDX-topAction a#IDX-newSearch {
     background: #3f51b5;
     color: #fff;
     position: relative;
     transition: all 200ms;
 }
-.propertypage .IDX-topAction a#IDX-saveProperty:hover,
-.propertypage .IDX-topAction a#IDX-saveProperty:focus,
-.propertypage .IDX-topAction a#IDX-saveProperty:active,
-.propertypage .IDX-topAction a#IDX-newSearch:hover,
-.propertypage .IDX-topAction a#IDX-newSearch:focus,
-.propertypage .IDX-topAction a#IDX-newSearch:active{
+.IDX-topAction a#IDX-saveProperty:hover,
+.IDX-topAction a#IDX-saveProperty:focus,
+.IDX-topAction a#IDX-saveProperty:active,
+.IDX-topAction a#IDX-newSearch:hover,
+.IDX-topAction a#IDX-newSearch:focus,
+.IDX-topAction a#IDX-newSearch:active{
     background: #757de8;
     color: #fff;
     top:-2px;
     bottom: 2px;
+}
+.IDX-wrapper-standard #IDX-detailsHotActions {
+    display: flex;
+    justify-content: space-between;
+}
+#IDX-detailsHotActions > div {
+    background: #fff;
+    color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .25);
+    padding:5px 10px;
 }
 /* END OF PROPERTY PAGE */
