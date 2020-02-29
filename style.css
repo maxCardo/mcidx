@@ -375,7 +375,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 
 /* PROPERTY PAGE */
 .IDX-page-listing {
-    padding-top: 60px;
+    padding-top: 60px !important;
 }
 #IDX-detailsTopNav {
     height: auto;
