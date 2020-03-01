@@ -428,19 +428,15 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 .IDX-page-listing #IDX-detailsHead {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 0 50px 0;
+    margin: 20px 0 0 0;
     justify-content: space-between;
     position: relative;
-    width: 85%;
+    width: 75%;
 }
 .IDX-page-listing #IDX-detailsHead hr {
     display: none;
 }
-.IDX-page-listing #IDX-detailsAddress {
-    position: absolute;
-    bottom: -45px;
-    margin: 0;
-}
+
 .IDX-page-listing #IDX-detailsAddress .IDX-psudolink {
     width: 100%;
     display: block;
@@ -457,10 +453,10 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, .25);
 }
 .IDX-page-listing #IDX-detailsMedia {
-    width: 68%;
+    width: 100%;
 }
 .IDX-page-listing #IDX-detailsMainInfo {
-    width:30%;
+    width:295px;
 }
 .IDX-page-listing #IDX-photoGalleryLink {
     background-color: #757de8;
@@ -490,6 +486,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     background: white;
     text-align: center;
     font-size: 20px;
+    padding:0 10px;
 }
 
 .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-heading .IDX-field-listingID.IDX-field {
@@ -502,6 +499,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
     margin-bottom: 10px;
     font-size: 18px;
+    line-height:1.5;
 }
 
 .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-body .IDX-field-listingPrice {
@@ -552,14 +550,18 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    max-width: 1220px;
+    margin: 0 auto;
 }
 .IDX-page-listing #IDX-detailsHotActions {
     display: flex;
-    width: 14%;
-    flex-direction: column;
+    width: unset;
+    flex-direction: ROW;
     margin-right: 1%;
-    top: 20px;
+    top: 0;
     position: relative;
+    padding: 0;
+    margin-bottom: 10px;
 }
 .IDX-page-listing #IDX-primaryPhoto .IDX-arrow {
     border: none;
@@ -614,5 +616,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 .IDX-page-listing .IDX-form-group input,
 .IDX-page-listing .IDX-form-group .IDX-controls textarea{
     box-shadow: inset 1px 1px 5px rgba(0, 0, 0, .13), inset -1px -1px 5px rgba(0, 0, 0, .13);
+}
+#IDX-detailsMediaContaner--custom {
+    max-width: 586px;
 }
 /* END OF PROPERTY PAGE */
