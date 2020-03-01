@@ -179,19 +179,18 @@
                         <div id="IDX-detailsMainInfo" class="IDX-panel IDX-panel-default">
                             <div class="IDX-panel-heading">
                                 <div id="IDX-detailsAddress">
-                                    <a href="#" class="IDX-psudolink">
-                                        <div class="IDX-detailsAddressInfo">
-                                            <span class="IDX-detailsAddressNumber">{{ streetNumber }} </span>
-                                            <span class="IDX-detailsAddressDirection">{{ streetDirection }} </span>
-                                            <span class="IDX-detailsAddressName">{{ streetName }}</span>{% if unitNumber %}&nbsp;<span class="IDX-detailsAddressUnitNumber">{{ unitNumber }}</span>{% endif %}{% if streetName %}<span class="IDX-detailsEndAddressComma">,&nbsp;</span>{% endif %}
-                                        </div>
-                                        <div class="IDX-detailsAddressLocationInfo">
-                                            <span class="IDX-detailsAddressCity">{{ cityName }}</span>,
-                                            <span class="IDX-detailsAddressState">{{ state }} </span>
-                                            <span class="IDX-detailsAddressStateAbrv">{{ stateAbrv }}</span>
-                                            <span class="IDX-detailsAddressZipcode">{{ zipcode }}</span>{% if zip4 > 0 %}<span class="IDX-addressZip4">-{{ zip4 }}{% endif %}
-                                        </div>
-                                    </a>
+                                    <div class="IDX-detailsAddressInfo">
+                                        <span>Property Address:</span> <br/>
+                                        <span class="IDX-detailsAddressNumber">{{ streetNumber }} </span>
+                                        <span class="IDX-detailsAddressDirection">{{ streetDirection }} </span>
+                                        <span class="IDX-detailsAddressName">{{ streetName }}</span>{% if unitNumber %}&nbsp;<span class="IDX-detailsAddressUnitNumber">{{ unitNumber }}</span>{% endif %}{% if streetName %}<span class="IDX-detailsEndAddressComma">,&nbsp;</span>{% endif %}
+                                    </div>
+                                    <div class="IDX-detailsAddressLocationInfo">
+                                        <span class="IDX-detailsAddressCity">{{ cityName }}</span>,
+                                        <span class="IDX-detailsAddressState">{{ state }} </span>
+                                        <span class="IDX-detailsAddressStateAbrv">{{ stateAbrv }}</span>
+                                        <span class="IDX-detailsAddressZipcode">{{ zipcode }}</span>{% if zip4 > 0 %}<span class="IDX-addressZip4">-{{ zip4 }}{% endif %}
+                                    </div>
                                 </div>
                             </div>
                             <div class="IDX-panel-body">
