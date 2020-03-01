@@ -224,8 +224,35 @@
                                 {% endif %}
                             </div>
                         </div>
+
+                          <div class="mat-form">
+                            <div class="element-wrapper">
+                                <input type="text" name="name" required>
+                                <label for="name">First Name:</label>
+                            </div>
+                            <div class="element-wrapper">
+                                <input type="text" name="lastName" required>
+                                <label for="lastName">Last Name:</label>
+                            </div>
+                            <div class="element-wrapper">
+                                <input type="email" name="email" required>
+                                <label for="email">Email:</label>
+                            </div>
+                            <div class="element-wrapper">
+                                <input type="text" name="phone" required>
+                                <label for="phone">Phone:</label>
+                            </div>
+                            <div class="element-wrapper">
+                                <textarea id="message" class="form__field" placeholder="Your Message" rows="6"></textarea>
+                                <label for="message" class="form__label">Your Message</label>
+                            </div>
+                            <div class="flex-grow"></div>
+                            <div class="element-wrapper">
+                                <button class="contact-btn--send">Send</button>
+                            </div>
+                        </div>
                     </div>
-                    
+                 
                    
                     {# determine if there is a open house #}
                     {% if mediaData.ohCount > 0 %}
@@ -342,8 +369,8 @@
                 {% elseif propArchived %}
                 {% elseif invalidMLS %}
                 {% else %}
-                <div id="IDX-description" class="IDX-well">
-                    {{ tools.remarks }}
+                <div id="IDX-description" class="IDX-well" style="background: url({{ imageData|first.url }}) no-repeat center; background-attachment: fixed; background-size: cover;">
+                    <p>{{ tools.remarks }}</p>
                 </div>
                 {% endif %}
 
@@ -474,6 +501,7 @@
                 {% include 'mobileFirstContactComp-1.001.twig' %}
             </div>
         {% endif %}
+
 
 
         {# Page Footer Content #}
