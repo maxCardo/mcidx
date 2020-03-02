@@ -520,6 +520,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     border:none;
     position: relative;
     margin-bottom:0;
+    flex-grow: 1;
+    margin-left: 20px;
 }
 .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-heading {
     background: white;
@@ -552,7 +554,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     right: 0;
 }
 .IDX-page-listing #IDX-description  {
-    margin: 10px -20px 20px -20px;
+    margin: 10px 0 20px 0;
     border: none;
     background: #002984;
     color: white;
@@ -561,7 +563,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     line-height: 1.55;
 }
 .IDX-page-listing #IDX-description p {
-    padding: 20px 40px;
+    padding: 40px 60px;
     background: rgba(0,0,0,.38);
 }
 .IDX-page-listing #IDX-fieldsWrapper {
@@ -616,25 +618,16 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 .IDX-page-listing #IDX-primaryPhoto .IDX-arrow,
 .IDX-page-listing #IDX-detailsShowcaseSlides .IDX-carouselNavWrapper {
     color: #000;
-    background: #fff;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, .25);
+    background: transparent;
+    box-shadow: none;
     -webkit-transition: all 250ms;
     transition: all 250ms;
+    font-size:25px;
 }
 .IDX-page-listing #IDX-detailsShowcaseSlides .IDX-carouselNavWrapper {
     border: 1px solid lightgray;
 }
-.IDX-page-listing #IDX-primaryPhoto .IDX-arrow:hover,
-.IDX-page-listing #IDX-primaryPhoto .IDX-arrow:focus,
-.IDX-page-listing #IDX-primaryPhoto .IDX-arrow:active,
-.IDX-page-listing #IDX-detailsShowcaseSlides .IDX-carouselNavWrapper:hover,
-.IDX-page-listing #IDX-detailsShowcaseSlides .IDX-carouselNavWrapper:focus,
-.IDX-page-listing #IDX-detailsShowcaseSlides .IDX-carouselNavWrapper:active {
-    background-color: #000;
-    color: white;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, .25);
 
-}
 .IDX-page-listing #IDX-detailsMedia .IDX-carouselThumb {
     transition: box-shadow 250ms;
 }
@@ -672,15 +665,16 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 
 .IDX-page-listing .mat-form {
-    width: 24%;
+    width: 100%;
     background: white;
     box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.16), 0 0 200px 1px rgba(255, 255, 255, 0.15);
     border-radius: 2px;
     margin-left: 1%;
     padding: 40px 10px 10px 10px;
-    position: relative;
     display: flex;
     flex-direction: column;
+    position: sticky;
+    top: 70px;
 }
 
 .IDX-page-listing input {
@@ -791,6 +785,28 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     font-size: 9px;
     text-align: center;
     width: 100%;
+}
+.IDX-page-listing #IDX-detailsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.IDX-page-listing .detailsWrapper--left {
+    width: 75%;
+}
+.IDX-page-listing .detailsWrapper--right {
+    padding: 64px 10px 18px 10px;
+    width: 22%;
+}
+.IDX-page-listing .IDX-arrow {
+    background: transparent;
+    box-shadow: none;
+}
+.IDX-page-listing #IDX-arrow-next {
+    right: -15px;
+}
+.IDX-page-listing #IDX-arrow-previous {
+    left: -15px;
 }
 div.flex-grow {
     flex-grow:1;
