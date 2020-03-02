@@ -496,13 +496,6 @@
             {% include 'similarProperties-1.000.twig' %}
         {% endif %}
         
-        {% if contactOnDetails %}
-            <div id="IDX-detailsContactForm">
-                {% include 'mobileFirstContactComp-1.001.twig' %}
-            </div>
-        {% endif %}
-
-
 
         {# Page Footer Content #}
         {# Content we'll need on pages #}
