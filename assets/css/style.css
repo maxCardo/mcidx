@@ -223,9 +223,9 @@ body {
     align-items: center;
     max-width: 330px;
     position: absolute;
-    top: 80%;
+    top: 75%;
     left: 50%;
-    transform: translate(-50%, -80%); }
+    transform: translate(-50%, -75%); }
     .hero .container form .wrap button {
       background-color: transparent;
       display: inline-block; }
