@@ -795,8 +795,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     width: 75%;
 }
 .IDX-page-listing .detailsWrapper--right {
-    padding: 64px 10px 18px 10px;
-    width: 22%;
+    padding: 64px 20px 18px 15px;
+    width: 25%;
 }
 .IDX-page-listing .IDX-arrow {
     background: transparent;
