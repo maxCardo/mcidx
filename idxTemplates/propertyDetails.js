@@ -559,5 +559,12 @@
         idx('.IDX-page-listing .IDX-panel-collapse-toggle').each(function() {
             this.classList.add('IDX-collapsed');
         });
+        idx('.contact-mail').on('click', function(){
+            if (idx('.detailsWrapper--right').hasClass('open')) {
+                idx('.detailsWrapper--right').removeClass('open');
+            } else {
+                idx('.detailsWrapper--right').addClass('open');
+            }
+        });
     });
 })(window, undefined);

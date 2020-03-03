@@ -276,14 +276,24 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 
 @media (max-width: 640px) {
-    #IDX-resultsRow .IDX-pageContainer .IDX-topActions > div {
+    #IDX-resultsRow .IDX-pageContainer #IDX-resultsTopActions > div {
         width: 50%;
         font-size: 18px;
         line-height: 50px;
+        color: #fff;
+        border: 1px solid white;
+    }
+    #IDX-resultsRow .IDX-pageContainer #IDX-resultsTopActions > div > a {
+        color: #fff;
+        background: #3f51b5;
+        display: block;
+    }
+    #IDX-resultsRow .IDX-pageContainer #IDX-resultsTopActions > div:nth-child(5) {
+        width: 100%;
     }
     #IDX-resultsRow #IDX-resultsContainer #IDX-resultsRefineSearchWrap {
-        width: 200%;
-        left: -100%;
+        width: 204%;
+        left: -102%;
     }
 }
 .IDX-wrapper-standard .IDX-h2, .IDX-wrapper-standard h2 {
