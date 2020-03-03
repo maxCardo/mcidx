@@ -92,18 +92,17 @@ body {
     transition: all 0.2s; }
     .header__link:hover {
       transform: scale(1.2); }
-    .header__link::after {
-      content: '';
+    .header__link div {
       display: inline-block;
       position: absolute;
       background: none repeat scroll 0 0 transparent;
       left: 50%;
       bottom: 0;
       height: 2px;
-      background: #fff;
+      background-color: #fff;
       transition: all 0.3s ease-in-out;
       width: 0; }
-    .header__link:hover:after {
+    .header__link:hover div {
       width: 100%;
       left: 0; }
   .header__down .container ul {

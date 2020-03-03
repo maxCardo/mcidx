@@ -3,6 +3,7 @@ $(document).ready(function () {
     var startchange = $(".body");
     var offset = startchange.offset();
 
+
     if (startchange.length) {
         $(document).scroll(function () {
             scroll_start = $(this).scrollTop();
@@ -13,6 +14,8 @@ $(document).ready(function () {
                 $(".link").css('color', 'black');
                 $(".logo").css('color', 'black');
                 $(".hamburger div").css('background-color', 'black');
+                $(".header__link div").css('background-color', 'black');
+
 
 
             } else {
@@ -20,7 +23,9 @@ $(document).ready(function () {
                 $(".link").css('color', "white");
                 $(".logo").css('color', 'white');
                 $("#header").css('box-shadow', 'none');
-                $(".hamburger div").css('background-color', 'white');
+                $(".header__link div").css('background-color', 'white');
+
+
             }
         });
     }
