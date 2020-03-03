@@ -9,49 +9,57 @@
         {% endif %}
 
         <div id="IDX-detailsWrapper" class="IDX-pageContainer" data-collapse-details="{{ collapseMobileFirstDetailsFields }}">
-            <div class="detailsWrapper--left">
-                {% block idxDetailsHeader %}
-                    <div id="IDX-detailsTopNav" {% if nav.prev or nav.next %}class="IDX-detailsTrack"{% endif %}>
-                        {% if nav.prev or nav.next %}
-                            <div id="IDX-nextLastButtons" class="IDX-row-content">
-                                <div id="IDX-nextLastPosition" class="IDX-alert IDX-alert-info">Currently viewing {{ nav.position.current }} of {{ nav.position.total }}</div>
+            {% block idxDetailsHeader %}
+            <div id="IDX-detailsTopNav" {% if nav.prev or nav.next %}class="IDX-detailsTrack"{% endif %}>
 
-                                <a href="{{ detailsBaseURL }}{{ nav.prev.detailsURL }}" class="IDX-btn IDX-btn-default {% if not nav.prev %}disabled{% endif %}" {% if not nav.prev %}disabled={% endif %}>Prev Property</a>
-                                {% if nav.next %}
-                                    <a href="{{ detailsBaseURL }}{{ nav.next.detailsURL }}" class="IDX-btn IDX-btn-default">Next Property</a>
-                                {% endif %}
-                            </div>
-                        {% endif %}
-                        <div id="IDX-detailsTopActions" class="IDX-topActions IDX-row-content" >
-                            {% spaceless %}
-                                {% if missingProperty == false and propArchived == false %}
-                                    <div id="IDX-detailsActionSave" class="IDX-topAction">
-                                        {% if propertySavedPreviously %}
-                                            <a id="IDX-saveProperty" data-listingid="{{ listingID }}" data-idxid="{{ idxID }}" href="#saveProperty" class="IDX-saveProperty IDX-btn IDX-btn-default">Saved!</a>
-                                        {% else %}
-                                            <a id="IDX-saveProperty" data-listingid="{{ listingID }}" data-idxid="{{ idxID }}" href="#saveProperty" class="IDX-saveProperty IDX-btn IDX-btn-default" >Save Property</a>
-                                        {% endif %}
-                                    </div>
-                                {% endif %}
-                                <div id="IDX-detailsActionNew" class="IDX-topAction" >
-                                    {% if nav.newSearch %}
-                                        <a  id="IDX-newSearch" href="{{ nav.newSearch }}" class="IDX-btn IDX-btn-default">New Search</a>
-                                    {% endif %}
-                                </div>
-                                {% if nav.modifySearch %}
-                                    <div id="IDX-detailsActionModify" class="IDX-topAction">
-                                        <a  id="IDX-modifySearch" href="{{ nav.modifySearch }}" class="IDX-btn IDX-btn-default">Modify Search</a>
-                                    </div>
-                                {% endif %}
-                                {% if nav.backToResults %}
-                                    <div class="IDX-topAction" id="IDX-detailsActionBack">
-                                        <a id="IDX-backToResults" href="{{ nav.backToResults }}" class="IDX-btn IDX-btn-default">Back to Results</a>
-                                    </div>
-                                {% endif %}
-                            {% endspaceless %}
-                        </div>
+                <div id="IDX-detailsTopActions" class="IDX-topActions IDX-row-content" >
+                    {% if nav.prev or nav.next %}
+                    <div id="IDX-prevButton">
+
+                        <a href="{{ detailsBaseURL }}{{ nav.prev.detailsURL }}" class="IDX-btn IDX-btn-default {% if not nav.prev %}disabled{% endif %}" {% if not nav.prev %}disabled={% endif %}>
+                            <i class="fa fa-chevron-left"></i>
+                        </a>
                     </div>
-                {% endblock %}
+                    {% endif %}
+                    {% spaceless %}
+                    {% if missingProperty == false and propArchived == false %}
+                    <div id="IDX-detailsActionSave" class="IDX-topAction">
+                        {% if propertySavedPreviously %}
+                        <a id="IDX-saveProperty" data-listingid="{{ listingID }}" data-idxid="{{ idxID }}" href="#saveProperty" class="IDX-saveProperty IDX-btn IDX-btn-default">Saved!</a>
+                        {% else %}
+                        <a id="IDX-saveProperty" data-listingid="{{ listingID }}" data-idxid="{{ idxID }}" href="#saveProperty" class="IDX-saveProperty IDX-btn IDX-btn-default" >Save Property</a>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                    <div id="IDX-detailsActionNew" class="IDX-topAction" >
+                        {% if nav.newSearch %}
+                        <a  id="IDX-newSearch" href="{{ nav.newSearch }}" class="IDX-btn IDX-btn-default">New Search</a>
+                        {% endif %}
+                    </div>
+                    {% if nav.modifySearch %}
+                    <div id="IDX-detailsActionModify" class="IDX-topAction">
+                        <a  id="IDX-modifySearch" href="{{ nav.modifySearch }}" class="IDX-btn IDX-btn-default">Modify Search</a>
+                    </div>
+                    {% endif %}
+                    {% if nav.backToResults %}
+                    <div class="IDX-topAction" id="IDX-detailsActionBack">
+                        <a id="IDX-backToResults" href="{{ nav.backToResults }}" class="IDX-btn IDX-btn-default">Back to Results</a>
+                    </div>
+                    {% endif %}
+                    {% endspaceless %}
+                    {% if nav.prev or nav.next %}
+                    <div id="IDX-nextButton">
+                        {% if nav.next %}
+                        <a href="{{ detailsBaseURL }}{{ nav.next.detailsURL }}" class="IDX-btn IDX-btn-default">
+                            <i class="fa fa-chevron-right"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endblock %}
+            <div class="detailsWrapper--left">
 
                 {% if missingProperty %}
                     <p id="IDX-detailsMissingPropertyAlert" class="IDX-missingPropertyAlert IDX-alert">We're sorry! The property you tried to view does not seem to exist. This could be because the property has left market and entered a Sold or Pending state. If you would like more information about properties similar to the one you were trying to find, please contact <a id="IDX-missingPropertyContactLink" href="{{ contactPageURL }}">{{ displayName }}</a>. You can also try performing a <a id="IDX-missingPropertyNewSearchLink" href="{{ newSearchURL }}">New Search</a>!</p>
@@ -344,9 +352,16 @@
                     {% elseif propArchived %}
                     {% elseif invalidMLS %}
                     {% else %}
+                <div class="IDX-description-container">
+                    <h4 id="IDX-description-headline">
+                        Property Description
+                    </h4>
                     <div id="IDX-description" class="IDX-well" style="background: url({{ imageData|first.url }}) no-repeat center; background-attachment: fixed; background-size: cover;">
+
                         <p>{{ tools.remarks }}</p>
                     </div>
+                </div>
+
                     {% endif %}
 
                 {% block idxDetailsSubContent %}
