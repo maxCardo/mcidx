@@ -181,6 +181,20 @@ body {
     width: 100%;
     object-fit: cover; }
 
+@supports (-ms-ime-align: auto) {
+  .bg-video > video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  @media only screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+    .footer {
+      height: 400px; } } }
+
 .listings {
   padding: 50px 0;
   width: 100vw; }
