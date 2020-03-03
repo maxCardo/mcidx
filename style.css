@@ -406,8 +406,9 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 .IDX-page-listing #IDX-detailsTopNav {
     height: auto;
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    margin: 10px 0 0 0;
 }
 
 .IDX-page-listing.IDX-wrapper-standard #IDX-detailsTopActions #IDX-detailsActionSave,
@@ -790,12 +791,14 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px 15px;
 }
 .IDX-page-listing .detailsWrapper--left {
     width: 75%;
 }
 .IDX-page-listing .detailsWrapper--right {
-    padding: 64px 20px 18px 15px;
+    padding: 20px 5px 18px 15px;
     width: 25%;
 }
 .IDX-page-listing .IDX-arrow {
