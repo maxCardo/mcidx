@@ -79,7 +79,7 @@ body {
     align-items: center;
     background-color: transparent; }
   .header__logo .logo {
-    color: black;
+    color: black !important;
     font-size: 30px; }
   .header__links {
     display: flex;
