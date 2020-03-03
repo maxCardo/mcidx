@@ -616,3 +616,12 @@
         </div>
     {% endif %}
 {% endmacro %}
+
+<div class="sm-contact-bar">
+    <a href="#" class="contact-phone">
+        <i class="fa fa-phone"></i>
+    </a>
+    <span class="contact-mail" id="view-sidebar">
+        <i class="fa fa-envelope"></i>
+    </span>
+</div>
