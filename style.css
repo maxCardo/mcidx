@@ -67,9 +67,7 @@ iframe {
 }
 
 .IDX-wrapper-standard #IDX-resultsRefineSearchWrap {
-    width: 200%;
     max-width: unset;
-    left: -100%;
     top: 100%;
     z-index: 5;
 }
@@ -253,7 +251,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     z-index: 6;
 }
 
-#IDX-resultsRow .IDX-pageContainer .IDX-topActions div {
+#IDX-resultsRow .IDX-pageContainer .IDX-topActions > div {
     width:25%;
 }
 .IDX-page-listings #IDX-resultsRefineSearchToggle {
