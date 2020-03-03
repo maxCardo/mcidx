@@ -205,7 +205,7 @@ body {
 .hero {
   background-image: url("/images/bg.jpg");
   width: 100vw;
-  height: 700px;
+  height: 700vh;
   background-position: center center;
   position: relative;
   background-size: cover;
