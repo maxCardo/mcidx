@@ -1,0 +1,24 @@
+{
+  "name": "adam-scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss assets/css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss assets/css/style.comp.css",
+    "concat:css": "concat -o assets/css/style.concat.css fonts/css/all.css assets/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" assets/css/style.concat.css -o assets/css/style.prefix.css",
+    "compress:css": "node-sass assets/css/style.prefix.css assets/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  },
+  "author": "Danilo",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0"
+  }
+}
