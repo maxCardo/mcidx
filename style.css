@@ -555,7 +555,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     right: 0;
 }
 .IDX-page-listing #IDX-description  {
-    margin: 10px 0 20px 0;
+    margin: 0 0 10px 0;
     border: none;
     background: #002984;
     color: white;
@@ -614,7 +614,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 .IDX-page-listing #IDX-primaryPhoto .IDX-arrow {
     border: none;
-    line-height: 2.65;
+    line-height: 1.65;
 }
 .IDX-page-listing #IDX-primaryPhoto .IDX-arrow,
 .IDX-page-listing #IDX-detailsShowcaseSlides .IDX-carouselNavWrapper {
@@ -774,6 +774,13 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 .IDX-page-listing .IDX-similar-listings--item {
     box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.16), 0 0 200px 1px rgba(255, 255, 255, 0.15);
+    position: relative;
+    top:0;
+    transition: top 200ms, box-shadow 200ms;
+}
+.IDX-page-listing .IDX-similar-listings--item:hover {
+    box-shadow: 0 7px 20px 1px rgba(0, 0, 0, 0.16), 0 0 300px 1px rgba(255, 255, 255, 0.15);
+    top:-2px;
 }
 .IDX-page-listing .IDX-similar-listings--item .IDX-similar-listings--info {
     padding: 15px;
@@ -806,11 +813,22 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     box-shadow: none;
 }
 .IDX-page-listing #IDX-arrow-next {
-    right: -15px;
+    right: -25px;
 }
 .IDX-page-listing #IDX-arrow-previous {
-    left: -15px;
+    left: -25px;
 }
+.IDX-page-listing .IDX-description-container {
+    margin-top: 20px;
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.16), 0 0 200px 1px rgba(255, 255, 255, 0.15);
+}
+.IDX-page-listing .IDX-description-container #IDX-description-headline {
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    font-size: 1.75em;
+}
+
 div.flex-grow {
     flex-grow:1;
 }
