@@ -1,41 +1,38 @@
 /* HEADER */
 
 .header {
-    width: 100vw;
+    @include vw100;
     padding: 20px 0;
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
+    @include bgTransparent;
+    @include positionFixed;
+    @include topleft0;
     z-index: 500;
-    transition: all 0.3s ease-in-out;
+    @include transitionAll2ms;
 
     .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: transparent;
+        @include flexAlignItemsCenter;
+        @include justifyContentSpaceBetween;
+        @include bgTransparent;
     }
 
     &__logo {
         .logo {
-            color: black !important;
+            @include color-black;
             font-size: 30px;
         }
     }
 
     &__links {
-        display: flex;
-        align-content: center;
-
+        @include displayFlex;
+        @include alignContentCenter;
     }
 
     &__link {
-        display: inline-block;
+        @include inlineBlock;
         padding: 10px;
         color: black !important;
-        position: relative;
-        transition: all 0.2s;
+        @include relative;
+        @include transitionAll2ms;
 
         &:hover {
             transform: scale(1.2);
@@ -44,14 +41,14 @@
 
         div {
             // content: '';
-            display: inline-block;
-            position: absolute;
+            @include inlineBlock;
+            @include positionAbsolute;
             background: none repeat scroll 0 0 transparent;
             left: 50%;
             bottom: 0;
             height: 2px;
             background-color: #fff;
-            transition: all 0.3s ease-in-out;
+            @include transitionAll2ms;
             width: 0;
         }
 
@@ -63,19 +60,19 @@
 
     &__down {
         .container ul {
-            display: flex;
-            position: fixed;
+            @include displayFlex;
+            @include positionFixed;
             top: 87px;
             left: 50%;
             z-index: 5000000000000000;
 
             li a {
-                display: inline-block;
+                @include inlineBlock;
                 margin: 0 10px;
                 padding: 5px 10px;
                 background-color: #e2a855;
-                color: white;
-                transition: all 0.2s;
+                @include color-white;
+                @include transitionAll2ms;
                 border-radius: 5px;
 
                 &:hover {

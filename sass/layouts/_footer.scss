@@ -2,18 +2,18 @@
 
 .footer {
     padding: 50px;
-    width: 100vw;
-    position: relative;
-    color: white;
+    @include vw100;
+    @include relative;
+    @include color-white;
 
     &__flex {
-        display: flex;
-        justify-content: space-between;
+        @include displayFlex;
+        @include justifyContentSpaceBetween;
     }
 
     &__box {
         max-width: 350px;
-        color: black;
+        @include color-black;
 
         h3 {
             margin-bottom: 20px;
@@ -25,38 +25,38 @@
 
             i,
             a {
-                color: black;
-                font-weight: bold;
+                @include color-black;
+                @include bold;
             }
         }
 
         h3,
         span,
         button {
-            color: black;
-            font-weight: bold;
+            @include color-black;
+            @include bold;
         }
 
         input {
 
             &::placeholder,
             &:hover {
-                color: black;
-                font-weight: bold;
+                @include color-black;
+                @include bold;
             }
         }
     }
 
     &__copyright {
-        text-align: center;
+        @include text-center;
         padding-top: 20px;
-        font-weight: bold;
-        color: black;
+        @include bold;
+        @include color-black;
     }
 
     &__line {
         width: 100%;
-        background-color: black;
+        @include bgBlack;
         height: 2px;
         margin-top: 20px;
     }
@@ -65,24 +65,21 @@
         max-width: 250px;
         transition: all 0.5s ease-in-out;
         border: none;
-        background-color: transparent;
+        @include bgTransparent;
         border-bottom: 1px solid black;
     }
 }
 
 .bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+    @include positionAbsolute;
+    @include topleft0;
+    @include heightWidth100;
     z-index: -1;
     opacity: .7;
     overflow: hidden;
 
     &__content {
-        height: 100%;
-        width: 100%;
+        @include heightWidth100;
         object-fit: cover;
     }
 }
@@ -91,13 +88,12 @@
 
 @supports (-ms-ime-align:auto) {
     .bg-video>video {
-        position: absolute;
+        @include positionAbsolute;
         min-width: 100%;
         min-height: 100%;
         width: auto;
         height: auto;
-        left: 50%;
-        top: 50%;
+        @include leftTop50;
         transform: translate(-50%, -50%);
     }
 
