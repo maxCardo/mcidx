@@ -55,19 +55,21 @@
         align-items: center;
         max-width: 330px;
         position: absolute;
-        top: 50%;
+        top: 70%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -70%);
 
         button {
             background-color: transparent;
             display: inline-block;
 
             i {
+                position: relative;
                 margin-left: -40px;
-                z-index: 5000;
+                z-index: 5000000;
                 height: 100%;
                 width: 100%;
+
             }
         }
     }
