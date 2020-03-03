@@ -179,7 +179,6 @@ iframe {
 .IDX-wrapper-standard #IDX-refineSearchFormToggle::after {
     color: #fff;
 }
-.IDX-wrapper-standard .IDX-resultsAction,
 .IDX-wrapper-standard #IDX-refineSearchFormToggle{
     position: absolute;
     top: 0;
@@ -276,6 +275,17 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     padding: 0px;
 }
 
+@media (max-width: 640px) {
+    #IDX-resultsRow .IDX-pageContainer .IDX-topActions div {
+        width: 50%;
+        font-size: 18px;
+        line-height: 50px;
+    }
+    #IDX-resultsRow #IDX-resultsContainer #IDX-resultsRefineSearchWrap {
+        width: 100%;
+        left: 0;
+    }
+}
 .IDX-wrapper-standard .IDX-h2, .IDX-wrapper-standard h2 {
     font-size: 30px;
     margin: 0;
@@ -289,7 +299,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 @media (min-width: 640px) and (max-width: 660px) {
     #IDX-resultsActiveListings {
-        margin-top: 60px;
+        margin-top: 0;
     }
 }
 
