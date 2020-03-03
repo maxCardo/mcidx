@@ -32,7 +32,7 @@
 // SECTION HERO
 
 .hero {
-    background-image: url('/images/bg1.jpg');
+    background-image: url('/images/bg.jpg');
     width: 100vw;
     height: 700px;
     background-position: center center;
@@ -205,52 +205,6 @@
             &::after {
                 -webkit-transform: rotate(225deg);
                 transform: rotate(225deg);
-            }
-        }
-    }
-}
-
-/* SECTION HERO */
-
-.hero {
-    background-image: url('/images/bg1.jpg');
-    width: 100vw;
-    height: 700px;
-    background-position: center center;
-    position: relative;
-    background-size: cover;
-    z-index: 498;
-    filter: grayscale(50%);
-
-    .container {
-        .hero__input {
-            width: 30vw;
-            min-width: 330px;
-            text-align: center;
-            display: inline-block;
-            border-radius: 15px;
-            padding: 5px 0;
-        }
-
-        form .wrap {
-            display: flex;
-            align-items: center;
-            max-width: 330px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            button {
-                background-color: transparent;
-                display: inline-block;
-
-                i {
-                    margin-left: -40px;
-                    z-index: 5000px;
-                    height: 100%;
-                    width: 100%;
-                }
             }
         }
     }
