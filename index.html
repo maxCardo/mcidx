@@ -42,7 +42,7 @@
   <div class="menu">
     <ul class="menu__links">
       <li>
-        <a href="#" class="menu__link"><i class="fas fa-search"></i> Search</a>
+        <a href="#input" class="menu__link"><i class="fas fa-search"></i> Search</a>
       </li>
       <li>
         <a href="#mapDiv" class="menu__link"><i class="fas fa-map-marker-alt"></i> Map Search</a>
@@ -51,7 +51,8 @@
         <a href="#" class="menu__link"><i class="fas fa-wrench"></i> My Portal</a>
       </li>
       <li>
-        <a href="#contact" class="menu__link"><i class="fas fa-envelope"></i> Contact Us</a>
+        <a href="mailto:someone@something.com?subject=your title&body=TThe message" class="menu__link"><i
+            class="fas fa-envelope"></i> Contact Us</a>
       </li>
 
       <li>
@@ -73,7 +74,7 @@
       </div>
       <ul class="header__links">
         <li>
-          <a href="#" class="header__link link"><i class="fas fa-search"></i> Search
+          <a href="#input" class="header__link link"><i class="fas fa-search"></i> Search
             <div></div></a>
         </li>
         <li>
@@ -84,7 +85,8 @@
           <a href="#" class="header__link link"><i class="fas fa-wrench"></i> My Portal <div></div></a>
         </li>
         <li>
-          <a href="#contact" class="header__link link"><i class="fas fa-envelope"></i> Contact Us <div></div></a>
+          <a href="mailto:someone@something.com?subject=your title&body=TThe message" class=" header__link link"><i
+              class="fas fa-envelope"></i> Contact Us <div></div></a>
         </li>
 
         <li>
@@ -109,7 +111,7 @@
     <div class="container">
       <form action="index.html">
         <div class="wrap">
-          <input type="search" class="hero__input" placeholder="City,Postal Code,Address, or Listing ID" />
+          <input type="search" class="hero__input" placeholder="City,Postal Code,Address, or Listing ID" id='input' />
           <button><i class="fas fa-search"></i></button>
         </div>
       </form>
@@ -181,8 +183,10 @@
           <h3>Contact Us</h3>
           <ul>
             <li>
-              <i class="fas fa-envelope"></i>
-              <span>example@gmail.com</span>
+              <a href="mailto:someone@something.com?subject=your title&body=The message"> <i
+                  class="fas fa-envelope"></i>
+                <span>example@gmail.com</span></a>
+
             </li>
             <li>
               <a href="tel:555-428-0940"><i class="fas fa-phone"></i> 555-428-0940</a>
