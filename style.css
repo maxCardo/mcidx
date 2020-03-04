@@ -693,7 +693,7 @@ body, h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 1220px;
+    max-width: unset;
     margin: 0 auto;
   }
   
@@ -766,17 +766,18 @@ body, h1, h2, h3, h4, h5, h6 {
     box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.13), inset -1px -1px 5px rgba(0, 0, 0, 0.13);
   }
   
-  #IDX-detailsMediaContaner--custom {
-    max-width: 586px;
-  }
-  
   .IDX-page-listing #IDX-detailsAddress {
     font-size: 14px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   }
   
   .IDX-page-listing #IDX-primaryPhoto {
-    height: 400px;
+    height: auto;
+    max-height: unset;
+  }
+  .IDX-page-listing #IDX-primaryPhoto img {
+    height: auto;
+    max-height: unset;
   }
   
   .IDX-page-listing .mat-form {
@@ -887,7 +888,9 @@ body, h1, h2, h3, h4, h5, h6 {
   .IDX-page-listing #IDX-similar-listings-result {
     padding: 50px 0;
     display: flex;
-    justify-content: space-between;
+    max-width: 1320px;
+    justify-content: center;
+    margin: 0 auto;
   }
   
   .IDX-page-listing .IDX-similar-listings--item {
@@ -960,6 +963,11 @@ body, h1, h2, h3, h4, h5, h6 {
     font-size: 1.75em;
   }
   
+  .IDX-page-listing .IDX-details--actions-and-address-container {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  
   div.flex-grow {
     flex-grow: 1;
   }
@@ -969,6 +977,10 @@ body, h1, h2, h3, h4, h5, h6 {
   }
   
   @media (max-width: 748px) {
+    .disclaimer-container {
+      padding: 0 10px;
+    }
+  
     .sm-contact-bar {
       position: fixed;
       bottom: 45px;
@@ -1012,6 +1024,12 @@ body, h1, h2, h3, h4, h5, h6 {
   .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionBack {
       order: 2;
       flex-grow: 1;
+    }
+    .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionNew {
+      width: 36.5%;
+    }
+    .IDX-page-listing #IDX-detailsTopActions #IDX-saveProperty {
+      width: 35%;
     }
     .IDX-page-listing #IDX-primaryPhoto {
       height: unset;
