@@ -259,7 +259,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     align-items: center;
-    max-width: 330px;
+    max-width: 500px;
     position: absolute;
     top: 75%;
     left: 50%;
@@ -403,6 +403,35 @@ body {
 .menu p {
   font-size: 14px;
   margin-bottom: 10px; }
+
+.hero__heading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold; }
+
+.hero__paragraph {
+  position: absolute;
+  color: white;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -68%);
+  font-weight: bold; }
+
+.hero__link {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -85%);
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .hero__link:hover {
+    color: black; }
 
 /* components */
 .btn__block {

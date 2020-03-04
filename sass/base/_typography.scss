@@ -50,3 +50,38 @@
         margin-bottom: 10px;
     }
 }
+
+.hero {
+    &__heading {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: bold;
+    }
+
+    &__paragraph {
+        position: absolute;
+        color: white;
+        top: 68%;
+        left: 50%;
+        transform: translate(-50%, -68%);
+        font-weight: bold;
+    }
+
+    &__link {
+        position: absolute;
+        left: 50%;
+        top: 85%;
+        transform: translate(-50%, -85%);
+        display: inline-block;
+        color: rgba(255, 255, 255, .8);
+        @include transitionAll2ms;
+
+        &:hover {
+            color: black;
+        }
+
+    }
+}
