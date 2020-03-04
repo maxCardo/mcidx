@@ -1079,6 +1079,7 @@ body, h1, h2, h3, h4, h5, h6 {
   
     .IDX-similar-listings--item {
       width: 100%;
+      margin-bottom: 25px;
     }
     .IDX-similar-listings--item .IDX-similar-listings--item-image {
       width: 100%;
@@ -1087,6 +1088,13 @@ body, h1, h2, h3, h4, h5, h6 {
   
     .IDX-similar-listings--redirect {
       justify-content: center;
+    }
+  
+    .IDX-similar-listings--item .IDX-btn-default {
+      background: orange;
+      color: white;
+      border-color: transparent;
+      border-radius: 4px;
     }
   }
   /* END OF PROPERTY PAGE */
