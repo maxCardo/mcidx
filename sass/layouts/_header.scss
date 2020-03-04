@@ -60,7 +60,10 @@
         }
     }
 
+    // display:none 
     &__down {
+        display: none;
+
         .container ul {
             position: fixed;
             display: flex;

@@ -28,19 +28,31 @@
     }
 }
 
-
 // SECTION ABOUT 
 
 .about {
-    .container {
+    max-height: 500px;
 
-        h2,
-        p {
-            text-align: center;
+    &__heading,
+    &__paragraph {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+
+    &__link {
+        color: black;
+        border: 1px solid black;
+        padding: 10px;
+        transition: all .5s ease-in-out;
+
+
+        &:hover {
+            color: white;
+            background-color: black;
         }
     }
 }
-
 
 // MENU 
 
@@ -51,36 +63,40 @@
     }
 }
 
+
+// SECTION HERO
 .hero {
-    &__heading {
+
+    &__paragraph,
+    &__heading,
+    &__link {
+        color: white;
         position: absolute;
+        font-weight: bold;
         left: 50%;
+    }
+
+    &__heading {
         top: 50%;
         transform: translate(-50%, -50%);
-        color: white;
-        font-weight: bold;
     }
 
     &__paragraph {
-        position: absolute;
-        color: white;
         top: 68%;
-        left: 50%;
+        text-transform: uppercase;
         transform: translate(-50%, -68%);
-        font-weight: bold;
+        font-size: 17px;
     }
 
     &__link {
-        position: absolute;
-        left: 50%;
         top: 85%;
         transform: translate(-50%, -85%);
         display: inline-block;
-        color: rgba(255, 255, 255, .8);
         @include transitionAll2ms;
+        font-size: 14px;
 
         &:hover {
-            color: black;
+            color: rgba(255, 255, 255, .8);
         }
 
     }

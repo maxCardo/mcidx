@@ -54,11 +54,12 @@
 
     .container form .wrap {
         @include flexAlignItemsCenter;
-        max-width: 500px;
+        max-width: 570px;
         position: absolute;
         top: 75%;
         left: 50%;
         transform: translate(-50%, -75%);
+        font-size: 14px;
 
         button {
 
@@ -67,7 +68,7 @@
 
             i {
                 position: relative;
-                margin-left: -40px;
+                margin-right: -20px;
                 z-index: 5000000;
                 @include heightWidth100;
 
@@ -80,25 +81,18 @@
 
 .about {
     width: 100vw;
-    padding: 50px 0;
     background-color: rgba(236, 235, 235, 0.5);
 
-    .container {
-
-
-        img {
-            border-radius: 50%;
-            height: 200px;
-            max-width: 200px;
-            margin-right: 50px;
-        }
+    &__box,
+    img {
+        width: 100%;
+        height: 100%;
     }
 
-    &__flex {
-        @include flexAlignItemsCenter;
-        @include justifyContentSpaceBetween;
+    &__box {
+        text-align: center;
+        padding: 50px;
     }
-
 }
 
 /* map */
