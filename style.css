@@ -193,8 +193,8 @@ body, h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #3f51b5;
-    color: #fff;
+    background: lightgray;
+    color: #000;
     transition: all 200ms;
   }
   
@@ -223,9 +223,12 @@ body, h1, h2, h3, h4, h5, h6 {
   .IDX-wrapper-standard #IDX-refineSearchFormToggle:active,
   .contact-btn--send:focus,
   .contact-btn--send:hover,
-  .contact-btn--send:active {
-    background: #757de8;
-    color: #fff;
+  .contact-btn--send:active,
+  .IDX-page-listings .IDX-topAction > a:hover,
+  .IDX-page-listings .IDX-topAction > a:focus,
+  .IDX-page-listings .IDX-topAction > a:active {
+    background: darkgray;
+    color: #000;
     top: -2px;
     bottom: 2px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.17);
@@ -290,6 +293,13 @@ body, h1, h2, h3, h4, h5, h6 {
   
   #IDX-resultsRow .IDX-pageContainer .IDX-topActions div {
     padding: 0px;
+  }
+  
+  .IDX-page-listings .IDX-topAction > a {
+    display: block;
+    background: lightgray;
+    color: #000;
+    position: relative;
   }
   
   @media (max-width: 640px) {
@@ -643,6 +653,7 @@ body, h1, h2, h3, h4, h5, h6 {
   .IDX-page-listing #IDX-description p {
     padding: 40px 60px;
     background: rgba(0, 0, 0, 0.38);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
   }
   
   .IDX-page-listing #IDX-fieldsWrapper {
@@ -797,7 +808,7 @@ body, h1, h2, h3, h4, h5, h6 {
   
   .IDX-page-listing .element-wrapper {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding: 0px 15px;
   }
   
@@ -847,6 +858,8 @@ body, h1, h2, h3, h4, h5, h6 {
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
+    max-height: 73px;
+    z-index: 999999999999999;
   }
   
   .IDX-page-listing .form__field::placeholder {
@@ -1020,8 +1033,60 @@ body, h1, h2, h3, h4, h5, h6 {
     }
   
     .IDX-page-listing .detailsWrapper--right.open {
-      right: 0%;
-      top: 50px;
+      right: 0;
+      width: 100%;
+      position: fixed;
+      top: 40px;
+      left: 0;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.75);
+      bottom: 0;
+    }
+  
+    .IDX-page-listing .mat-form {
+      top: 25px;
+    }
+  
+    .IDX-page-listing #IDX-detailsMainInfo {
+      margin-left: 0;
+    }
+  
+    .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
+      font-size: 14px;
+    }
+  
+    .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-body {
+      padding-bottom: 50px;
+    }
+  
+    .IDX-page-listing #IDX-description p {
+      padding: 25px 15px;
+      background: rgba(0, 0, 0, 0.38);
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+  
+    .IDX-page-listing #IDX-fieldsWrapper {
+      flex-direction: column;
+    }
+  
+    .IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer {
+      width: 100%;
+    }
+  
+    #IDX-similar-listings-result {
+      padding: 25px 0;
+    }
+  
+    .IDX-similar-listings--item {
+      width: 100%;
+    }
+    .IDX-similar-listings--item .IDX-similar-listings--item-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .IDX-similar-listings--redirect {
+      justify-content: center;
     }
   }
   /* END OF PROPERTY PAGE */
