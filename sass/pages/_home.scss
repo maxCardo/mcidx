@@ -2,11 +2,12 @@
 
 .listings {
     padding: 50px 0;
-    @include vw100;
+    width: 100vw;
 
 
     &__flex {
-        @include displayFlex;
+
+        display: flex;
         max-width: 100%;
         @include justifyContentSpaceBetween;
     }
@@ -17,10 +18,10 @@
         max-width: 600px;
         height: 400px;
         background-position: center center;
-        @include bgSizeCover;
-        @include bold;
+        background-size: cover;
+        position: relative;
+        font-weight: bold;
         padding: 15px;
-        @include relative;
 
         &:nth-child(2) {
             background-image: url('/images/1.jpg');
@@ -34,19 +35,19 @@
 
 .hero {
     background-image: url('/images/bg.jpg');
-    @include vw100;
+    width: 100vw;
     height: 100vh;
     background-position: center center;
-    @include relative;
-    @include bgSizeCover;
+    position: relative;
+    background-size: cover;
     z-index: 498;
     filter: grayscale(50%);
 
     &__input {
         width: 30vw;
         min-width: 330px;
-        @include text-center;
-        @include inlineBlock;
+        text-align: center;
+        display: inline-block;
         border-radius: 15px;
         padding: 5px 0;
     }
@@ -54,17 +55,18 @@
     .container form .wrap {
         @include flexAlignItemsCenter;
         max-width: 330px;
-        @include positionAbsolute;
+        position: absolute;
         top: 75%;
         left: 50%;
         transform: translate(-50%, -75%);
 
         button {
-            @include bgTransparent;
-            @include inlineBlock;
+
+            background-color: transparent;
+            display: inline-block;
 
             i {
-                @include relative;
+                position: relative;
                 margin-left: -40px;
                 z-index: 5000000;
                 @include heightWidth100;
@@ -77,7 +79,7 @@
 // SECTION ABOUT
 
 .about {
-    @include vw100;
+    width: 100vw;
     padding: 50px 0;
     background-color: rgba(236, 235, 235, 0.5);
 
@@ -101,14 +103,15 @@
 
 /* map */
 #mapDiv {
-    @include vw100;
+    width: 100vw;
     height: 400px;
 }
 
 // MENU
 
 .menu {
-    @include positionFixed;
+
+    position: fixed;
     left: -30%;
     z-index: 998;
     color: #005c9c;
@@ -118,23 +121,26 @@
     width: 30%;
     height: 100%;
     padding: 0px 100px 0 50px;
-    @include displayFlex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
 
     &.active {
         left: 0;
-        @include positionFixed;
+        position: fixed;
     }
 
     &__link {
-        @include inlineBlock;
+
+        color: black;
+        display: inline-block;
         @include transitionAll2ms;
-        @include color-black;
+
 
         &:hover {
-            @include color-white;
+
+            color: white;
         }
 
         &:last-of-type {
@@ -143,7 +149,7 @@
     }
 
     &__toggler {
-        @include positionFixed;
+        position: fixed;
         top: 20px;
         left: 20px;
         z-index: 99999999999;
@@ -156,25 +162,22 @@
         opacity: 0;
 
         span {
-            @include positionAbsolute;
-
+            position: absolute;
             content: '';
             width: 28px;
             height: 2.5px;
-            @include bgBlack;
+            background-color: black;
             z-index: 999999999999999;
             border-radius: 20px;
             transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
 
             &::before,
             &::after {
-                @include positionAbsolute;
-
+                position: absolute;
                 content: '';
                 width: 28px;
                 height: 2.5px;
-                @include bgBlack;
-
+                background-color: black;
                 z-index: 999999999999999;
                 border-radius: 20px;
                 transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
@@ -190,14 +193,13 @@
         }
 
         &.active>span {
-            @include bgTransparent;
+            background-color: transparent;
 
             &::before,
             &::after {
-                @include bgBlack;
-
                 top: 50px;
-                @include positionFixed;
+                position: fixed;
+                background-color: black;
             }
 
             &::before {

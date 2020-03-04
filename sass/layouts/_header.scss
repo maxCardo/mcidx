@@ -1,10 +1,11 @@
 /* HEADER */
 
 .header {
-    @include vw100;
+    width: 100vw;
     padding: 20px 0;
-    @include bgTransparent;
-    @include positionFixed;
+    background-color: transparent;
+
+    position: fixed;
     @include topleft0;
     z-index: 500;
     @include transitionAll2ms;
@@ -12,26 +13,27 @@
     .container {
         @include flexAlignItemsCenter;
         @include justifyContentSpaceBetween;
-        @include bgTransparent;
+        background-color: transparent;
     }
 
     &__logo {
         .logo {
-            @include color-black;
+
+            color: black;
             font-size: 30px;
         }
     }
 
     &__links {
-        @include displayFlex;
+        display: flex;
         @include alignContentCenter;
     }
 
     &__link {
-        @include inlineBlock;
+        display: inline-block;
         padding: 10px;
         color: black !important;
-        @include relative;
+        position: relative;
         @include transitionAll2ms;
 
         &:hover {
@@ -40,9 +42,9 @@
 
 
         div {
-            // content: '';
-            @include inlineBlock;
-            @include positionAbsolute;
+
+            display: inline-block;
+            position: absolute;
             background: none repeat scroll 0 0 transparent;
             left: 50%;
             bottom: 0;
@@ -60,18 +62,18 @@
 
     &__down {
         .container ul {
-            @include displayFlex;
-            @include positionFixed;
+            position: fixed;
+            display: flex;
             top: 87px;
             left: 50%;
             z-index: 5000000000000000;
 
             li a {
-                @include inlineBlock;
+                display: inline-block;
                 margin: 0 10px;
                 padding: 5px 10px;
                 background-color: #e2a855;
-                @include color-white;
+                color: white;
                 @include transitionAll2ms;
                 border-radius: 5px;
 

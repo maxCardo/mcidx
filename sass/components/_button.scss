@@ -2,14 +2,14 @@
 
 .btn__block {
     display: block;
-    @include bgTransparent;
+    background-color: transparent;
     margin-left: auto;
     margin-top: 15px;
     transition: all 0.5s ease-in-out;
 
     &:hover {
         transform: scaleX(1.2);
-        @include color-white;
+        color: white;
         letter-spacing: 1.2px;
     }
 }

@@ -57,12 +57,12 @@
 
         &__box {
 
-            @include text-center;
+            text-align: center;
 
 
 
             form {
-                @include displayFlex;
+                display: flex;
 
                 button {
                     border-bottom: 1px solid black;
@@ -121,7 +121,7 @@
     }
 
     .btn__block {
-        @include margin0auto;
+        margin: 0 auto;
 
     }
 
@@ -157,7 +157,7 @@
     .footer {
         &__copyright {
             max-width: 250px;
-            @include margin0auto;
+            margin: 0 auto;
         }
     }
 }
@@ -165,7 +165,6 @@
 @media only screen and (max-width:400px) {
     .hero .container .wrap .hero__input {
         min-width: 280px;
-        /* margin: 0 auto; */
         font-size: 13px;
     }
 
