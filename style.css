@@ -794,93 +794,39 @@ body, h1, h2, h3, h4, h5, h6 {
     position: sticky;
     top: 70px;
   }
-  
-  .IDX-page-listing input {
-    margin-bottom: 10px;
+  .IDX-page-listing .mat-form .mat-form--header {
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 30px;
+    background: lightgray;
+    color: white;
+    letter-spacing: 5px;
   }
-  
-  .IDX-page-listing input[type=email],
-  .IDX-page-listing input[type=text],
-  .IDX-page-listing textarea {
-    width: 100%;
-    border: 0px;
-    padding: 5px 0px;
-    background: rgba(0, 0, 0, 0);
-    border-bottom: 2px solid teal;
+  .IDX-page-listing .mat-form .mat-form--header a {
+    color: white;
   }
-  
-  .IDX-page-listing .element-wrapper {
+  .IDX-page-listing .mat-form .mat-form--header .fa {
     position: relative;
-    margin-bottom: 20px;
-    padding: 0px 15px;
+    top: 8px;
+    font-size: 40px;
+    transform: rotate(95deg);
+    color: white;
   }
-  
-  .IDX-page-listing .element-wrapper:last-child {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .IDX-page-listing label {
-    position: absolute;
-    top: 0px;
-    left: 20px;
+  .IDX-page-listing .mat-form .mat-form--footer {
+    padding: 10px 20px;
+    text-align: center;
     font-size: 20px;
-    transform-origin: top left;
-    transition: transform ease-out 0.2s;
+    background: lightgray;
+    color: white;
+    letter-spacing: 5px;
   }
-  
-  .IDX-page-listing input:focus,
-  .IDX-page-listing textarea:focus {
-    outline: 0;
-    border-bottom: 2px solid #1976D2;
+  .IDX-page-listing .mat-form .mat-form--footer a {
+    color: white;
   }
-  
-  .IDX-page-listing input:focus ~ label,
-  .IDX-page-listing input:valid ~ label,
-  .IDX-page-listing textarea:focus ~ label,
-  .IDX-page-listing textarea:placeholder-shown ~ label,
-  .IDX-page-listing input:placeholder-shown ~ label {
-    color: teal;
-    transform: scale(0.8) translate(-10px, -25px);
-  }
-  
-  .IDX-page-listing .form__group {
+  .IDX-page-listing .mat-form .mat-form--footer .fa {
+    font-size: 35px;
     position: relative;
-    padding: 15px 0 0;
-    margin-top: 10px;
-  }
-  
-  .IDX-page-listing .form__field {
-    font-family: inherit;
-    width: 100%;
-    border: 0;
-    border-bottom: 2px solid #d2d2d2;
-    outline: 0;
-    font-size: 16px;
-    color: #212121;
-    padding: 7px 0;
-    background: transparent;
-    transition: border-color 0.2s;
-    max-height: 73px;
-    z-index: 999999999999999;
-  }
-  
-  .IDX-page-listing .form__field::placeholder {
-    color: transparent;
-  }
-  
-  .IDX-page-listing label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-size: 18px;
-    color: #9b9b9b;
-  }
-  
-  .IDX-page-listing .form__field:focus {
-    padding-bottom: 7px;
-    border-bottom: 2px solid #009788;
+    top: 4px;
   }
   
   .IDX-page-listing #IDX-fieldsWrapper {
