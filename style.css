@@ -749,6 +749,7 @@ body, h1, h2, h3, h4, h5, h6 {
   
   .IDX-page-listing #IDX-detailsMedia .IDX-thumbnail {
     border: none;
+    margin-bottom: 10px;
   }
   
   .IDX-page-listing #IDX-detailscontactContent {
@@ -787,7 +788,7 @@ body, h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.16), 0 0 200px 1px rgba(255, 255, 255, 0.15);
     border-radius: 2px;
     margin-left: 1%;
-    padding: 40px 10px 10px 10px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     position: sticky;
@@ -1073,9 +1074,6 @@ body, h1, h2, h3, h4, h5, h6 {
       bottom: 0;
       z-index: 6;
     }
-    .IDX-page-listing #IDX-detailsMainInfo {
-      margin-left: 0;
-    }
     .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
       font-size: 14px;
     }
@@ -1178,6 +1176,9 @@ body, h1, h2, h3, h4, h5, h6 {
     }
   
     .IDX-page-listing #IDX-detailsMainInfo {
+      position: sticky;
+      height: 528px;
+      top: 70px;
       margin: 0 20px 10px 40px;
     }
   
