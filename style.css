@@ -1005,6 +1005,14 @@ body, h1, h2, h3, h4, h5, h6 {
     .IDX-page-listing #IDX-detailsWrapper {
       position: static;
     }
+    .IDX-page-listing #IDX-detailsTopActions {
+      flex-wrap: wrap;
+    }
+    .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionModify,
+  .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionBack {
+      order: 2;
+      flex-grow: 1;
+    }
     .IDX-page-listing #IDX-primaryPhoto {
       height: unset;
     }
