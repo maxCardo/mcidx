@@ -1033,7 +1033,7 @@ body, h1, h2, h3, h4, h5, h6 {
       flex-grow: 1;
     }
     .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionNew,
-  .IDX-page-listing #IDX-detailsTopActions #IDX-saveActionSave {
+  .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionSave {
       width: 126px;
     }
     .IDX-page-listing #IDX-primaryPhoto {
