@@ -328,7 +328,7 @@ body, h1, h2, h3, h4, h5, h6 {
   }
   .IDX-wrapper-standard .IDX-h2, .IDX-wrapper-standard h2 {
     font-size: 30px;
-    margin: 0;
+    margin: 20px;
     text-align: center;
   }
   
@@ -653,7 +653,7 @@ body, h1, h2, h3, h4, h5, h6 {
   .IDX-page-listing #IDX-description p {
     padding: 40px 60px;
     background: rgba(0, 0, 0, 0.38);
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
   
   .IDX-page-listing #IDX-fieldsWrapper {
@@ -776,6 +776,7 @@ body, h1, h2, h3, h4, h5, h6 {
     max-height: unset;
   }
   .IDX-page-listing #IDX-primaryPhoto img {
+    width: 100%;
     height: auto;
     max-height: unset;
   }
@@ -926,7 +927,7 @@ body, h1, h2, h3, h4, h5, h6 {
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 10px 15px;
-    overflow-x: hidden;
+    overflow-x: unset;
   }
   
   .IDX-page-listing .detailsWrapper--left {
@@ -957,10 +958,12 @@ body, h1, h2, h3, h4, h5, h6 {
   }
   
   .IDX-page-listing .IDX-description-container #IDX-description-headline {
-    padding: 10px;
+    padding: 30px 10px 0 10px;
     text-align: center;
     margin: 0;
     font-size: 1.75em;
+    background: rgba(0, 0, 0, 0.38);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
   }
   
   .IDX-page-listing .IDX-details--actions-and-address-container {
@@ -989,7 +992,11 @@ body, h1, h2, h3, h4, h5, h6 {
       padding: 0 10px;
     }
   
-    .sm-contact-bar {
+    #IDX-detailsMediaContaner--custom {
+      width: 100%;
+    }
+  
+    .IDX-page-listing .sm-contact-bar {
       position: fixed;
       bottom: 45px;
       width: 100%;
@@ -999,30 +1006,25 @@ body, h1, h2, h3, h4, h5, h6 {
       padding: 0 15px;
       z-index: 7;
     }
-  
-    .sm-contact-bar a,
-  .sm-contact-bar span {
+    .IDX-page-listing .sm-contact-bar a,
+  .IDX-page-listing .sm-contact-bar span {
       padding: 0 15px;
       border: 5px solid white;
       background: rgba(0, 0, 0, 0.55);
       color: #fff;
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
     }
-  
-    .mat-form {
+    .IDX-page-listing .mat-form {
       top: 25px;
     }
-  
-    #IDX-detailsMediaContaner--custom {
-      width: 100%;
-    }
-  
     .IDX-page-listing#IDX-main {
       position: relative;
       overflow-x: hidden;
     }
     .IDX-page-listing #IDX-detailsWrapper {
       position: static;
+      padding: 3px 15px;
+      overflow-x: hidden;
     }
     .IDX-page-listing #IDX-detailsTopActions {
       flex-wrap: wrap;
@@ -1117,6 +1119,102 @@ body, h1, h2, h3, h4, h5, h6 {
     .IDX-page-listing #IDX-openHouses {
       text-align: center;
       width: 100%;
+    }
+    .IDX-page-listing #IDX-detailsHead {
+      margin: 0 0 0 0;
+    }
+    .IDX-page-listing #IDX-detailsTopNav {
+      margin: 0 0 0 0;
+    }
+  }
+  @media (min-width: 1023px) and (max-width: 1209px) {
+    .IDX-page-listing #IDX-detailsMediaContaner--custom {
+      width: 57%;
+    }
+  
+    .IDX-page-listing #IDX-detailsMainInfo {
+      margin: 0 20px 10px 40px;
+      width: 260px;
+      padding-bottom: 30px;
+    }
+  
+    .IDX-page-listing .IDX-description-container {
+      margin-right: 20px;
+    }
+  
+    .IDX-page-listing #IDX-fieldsWrapper {
+      padding: 20px 20px 0 0;
+    }
+  }
+  @media (min-width: 1210px) {
+    .IDX-page-listing .IDX-description-container {
+      margin-right: 20px;
+    }
+  
+    .IDX-page-listing #IDX-detailsMediaContaner--custom {
+      width: 52%;
+    }
+  
+    .IDX-page-listing #IDX-detailsMainInfo {
+      margin: 0 20px 10px 40px;
+    }
+  
+    .IDX-page-listing #IDX-details-row-content {
+      margin: 0 auto 40px auto;
+    }
+  
+    .IDX-page-listing #IDX-fieldsWrapper {
+      padding: 20px 20px 0 0;
+    }
+  }
+  @media (min-width: 1279px) {
+    .IDX-page-listing #IDX-detailsMediaContaner--custom {
+      width: 62%;
+    }
+  }
+  @media (min-width: 1359px) {
+    .IDX-page-listing #IDX-detailsMediaContaner--custom {
+      width: 42%;
+    }
+  
+    .IDX-page-listing #IDX-detailsMainInfo {
+      margin: 0 20px 10px 40px;
+    }
+  
+    .IDX-page-listing #IDX-details-row-content {
+      margin: 0 auto 40px auto;
+    }
+  }
+  @media (min-width: 1599px) {
+    .IDX-page-listing #IDX-detailsMediaContaner--custom {
+      width: 52%;
+    }
+  }
+  @media (min-width: 1899px) {
+    .IDX-page-listing #IDX-detailsMediaContaner--custom {
+      width: 70%;
+    }
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .IDX-page-listing #IDX-detailsMediaContaner--custom {
+      width: 100%;
+    }
+  
+    .IDX-page-listing .detailsWrapper--left {
+      width: 70%;
+    }
+  
+    .IDX-page-listing .detailsWrapper--right {
+      width: 30%;
+    }
+  
+    .IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer {
+      width: 49%;
+    }
+  
+    .IDX-page-listing #IDX-detailsMainInfo {
+      margin-left: 0;
+      padding-bottom: 30px;
     }
   }
   /* END OF PROPERTY PAGE */
