@@ -976,6 +976,14 @@ body, h1, h2, h3, h4, h5, h6 {
     display: none;
   }
   
+  #IDX-detailsMediaContaner--custom {
+    width: 70%;
+  }
+  
+  .IDX-page-listing #IDX-detailsMedia {
+    width: 100%;
+  }
+  
   @media (max-width: 748px) {
     .disclaimer-container {
       padding: 0 10px;
@@ -1006,7 +1014,6 @@ body, h1, h2, h3, h4, h5, h6 {
     }
   
     #IDX-detailsMediaContaner--custom {
-      max-width: 586px;
       width: 100%;
     }
   
@@ -1025,11 +1032,9 @@ body, h1, h2, h3, h4, h5, h6 {
       order: 2;
       flex-grow: 1;
     }
-    .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionNew {
-      width: 36.5%;
-    }
-    .IDX-page-listing #IDX-detailsTopActions #IDX-saveProperty {
-      width: 35%;
+    .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionNew,
+  .IDX-page-listing #IDX-detailsTopActions #IDX-saveActionSave {
+      width: 126px;
     }
     .IDX-page-listing #IDX-primaryPhoto {
       height: unset;
