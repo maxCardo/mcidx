@@ -216,15 +216,74 @@ body {
     .footer {
       height: 400px; } } }
 
-.about__grid {
+.approach__grid {
   width: 100%;
-  height: 500px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px; }
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px; }
+
+.homeValuation__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px; }
+
+.homeValuation__box {
+  align-content: center;
+  align-self: center; }
+  .homeValuation__box h2,
+  .homeValuation__box p {
+    margin-bottom: 20px; }
+  .homeValuation__box a {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 25px; }
+
+.blog {
+  width: 100vw;
+  padding: 50px 0; }
+  .blog__heading {
+    text-align: center;
+    margin-bottom: 30px; }
+  .blog__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 30px; }
+  .blog__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: green; }
+    .blog__box--top {
+      padding: 20px; }
+    .blog__box--bottom {
+      display: flex;
+      font-size: 12px;
+      padding: 5px;
+      justify-content: space-between; }
+    .blog__box-1 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2; }
+    .blog__box-2 {
+      grid-column: 2 / 4;
+      grid-row: 1 / 2; }
+    .blog__box-3 {
+      grid-column: 4 / -1;
+      grid-row: 1 / 3; }
+    .blog__box-4 {
+      grid-column: 1 / 3; }
 
 .listings {
   padding: 50px 0;
-  width: 100vw; }
+  width: 100vw;
+  background-color: rgba(236, 235, 235, 0.5); }
   .listings__flex {
     display: flex;
     max-width: 100%;
@@ -283,16 +342,65 @@ body {
         height: 100%;
         width: 100%; }
 
-.about {
+.approach {
+  width: 100vw;
+  padding: 50px 0;
+  background-color: rgba(236, 235, 235, 0.5); }
+  .approach__box {
+    text-align: center;
+    position: relative;
+    height: 400px;
+    transition: all .2s ease-in-out;
+    font-weight: bold; }
+    .approach__box--back {
+      height: 100%;
+      transition: all .8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 3px;
+      overflow: hidden;
+      padding: 50px;
+      transform: rotateY(180deg); }
+      .approach__box--back h2 {
+        margin-bottom: 20px; }
+    .approach__box img {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .approach__box:hover img {
+      filter: blur(3px); }
+    .approach__box:hover .approach__box--back {
+      transform: translateY(0); }
+
+.strongLeadership {
   width: 100vw;
   background-color: rgba(236, 235, 235, 0.5); }
-  .about__box,
-  .about img {
+  .strongLeadership__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px; }
+  .strongLeadership__box {
     width: 100%;
-    height: 100%; }
-  .about__box {
-    text-align: center;
-    padding: 50px; }
+    text-align: center; }
+    .strongLeadership__box img {
+      width: 100%;
+      margin-bottom: 30px; }
+
+.testimonials {
+  padding: 50px 0; }
+  .testimonials__box {
+    padding: 20px;
+    height: fit-content;
+    transition: all .5s ease-out; }
+    .testimonials__box:hover {
+      border: 1px solid black;
+      box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75); }
 
 /* map */
 #mapDiv {
@@ -396,19 +504,23 @@ body {
     background-color: white;
     color: black; }
 
-.about {
-  max-height: 500px; }
-  .about__heading, .about__paragraph {
+.approach__heading, .approach__paragraph {
+  text-align: center;
+  margin-bottom: 30px; }
+
+.strongLeadership {
+  padding: 50px 0; }
+  .strongLeadership__heading {
     text-align: center;
     margin-bottom: 30px; }
-  .about__link {
-    color: black;
-    border: 1px solid black;
-    padding: 10px;
-    transition: all .5s ease-in-out; }
-    .about__link:hover {
-      color: white;
-      background-color: black; }
+
+.testimonials__heading {
+  text-align: center;
+  margin-bottom: 30px; }
+
+.testimonials__box p:first-of-type {
+  font-style: italic;
+  color: grey; }
 
 .menu p {
   font-size: 14px;

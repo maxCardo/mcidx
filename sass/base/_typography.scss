@@ -28,28 +28,41 @@
     }
 }
 
-// SECTION ABOUT 
+// SECTION APPROACH 
 
-.about {
-    max-height: 500px;
+.approach {
+
 
     &__heading,
     &__paragraph {
         text-align: center;
         margin-bottom: 30px;
     }
+}
 
+// SECTION STRONG LEADERSHIP
 
-    &__link {
-        color: black;
-        border: 1px solid black;
-        padding: 10px;
-        transition: all .5s ease-in-out;
+.strongLeadership {
+    padding: 50px 0;
 
+    &__heading {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
 
-        &:hover {
-            color: white;
-            background-color: black;
+// SECTION TESTIMONIALS 
+
+.testimonials {
+    &__heading {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__box {
+        p:first-of-type {
+            font-style: italic;
+            color: grey;
         }
     }
 }

@@ -1,289 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
-    <!-- bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
-    <!-- animate on scroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- font -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Raleway"
-    />
-    <!-- map -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
-      integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-      crossorigin=""
-    />
-    <script
-      src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
-      integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
-      crossorigin=""
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
-    <!-- jquery -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"
-    ></script>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <!-- animate on scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+  <!-- map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+    integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+    crossorigin=""></script>
 
-    <!-- hamburger -->
-    <link
-      href="BurgerRotate/dist/styles.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!-- font -->
-    <link rel="stylesheet" href="fonts/css/all.css" />
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
 
-    <!-- style -->
-    <link rel="stylesheet" href="/assets/css/style.css" />
+  <!-- hamburger -->
+  <link href="BurgerRotate/dist/styles.css" rel="stylesheet" type="text/css" />
+  <!-- font -->
+  <link rel="stylesheet" href="fonts/css/all.css" />
 
-    <title>Max Cardo Ltd</title>
-  </head>
+  <!-- style -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
 
-  <body class="body" id="body">
-    <!-- sidepanel -->
-    <div class="menu">
-      <ul class="menu__links">
+  <title>Max Cardo Ltd</title>
+</head>
+
+<body class="body" id="body">
+  <!-- sidepanel -->
+  <div class="menu">
+    <ul class="menu__links">
+      <li>
+        <a href="#input" class="menu__link"><i class="fas fa-search"></i> Search</a>
+      </li>
+      <li>
+        <a href="#mapDiv" class="menu__link"><i class="fas fa-map-marker-alt"></i> Map Search</a>
+      </li>
+      <li>
+        <a href="#" class="menu__link"><i class="fas fa-wrench"></i> My Portal</a>
+      </li>
+      <li>
+        <a href="mailto:someone@something.com?subject=your title&body=TThe message" class="menu__link"><i
+            class="fas fa-envelope"></i> Contact Us</a>
+      </li>
+
+      <li>
+        <a href="tel:5554280940" class="menu__link"><i class="fas fa-phone"></i>Call Us</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- hamburger menu -->
+  <div class="menu__toggler"><span></span></div>
+
+  <!-- header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__logo">
+        <a href="#">
+          <h3 class="logo">Max Cardo <span>Ltd</span></h3>
+        </a>
+      </div>
+      <ul class="header__links">
         <li>
-          <a href="#input" class="menu__link"
-            ><i class="fas fa-search"></i> Search</a
-          >
+          <a href="#input" class="header__link link"><i class="fas fa-search"></i> Search
+            <div></div></a>
         </li>
         <li>
-          <a href="#mapDiv" class="menu__link"
-            ><i class="fas fa-map-marker-alt"></i> Map Search</a
-          >
+          <a href="#mapDiv" class="header__link link"><i class="fas fa-map-marker-alt"></i> Map Search
+            <div></div></a>
         </li>
         <li>
-          <a href="#" class="menu__link"
-            ><i class="fas fa-wrench"></i> My Portal</a
-          >
+          <a href="#" class="header__link link"><i class="fas fa-wrench"></i> My Portal
+            <div></div></a>
         </li>
         <li>
-          <a
-            href="mailto:someone@something.com?subject=your title&body=TThe message"
-            class="menu__link"
-            ><i class="fas fa-envelope"></i> Contact Us</a
-          >
+          <a href="mailto:someone@something.com?subject=your title&body=TThe message" class=" header__link link"><i
+              class="fas fa-envelope"></i> Contact Us
+            <div></div></a>
         </li>
 
         <li>
-          <a href="tel:5554280940" class="menu__link"
-            ><i class="fas fa-phone"></i>Call Us</a
-          >
+          <a href="tel:5554280940" class="header__link link"><i class="fas fa-phone"></i> 555-428-0940
+            <div></div></a>
         </li>
       </ul>
     </div>
+  </header>
 
-    <!-- hamburger menu -->
-    <div class="menu__toggler"><span></span></div>
+  <!-- header down -->
+  <div class="header__down">
+    <div class="container">
+      <ul>
+        <li><a href="#">Apply Here</a></li>
+        <li><a href="#">Residents</a></li>
+      </ul>
+    </div>
+  </div>
 
-    <!-- header -->
-    <header class="header" id="header">
-      <div class="container">
-        <div class="header__logo">
-          <a href="#">
-            <h3 class="logo">Max Cardo <span>Ltd</span></h3>
-          </a>
+  <!-- hero -->
+  <section class="hero" id="input">
+    <div class="container">
+      <form action="index.html">
+        <h1 class="hero__heading">Street smart and market wise</h1>
+        <p class="hero__paragraph">Start your search today</p>
+        <div class="wrap">
+          <button><i class="fas fa-search"></i></button>
+          <input type="search" class="hero__input" placeholder="Enter an Address, Neighborhood, County, Zip or Agent" />
         </div>
-        <ul class="header__links">
-          <li>
-            <a href="#input" class="header__link link"
-              ><i class="fas fa-search"></i> Search
-              <div></div
-            ></a>
-          </li>
-          <li>
-            <a href="#mapDiv" class="header__link link"
-              ><i class="fas fa-map-marker-alt"></i> Map Search
-              <div></div
-            ></a>
-          </li>
-          <li>
-            <a href="#" class="header__link link"
-              ><i class="fas fa-wrench"></i> My Portal
-              <div></div
-            ></a>
-          </li>
-          <li>
-            <a
-              href="mailto:someone@something.com?subject=your title&body=TThe message"
-              class=" header__link link"
-              ><i class="fas fa-envelope"></i> Contact Us
-              <div></div
-            ></a>
-          </li>
+      </form>
+      <a href="#" class="hero__link">Advanced Search</a>
+    </div>
+  </section>
 
-          <li>
-            <a href="tel:5554280940" class="header__link link"
-              ><i class="fas fa-phone"></i> 555-428-0940
-              <div></div
-            ></a>
-          </li>
-        </ul>
-      </div>
-    </header>
+  <!-- approach -->
+  <section id="approach" class="approach" data-aos="fade-right">
+    <div class="container">
+      <h2 class="approach__heading">Approach</h2>
+      <p class="approach__paragraph">We don’t just take your order and serve you a web design or mobile app. Lounge
+        Lizard’s website designers, website developers and mobile app developers take the time to get to know you and
+        your
+        market to create an all-encompassing digital marketing presence. This is how we have become one of the Best
+        Website Design Companies in the World.
+      </p>
+      <p class="approach__paragraph">Our New York Digital Marketing Agency is focused on delivering results for our
+        clients. Whatever marketing goals you have – Brand Exposure, Lead Generation, Website Traffic – our team can
+        help
+        you reach your target audience and succeed. Lounge Lizard’s Digital Marketing Team specializes in Search Engine
+        Optimization, Social Media, Pay-per-click, Influencer Marketing, and more!
+      </p>
+      <div class="approach__grid">
 
-    <!-- header down -->
-    <div class="header__down">
-      <div class="container">
-        <ul>
-          <li><a href="#">Apply Here</a></li>
-          <li><a href="#">Residents</a></li>
-        </ul>
+        <div class="approach__box">
+          <img src="/images/1.jpg" alt="">
+
+          <div class="approach__box--back">
+            <h2>Analytics</h2>
+            <p>Lounge Lizard brandtenders and digital marketing mixologists have all the ingredients to create
+              intoxicating Websites and digital marketing programs that create customer addiction and insatiable
+              cravings.</p>
+          </div>
+        </div>
+        <div class="approach__box">
+          <img src="/images/1.jpg" alt="">
+
+          <div class="approach__box--back">
+            <h2>Creativity</h2>
+            <p>Our designers juices are always overflowing. Our creative mixologists stir up innovation with creative
+              artistry, vision, flair and functionality that reflects your Web and Mobile identity and brand..</p>
+          </div>
+
+        </div>
+        <div class="approach__box">
+          <img src="/images/1.jpg" alt="">
+
+          <div class="approach__box--back">
+            <h2>Innovation</h2>
+            <p>Websites and mobile app technologies are constantly evolving. Our techies are constantly researching and
+              exploring new and innovative ways to develop corporate websites, build mobile apps and shout them out to
+              your target market.</p>
+          </div>
+
+        </div>
       </div>
     </div>
 
-    <!-- hero -->
-    <section class="hero" id="input">
-      <div class="container">
-        <form action="index.html">
-          <h1 class="hero__heading">Street smart and market wise</h1>
-          <p class="hero__paragraph">Start your search today</p>
-          <div class="wrap">
-            <button><i class="fas fa-search"></i></button>
-            <input
-              type="search"
-              class="hero__input"
-              placeholder="Enter an Address, Neighborhood, County, Zip or Agent"
-            />
-          </div>
-        </form>
-        <a href="#" class="hero__link">Advanced Search</a>
-      </div>
-    </section>
 
-    <!-- about -->
-    <section id="about" class="about" data-aos="fade-up">
-      <div class="about__grid">
-        <div class="about__box">
-          <h3 class="about__heading">Meet Adam Poznanski</h3>
-          <p class="about__paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
-            necessitatibus, ex dignissimos animi excepturi esse nostrum sequi
-            natus ducimus repellendus velit possimus assumenda nemo quia
-            distinctio rerum officiis unde iste.
+  </section>
+
+  <!-- home valuation -->
+
+  <section data-aos="fade-left" class="homeValuation">
+    <div class="container">
+      <div class="homeValuation__grid">
+        <div class="homeValuation__box">
+          <h2>Home Valuation</h2>
+          <p>Do you know what your home is really worth? Just fill out our form and we’ll gladly provide a comprehensive
+            market overview report so you can decide to sell at a price thats right for both you and your market.</p>
+          <a href="#">FREE HOME VALUATION</a>
+        </div>
+        <div class="homeValuation__box">
+          <img src="/images/1.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- strong leadership -->
+
+  <section data-aos="fade-right" class="strongLeadership">
+    <h2 class="strongLeadership__heading">Strong Leadership</h2>
+    <div class="container">
+      <div class="strongLeadership__grid">
+        <div class="strongLeadership__box">
+          <img src="/images/1.jpg" alt="">
+          <p>Claire Buchner, Esq</p>
+          <p>COO | General Counsel | Principal Broker DC | MD | VA</p>
+          <p> 301.674.6927claire@onestreet.one</p>
+        </div>
+        <div class="strongLeadership__box">
+          <img src="/images/1.jpg" alt="">
+          <p>Claire Buchner, Esq</p>
+          <p>COO | General Counsel | Principal Broker DC | MD | VA</p>
+          <p> 301.674.6927claire@onestreet.one</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+
+  <section data-aos='fade-left' class="testimonials">
+    <h2 class="testimonials__heading">Testimonials</h2>
+
+    <div class="container">
+      <div class="testimonials__grid">
+        <div class="testimonials__box">
+          <p> "David is a committed, intelligent professional who serves his customers well."</p>
+          <p>— MAUREEN P.</p>
+        </div>
+        <div class="testimonials__box">
+          <p>"David was in our corner at all times in both finding us our new home and selling our old one. He was
+            always available and quickly responsive to our questions or concerns. I heartily recommend him to anyone who
+            is either buying or selling a home. This guy is good!"</p>
+          <p>— JON W.</p>
+        </div>
+        <div class="testimonials__box">
+          <p>"David is a true professional, with great experience in the business."
           </p>
-          <a href="#" class="about__link">Learn More</a>
-        </div>
-        <img src="/images/bg.jpg" alt="" />
-      </div>
-    </section>
-
-    <!-- listings -->
-    <section class="listings" data-aos="fade-right">
-      <div class="container">
-        <h2>Listings</h2>
-        <div class="listings__flex">
-          <div class="listings__box">
-            <a href="#">Apartments</a>
-          </div>
-          <div class="listings__box">
-            <a href="#">Luxury Homes</a>
-          </div>
+          <p> — MARK D.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- map -->
-    <section id="mapDiv" data-aos="fade-right"></section>
-
-    <!-- footer -->
-    <footer class="footer">
-      <div class="bg-video">
-        <video playsinline autoplay loop muted class="bg-video__content">
-          <source src="/images/video.mp4" type="video/mp4" />
-        </video>
+  <!-- listings -->
+  <section data-aos="fade-right" class="listings" data-aos="fade-right">
+    <div class="container">
+      <h2>Listings</h2>
+      <div class="listings__flex">
+        <div class="listings__box">
+          <a href="#">Apartments</a>
+        </div>
+        <div class="listings__box">
+          <a href="#">Luxury Homes</a>
+        </div>
       </div>
-      <div class="container">
-        <div class="footer__flex">
-          <div class="footer__box">
-            <h3>Subscribe</h3>
-            <form action="#">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="E-mail address"
-              />
-              <button type="submit" class="btn__block">Subscribe</button>
-            </form>
+    </div>
+  </section>
+
+
+  <!-- blog -->
+
+  <div data-aos="fade-left" class="blog">
+    <h2 class="blog__heading">Blog</h2>
+    <div class="container">
+      <div class="blog__grid">
+        <div class="blog__box blog__box-1">
+          <div class="blog__box--top">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa est dolores corrupti explicabo
+              exercitationem veritatis, nihil a fugit, assumenda, eum consectetur architecto maxime praesentium ad
+              ducimus
+              nulla neque cum cumque?</p>
           </div>
 
-          <div class="footer__box">
-            <h3>Where to find us</h3>
-            <ul>
-              <li>
-                <i class="fas fa-map-marker-alt"></i>
-                <span>6101 Penn Ave,Pittsburgh,PA</span>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__box" id="contact">
-            <h3>Contact Us</h3>
-            <ul>
-              <li>
-                <a
-                  href="mailto:someone@something.com?subject=your title&body=The message"
-                >
-                  <i class="fas fa-envelope"></i>
-                  <span>dejnns55@gmail.com</span></a
-                >
-              </li>
-              <li>
-                <a href="tel:555-428-0940"
-                  ><i class="fas fa-phone"></i> 555-428-0940</a
-                >
-              </li>
-            </ul>
+          <div class="blog__box--bottom">
+            <p>February 15, 2020</p> <a href="#">Read more</a>
           </div>
         </div>
-
-        <div class="footer__line"></div>
-
-        <p class="footer__copyright">
-          &copy; Copyright 2020 by Danilo Dukic. All rights reserved
-        </p>
+        <div class="blog__box blog__box-2">
+          <div class="blog__box--top">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa est dolores corrupti explicabo
+              exercitationem veritatis, nihil a fugit, assumenda, eum consectetur architecto maxime praesentium ad
+              ducimus
+              nulla neque cum cumque?</p>
+          </div>
+          <div class="blog__box--bottom">
+            <p>February 15, 2020</p> <a href="#">Read more</a>
+          </div>
+        </div>
+        <div class="blog__box blog__box-3">
+          <div class="blog__box--top">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa est dolores corrupti explicabo
+              exercitationem veritatis, nihil a fugit, assumenda, eum consectetur architecto maxime praesentium ad
+              ducimus
+              nulla neque cum cumque?</p>
+          </div>
+          <div class="blog__box--bottom">
+            <p>February 15, 2020</p> <a href="#">Read more</a>
+          </div>
+        </div>
+        <div class="blog__box blog__box-4">
+          <div class="blog__box--top">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa est dolores corrupti explicabo
+              exercitationem veritatis, nihil a fugit, assumenda, eum consectetur architecto maxime praesentium ad
+              ducimus
+              nulla neque cum cumque?</p>
+          </div>
+          <div class="blog__box--bottom">
+            <p>February 15, 2020</p> <a href="#">Read more</a>
+          </div>
+        </div>
+        <div class="blog__box blog__box-5">
+          <div class="blog__box--top">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa est dolores corrupti explicabo
+              exercitationem veritatis, nihil a fugit, assumenda, eum consectetur architecto maxime praesentium ad
+              ducimus
+              nulla neque cum cumque?</p>
+          </div>
+          <div class="blog__box--bottom">
+            <p>February 15, 2020</p> <a href="#">Read more</a>
+          </div>
+        </div>
       </div>
-    </footer>
+    </div>
+  </div>
+  <!-- map -->
+  <section id="mapDiv" data-aos="fade-right"></section>
 
-    <script>
-      // position we will use later
-      var lat = 40.46115;
-      var lon = -79.92341;
-      // initialize map
-      map = L.map('mapDiv').setView([lat, lon], 13);
-      // set map tiles source
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution:
-          'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-        maxZoom: 18
-      }).addTo(map);
-      // add marker to the map
-      marker = L.marker([lat, lon]).addTo(map);
-      // add popup to the marker
-      marker
-        .bindPopup('<b>Max Cardo Ltd</b><br />6101 Penn Ave<br />Pittsburgh')
-        .openPopup();
-    </script>
+  <!-- footer -->
+  <footer class="footer" data-aos="fade-left">
+    <div class="bg-video">
+      <video playsinline autoplay loop muted class="bg-video__content">
+        <source src="/images/video.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="container">
+      <div class="footer__flex">
+        <div class="footer__box">
+          <h3>Subscribe</h3>
+          <form action="#">
+            <input type="email" name="email" id="email" placeholder="E-mail address" />
+            <button type="submit" class="btn__block">Subscribe</button>
+          </form>
+        </div>
 
-    <script>
-      AOS.init();
-    </script>
-    <script src="main.js"></script>
-  </body>
+        <div class="footer__box">
+          <h3>Where to find us</h3>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>6101 Penn Ave,Pittsburgh,PA</span>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__box" id="contact">
+          <h3>Contact Us</h3>
+          <ul>
+            <li>
+              <a href="mailto:someone@something.com?subject=your title&body=The message">
+                <i class="fas fa-envelope"></i>
+                <span>dejnns55@gmail.com</span></a>
+            </li>
+            <li>
+              <a href="tel:555-428-0940"><i class="fas fa-phone"></i> 555-428-0940</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__line"></div>
+
+      <p class="footer__copyright">
+        &copy; Copyright 2020 by Danilo Dukic. All rights reserved
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // position we will use later
+    var lat = 40.46115;
+    var lon = -79.92341;
+    // initialize map
+    map = L.map('mapDiv').setView([lat, lon], 13);
+    // set map tiles source
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      maxZoom: 18
+    }).addTo(map);
+    // add marker to the map
+    marker = L.marker([lat, lon]).addTo(map);
+    // add popup to the marker
+    marker
+      .bindPopup('<b>Max Cardo Ltd</b><br />6101 Penn Ave<br />Pittsburgh')
+      .openPopup();
+  </script>
+
+  <script>
+    AOS.init();
+  </script>
+  <script src="main.js"></script>
+</body>
+
 </html>
