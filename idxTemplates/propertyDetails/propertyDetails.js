@@ -567,4 +567,18 @@
             }
         });
     });
+
+    function calcHeight(pixels, element, type, divide) {
+        if (divide == 0) {
+            var nHeight = idx(window).outerHeight() - pixels - 27;
+            idx(element).css(type, nHeight + 'px')
+        } else {
+            var nHeight = idx(window).outerHeight() - pixels - 27;
+            var hSpit = nHeight / divide;
+            idx(element).css(type, hSpit + 'px');
+        }
+    }
+
+    //calcHeight(227, '.dataTables_scrollBody', 'max-height', 0);
+
 })(window, undefined);
