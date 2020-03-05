@@ -382,12 +382,12 @@ body, h1, h2, h3, h4, h5, h6 {
     }
   
     .IDX-wrapper-standard .IDX-custom-map {
-      max-height: 82.5vh;
+      max-height: 85vh;
       top: -5px;
     }
   
     .IDX-wrapper-standard #IDX-resultsContent {
-      height: calc(89vh - 62px);
+      height: calc(90.5vh - 62px);
       top: 35px;
     }
   
@@ -460,7 +460,7 @@ body, h1, h2, h3, h4, h5, h6 {
     height: auto;
     max-width: 100%;
     width: 100%;
-    margin: 10px 0 0 0;
+    margin: 20px 0 15px 0;
   }
   
   .IDX-page-listing.IDX-wrapper-standard #IDX-detailsTopActions #IDX-detailsActionSave,
@@ -1160,7 +1160,7 @@ body, h1, h2, h3, h4, h5, h6 {
       position: sticky;
       height: 560px;
       top: 70px;
-      margin: 0 20px 10px 40px;
+      margin: 0;
     }
   
     .IDX-page-listing #IDX-details-row-content {
@@ -1174,7 +1174,7 @@ body, h1, h2, h3, h4, h5, h6 {
   }
   @media (min-width: 1899px) {
     .IDX-page-listing #IDX-detailsMediaContaner--custom {
-      width: 70%;
+      width: 74%;
     }
   }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -1201,6 +1201,10 @@ body, h1, h2, h3, h4, h5, h6 {
   }
   /* END OF PROPERTY PAGE */
   /*BASIC SEARCH PAGE*/
+  .IDX-category-search .select2-container.select2-container-multi .select2-choices {
+    box-shadow: none;
+    border-radius: 10px;
+  }
   .IDX-category-search #IDX-searchPageWrapper {
     padding: 15%;
   }
@@ -1208,10 +1212,47 @@ body, h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
   }
-  .IDX-category-search .IDX-btn {
-    width: unset;
-    margin: 0 20px;
-    min-width: 85px;
+  .IDX-category-search #IDX-coreSearchFields {
+    border: none;
+  }
+  .IDX-category-search #IDX-coreSearchFields .select2-choice {
+    border-radius: 10px;
+  }
+  .IDX-category-search #IDX-coreSearchFields .select2-container {
+    border-color: transparent;
+    box-shadow: none;
+  }
+  .IDX-category-search #IDX-coreSearchFields #IDX-search-property-content {
+    display: flex;
+    justify-content: center;
+  }
+  .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content {
+    padding: 10px 0 0 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .IDX-category-search #IDX-coreSearchFields #IDX-per-group,
+  .IDX-category-search #IDX-coreSearchFields #IDX-srt-group {
+    margin: 0 0 0 0;
+  }
+  @media (min-width: 642px) {
+    .IDX-category-search #IDX-action-buttons .IDX-btn {
+      max-width: 200px;
+      margin: 10px;
+    }
+    .IDX-category-search #IDX-coreSearchFields .IDX-control-group {
+      margin: 0 0 20px 0;
+      border: none;
+    }
+    .IDX-category-search.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd), .IDX-category-search.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd), .IDX-category-search.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd) {
+      border-right: none;
+      padding-left: 0;
+    }
+    .IDX-category-search.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even), .IDX-category-search.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even), .IDX-category-search.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even) {
+      padding-right: 0;
+    }
   }
   
   /*END OF BASIC SEARCH PAGE*/
@@ -1242,7 +1283,7 @@ body, h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     border-radius: 4px;
     transition: box-shadow 0.3s;
-    box-shadow: inset 0 0 0 var(--s, 1) var(--b, var(--border));
+    box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
   }
   .checkbox input:hover {
     --s: 2px;
