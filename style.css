@@ -598,7 +598,7 @@ body, h1, h2, h3, h4, h5, h6 {
     bottom: 2px;
   }
   
-  .IDX-page-listing #IDX-detailsMainInfo {
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
     border: none;
     position: relative;
@@ -834,7 +834,7 @@ body, h1, h2, h3, h4, h5, h6 {
   }
   .IDX-page-listing .mat-form .mat-form--body .element-wrapper label {
     position: absolute;
-    font-size: 12px;
+    font-size: 14px;
     left: 4px;
   }
   .IDX-page-listing .mat-form .mat-form--body .element-wrapper input, .IDX-page-listing .mat-form .mat-form--body .element-wrapper textarea {
@@ -1156,9 +1156,9 @@ body, h1, h2, h3, h4, h5, h6 {
       padding-bottom: 40px;
     }
   
-    .IDX-page-listing #IDX-detailsMainInfo {
+    .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
       position: sticky;
-      height: 528px;
+      height: 560px;
       top: 70px;
       margin: 0 20px 10px 40px;
     }
@@ -1242,7 +1242,7 @@ body, h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     border-radius: 4px;
     transition: box-shadow 0.3s;
-    box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+    box-shadow: inset 0 0 0 var(--s, 1) var(--b, var(--border));
   }
   .checkbox input:hover {
     --s: 2px;
