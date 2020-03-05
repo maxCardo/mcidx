@@ -103,10 +103,13 @@
         position: absolute;
         font-weight: bold;
         left: 50%;
+        width: 100%;
+        text-align: center;
     }
 
     &__heading {
         top: 50%;
+        width: 90%;
         transform: translate(-50%, -50%);
     }
 

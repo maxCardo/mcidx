@@ -77,13 +77,9 @@ html {
 
 body {
     position: relative;
-    width: 100vw;
 }
 
-.hero,
-.about,
-.listings,
-#mapDiv,
-.footer {
-    overflow-x: hidden;
+.wrapper {
+    max-width: 100%;
+    overflow: hidden;
 }

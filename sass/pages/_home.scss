@@ -182,11 +182,6 @@
     padding: 50px 0;
     background-color: rgba(236, 235, 235, 0.5);
 
-    &__grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 30px;
-    }
 
     &__box {
         width: 100%;
