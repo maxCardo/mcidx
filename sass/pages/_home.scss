@@ -87,35 +87,56 @@
         text-align: center;
         position: relative;
         height: 400px;
-        transition: all .2s ease-in-out;
+        transition: all .4s ease-in-out;
         font-weight: bold;
-
-        &--back {
-            height: 100%;
-            transition: all .8s ease;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            border-radius: 3px;
-            overflow: hidden;
-            padding: 50px;
-            transform: rotateY(180deg);
-
-            h2 {
-                margin-bottom: 20px;
-            }
-
-        }
-
 
         img {
             height: 100%;
             width: 100%;
             position: absolute;
             @include topleft0;
+
+        }
+
+        &--front {
+            position: absolute;
+            @include topleft0;
+        }
+
+        &--back {
+            transition: all .2s ease;
+            background-color: rgba(250, 250, 250, 0.7);
+            position: relative;
+            visibility: hidden;
+            opacity: 1;
+            top: 50px;
+            padding: 50px;
+
+            .top,
+            .bottom {
+                transition: all .4s ease-in;
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+            }
+
+            .top {
+                top: -50px;
+            }
+
+            .bottom {
+                bottom: -50px;
+                padding: 20px;
+            }
+
+        }
+
+        &--front,
+        &--back {
+            @include heightWidth100;
         }
 
         &:hover {
@@ -124,14 +145,33 @@
             }
 
             .approach__box--back {
-                transform: translateY(0);
+
+                .top,
+                .bottom {
+                    visibility: visible;
+                    opacity: 1;
+
+                }
+
+                .top {
+                    top: 50px;
+                }
+
+                .bottom {
+                    bottom: 50px;
+                }
+
+                transform: translateY(-50px);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .approach__box--front h2 {
+                display: none;
             }
         }
 
     }
-
-
-
 
 }
 
