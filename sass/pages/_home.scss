@@ -120,7 +120,7 @@
 
         &:hover {
             img {
-                filter: blur(3px);
+                filter: blur(15px);
             }
 
             .approach__box--back {
@@ -139,6 +139,7 @@
 
 .strongLeadership {
     width: 100vw;
+    padding: 50px 0;
     background-color: rgba(236, 235, 235, 0.5);
 
     &__grid {

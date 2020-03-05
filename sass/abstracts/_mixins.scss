@@ -39,3 +39,9 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+
+@mixin heading {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}

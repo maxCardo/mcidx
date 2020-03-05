@@ -32,8 +32,10 @@
 
 .approach {
 
+    &__heading {
+        @include heading;
+    }
 
-    &__heading,
     &__paragraph {
         text-align: center;
         margin-bottom: 30px;
@@ -43,11 +45,9 @@
 // SECTION STRONG LEADERSHIP
 
 .strongLeadership {
-    padding: 50px 0;
 
     &__heading {
-        text-align: center;
-        margin-bottom: 30px;
+        @include heading;
     }
 }
 
@@ -55,8 +55,7 @@
 
 .testimonials {
     &__heading {
-        text-align: center;
-        margin-bottom: 30px;
+        @include heading;
     }
 
     &__box {
@@ -112,5 +111,12 @@
             color: rgba(255, 255, 255, .8);
         }
 
+    }
+}
+
+// SECTION BLOG
+.blog {
+    &__heading {
+        @include heading;
     }
 }
