@@ -787,7 +787,8 @@ body, h1, h2, h3, h4, h5, h6 {
     background: white;
     box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.16), 0 0 200px 1px rgba(255, 255, 255, 0.15);
     border-radius: 2px;
-    margin-left: 1%;
+    max-width: 375px;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -841,6 +842,8 @@ body, h1, h2, h3, h4, h5, h6 {
   }
   .IDX-page-listing .mat-form .mat-form--body .element-wrapper:nth-child(9) {
     width: 100%;
+    max-height: 65px;
+    /* TODO: HIDE ON LOAD, SHOW IF CUSTOM MASSAGE IS SELECTED */
   }
   .IDX-page-listing .mat-form .mat-form--footer {
     padding: 10px 20px;
@@ -1149,7 +1152,8 @@ body, h1, h2, h3, h4, h5, h6 {
   }
   @media (min-width: 1359px) {
     .IDX-page-listing #IDX-detailsMediaContaner--custom {
-      width: 42%;
+      align-self: center;
+      padding-bottom: 40px;
     }
   
     .IDX-page-listing #IDX-detailsMainInfo {
@@ -1196,6 +1200,21 @@ body, h1, h2, h3, h4, h5, h6 {
     }
   }
   /* END OF PROPERTY PAGE */
+  /*BASIC SEARCH PAGE*/
+  .IDX-category-search #IDX-searchPageWrapper {
+    padding: 15%;
+  }
+  .IDX-category-search #IDX-action-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  .IDX-category-search .IDX-btn {
+    width: unset;
+    margin: 0 20px;
+    min-width: 85px;
+  }
+  
+  /*END OF BASIC SEARCH PAGE*/
   /* CUSTOM CHECKBOX */
   .checkbox {
     --background: #fff;
@@ -1250,6 +1269,9 @@ body, h1, h2, h3, h4, h5, h6 {
     width: 100%;
     display: flex;
     flex-direction: row;
+  }
+  .checkbox.path input {
+    margin: 0 0 0 0;
   }
   .checkbox.path input:checked {
     --s: 2px;
