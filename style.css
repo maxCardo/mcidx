@@ -18,6 +18,45 @@
     background: #0e5477;
   }
   
+  .bg-3 {
+    background: #1976d2;
+  }
+  
+  .bg-2 {
+    background: #3781e7;
+  }
+  
+  .bg-1 {
+    background: #6492ed;
+  }
+  
+  .bg-4 {
+    background: #1468a4;
+  }
+  
+  .bg-5 {
+    background: #0e5477;
+  }
+  
+  .btn {
+    background: #1976d2;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    min-width: 64px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-weight: 500;
+    padding: 6px 16px;
+    font-size: 0.87rem;
+  }
+  .btn:hover {
+    background: #1562ae;
+    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 2px 3px 0px rgba(0, 0, 0, 0.14), 0px 1px 7px 0px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+  }
+  .btn:active {
+    background: #0b3660;
+  }
+  
   /*
   blue - primary #3f51b5
   blue - light #757de8
@@ -598,9 +637,6 @@
   }
   
   .IDX-page-listing #IDX-photoGalleryLink {
-    background-color: #002984;
-    color: white;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
     position: relative;
     top: 0;
     bottom: 0;
@@ -611,9 +647,6 @@
   .IDX-page-listing #IDX-photoGalleryLink:hover,
   .IDX-page-listing #IDX-photoGalleryLink:focus,
   .IDX-page-listing #IDX-photoGalleryLink:active {
-    background-color: #757de8;
-    color: white;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
     top: -2px;
     bottom: 2px;
   }
@@ -1178,13 +1211,22 @@
   
     .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
       position: sticky;
-      height: 560px;
+      height: unset;
       top: 70px;
       margin: 0;
+      padding-bottom: 30px;
     }
   
     .IDX-page-listing #IDX-details-row-content {
       margin: 0 auto 40px auto;
+    }
+  
+    .IDX-page-listing #IDX-detailsHead {
+      justify-content: space-evenly;
+    }
+  
+    .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
+      font-size: 16px;
     }
   }
   @media (min-width: 1599px) {
