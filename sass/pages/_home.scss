@@ -75,13 +75,14 @@
     &__box {
         text-align: center;
         position: relative;
-        height: 400px;
+        height: 500px;
         transition: all 0.4s ease-in-out;
         font-weight: bold;
 
         img {
             height: 100%;
             width: 100%;
+
             position: absolute;
             @include topleft0;
         }
@@ -144,7 +145,7 @@
                 }
 
                 .bottom {
-                    bottom: 50px;
+                    bottom: 150px;
                 }
 
                 transform: translateY(-50px);
@@ -165,6 +166,7 @@
     width: 100vw;
     padding: 50px 0;
     background-color: rgba(236, 235, 235, 0.5);
+    text-align: center;
 
     &__box {
         width: 100%;
@@ -173,6 +175,20 @@
         img {
             width: 100%;
             margin-bottom: 30px;
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        border: 1px solid black;
+        padding: 5px 15px;
+        color: black;
+        transition: all .4s ease-in-out;
+        border-radius: 25px;
+
+        &:hover {
+            color: white;
+            background-color: black;
         }
     }
 }

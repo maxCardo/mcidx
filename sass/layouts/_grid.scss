@@ -8,6 +8,11 @@
     }
 }
 
+.approach {
+    &__grid {
+        column-gap: 50px;
+    }
+}
 
 .homeValuation {
     &__grid {
@@ -19,6 +24,15 @@
     &__box {
         align-content: center;
         align-self: center;
+
+        &:first-of-type {
+            text-align: center;
+            padding: 50px;
+        }
+
+        img {
+            width: 100%;
+        }
 
         h2,
         p {
@@ -83,6 +97,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 30px;
+        margin-bottom: 30px;
     }
 }
 
