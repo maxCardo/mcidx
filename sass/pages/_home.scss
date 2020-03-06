@@ -69,13 +69,13 @@
 
 .approach {
     width: 100vw;
-    padding: 50px 10px;
+    padding: 50px 30px;
     background-color: rgba(236, 235, 235, 0.5);
 
     &__box {
         text-align: center;
         position: relative;
-        height: 600px;
+        height: 550px;
         transition: all 0.4s ease-in-out;
         font-weight: bold;
 
@@ -434,4 +434,27 @@
             }
         }
     }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
