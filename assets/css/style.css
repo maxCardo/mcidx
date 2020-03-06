@@ -324,34 +324,24 @@ body {
   background-size: cover;
   z-index: 498;
   filter: grayscale(50%); }
-  .hero__input {
-    width: 30vw;
-    min-width: 330px;
-    text-align: center;
-    display: inline-block;
-    border-radius: 15px;
-    padding: 5px 0; }
-  .hero .container form .wrap {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    align-items: center;
-    max-width: 570px;
+  .hero .form-control {
     position: absolute;
-    top: 75%;
+    min-width: 300px;
+    max-width: 570px;
+    top: 77%;
     left: 50%;
-    transform: translate(-50%, -75%);
-    font-size: 14px; }
-    .hero .container form .wrap button {
-      background-color: transparent;
-      display: inline-block; }
-      .hero .container form .wrap button i {
-        position: relative;
-        margin-right: -20px;
-        z-index: 5000000;
-        height: 100%;
-        width: 100%; }
+    width: 80%;
+    transform: translate(-50%, -77%);
+    z-index: 99999999999999999999999;
+    display: Flex;
+    border-radius: 25px;
+    flex-direction: row-reverse; }
+    .hero .form-control input {
+      width: 100%;
+      margin-left: 15px;
+      height: 100%; }
+    .hero .form-control button {
+      background-color: transparent; }
 
 .approach {
   width: 100vw;
