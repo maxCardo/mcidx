@@ -82,4 +82,10 @@ body {
 .wrapper {
     max-width: 100%;
     overflow: hidden;
+
+    &:target {
+        .bgDark {
+            top: -500px;
+        }
+    }
 }
