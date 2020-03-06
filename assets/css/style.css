@@ -356,12 +356,12 @@ body {
 
 .approach {
   width: 100vw;
-  padding: 50px 0;
+  padding: 50px 10px;
   background-color: rgba(236, 235, 235, 0.5); }
   .approach__box {
     text-align: center;
     position: relative;
-    height: 500px;
+    height: 600px;
     transition: all 0.4s ease-in-out;
     font-weight: bold; }
     .approach__box img {
