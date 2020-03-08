@@ -283,6 +283,10 @@
     margin: 15px 0 0 0;
   }
   
+  .IDX-wrapper-standard .IDX-box-shadow--bottom {
+    box-shadow: unset;
+  }
+  
   .IDX-wrapper-standard .IDX-results-title--count {
     line-height: 1.25em;
     font-size: 18px;
@@ -1021,6 +1025,13 @@
     width: 100%;
     max-height: 65px;
     /* TODO: HIDE ON LOAD, SHOW IF CUSTOM MASSAGE IS SELECTED */
+  }
+  .IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer {
+    height: 0px;
+    overflow: hidden;
+  }
+  .IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer.open {
+    height: auto;
   }
   .IDX-page-listing .mat-form .contact-btn--send {
     margin: 0 15px 15px;
