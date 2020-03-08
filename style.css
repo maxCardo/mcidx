@@ -1401,6 +1401,7 @@
   .IDX-category-search .select2-container.select2-container-multi .select2-choices {
     box-shadow: none;
     border-radius: 10px;
+    max-height: 38px;
   }
   .IDX-category-search #IDX-searchPageWrapper {
     padding: 52px 0 0 0;
@@ -1412,6 +1413,7 @@
   }
   .IDX-category-search #IDX-coreSearchFields {
     border: none;
+    /* ADVANCED SEARCH PAGE */
   }
   .IDX-category-search #IDX-coreSearchFields .select2-choice {
     border-radius: 10px;
@@ -1458,6 +1460,11 @@
   .IDX-category-search #IDX-coreSearchFields #IDX-add-group {
     width: 20%;
   }
+  .IDX-category-search #IDX-coreSearchFields .advancedSearchContainer #IDX-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
   @media (min-width: 642px) {
     .IDX-category-search #IDX-action-buttons .IDX-btn {
       max-width: 200px;
@@ -1491,7 +1498,7 @@
   }
   .IDX-category-search #IDX-searchForm {
     width: 76%;
-    margin: 70px auto;
+    margin: 70px auto 40px auto;
   }
   .IDX-category-search #IDX-navbar {
     display: flex;
