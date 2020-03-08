@@ -1394,6 +1394,9 @@
   }
   /* END OF PROPERTY PAGE */
   /*BASIC SEARCH PAGE*/
+  .IDX-category-search {
+    /* ADVANCED SEARCH PAGE */
+  }
   .IDX-category-search#IDX-main {
     overflow: hidden;
     height: calc(100vh - 30px);
@@ -1413,7 +1416,6 @@
   }
   .IDX-category-search #IDX-coreSearchFields {
     border: none;
-    /* ADVANCED SEARCH PAGE */
   }
   .IDX-category-search #IDX-coreSearchFields .select2-choice {
     border-radius: 10px;
@@ -1460,10 +1462,19 @@
   .IDX-category-search #IDX-coreSearchFields #IDX-add-group {
     width: 20%;
   }
-  .IDX-category-search #IDX-coreSearchFields .advancedSearchContainer #IDX-navbar {
+  .IDX-category-search .IDX-page-advanced .IDX-searchFormContainer {
+    max-height: 64vh;
+    overflow: auto;
+  }
+  .IDX-category-search .IDX-page-advanced #IDX-navbar {
     position: sticky;
     top: 0;
     z-index: 5;
+  }
+  .IDX-category-search .IDX-page-advanced .select2-choices,
+  .IDX-category-search .IDX-page-advanced .select2-container,
+  .IDX-category-search .IDX-page-advanced .select2-container-multi {
+    box-shadow: unset;
   }
   @media (min-width: 642px) {
     .IDX-category-search #IDX-action-buttons .IDX-btn {
