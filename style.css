@@ -1452,27 +1452,27 @@
     }
   }
   .IDX-category-search .IDX-searchPageContainer {
-    height: calc(100vh - 171px);
+    height: calc(100vh - 98px);
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .IDX-category-search .IDX-searchFormContainer {
-    padding: 0 250px 100px 250px;
-    clip-path: polygon(17% 0%, 100% 0%, 83% 100%, 0% 100%);
+    width: 76vw;
+    padding: 0;
     background: rgba(255, 255, 255, 0.65);
   }
   .IDX-category-search .IDX-searchFormContainer #IDX-action-buttons {
-    width: unset;
+    width: 100% !important;
   }
   .IDX-category-search #IDX-searchForm {
     width: 76%;
-    margin: 0 auto;
+    margin: 70px auto;
   }
   .IDX-category-search #IDX-navbar {
     display: flex;
     justify-content: center;
-    width: 200%;
+    width: 100%;
   }
   
   /*END OF BASIC SEARCH PAGE*/
