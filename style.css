@@ -758,7 +758,7 @@
   }
   
   .IDX-page-listing #IDX-detailsMainInfo {
-    width: 295px;
+    width: 360px;
   }
   
   .IDX-page-listing #IDX-photoGalleryLink {
@@ -1029,9 +1029,10 @@
   .IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer {
     height: 0px;
     overflow: hidden;
+    transition: height 200ms;
   }
   .IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer.open {
-    height: auto;
+    height: 70px;
   }
   .IDX-page-listing .mat-form .contact-btn--send {
     margin: 0 15px 15px;
@@ -1378,7 +1379,7 @@
   }
   @media (min-width: 1899px) {
     .IDX-page-listing #IDX-detailsMediaContaner--custom {
-      width: 74%;
+      width: 70%;
     }
   }
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
