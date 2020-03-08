@@ -40,7 +40,7 @@
   
   /* CUSTOM BTN */
   .btn {
-    background: #1976d2;
+    background: #1976d2 !important;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
     min-width: 64px;
     box-sizing: border-box;
@@ -50,10 +50,11 @@
     font-size: 0.87rem;
     position: relative;
     top: 0;
+    border-color: transparent !important;
     color: #FFF !important;
   }
   .btn:hover {
-    background: #1562ae;
+    background: #1562ae !important;
     box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 5px 0px rgba(0, 0, 0, 0.14), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
     transition: all 0.3s ease;
     text-decoration: none !important;
@@ -64,7 +65,7 @@
   }
   
   .btn-cta {
-    background: #E9D758;
+    background: #E9D758 !important;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
     min-width: 64px;
     box-sizing: border-box;
@@ -74,10 +75,11 @@
     font-size: 0.87rem;
     position: relative;
     top: 0;
+    border-color: transparent !important;
     color: #FFF !important;
   }
   .btn-cta:hover {
-    background: #e4ce34;
+    background: #e4ce34 !important;
     box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 5px 0px rgba(0, 0, 0, 0.14), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
     transition: all 0.3s ease;
     text-decoration: none !important;
@@ -296,7 +298,7 @@
     padding: 10px 5px;
     margin-bottom: 15px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
-    border-bottom: 4px solid #3f51b5;
+    border-bottom: 4px solid #1976d2;
   }
   
   .IDX-wrapper-standard #scroll-top {
@@ -1394,7 +1396,7 @@
   /* END OF PROPERTY PAGE */
   /*BASIC SEARCH PAGE*/
   .IDX-category-search#IDX-main {
-    overflow-x: hidden;
+    overflow: hidden;
     height: calc(100vh - 30px);
   }
   .IDX-category-search .select2-container.select2-container-multi .select2-choices {
