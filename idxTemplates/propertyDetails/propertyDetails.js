@@ -1,8 +1,8 @@
-(function() {
+(function () {
     // bankrate
-    var bankRateSetup = function(){
+    var bankRateSetup = function () {
         if (idx('#IDX-BankRateTool-Dialog').size() || idx('#IDX-bankRate').size()) {
-            Number.prototype.formatMoney = function(c, d, t){
+            Number.prototype.formatMoney = function (c, d, t) {
                 var n = this,
                     _c = isNaN(c = Math.abs(c)) ? 2 : c,
                     _d = d === undefined ? '.' : d,
@@ -12,11 +12,11 @@
                     j = (j = i.length) > 3 ? j % 3 : 0;
                 return s + (j ? i.substr(0, j) + _t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + _t) + (_c ? _d + Math.abs(n - i).toFixed(_c).slice(2) : '');
             };
-            var listingDefaultInfo = JSON.parse(idx('#IDX-mortgageDefaultQueryParameters').text().replace(/\s*/g,''));
+            var listingDefaultInfo = JSON.parse(idx('#IDX-mortgageDefaultQueryParameters').text().replace(/\s*/g, ''));
             // format price field.
-            idx('.IDX-priceField').on('change', function(){
+            idx('.IDX-priceField').on('change', function () {
                 var val = idx(this).val();
-                val = val.replace(/[,|$]/g,'');
+                val = val.replace(/[,|$]/g, '');
                 var floatVal;
                 if (val.match(/.*\..*/)) {
                     floatVal = parseFloat(val);
@@ -36,40 +36,40 @@
             var noResult = '<div id="IDX-mortgageRatesResultInfo">' +
                 '<h3>There are no rates available for the product you selected.</h3>' +
                 '</div>';
-            var template = '<div class="IDX-bankRateRowContent" data-role="content" data-editorial="{{isEditorial}}">'+
-                '<div class="IDX-mortgageRatesLogoInfo">'+
-                '<a class="IDX-mortgageRatesLogo" href="{{cpc}}" target="_blank"><img src="http://www.bankrate.com/system/img/inst/{{logo}}"/></a>'+
+            var template = '<div class="IDX-bankRateRowContent" data-role="content" data-editorial="{{isEditorial}}">' +
+                '<div class="IDX-mortgageRatesLogoInfo">' +
+                '<a class="IDX-mortgageRatesLogo" href="{{cpc}}" target="_blank"><img src="http://www.bankrate.com/system/img/inst/{{logo}}"/></a>' +
                 '<div class="IDX-mortgageRatesBankInfo">' +
-                '<p class="IDX-mortgageRatesAdvertiser">{{advertiser}}</p>'+
-                '<p class="IDX-noMargin"><span class="IDX-mortgageRatesNMLS IDX-mortgageRatesLabel"><small>NMLS # {{nmls}}</small></span></p>'+
-                '<p class="IDX-noMargin"><span class="IDX-mortgageRatesSlic IDX-mortgageRatesLabel"><small>State Lic # {{slicense}}</small></span></p>'+
-                '<h4 class="IDX-noMargin"><span class="IDX-mortgageRatesPhone"><a href="tel://{{phone}}">{{phone}}</a></span></h4>'+
+                '<p class="IDX-mortgageRatesAdvertiser">{{advertiser}}</p>' +
+                '<p class="IDX-noMargin"><span class="IDX-mortgageRatesNMLS IDX-mortgageRatesLabel"><small>NMLS # {{nmls}}</small></span></p>' +
+                '<p class="IDX-noMargin"><span class="IDX-mortgageRatesSlic IDX-mortgageRatesLabel"><small>State Lic # {{slicense}}</small></span></p>' +
+                '<h4 class="IDX-noMargin"><span class="IDX-mortgageRatesPhone"><a href="tel://{{phone}}">{{phone}}</a></span></h4>' +
                 '</div>' +
-                '</div>'+
-                '<div class="IDX-mortgageRatesInfo">'+
-                '<p class="IDX-mortgageRatesAPR"><span class="IDX-mortgageRatesLabel">APR: </span>{{apr}}% </p>'+
-                '<p class="IDX-mortgageRatesRate"><span class="IDX-mortgageRatesLabel">Rate: </span>{{rate}}%</p>'+
-                '<p class="IDX-mortgageRatesPoints"><span class="IDX-mortgageRatesLabel">Points: </span>{{points}}</p>'+
-                '<p class="IDX-mortgageRatesFees" ><span class="IDX-mortgageRatesLabel">Fees: </span>${{fees}}</p>'+
-                '<p class="IDX-mortgageRatesCaps"><span class="IDX-mortgageRatesLabel">Caps: </span>{{firstcap}}/{{addcap}}/{{lifecap}}</p>'+
-                '</div>'+
-                '<div class="IDX-mortgageRatesBottom">'+
-                '<p class="IDX-mortgageRatesEst">${{estpayment}}/mo <small>{{date}}</small></p>'+
-                '<a class="IDX-mortgageRatesGoBtn" rel="nofollow" href="javascript:void(0)" onclick="javascript:window.location=\'{{cpc}}\'">Next</a>'+
-                '</div>'+
+                '</div>' +
+                '<div class="IDX-mortgageRatesInfo">' +
+                '<p class="IDX-mortgageRatesAPR"><span class="IDX-mortgageRatesLabel">APR: </span>{{apr}}% </p>' +
+                '<p class="IDX-mortgageRatesRate"><span class="IDX-mortgageRatesLabel">Rate: </span>{{rate}}%</p>' +
+                '<p class="IDX-mortgageRatesPoints"><span class="IDX-mortgageRatesLabel">Points: </span>{{points}}</p>' +
+                '<p class="IDX-mortgageRatesFees" ><span class="IDX-mortgageRatesLabel">Fees: </span>${{fees}}</p>' +
+                '<p class="IDX-mortgageRatesCaps"><span class="IDX-mortgageRatesLabel">Caps: </span>{{firstcap}}/{{addcap}}/{{lifecap}}</p>' +
+                '</div>' +
+                '<div class="IDX-mortgageRatesBottom">' +
+                '<p class="IDX-mortgageRatesEst">${{estpayment}}/mo <small>{{date}}</small></p>' +
+                '<a class="IDX-mortgageRatesGoBtn" rel="nofollow" href="javascript:void(0)" onclick="javascript:window.location=\'{{cpc}}\'">Next</a>' +
+                '</div>' +
                 '</div><hr/>';
-            var generateMortgages = function() {
+            var generateMortgages = function () {
                 var mortgages = idx.extend({}, listingDefaultInfo);
-                mortgages.downPayment = parseFloat(idx('#IDX-downPayment input').val().replace(/,/g,''));
+                mortgages.downPayment = parseFloat(idx('#IDX-downPayment input').val().replace(/,/g, ''));
                 mortgages.loanAmount = mortgages.price - mortgages.downPayment;
-                mortgages.fico = idx('#IDX-mortgageRatesFico').val().replace(/,/g,'');
+                mortgages.fico = idx('#IDX-mortgageRatesFico').val().replace(/,/g, '');
                 mortgages.products = idx('#IDX-mortgageRatesProductId').val();
                 mortgages.legacyID = idx('#IDX-mortgageRatesProductId option:selected').data('legacyid');
                 mortgages.ltv = (mortgages.loanAmount / mortgages.price) * 100;
                 return mortgages;
             };
             var xhr;
-            var gatherBankRateData = function() {
+            var gatherBankRateData = function () {
                 // clean previous result.
                 idx('#IDX-mortgageShowAllRates').hide();
                 idx('#IDX-bankRateContent').empty();
@@ -80,12 +80,19 @@
                 }
                 xhr = idx.ajax({
                     url: '/idx/api/mortgages/rates',
-                    data: {zip: mortgages.zipcode, loanAmount: mortgages.loanAmount, fico: mortgages.fico, ltv: mortgages.ltv, products: mortgages.products, points: mortgages.points }
+                    data: {
+                        zip: mortgages.zipcode,
+                        loanAmount: mortgages.loanAmount,
+                        fico: mortgages.fico,
+                        ltv: mortgages.ltv,
+                        products: mortgages.products,
+                        points: mortgages.points
+                    }
                 });
                 xhr.done(function (resp) {
-                    if (resp && resp.result && typeof(resp.result[0]) === 'object') {
+                    if (resp && resp.result && typeof (resp.result[0]) === 'object') {
                         var advertiser, temp, regex, field, points, isEditorial;
-                        resp.result.forEach(function(advertiser) {
+                        resp.result.forEach(function (advertiser) {
                             isEditorial = advertiser.ispaid.toLowerCase() === 'false';
                             if (advertiser.svydate) {
                                 advertiser.svydate = new Date(advertiser.svydate).toDateString().replace(/\s\d{4}/, '');
@@ -97,7 +104,7 @@
                             temp = temp.replace(regex, isEditorial);
                             for (field in advertiser) {
                                 if (advertiser.hasOwnProperty(field)) {
-                                    regex = new RegExp('{{'+field+'}}', 'g');
+                                    regex = new RegExp('{{' + field + '}}', 'g');
                                     temp = temp.replace(regex, advertiser[field]);
                                 }
                             }
@@ -118,15 +125,15 @@
                         } else {
                             idx('.IDX-mortgageRatesCaps').hide();
                         }
-                        idx('.IDX-mortgageRatesNMLS').each(function(index, ele){
+                        idx('.IDX-mortgageRatesNMLS').each(function (index, ele) {
                             if (idx(ele).text() == 'NMLS # ')
                                 idx(ele).remove();
                         });
-                        idx('.IDX-mortgageRatesSlic').each(function(index, ele){
+                        idx('.IDX-mortgageRatesSlic').each(function (index, ele) {
                             if (idx(ele).text() == 'State Lic # ')
                                 idx(ele).remove();
                         });
-                        if (idx(window).width() <=480) {
+                        if (idx(window).width() <= 480) {
                             idx('.IDX-mortgageRatesInfo').addClass('IDX-mortgageRatesInfo-small');
                         } else {
                             idx('.IDX-mortgageRatesInfo').removeClass('IDX-mortgageRatesInfo-small');
@@ -151,16 +158,15 @@
                 var mortgages = generateMortgages();
                 if (mortgages.zipcode !== '') {
                     var points;
-                    if ( mortgages.points === 'One') {
+                    if (mortgages.points === 'One') {
                         points = 'ZeroToOne';
-                    } else if ( mortgages.points === 'Two' ) {
+                    } else if (mortgages.points === 'Two') {
                         points = 'OneToTwo';
                     } else {
                         points = mortgages.points;
                     }
-                    window.open('http://www.bankrate.com/funnel/mortgages/mortgage-results.aspx?pid=p:idxb&zip=' + mortgages.zipcode + '&loan=' + mortgages.loanAmount + '&perc=' + mortgages.ltv +'&prods=' + mortgages.legacyID + '&points=' + points);
-                }
-                else{
+                    window.open('http://www.bankrate.com/funnel/mortgages/mortgage-results.aspx?pid=p:idxb&zip=' + mortgages.zipcode + '&loan=' + mortgages.loanAmount + '&perc=' + mortgages.ltv + '&prods=' + mortgages.legacyID + '&points=' + points);
+                } else {
                     window.open('http://www.bankrate.com/funnel/mortgages/?pid=p:idxb&loan=' + mortgages.loanAmount + '&prods=' + mortgages.legacyID + '&points=All');
                 }
             };
@@ -169,11 +175,11 @@
                 gatherBankRateData();
             });
             // show all rate links
-            idx('#IDX-mortgageShowAllRates').click(function(e) {
+            idx('#IDX-mortgageShowAllRates').click(function (e) {
                 e.preventDefault();
                 seeMoreRates();
             });
-            idx('a[href="#IDX-bankRate"]').click(function(e){
+            idx('a[href="#IDX-bankRate"]').click(function (e) {
                 e.preventDefault();
                 var mortgages = generateMortgages();
                 idx('#IDX-loanAmount input').val(mortgages.loanAmount.formatMoney());
@@ -188,9 +194,13 @@
                 idx('#IDX-mortgageRatesContent').show();
             });
             // center dialog
-            idx(window).resize(function() {
+            idx(window).resize(function () {
                 // if (idx(window)) {};
-                idx("#IDX-BankRateTool-Dialog").dialog("option", "position", {at: "center", collision: "fit", my: "center"});
+                idx("#IDX-BankRateTool-Dialog").dialog("option", "position", {
+                    at: "center",
+                    collision: "fit",
+                    my: "center"
+                });
             });
         }
     }
@@ -207,7 +217,7 @@
         idx('.IDX-panel-collapse').collapse('hide');
         idx('.IDX-panel-collapse-toggle').addClass('IDX-collapsed');
     }
-    var openVirtualTourModal = function(e) {
+    var openVirtualTourModal = function (e) {
         e.preventDefault();
         idx(idx(this).attr('href')).dialog('open');
     };
@@ -240,7 +250,7 @@
 
         idx('#IDX-detailsVirtualTour').click(openVirtualTourModal);
 
-        idx('#IDX-saveProperty').click(function(e) {
+        idx('#IDX-saveProperty').click(function (e) {
             e.preventDefault();
             var softLoggedIn = idx('#IDX-registration').attr('data-softLoggedIn');
             var idxID = idx(this).attr('data-idxid');
@@ -252,8 +262,8 @@
 
                 // they are logged in, submit the form
                 idx('#IDX-savePropertyForm').ajaxSubmit({
-                    dataType:'json',
-                    success: function(responseText, statusText, xhr, $form) {
+                    dataType: 'json',
+                    success: function (responseText, statusText, xhr, $form) {
                         var element = idx('#IDX-saveProperty');
                         if (responseText.status === 'success' || responseText.status === 'duplicate') {
                             element.text('Saved!');
@@ -263,7 +273,7 @@
                     }
                 });
             } else {
-                idx('.IDX-saveParams').attr('disabled','disabled');
+                idx('.IDX-saveParams').attr('disabled', 'disabled');
                 idx('.IDX-saveWhat').val('property').removeAttr('disabled');
                 idx('.IDX-idxID').val(idxID).removeAttr('disabled');
                 idx('.IDX-listingID').val(listingID).removeAttr('disabled');
@@ -271,13 +281,13 @@
             }
         });
 
-        idx('.IDX-detailsshowcaseSlides a').click(function(e){
+        idx('.IDX-detailsshowcaseSlides a').click(function (e) {
             e.preventDefault();
 
             changePrimaryImg(idx(this));
         });
         // schedule link
-        idx('#IDX-scheduleShowing').click(function(e) {
+        idx('#IDX-scheduleShowing').click(function (e) {
             e.preventDefault();
             if (idx('#IDX-detailsContactForm:visible').size() && idx('#IDX-scheduleshowingContactForm').size()) {
                 window.location = window.location.href.replace(window.location.hash, '') + '#IDX-detailsContactForm';
@@ -287,7 +297,7 @@
         });
 
         // contact agent
-        idx('#IDX-contactAgent').click(function(e) {
+        idx('#IDX-contactAgent').click(function (e) {
             e.preventDefault();
             if (idx('#IDX-detailsContactForm:visible').size() && idx('#IDX-detailscontactContactForm').size()) {
                 window.location = window.location.href.replace(window.location.hash, '') + '#IDX-detailsContactForm';
@@ -296,7 +306,7 @@
             }
         });
         // request more info
-        idx('#IDX-moreinfo').click(function(e) {
+        idx('#IDX-moreinfo').click(function (e) {
             e.preventDefault();
             if (idx('#IDX-detailsContactForm:visible').size() && idx('#IDX-moreinfoContactForm').size()) {
                 window.location = window.location.href.replace(window.location.hash, '') + '#IDX-detailsContactForm';
@@ -306,16 +316,16 @@
         });
 
         // swipe
-        idx('#IDX-primaryPhoto a').click(function(e){
+        idx('#IDX-primaryPhoto a').click(function (e) {
             e.preventDefault();
         });
         var primaryPhotoElement = document.getElementById('IDX-primaryPhoto');
         var hammer = new idxHammer.Manager(primaryPhotoElement);
         hammer.add(new idxHammer.Swipe({direction: idxHammer.DIRECTION_HORIZONTAL, velocity: 0.5}));
-        hammer.on('swipeleft', function() {
+        hammer.on('swipeleft', function () {
             slideNext();
         });
-        hammer.on('swiperight', function() {
+        hammer.on('swiperight', function () {
             slidePrev();
         });
 
@@ -380,7 +390,7 @@
                 }
 
                 // Replaces the thumbnail src attribute with the data-src attribute.
-                var loadSlideThumbnail = function(index) {
+                var loadSlideThumbnail = function (index) {
                     var image = idx(slides).eq(index).children('img[data-loaded="false"]');
                     if (image.length > 0) {
                         image
@@ -452,7 +462,7 @@
                                 right: newPos.right
                             });
                         // Buffer to allow CSS transition to complete before we recalculate the boundaries.
-                        setTimeout(function() {
+                        setTimeout(function () {
                             indexBoundaries = getIndexBoundaries();
                             lazyLoadImages();
                         }, buffer)
@@ -463,7 +473,7 @@
                 }
 
                 var lazyLoadImages = function () {
-                    for (var i=indexBoundaries.min; i<=Math.ceil(indexBoundaries.max); i++) {
+                    for (var i = indexBoundaries.min; i <= Math.ceil(indexBoundaries.max); i++) {
                         loadSlideThumbnail(i);
                     }
                 }
@@ -499,7 +509,7 @@
                     });
                     // Calc min/max visible indexes, loop through for lazy-loading.
                     var visibleImages = getVisibleImagesRounded();
-                    for (var i=0; i<visibleImages; i++) {
+                    for (var i = 0; i < visibleImages; i++) {
                         loadSlideThumbnail(i);
                     }
                     // Set new index boundaries.
@@ -508,11 +518,11 @@
 
                 // Return the object literal w/ initiators.
                 return {
-                    init: function(el) {
+                    init: function (el) {
                         slideShowElement = el;
                         setup();
                         el.parent()
-                        // Previous/Next button click event handlers.
+                            // Previous/Next button click event handlers.
                             .on('click', prev, function () {
                                 newSlide(el.find('.' + activeSlide).prev().index());
                             })
@@ -534,10 +544,10 @@
                         var photoElement = document.getElementById(primaryPhotoId);
                         var hammer = new idxHammer.Manager(photoElement);
                         hammer.add(new idxHammer.Swipe({direction: idxHammer.DIRECTION_HORIZONTAL, velocity: 0.5}));
-                        hammer.on('swipeleft', function() {
+                        hammer.on('swipeleft', function () {
                             newSlide(el.find('.' + activeSlide).index() + 1);
                         });
-                        hammer.on('swiperight', function() {
+                        hammer.on('swiperight', function () {
                             newSlide(el.find('.' + activeSlide).prev().index());
                         });
                         // Resize handler.
@@ -552,19 +562,32 @@
         idxSlides.slideShow.init(idx('#IDX-detailsShowcaseSlides'));
     });
     // Close pannels on details page
-    idx(document).ready(function() {
-        idx('.IDX-page-listing .IDX-panel-collapse').each(function() {
+    idx(document).ready(function () {
+        idx('.IDX-page-listing .IDX-panel-collapse').each(function () {
             this.classList.remove('IDX-in');
         });
-        idx('.IDX-page-listing .IDX-panel-collapse-toggle').each(function() {
+        idx('.IDX-page-listing .IDX-panel-collapse-toggle').each(function () {
             this.classList.add('IDX-collapsed');
         });
-        idx('.contact-mail').on('click', function(){
+        idx('.contact-mail').on('click', function () {
             if (idx('.detailsWrapper--right').hasClass('open')) {
                 idx('.detailsWrapper--right').removeClass('open');
             } else {
                 idx('.detailsWrapper--right').addClass('open');
             }
+        });
+
+        /*CHECKBOX MSG COMPONENT*/
+        idx(function () {
+            idx("#clickCustomMessage").on('click', function () {
+                var isChecked = idx("#sendCustomMessage").is(":checked");
+                if (isChecked) {
+                    idx('#customMessageContainer').addClass('open');
+                } else {
+                    idx('#customMessageContainer').removeClass('open');
+                }
+            });
+            /*END OF CHECKBOX MSG COMPONENT*/
         });
     });
 
@@ -579,6 +602,7 @@
         }
     }
 
-    //calcHeight(227, '.dataTables_scrollBody', 'max-height', 0);
+
+    calcHeight(165, '.IDX-category-details #IDX-details-row-content', 'min-height', 0);
 
 })(window, undefined);

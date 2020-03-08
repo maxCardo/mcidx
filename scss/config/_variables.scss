@@ -1,0 +1,13 @@
+$base:#1976d2;
+$lighter1: lighten(adjust-hue($base, 5), 10%);
+$lighter2: lighten(adjust-hue($base, 10), 20%);
+$darker1: darken(adjust-hue($base, -5), 10%);
+$darker2: darken(adjust-hue($base, -10), 20%);
+
+$ctlColor: #E9D758;
+
+.bg-3{background:$base;}
+.bg-2{background:$lighter1;}
+.bg-1{background:$lighter2;}
+.bg-4{background:$darker1;}
+.bg-5{background:$darker2;}

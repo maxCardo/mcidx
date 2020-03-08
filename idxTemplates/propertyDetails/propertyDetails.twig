@@ -215,7 +215,7 @@
                             {% if imageData.totalCount > 0 %}
                                 <div id="IDX-detailsGalleryAction">
                                     <a id="IDX-photoGalleryLink" href="{{ photoGalleryLink }}"
-                                       class="IDX-btn IDX-btn-default">
+                                       class="btn btn--full-width">
                                         View Photo Gallery<span
                                                 id="IDX-photoGalleryCount"> ({{ imageData.totalCount }})</span>
                                     </a>
@@ -582,21 +582,21 @@
                             </label>
                         </div>
                         <div class="element-wrapper with--checkbox">
-                            <label class="checkbox path">
-                                <input type="checkbox">
+                            <label class="checkbox path" id="clickCustomMessage">
+                                <input type="checkbox" id="sendCustomMessage">
                                 <svg viewBox="0 0 21 21">
                                     <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
                                 </svg>
                                 &nbsp; Custom Message
                             </label>
                         </div>
-                        <div class="element-wrapper">
-                            <textarea id="message" class="form__field" rows="6"></textarea>
-                            <label for="message" class="form__label">Your Message</label>
+                        <div class="element-wrapper" id="customMessageContainer">
+                            <textarea id="contactCustomMessage" class="form__field" rows="6"></textarea>
+                            <label for="contactCustomMessage" class="form__label">Your Message</label>
                         </div>
                     </div>
-                    <div class="element-wrapper">
-                        <button class="contact-btn--send">Send</button>
+                    <div class="element-wrapper flex-centered">
+                        <button class="contact-btn--send btn-cta">Send</button>
                     </div>
                     <div class="mat-form--footer">
                         <a href="tel:555-555-55-5">
