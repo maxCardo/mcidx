@@ -1506,6 +1506,10 @@ div.flex-grow {
 .IDX-category-map #IDX-coreSearchFields #IDX-add-group {
   width: 20%;
 }
+.IDX-category-search .IDX-category-map #IDX-navbar,
+.IDX-category-map .IDX-category-map #IDX-navbar {
+  margin-bottom: 0px;
+}
 .IDX-category-search.IDX-page-advanced .IDX-searchFormContainer,
 .IDX-category-map.IDX-page-advanced .IDX-searchFormContainer {
   max-height: 64vh;
@@ -1588,9 +1592,11 @@ div.flex-grow {
 /* CUSTOM LOADER */
 .lds-ring {
   display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 10%;
+  height: 10%;
 }
 
 .lds-ring div {
