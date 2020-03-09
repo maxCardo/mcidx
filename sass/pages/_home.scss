@@ -216,6 +216,63 @@
     height: 400px;
 }
 
+// HOME VALUATION
+.homeValuation {
+    &__box {
+        align-content: center;
+        align-self: center;
+
+        &:first-of-type {
+            text-align: center;
+            padding: 50px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h2,
+        p {
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 25px;
+
+        }
+    }
+}
+
+// SECTION BLOG
+
+.blog {
+    width: 100vw;
+    padding: 50px 0;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: green;
+
+        &--top {
+            padding: 20px;
+        }
+
+        &--bottom {
+            display: flex;
+            font-size: 12px;
+            padding: 5px;
+            justify-content: space-between;
+        }
+    }
+}
+
+
 // MENU
 
 .menu {
@@ -450,11 +507,12 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    // background: #888;
+    background-color: black;
     border-radius: 10px;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
+// ::-webkit-scrollbar-thumb:hover {
+//     background: #555;
+// }

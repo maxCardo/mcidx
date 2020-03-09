@@ -2,13 +2,11 @@
 
 .footer {
     padding: 50px;
-
     color: white;
     position: relative;
     width: 100vw;
 
     &__flex {
-
         display: flex;
         @include justifyContentSpaceBetween;
     }
@@ -50,7 +48,6 @@
     }
 
     &__copyright {
-
         text-align: center;
         color: black;
         font-weight: bold;
@@ -92,7 +89,6 @@
 
 @supports (-ms-ime-align:auto) {
     .bg-video>video {
-
         position: absolute;
         min-width: 100%;
         min-height: 100%;

@@ -4,7 +4,6 @@
     width: 100vw;
     padding: 20px 0;
     background-color: transparent;
-
     position: fixed;
     @include topleft0;
     z-index: 500;
@@ -18,7 +17,6 @@
 
     &__logo {
         .logo {
-
             color: black;
             font-size: 30px;
         }
@@ -42,7 +40,6 @@
 
 
         div {
-
             display: inline-block;
             position: absolute;
             background: none repeat scroll 0 0 transparent;

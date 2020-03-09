@@ -140,3 +140,28 @@
         @include heading;
     }
 }
+
+@media only screen and (max-width:992px) {
+    .testimonials {
+        &__box {
+            text-align: center;
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .homeValuation {
+        &__box {
+            p {
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
