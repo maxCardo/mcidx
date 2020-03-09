@@ -1408,12 +1408,19 @@ div.flex-grow {
   margin-bottom: 0px;
 }
 
+.IDX-category-map #IDX-mapHeader-Search {
+  margin-top: 0px;
+}
+
 #IDX-mapLoading {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*BASIC SEARCH PAGE*/
