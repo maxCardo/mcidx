@@ -1417,6 +1417,13 @@ div.flex-grow {
   background: rgba(0, 0, 0, 0.35);
   z-index: 99;
 }
+#IDX-loadingScreen .lds-ring {
+  top: 45%;
+}
+
+#IDX-searchFormContainer {
+  position: relative;
+}
 
 /* END OF LOADING SCREEN*/
 .IDX-category-map #IDX-navbar {
