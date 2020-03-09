@@ -1463,7 +1463,6 @@ div.flex-grow {
 .IDX-category-map #IDX-address {
   box-shadow: none;
   border-radius: 10px;
-  max-height: 38px;
 }
 .IDX-category-search #IDX-searchPageWrapper,
 .IDX-category-map #IDX-searchPageWrapper {
