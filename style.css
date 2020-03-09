@@ -1593,8 +1593,10 @@ div.flex-grow {
 .lds-ring {
   display: inline-block;
   position: absolute;
-  top: 45%;
-  left: 45%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 10%;
   height: 10%;
 }
