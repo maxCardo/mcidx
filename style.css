@@ -680,6 +680,17 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   top: 0;
 }
 
+.IDX-wrapper-standard #IDX-saveProperty,
+.IDX-wrapper-standard #IDX-newSearch,
+.IDX-wrapper-standard #IDX-modifySearch,
+.IDX-wrapper-standard #IDX-detailsHotAction-mortgage,
+.IDX-wrapper-standard #IDX-backToResults,
+.IDX-wrapper-standard .IDX-nextProperty,
+.IDX-wrapper-standard #IDX-detailsHotAction-mortgage {
+  background-color: #e6e6e6;
+  color: #555;
+}
+
 .IDX-page-listing #IDX-detailsHotActions > div > a {
   font-size: 12px;
   padding: 6px;
