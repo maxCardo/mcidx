@@ -665,18 +665,6 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   justify-content: center;
 }
 
-.IDX-page-listing .IDX-topAction a#IDX-saveProperty,
-.IDX-page-listing .IDX-topAction a#IDX-newSearch,
-.IDX-page-listing .IDX-topAction a#IDX-modifySearch,
-.IDX-page-listing .IDX-topAction a#IDX-backToResults,
-.IDX-page-listing #IDX-detailsTopActions #IDX-prevButton a,
-.IDX-page-listing #IDX-detailsTopActions #IDX-nextButton a {
-  background: #3f51b5;
-  color: #fff;
-  position: relative;
-  transition: all 200ms;
-}
-
 .IDX-page-listing .IDX-wrapper-standard #IDX-detailsHotActions {
   display: flex;
   justify-content: space-between;
