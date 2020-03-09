@@ -1405,42 +1405,55 @@ div.flex-grow {
 }
 /* END OF PROPERTY PAGE */
 /*BASIC SEARCH PAGE*/
-.IDX-category-search {
+.IDX-category-search,
+.IDX-category-map {
   /* ADVANCED SEARCH PAGE */
 }
-.IDX-category-search#IDX-main {
+.IDX-category-search#IDX-main,
+.IDX-category-map#IDX-main {
   overflow: hidden;
   height: calc(100vh - 30px);
 }
 .IDX-category-search .select2-container.select2-container-multi .select2-choices,
-.IDX-category-search #IDX-listingID {
+.IDX-category-search #IDX-listingID,
+.IDX-category-search #IDX-address,
+.IDX-category-map .select2-container.select2-container-multi .select2-choices,
+.IDX-category-map #IDX-listingID,
+.IDX-category-map #IDX-address {
   box-shadow: none;
   border-radius: 10px;
   max-height: 38px;
 }
-.IDX-category-search #IDX-searchPageWrapper {
+.IDX-category-search #IDX-searchPageWrapper,
+.IDX-category-map #IDX-searchPageWrapper {
   padding: 52px 0 0 0;
   height: calc(100vh - 37px) !important;
 }
-.IDX-category-search #IDX-action-buttons {
+.IDX-category-search #IDX-action-buttons,
+.IDX-category-map #IDX-action-buttons {
   display: flex;
   justify-content: center;
 }
-.IDX-category-search #IDX-coreSearchFields {
+.IDX-category-search #IDX-coreSearchFields,
+.IDX-category-map #IDX-coreSearchFields {
   border: none;
 }
-.IDX-category-search #IDX-coreSearchFields .select2-choice {
+.IDX-category-search #IDX-coreSearchFields .select2-choice,
+.IDX-category-map #IDX-coreSearchFields .select2-choice {
   border-radius: 10px;
 }
-.IDX-category-search #IDX-coreSearchFields .select2-container {
+.IDX-category-search #IDX-coreSearchFields .select2-container,
+.IDX-category-map #IDX-coreSearchFields .select2-container {
   border-color: transparent;
   box-shadow: none;
 }
-.IDX-category-search #IDX-coreSearchFields #IDX-search-property-content {
+.IDX-category-search #IDX-coreSearchFields #IDX-search-property-content,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-property-content {
   display: flex;
   justify-content: center;
 }
-.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content {
+.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content {
   padding: 10px 0 0 0;
   justify-content: center;
   display: flex;
@@ -1449,86 +1462,124 @@ div.flex-grow {
 }
 .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
 .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
-.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres {
+.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres {
   width: 25%;
 }
-.IDX-category-search #IDX-coreSearchFields #IDX-bd-group, .IDX-category-search #IDX-coreSearchFields #IDX-ccz-group, .IDX-category-search #IDX-coreSearchFields #IDX-reduced-group {
+.IDX-category-search #IDX-coreSearchFields #IDX-bd-group, .IDX-category-search #IDX-coreSearchFields #IDX-ccz-group, .IDX-category-search #IDX-coreSearchFields #IDX-reduced-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-bd-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-ccz-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-reduced-group {
   padding: 0 10px 0 0;
 }
-.IDX-category-search #IDX-coreSearchFields #IDX-maxPrice-group, .IDX-category-search #IDX-coreSearchFields #IDX-acres-group, .IDX-category-search #IDX-coreSearchFields #IDX-srt-group {
+.IDX-category-search #IDX-coreSearchFields #IDX-maxPrice-group, .IDX-category-search #IDX-coreSearchFields #IDX-acres-group, .IDX-category-search #IDX-coreSearchFields #IDX-srt-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-maxPrice-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-acres-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-srt-group {
   padding: 0 0 0 10px;
 }
-.IDX-category-search #IDX-coreSearchFields #IDX-tb-group, .IDX-category-search #IDX-coreSearchFields #IDX-add-group, .IDX-category-search #IDX-coreSearchFields #IDX-minPrice-group, .IDX-category-search #IDX-coreSearchFields #IDX-sqft-group {
+.IDX-category-search #IDX-coreSearchFields #IDX-tb-group, .IDX-category-search #IDX-coreSearchFields #IDX-add-group, .IDX-category-search #IDX-coreSearchFields #IDX-minPrice-group, .IDX-category-search #IDX-coreSearchFields #IDX-sqft-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-tb-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-add-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-minPrice-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-sqft-group {
   padding: 0 10px;
 }
-.IDX-category-search #IDX-coreSearchFields #IDX-srt-group {
+.IDX-category-search #IDX-coreSearchFields #IDX-srt-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-srt-group {
   margin: 0 0 0 0;
 }
 .IDX-category-search #IDX-coreSearchFields #IDX-per-group,
-.IDX-category-search #IDX-coreSearchFields #IDX-searchRefinement-group {
+.IDX-category-search #IDX-coreSearchFields #IDX-searchRefinement-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-per-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-searchRefinement-group {
   display: none;
 }
-.IDX-category-search #IDX-coreSearchFields #IDX-reduced-group, .IDX-category-search #IDX-coreSearchFields #IDX-srt-group {
+.IDX-category-search #IDX-coreSearchFields #IDX-reduced-group, .IDX-category-search #IDX-coreSearchFields #IDX-srt-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-reduced-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-srt-group {
   width: 40%;
 }
-.IDX-category-search #IDX-coreSearchFields #IDX-add-group {
+.IDX-category-search #IDX-coreSearchFields #IDX-add-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-add-group {
   width: 20%;
 }
-.IDX-category-search.IDX-page-advanced .IDX-searchFormContainer {
+.IDX-category-search.IDX-page-advanced .IDX-searchFormContainer,
+.IDX-category-map.IDX-page-advanced .IDX-searchFormContainer {
   max-height: 64vh;
   overflow: auto;
 }
-.IDX-category-search.IDX-page-advanced #IDX-navbar {
+.IDX-category-search.IDX-page-advanced #IDX-navbar,
+.IDX-category-map.IDX-page-advanced #IDX-navbar {
   position: sticky;
   top: 0;
   z-index: 5;
 }
 .IDX-category-search.IDX-page-advanced .select2-choices,
 .IDX-category-search.IDX-page-advanced .select2-container,
-.IDX-category-search.IDX-page-advanced .select2-container-multi {
+.IDX-category-search.IDX-page-advanced .select2-container-multi,
+.IDX-category-map.IDX-page-advanced .select2-choices,
+.IDX-category-map.IDX-page-advanced .select2-container,
+.IDX-category-map.IDX-page-advanced .select2-container-multi {
   box-shadow: unset;
 }
 @media (min-width: 642px) {
-  .IDX-category-search #IDX-action-buttons .IDX-btn {
+  .IDX-category-search #IDX-action-buttons .IDX-btn,
+.IDX-category-map #IDX-action-buttons .IDX-btn {
     max-width: 200px;
     margin: 10px;
   }
-  .IDX-category-search #IDX-coreSearchFields .IDX-control-group {
+  .IDX-category-search #IDX-coreSearchFields .IDX-control-group,
+.IDX-category-map #IDX-coreSearchFields .IDX-control-group {
     margin: 0 0 20px 0;
     border: none;
   }
-  .IDX-category-search.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd), .IDX-category-search.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd), .IDX-category-search.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd) {
+  .IDX-category-search.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd), .IDX-category-search.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd), .IDX-category-search.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd),
+.IDX-category-map.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd),
+.IDX-category-map.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd),
+.IDX-category-map.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd) {
     border-right: none;
     padding-left: 0;
   }
-  .IDX-category-search.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even), .IDX-category-search.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even), .IDX-category-search.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even) {
+  .IDX-category-search.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even), .IDX-category-search.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even), .IDX-category-search.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even),
+.IDX-category-map.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even),
+.IDX-category-map.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even),
+.IDX-category-map.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even) {
     padding-right: 0;
   }
 }
-.IDX-category-search .IDX-searchPageContainer {
+.IDX-category-search .IDX-searchPageContainer,
+.IDX-category-map .IDX-searchPageContainer {
   height: calc(100vh - 98px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.IDX-category-search .IDX-searchFormContainer {
+.IDX-category-search .IDX-searchFormContainer,
+.IDX-category-map .IDX-searchFormContainer {
   width: 76vw;
   padding: 0;
   background: rgba(255, 255, 255, 0.65);
 }
-.IDX-category-search .IDX-searchFormContainer #IDX-action-buttons {
+.IDX-category-search .IDX-searchFormContainer #IDX-action-buttons,
+.IDX-category-map .IDX-searchFormContainer #IDX-action-buttons {
   width: 100% !important;
 }
-.IDX-category-search #IDX-searchForm {
+.IDX-category-search #IDX-searchForm,
+.IDX-category-map #IDX-searchForm {
   width: 76%;
   margin: 70px auto 40px auto;
 }
-.IDX-category-search #IDX-navbar {
+.IDX-category-search #IDX-navbar,
+.IDX-category-map #IDX-navbar {
   display: flex;
   justify-content: left;
   width: 100%;
 }
-.IDX-category-search .IDX-help-block {
+.IDX-category-search .IDX-help-block,
+.IDX-category-map .IDX-help-block {
   color: #000;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
 }
