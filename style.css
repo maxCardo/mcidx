@@ -1510,6 +1510,14 @@ div.flex-grow {
 .IDX-category-map .IDX-category-map #IDX-navbar {
   margin-bottom: 0px;
 }
+.IDX-category-search #IDX-mapLoading,
+.IDX-category-map #IDX-mapLoading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .IDX-category-search.IDX-page-advanced .IDX-searchFormContainer,
 .IDX-category-map.IDX-page-advanced .IDX-searchFormContainer {
   max-height: 64vh;
@@ -1593,12 +1601,8 @@ div.flex-grow {
 .lds-ring {
   display: inline-block;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 10%;
-  height: 10%;
+  width: 80px;
+  height: 80px;
 }
 
 .lds-ring div {
