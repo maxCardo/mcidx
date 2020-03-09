@@ -1404,6 +1404,18 @@ div.flex-grow {
   }
 }
 /* END OF PROPERTY PAGE */
+.IDX-category-map #IDX-navbar {
+  margin-bottom: 0px;
+}
+
+#IDX-mapLoading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 /*BASIC SEARCH PAGE*/
 .IDX-category-search,
 .IDX-category-map {
@@ -1505,18 +1517,6 @@ div.flex-grow {
 .IDX-category-search #IDX-coreSearchFields #IDX-add-group,
 .IDX-category-map #IDX-coreSearchFields #IDX-add-group {
   width: 20%;
-}
-.IDX-category-search .IDX-category-map #IDX-navbar,
-.IDX-category-map .IDX-category-map #IDX-navbar {
-  margin-bottom: 0px;
-}
-.IDX-category-search #IDX-mapLoading,
-.IDX-category-map #IDX-mapLoading {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 .IDX-category-search.IDX-page-advanced .IDX-searchFormContainer,
 .IDX-category-map.IDX-page-advanced .IDX-searchFormContainer {
