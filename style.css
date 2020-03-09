@@ -692,12 +692,25 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   color: #555;
 }
 
+.IDX-page-listing #IDX-navbar-collapse {
+  padding: 0;
+}
+.IDX-page-listing ul.IDX-nav.IDX-navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.IDX-page-listing ul.IDX-nav.IDX-navbar-nav #IDX-saveProperty,
+.IDX-page-listing ul.IDX-nav.IDX-navbar-nav .IDX-nav-address,
+.IDX-page-listing ul.IDX-nav.IDX-navbar-nav .IDX-nav-mapsearch,
+.IDX-page-listing ul.IDX-nav.IDX-navbar-nav #IDX-detailsHotAction-mortgage {
+  flex-grow: 1;
+}
 .IDX-page-listing #IDX-detailsHotActions > div > a {
   font-size: 12px;
   padding: 6px;
   transition: all 250ms;
 }
-
 .IDX-page-listing #IDX-detailsHotActions > div:hover {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.17), -2px 2px 5px rgba(0, 0, 0, 0.17);
   top: -1px;
