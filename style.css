@@ -1160,13 +1160,33 @@ div.flex-grow {
 }
 
 @media (max-width: 748px) {
+  .IDX-category-search #IDX-searchForm, .IDX-category-map #IDX-searchForm {
+    width: 85%;
+    margin: 20px auto 15px auto;
+  }
+
+  .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
+.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
+.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres {
+    width: 100%;
+    padding: 0;
+  }
+
+  .IDX-category-search .IDX-searchFormContainer #IDX-action-buttons,
+.IDX-category-map .IDX-searchFormContainer #IDX-action-buttons {
+    justify-content: space-between;
+  }
+
   .disclaimer-container {
     padding: 0 10px;
   }
 
   .IDX-category-map .IDX-searchFormContainer, .IDX-category-search .IDX-searchFormContainer {
     height: 80vh;
-    width: 90vw;
+    width: 90vw !important;
     max-height: unset !important;
     overflow: auto;
   }
