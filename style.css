@@ -1259,7 +1259,7 @@ div.flex-grow {
   padding: 40px;
   background: rgba(0, 0, 0, 0.75);
   bottom: 0;
-  z-index: 6;
+  z-index: 19;
 }
 .IDX-category-search#IDX-main,
 .IDX-category-map#IDX-main {
@@ -1552,7 +1552,7 @@ div.flex-grow {
     font-size: 25px;
     justify-content: space-between;
     padding: 0 15px;
-    z-index: 7;
+    z-index: 20;
   }
   .IDX-page-listing .sm-contact-bar a,
 .IDX-page-listing .sm-contact-bar span, .IDX-category-search .sm-contact-bar a,
