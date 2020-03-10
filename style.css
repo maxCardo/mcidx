@@ -1243,7 +1243,6 @@ div.flex-grow {
   background: rgba(0, 0, 0, 0.75);
   bottom: 0;
   z-index: 6;
-  transition: right 250ms 50ms, left 250ms 50ms;
 }
 .IDX-category-search#IDX-main,
 .IDX-category-map#IDX-main {
@@ -1503,6 +1502,11 @@ div.flex-grow {
     min-height: 380px;
   }
 
+  .IDX-category-search .mat-form .mat-form--header {
+    padding: 5px 15px 10px 15px;
+    font-size: 15px;
+  }
+
   .IDX-wrapper-standard #IDX-mapHeader-Search #IDX-mapCount {
     padding-top: 5px;
   }
@@ -1591,7 +1595,7 @@ div.flex-grow {
   }
   .IDX-page-listing .detailsWrapper--right {
     padding: 20px 5px 18px 15px;
-    width: 85%;
+    width: 90%;
     position: absolute;
     right: -100%;
   }
