@@ -1305,7 +1305,7 @@ div.flex-grow {
 }
 .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content,
 .IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content {
-  padding: 10px 0 0 0;
+  padding: 0;
   justify-content: center;
   display: flex;
   flex-direction: row;
@@ -1542,6 +1542,15 @@ div.flex-grow {
 
   #IDX-detailsMediaContaner--custom {
     width: 100%;
+  }
+
+  .IDX-category-search #IDX-search-additional-content {
+    flex-direction: column;
+    display: flex;
+  }
+  .IDX-category-search #IDX-search-additional-content .IDX-control-group {
+    width: 100%;
+    padding: 0px !important;
   }
 
   .IDX-page-listing .sm-contact-bar, .IDX-category-search .sm-contact-bar, .IDX-category-map .sm-contact-bar {
