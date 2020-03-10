@@ -559,7 +559,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   }
 
   .IDX-resultsCellsContainer,
-#IDX-resultsCellsContent {
+  #IDX-resultsCellsContent {
     max-height: 59vh;
     overflow-y: scroll;
     background: transparent;
@@ -629,7 +629,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   }
 
   #IDX-resultsRow .IDX-pageContainer .IDX-topActions > div,
-#IDX-resultsRow .IDX-pageContainer .IDX-topActions > div#IDX-resultsRefineSearchToggle a.IDX-refine-search--toggle#IDX-refineSearchFormToggle {
+  #IDX-resultsRow .IDX-pageContainer .IDX-topActions > div#IDX-resultsRefineSearchToggle a.IDX-refine-search--toggle#IDX-refineSearchFormToggle {
     height: 30px;
     line-height: 30px;
   }
@@ -953,7 +953,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   max-height: unset;
 }
 
-.IDX-page-listing .mat-form {
+.IDX-page-listing .mat-form,
+.IDX-category-search .mat-form {
   width: 100%;
   background: white;
   box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.16), 0 0 200px 1px rgba(255, 255, 255, 0.15);
@@ -966,7 +967,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   position: sticky;
   top: 70px;
 }
-.IDX-page-listing .mat-form .mat-form--header {
+.IDX-page-listing .mat-form .mat-form--header,
+.IDX-category-search .mat-form .mat-form--header {
   padding: 5px 20px;
   text-align: center;
   font-size: 30px;
@@ -974,63 +976,77 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   color: white;
   letter-spacing: 5px;
 }
-.IDX-page-listing .mat-form .mat-form--header a {
+.IDX-page-listing .mat-form .mat-form--header a,
+.IDX-category-search .mat-form .mat-form--header a {
   color: white;
 }
-.IDX-page-listing .mat-form .mat-form--header .fa {
+.IDX-page-listing .mat-form .mat-form--header .fa,
+.IDX-category-search .mat-form .mat-form--header .fa {
   position: relative;
   top: 8px;
   font-size: 40px;
   transform: rotate(95deg);
   color: white;
 }
-.IDX-page-listing .mat-form .mat-form--body {
+.IDX-page-listing .mat-form .mat-form--body,
+.IDX-category-search .mat-form .mat-form--body {
   display: flex;
   flex-wrap: wrap;
   padding: 15px;
   justify-content: space-between;
   margin: -5px;
 }
-.IDX-page-listing .mat-form .mat-form--body .element-wrapper {
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper {
   display: flex;
   flex-direction: column;
   width: calc(50% - 10px);
   position: relative;
   margin: 5px;
 }
-.IDX-page-listing .mat-form .mat-form--body .element-wrapper.flex-centered {
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper.flex-centered,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper.flex-centered {
   padding-bottom: 15px;
 }
-.IDX-page-listing .mat-form .mat-form--body .element-wrapper.with--checkbox {
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper.with--checkbox,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper.with--checkbox {
   min-height: 20px;
   display: flex;
   flex-direction: row;
 }
-.IDX-page-listing .mat-form .mat-form--body .element-wrapper label {
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper label,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper label {
   position: absolute;
   font-size: 14px;
   left: 4px;
 }
-.IDX-page-listing .mat-form .mat-form--body .element-wrapper input, .IDX-page-listing .mat-form .mat-form--body .element-wrapper textarea {
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper input, .IDX-page-listing .mat-form .mat-form--body .element-wrapper textarea,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper input,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper textarea {
   padding: 15px 5px 5px 5px;
 }
-.IDX-page-listing .mat-form .mat-form--body .element-wrapper:nth-child(9) {
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper:nth-child(9),
+.IDX-category-search .mat-form .mat-form--body .element-wrapper:nth-child(9) {
   width: 100%;
   max-height: 65px;
   /* TODO: HIDE ON LOAD, SHOW IF CUSTOM MASSAGE IS SELECTED */
 }
-.IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer {
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper#customMessageContainer {
   height: 0px;
   overflow: hidden;
   transition: height 200ms;
 }
-.IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer.open {
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer.open,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper#customMessageContainer.open {
   height: 70px;
 }
-.IDX-page-listing .mat-form .contact-btn--send {
+.IDX-page-listing .mat-form .contact-btn--send,
+.IDX-category-search .mat-form .contact-btn--send {
   margin: 0 15px 15px;
 }
-.IDX-page-listing .mat-form .mat-form--footer {
+.IDX-page-listing .mat-form .mat-form--footer,
+.IDX-category-search .mat-form .mat-form--footer {
   padding: 10px 20px;
   text-align: center;
   font-size: 16px;
@@ -1039,10 +1055,12 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   line-height: 2.5;
   letter-spacing: 5px;
 }
-.IDX-page-listing .mat-form .mat-form--footer a {
+.IDX-page-listing .mat-form .mat-form--footer a,
+.IDX-category-search .mat-form .mat-form--footer a {
   color: white;
 }
-.IDX-page-listing .mat-form .mat-form--footer .fa {
+.IDX-page-listing .mat-form .mat-form--footer .fa,
+.IDX-category-search .mat-form .mat-form--footer .fa {
   font-size: 35px;
   position: relative;
   top: 4px;
@@ -1206,19 +1224,20 @@ div.flex-grow {
 .IDX-category-map {
   /* ADVANCED SEARCH PAGE */
 }
+.IDX-category-search#IDX-main,
+.IDX-category-map#IDX-main {
+  position: relative;
+  overflow-x: hidden;
+}
 .IDX-category-search .detailsWrapper--right,
 .IDX-category-map .detailsWrapper--right {
   padding: 20px 5px 18px 15px;
   width: 85%;
   position: absolute;
   right: -100%;
-  left: 100%;
-  display: none;
-  transition: right 250ms 50ms, left 250ms 50ms;
 }
 .IDX-category-search .detailsWrapper--right.open,
 .IDX-category-map .detailsWrapper--right.open {
-  display: block;
   right: 0;
   width: 100%;
   position: fixed;
@@ -1347,26 +1366,26 @@ div.flex-grow {
 }
 @media (min-width: 642px) {
   .IDX-category-search #IDX-action-buttons .IDX-btn,
-.IDX-category-map #IDX-action-buttons .IDX-btn {
+  .IDX-category-map #IDX-action-buttons .IDX-btn {
     max-width: 200px;
     margin: 10px;
   }
   .IDX-category-search #IDX-coreSearchFields .IDX-control-group,
-.IDX-category-map #IDX-coreSearchFields .IDX-control-group {
+  .IDX-category-map #IDX-coreSearchFields .IDX-control-group {
     margin: 0 0 20px 0;
     border: none;
   }
   .IDX-category-search.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd), .IDX-category-search.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd), .IDX-category-search.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd),
-.IDX-category-map.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd),
-.IDX-category-map.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd),
-.IDX-category-map.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd) {
+  .IDX-category-map.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd),
+  .IDX-category-map.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd),
+  .IDX-category-map.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd) {
     border-right: none;
     padding-left: 0;
   }
   .IDX-category-search.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even), .IDX-category-search.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even), .IDX-category-search.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even),
-.IDX-category-map.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even),
-.IDX-category-map.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even),
-.IDX-category-map.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even) {
+  .IDX-category-map.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even),
+  .IDX-category-map.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even),
+  .IDX-category-map.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even) {
     padding-right: 0;
   }
 }
@@ -1450,24 +1469,24 @@ div.flex-grow {
 /* RESPONSIVE */
 @media (max-width: 748px) {
   .IDX-category-search #IDX-searchForm,
-.IDX-category-map #IDX-searchForm {
+  .IDX-category-map #IDX-searchForm {
     width: 85%;
     margin: 20px auto 15px auto;
   }
 
   .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
-.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
-.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres,
-.IDX-category-search #IDX-coreSearchFields #IDX-ccz-group,
-.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
-.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
-.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres {
+  .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
+  .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres,
+  .IDX-category-search #IDX-coreSearchFields #IDX-ccz-group,
+  .IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
+  .IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
+  .IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres {
     width: 100%;
     padding: 0;
   }
 
   .IDX-category-search .IDX-searchFormContainer #IDX-action-buttons,
-.IDX-category-map .IDX-searchFormContainer #IDX-action-buttons {
+  .IDX-category-map .IDX-searchFormContainer #IDX-action-buttons {
     justify-content: space-between;
   }
 
@@ -1519,8 +1538,8 @@ div.flex-grow {
     z-index: 7;
   }
   .IDX-page-listing .sm-contact-bar a,
-.IDX-page-listing .sm-contact-bar span, .IDX-category-search .sm-contact-bar a,
-.IDX-category-search .sm-contact-bar span {
+  .IDX-page-listing .sm-contact-bar span, .IDX-category-search .sm-contact-bar a,
+  .IDX-category-search .sm-contact-bar span {
     padding: 0 15px;
     border: 5px solid white;
     background: rgba(0, 0, 0, 0.55);
@@ -1544,12 +1563,12 @@ div.flex-grow {
     flex-wrap: wrap;
   }
   .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionModify,
-.IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionBack {
+  .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionBack {
     order: 2;
     flex-grow: 1;
   }
   .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionNew,
-.IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionSave {
+  .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionSave {
     width: 126px;
   }
   .IDX-page-listing #IDX-primaryPhoto {
