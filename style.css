@@ -1147,6 +1147,7 @@ div.flex-grow {
 
 #IDX-detailsMediaContaner--custom {
   width: 70%;
+  align-self: flex-start;
 }
 
 .IDX-page-listing #IDX-detailsMedia {
@@ -1161,6 +1162,20 @@ div.flex-grow {
 @media (max-width: 748px) {
   .disclaimer-container {
     padding: 0 10px;
+  }
+
+  .IDX-searchFormContainer.advancedSearchContainer {
+    height: 80vh;
+    width: 90vw;
+  }
+
+  .IDX-container-navbar {
+    width: 100%;
+  }
+
+  .IDX-navbar-toggle {
+    margin-right: 5px;
+    border: none;
   }
 
   #IDX-detailsMediaContaner--custom {
