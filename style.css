@@ -1212,6 +1212,21 @@ div.flex-grow {
   width: 85%;
   position: absolute;
   right: -100%;
+  display: none;
+  transition: all 200ms;
+}
+.IDX-category-search .detailsWrapper--right.open,
+.IDX-category-map .detailsWrapper--right.open {
+  display: block;
+  right: 0;
+  width: 100%;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.75);
+  bottom: 0;
+  z-index: 6;
 }
 .IDX-category-search#IDX-main,
 .IDX-category-map#IDX-main {
