@@ -1206,6 +1206,13 @@ div.flex-grow {
 .IDX-category-map {
   /* ADVANCED SEARCH PAGE */
 }
+.IDX-category-search .detailsWrapper--right,
+.IDX-category-map .detailsWrapper--right {
+  padding: 20px 5px 18px 15px;
+  width: 85%;
+  position: absolute;
+  right: -100%;
+}
 .IDX-category-search#IDX-main,
 .IDX-category-map#IDX-main {
   overflow: hidden;
