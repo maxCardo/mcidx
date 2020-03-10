@@ -954,7 +954,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 
 .IDX-page-listing .mat-form,
-.IDX-category-search .mat-form {
+.IDX-category-search .mat-form,
+.IDX-category-map .mat-form {
   width: 100%;
   background: white;
   box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.16), 0 0 200px 1px rgba(255, 255, 255, 0.15);
@@ -968,7 +969,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   top: 70px;
 }
 .IDX-page-listing .mat-form .mat-form--header,
-.IDX-category-search .mat-form .mat-form--header {
+.IDX-category-search .mat-form .mat-form--header,
+.IDX-category-map .mat-form .mat-form--header {
   padding: 5px 20px;
   text-align: center;
   font-size: 30px;
@@ -977,11 +979,13 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   letter-spacing: 5px;
 }
 .IDX-page-listing .mat-form .mat-form--header a,
-.IDX-category-search .mat-form .mat-form--header a {
+.IDX-category-search .mat-form .mat-form--header a,
+.IDX-category-map .mat-form .mat-form--header a {
   color: white;
 }
 .IDX-page-listing .mat-form .mat-form--header .fa,
-.IDX-category-search .mat-form .mat-form--header .fa {
+.IDX-category-search .mat-form .mat-form--header .fa,
+.IDX-category-map .mat-form .mat-form--header .fa {
   position: relative;
   top: 8px;
   font-size: 40px;
@@ -989,7 +993,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   color: white;
 }
 .IDX-page-listing .mat-form .mat-form--body,
-.IDX-category-search .mat-form .mat-form--body {
+.IDX-category-search .mat-form .mat-form--body,
+.IDX-category-map .mat-form .mat-form--body {
   display: flex;
   flex-wrap: wrap;
   padding: 15px;
@@ -997,7 +1002,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   margin: -5px;
 }
 .IDX-page-listing .mat-form .mat-form--body .element-wrapper,
-.IDX-category-search .mat-form .mat-form--body .element-wrapper {
+.IDX-category-search .mat-form .mat-form--body .element-wrapper,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper {
   display: flex;
   flex-direction: column;
   width: calc(50% - 10px);
@@ -1005,28 +1011,34 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   margin: 5px;
 }
 .IDX-page-listing .mat-form .mat-form--body .element-wrapper.flex-centered,
-.IDX-category-search .mat-form .mat-form--body .element-wrapper.flex-centered {
+.IDX-category-search .mat-form .mat-form--body .element-wrapper.flex-centered,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper.flex-centered {
   padding-bottom: 15px;
 }
 .IDX-page-listing .mat-form .mat-form--body .element-wrapper.with--checkbox,
-.IDX-category-search .mat-form .mat-form--body .element-wrapper.with--checkbox {
+.IDX-category-search .mat-form .mat-form--body .element-wrapper.with--checkbox,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper.with--checkbox {
   min-height: 20px;
   display: flex;
   flex-direction: row;
 }
 .IDX-page-listing .mat-form .mat-form--body .element-wrapper label,
-.IDX-category-search .mat-form .mat-form--body .element-wrapper label {
+.IDX-category-search .mat-form .mat-form--body .element-wrapper label,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper label {
   position: absolute;
   font-size: 14px;
   left: 4px;
 }
 .IDX-page-listing .mat-form .mat-form--body .element-wrapper input, .IDX-page-listing .mat-form .mat-form--body .element-wrapper textarea,
 .IDX-category-search .mat-form .mat-form--body .element-wrapper input,
-.IDX-category-search .mat-form .mat-form--body .element-wrapper textarea {
+.IDX-category-search .mat-form .mat-form--body .element-wrapper textarea,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper input,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper textarea {
   padding: 15px 5px 5px 5px;
 }
 .IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer,
-.IDX-category-search .mat-form .mat-form--body .element-wrapper#customMessageContainer {
+.IDX-category-search .mat-form .mat-form--body .element-wrapper#customMessageContainer,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper#customMessageContainer {
   height: 0px;
   overflow: hidden;
   transition: height 200ms;
@@ -1034,15 +1046,18 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   max-height: 65px;
 }
 .IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer.open,
-.IDX-category-search .mat-form .mat-form--body .element-wrapper#customMessageContainer.open {
+.IDX-category-search .mat-form .mat-form--body .element-wrapper#customMessageContainer.open,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper#customMessageContainer.open {
   height: 70px;
 }
 .IDX-page-listing .mat-form .contact-btn--send,
-.IDX-category-search .mat-form .contact-btn--send {
+.IDX-category-search .mat-form .contact-btn--send,
+.IDX-category-map .mat-form .contact-btn--send {
   margin: 0 15px 15px;
 }
 .IDX-page-listing .mat-form .mat-form--footer,
-.IDX-category-search .mat-form .mat-form--footer {
+.IDX-category-search .mat-form .mat-form--footer,
+.IDX-category-map .mat-form .mat-form--footer {
   padding: 10px 20px;
   text-align: center;
   font-size: 16px;
@@ -1052,11 +1067,13 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   letter-spacing: 5px;
 }
 .IDX-page-listing .mat-form .mat-form--footer a,
-.IDX-category-search .mat-form .mat-form--footer a {
+.IDX-category-search .mat-form .mat-form--footer a,
+.IDX-category-map .mat-form .mat-form--footer a {
   color: white;
 }
 .IDX-page-listing .mat-form .mat-form--footer .fa,
-.IDX-category-search .mat-form .mat-form--footer .fa {
+.IDX-category-search .mat-form .mat-form--footer .fa,
+.IDX-category-map .mat-form .mat-form--footer .fa {
   font-size: 35px;
   position: relative;
   top: 4px;
