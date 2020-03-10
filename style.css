@@ -1434,6 +1434,7 @@ div.flex-grow {
   .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
 .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
 .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres,
+.IDX-category-search #IDX-coreSearchFields #IDX-ccz-group,
 .IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
 .IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
 .IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres {
@@ -1451,10 +1452,12 @@ div.flex-grow {
   }
 
   .IDX-category-map .IDX-searchFormContainer, .IDX-category-search .IDX-searchFormContainer {
-    height: 80vh;
+    height: 74vh;
     width: 90vw !important;
     max-height: unset !important;
     overflow: auto;
+    align-self: flex-start;
+    margin-top: 15px;
   }
 
   .IDX-category-map #IDX-map {
@@ -1503,54 +1506,53 @@ div.flex-grow {
   .IDX-page-listing .mat-form, .IDX-category-search .mat-form {
     top: 25px;
   }
-  .IDX-page-listing#IDX-main, .IDX-category-search#IDX-main {
+
+  .IDX-page-listing#IDX-main {
     position: relative;
     overflow-x: hidden;
   }
-  .IDX-page-listing #IDX-detailsWrapper, .IDX-category-search #IDX-detailsWrapper {
+  .IDX-page-listing #IDX-detailsWrapper {
     position: static;
     padding: 3px 15px;
     overflow-x: hidden;
   }
-  .IDX-page-listing #IDX-detailsTopActions, .IDX-category-search #IDX-detailsTopActions {
+  .IDX-page-listing #IDX-detailsTopActions {
     flex-wrap: wrap;
   }
   .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionModify,
-.IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionBack, .IDX-category-search #IDX-detailsTopActions #IDX-detailsActionModify,
-.IDX-category-search #IDX-detailsTopActions #IDX-detailsActionBack {
+.IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionBack {
     order: 2;
     flex-grow: 1;
   }
   .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionNew,
-.IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionSave, .IDX-category-search #IDX-detailsTopActions #IDX-detailsActionNew,
-.IDX-category-search #IDX-detailsTopActions #IDX-detailsActionSave {
+.IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionSave {
     width: 126px;
   }
-  .IDX-page-listing #IDX-primaryPhoto, .IDX-category-search #IDX-primaryPhoto {
+  .IDX-page-listing #IDX-primaryPhoto {
     height: unset;
   }
-  .IDX-page-listing #IDX-detailsHotActions > div, .IDX-category-search #IDX-detailsHotActions > div {
+  .IDX-page-listing #IDX-detailsHotActions > div {
     width: 50%;
   }
-  .IDX-page-listing #IDX-detailsHotActions, .IDX-category-search #IDX-detailsHotActions {
+  .IDX-page-listing #IDX-detailsHotActions {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: stretch;
   }
-  .IDX-page-listing .detailsWrapper--right, .IDX-category-search .detailsWrapper--right {
+  .IDX-page-listing .detailsWrapper--right {
     padding: 20px 5px 18px 15px;
     width: 85%;
     position: absolute;
     right: -100%;
   }
-  .IDX-page-listing .detailsWrapper--left, .IDX-category-search .detailsWrapper--left {
+  .IDX-page-listing .detailsWrapper--left {
     width: 100%;
   }
-  .IDX-page-listing .detailsWrapper--right, .IDX-category-search .detailsWrapper--right {
+  .IDX-page-listing .detailsWrapper--right {
     transition: all 200ms;
   }
-  .IDX-page-listing .detailsWrapper--right.open, .IDX-category-search .detailsWrapper--right.open {
+  .IDX-page-listing .detailsWrapper--right.open {
     right: 0;
     width: 100%;
     position: fixed;
@@ -1561,54 +1563,54 @@ div.flex-grow {
     bottom: 0;
     z-index: 6;
   }
-  .IDX-page-listing #IDX-detailsMainInfo .IDX-field, .IDX-category-search #IDX-detailsMainInfo .IDX-field {
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
     font-size: 14px;
   }
-  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-body, .IDX-category-search #IDX-detailsMainInfo .IDX-panel-body {
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-body {
     padding-bottom: 50px;
   }
-  .IDX-page-listing #IDX-description p, .IDX-category-search #IDX-description p {
+  .IDX-page-listing #IDX-description p {
     padding: 25px 15px;
     background: rgba(0, 0, 0, 0.38);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
   }
-  .IDX-page-listing #IDX-fieldsWrapper, .IDX-category-search #IDX-fieldsWrapper {
+  .IDX-page-listing #IDX-fieldsWrapper {
     flex-direction: column;
   }
-  .IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer, .IDX-category-search #IDX-fieldsWrapper .IDX-fieldContainer {
+  .IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer {
     width: 100%;
   }
-  .IDX-page-listing #IDX-similar-listings-result, .IDX-category-search #IDX-similar-listings-result {
+  .IDX-page-listing #IDX-similar-listings-result {
     padding: 25px 0;
   }
-  .IDX-page-listing .IDX-similar-listings--item, .IDX-category-search .IDX-similar-listings--item {
+  .IDX-page-listing .IDX-similar-listings--item {
     width: 100%;
     margin-bottom: 25px;
   }
-  .IDX-page-listing .IDX-similar-listings--item .IDX-similar-listings--item-image, .IDX-category-search .IDX-similar-listings--item .IDX-similar-listings--item-image {
+  .IDX-page-listing .IDX-similar-listings--item .IDX-similar-listings--item-image {
     width: 100%;
     height: auto;
   }
-  .IDX-page-listing .IDX-similar-listings--item .IDX-similar-listings--info, .IDX-category-search .IDX-similar-listings--item .IDX-similar-listings--info {
+  .IDX-page-listing .IDX-similar-listings--item .IDX-similar-listings--info {
     flex-direction: column;
   }
-  .IDX-page-listing .IDX-similar-listings--item .IDX-btn-default, .IDX-category-search .IDX-similar-listings--item .IDX-btn-default {
+  .IDX-page-listing .IDX-similar-listings--item .IDX-btn-default {
     background: orange;
     color: white;
     border-color: transparent;
     border-radius: 4px;
   }
-  .IDX-page-listing .IDX-similar-listings--redirect, .IDX-category-search .IDX-similar-listings--redirect {
+  .IDX-page-listing .IDX-similar-listings--redirect {
     justify-content: center;
   }
-  .IDX-page-listing #IDX-openHouses, .IDX-category-search #IDX-openHouses {
+  .IDX-page-listing #IDX-openHouses {
     text-align: center;
     width: 100%;
   }
-  .IDX-page-listing #IDX-detailsHead, .IDX-category-search #IDX-detailsHead {
+  .IDX-page-listing #IDX-detailsHead {
     margin: 0 0 0 0;
   }
-  .IDX-page-listing #IDX-detailsTopNav, .IDX-category-search #IDX-detailsTopNav {
+  .IDX-page-listing #IDX-detailsTopNav {
     margin: 0 0 0 0;
   }
 }
