@@ -1545,6 +1545,13 @@ div.flex-grow {
   .IDX-page-listing .mat-form, .IDX-category-search .mat-form {
     top: 25px;
   }
+  .IDX-page-listing .mat-form .mat-form--header, .IDX-category-search .mat-form .mat-form--header {
+    padding: 5px 15px 10px 15px;
+    font-size: 22px;
+  }
+  .IDX-page-listing .mat-form .mat-form--body .element-wrapper, .IDX-category-search .mat-form .mat-form--body .element-wrapper {
+    width: calc(100% - 10px);
+  }
   .IDX-page-listing .detailsWrapper--right, .IDX-category-search .detailsWrapper--right {
     transition: all 200ms;
   }
