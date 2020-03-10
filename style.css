@@ -1167,16 +1167,16 @@ div.flex-grow {
   .IDX-category-map .IDX-searchFormContainer.advancedSearchContainer, .IDX-category-search .IDX-searchFormContainer.advancedSearchContainer {
     height: 80vh;
     width: 90vw;
-    max-height: unset;
+    max-height: unset !important;
   }
 
   .IDX-container-navbar {
     width: 100%;
   }
 
-  .IDX-navbar-toggle {
-    margin-right: 5px;
-    border: none;
+  .IDX-wrapper-standard .IDX-navbar-toggle {
+    margin-right: 5px !important;
+    border: none !important;
   }
 
   #IDX-detailsMediaContaner--custom {
