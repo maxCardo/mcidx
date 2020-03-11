@@ -14,7 +14,7 @@
 
 
 
-    <link rel="stylesheet" href="https://maxcardo.github.io/mcidx/style.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcardo.github.io/mcidx/style.css">
 
     <title>Max Cardo Ltd</title>
 </head>
@@ -72,7 +72,11 @@
         Waves.init();
         Waves.attach('.btn');
 
-        $('link[rel=stylesheet][href~="graphical/"]').remove();
+        $.each($.grep(document.styleSheets, function(n) {
+            return n.href.search(/graphical/) != -1;
+        }), function(i, n) {
+            n.disabled = true;
+        });
 
         $('.IDX-showcaseSlide').removeClass('IDX-active');
 
