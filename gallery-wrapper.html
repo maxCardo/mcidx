@@ -72,7 +72,9 @@
         Waves.init();
         Waves.attach('.btn');
 
-        $('#IDX-showcaseSlide').removeClass('IDX-active');
+        $('link[rel=stylesheet][href~="graphical/"]').remove();
+
+        $('.IDX-showcaseSlide').removeClass('IDX-active');
 
         $('#IDX-showcaseSlides').slick({
             dots: true,
