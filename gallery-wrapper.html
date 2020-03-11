@@ -9,14 +9,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcardo.github.io/mcidx/assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcardo.github.io/mcidx/assets/css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="https://maxcardo.github.io/mcidx/assets/css/waves.min.css">
 
 
 
     <link rel="stylesheet" href="https://maxcardo.github.io/mcidx/style.css">
 
-    <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/slick.min.js"></script>
     <title>Max Cardo Ltd</title>
 </head>
 
@@ -63,10 +62,13 @@
     <script src="https://maxcardo.github.io/mcidx/assets/js/waves.min.js"></script>
 
     <script>
+        $( document ).ready(function() {
         Waves.init();
         Waves.attach('.btn');
 
-        $('#IDX-showcaseSlide').slick({
+        $('#IDX-showcaseSlide').removeClass('IDX-active');
+
+        $('#IDX-showcaseSlides').slick({
             dots: true,
             infinite: true,
             speed: 300,
@@ -74,9 +76,13 @@
             centerMode: true,
             variableWidth: true
         });
+    });
     </script>
 
     <script src="https://maxcardo.github.io/mcidx/main.js"></script>
+    
+    <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/slick.min.js"></script>
 </body>
 
 </html>
