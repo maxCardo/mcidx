@@ -1440,19 +1440,25 @@ div.flex-grow {
 .IDX-page-photogallery {
   padding-top: 50px;
 }
+.IDX-page-photogallery h2.IDX-photoGalleryTitle {
+  font-size: 3em;
+  margin: 60px 0 40px 0;
+  text-align: center;
+}
 .IDX-page-photogallery .galleryContent--container {
   display: flex;
 }
 .IDX-page-photogallery .galleryContent--container .propertyInfo--container {
   order: 2;
   width: 20%;
-  padding: 20px;
+  padding: 0 20px;
 }
 .IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList {
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
   list-style: none;
   font-size: 1.35em;
+  margin: 0 0 0 0;
 }
 .IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList li {
   margin-bottom: 0.5em;
@@ -1463,6 +1469,13 @@ div.flex-grow {
 }
 .IDX-page-photogallery .galleryContent--container .IDX-photoGallery {
   width: 80%;
+}
+.IDX-page-photogallery .galleryContent--container .IDX-photoGallery .slick-list {
+  max-height: 520px;
+}
+.IDX-page-photogallery #IDX-previousPage {
+  display: flex;
+  justify-content: space-between;
 }
 .IDX-page-photogallery #IDX-showcaseThumbnails-buttons {
   display: none;

@@ -69,8 +69,7 @@
     <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/slick.min.js"></script>
     <script>
         $( document ).ready(function() {
-        Waves.init();
-        Waves.attach('.btn');
+       
 
         $.each($.grep(document.styleSheets, function(n) {
             return n.href.search(/graphical/) != -1;
@@ -107,6 +106,11 @@
             $(this).find('.slick-slide').css('height', slickTrackHeight + 'px');
         });
 
+        $("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('.btn');
+
+
+        Waves.init();
+        Waves.attach('.btn');
     });
     </script>
 </body>
