@@ -1446,9 +1446,29 @@ div.flex-grow {
 .IDX-page-photogallery .galleryContent--container .propertyInfo--container {
   order: 2;
   width: 20%;
+  padding: 20px;
+}
+.IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList {
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
+  list-style: none;
+  font-size: 1.35em;
+}
+.IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList li {
+  margin-bottom: 0.5em;
+}
+.IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList li:first-child {
+  text-align: center;
+  font-size: 1.45em;
 }
 .IDX-page-photogallery .galleryContent--container .IDX-photoGallery {
   width: 80%;
+}
+.IDX-page-photogallery #IDX-showcaseThumbnails-buttons {
+  display: none;
+}
+.IDX-page-photogallery hr {
+  display: none;
 }
 
 /*END OF GALLERY PAGE*/
