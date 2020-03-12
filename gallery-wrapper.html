@@ -88,7 +88,8 @@
         $(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
 
         $(".IDX-photoGalleryTitle").html("Photo Gallery");
-
+        const sliderInfo = "<h6 class='sliderInfo'>Drag slider or use arrow keys to navigate</h6>";
+        $("#IDX-photoGalleryHeader").insertAfter(sliderInfo);
         
         $('#IDX-showcaseSlides').slick({
             dots: true,
@@ -101,7 +102,7 @@
 
     
         $("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('btn');
-
+        
 
         Waves.init();
         Waves.attach('.btn');

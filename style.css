@@ -1442,8 +1442,13 @@ div.flex-grow {
 }
 .IDX-page-photogallery h2.IDX-photoGalleryTitle {
   font-size: 3em;
-  margin: 60px 0 40px 0;
+  margin: 40px 0 25px 0;
   text-align: center;
+}
+.IDX-page-photogallery .sliderInfo {
+  margin: 0;
+  text-align: right;
+  color: gray;
 }
 .IDX-page-photogallery .galleryContent--container {
   display: flex;
@@ -1451,6 +1456,9 @@ div.flex-grow {
 .IDX-page-photogallery .galleryContent--container .propertyInfo--container {
   width: 20%;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList {
   padding: 15px;
@@ -1470,7 +1478,7 @@ div.flex-grow {
   width: 80%;
 }
 .IDX-page-photogallery .galleryContent--container .IDX-photoGallery .slick-list {
-  height: 80vh;
+  height: 65vh;
 }
 .IDX-page-photogallery #IDX-previousPage {
   display: flex;
@@ -1483,10 +1491,10 @@ div.flex-grow {
   display: none;
 }
 .IDX-page-photogallery .slick-slide {
-  height: 80vh;
+  height: 65vh;
 }
 .IDX-page-photogallery .slick-slide img {
-  height: 80vh;
+  height: 65vh;
 }
 
 /*END OF GALLERY PAGE*/
