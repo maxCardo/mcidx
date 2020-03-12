@@ -1449,7 +1449,6 @@ div.flex-grow {
   display: flex;
 }
 .IDX-page-photogallery .galleryContent--container .propertyInfo--container {
-  order: 2;
   width: 20%;
   padding: 0 20px;
 }
@@ -1471,7 +1470,7 @@ div.flex-grow {
   width: 80%;
 }
 .IDX-page-photogallery .galleryContent--container .IDX-photoGallery .slick-list {
-  max-height: 520px;
+  height: 80vh;
 }
 .IDX-page-photogallery #IDX-previousPage {
   display: flex;
@@ -1482,6 +1481,12 @@ div.flex-grow {
 }
 .IDX-page-photogallery hr {
   display: none;
+}
+.IDX-page-photogallery .slick-slide {
+  height: 80vh;
+}
+.IDX-page-photogallery .slick-slide img {
+  height: 80vh;
 }
 
 /*END OF GALLERY PAGE*/
