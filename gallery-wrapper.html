@@ -90,8 +90,11 @@
             variableWidth: true
         });
 
-        const content = "<div class='propertyInfo--container'></div>";
-        $(".IDX-propertyInfoList, #IDX-previousPage").wrapAll(content);
+        const propInfoContainer = "<div class='propertyInfo--container'></div>";
+        $(".IDX-propertyInfoList, #IDX-previousPage").wrapAll(propInfoContainer);
+
+        const galleryContentContainer = "<div class='galleryContent--container'></div>";
+        $(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
 
     });
     </script>
