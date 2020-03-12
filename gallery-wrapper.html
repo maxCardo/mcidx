@@ -81,6 +81,16 @@
 
         $('.IDX-showcaseSlide').removeClass('IDX-active');
 
+
+        const propInfoContainer = "<div class='propertyInfo--container'></div>";
+        $(".IDX-propertyInfoList, #IDX-previousPage").wrapAll(propInfoContainer);
+
+        const galleryContentContainer = "<div class='galleryContent--container'></div>";
+        $(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
+
+        $(".IDX-photoGalleryTitle").html("Photo Gallery");
+
+        
         $('#IDX-showcaseSlides').slick({
             dots: true,
             infinite: true,
@@ -89,13 +99,6 @@
             centerMode: true,
             variableWidth: true
         });
-
-        const propInfoContainer = "<div class='propertyInfo--container'></div>";
-        $(".IDX-propertyInfoList, #IDX-previousPage").wrapAll(propInfoContainer);
-
-        const galleryContentContainer = "<div class='galleryContent--container'></div>";
-        $(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
-
     });
     </script>
 </body>

@@ -1436,6 +1436,22 @@ div.flex-grow {
 }
 
 /*END OF BASIC SEARCH PAGE*/
+/*GALLERY PAGE*/
+.IDX-page-photogallery {
+  padding-top: 50px;
+}
+.IDX-page-photogallery .galleryContent--container {
+  display: flex;
+}
+.IDX-page-photogallery .galleryContent--container .propertyInfo--container {
+  order: 2;
+  width: 20%;
+}
+.IDX-page-photogallery .galleryContent--container .galleryContent--container {
+  width: 80%;
+}
+
+/*END OF GALLERY PAGE*/
 /* CUSTOM LOADER */
 .lds-ring {
   display: inline-block;
