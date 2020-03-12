@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // SECTION LISTINGS
 
 .listings {
@@ -164,4 +165,57 @@
             }
         }
     }
+=======
+// SECTION LISTINGS
+
+.listings {
+    .container {
+        h2 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__box {
+        a {
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+}
+
+
+// SECTION ABOUT 
+
+.about {
+    .container {
+
+        h2,
+        p {
+            text-align: center;
+        }
+    }
+}
+
+
+// MENU 
+
+.menu {
+    p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+>>>>>>> master
 }
