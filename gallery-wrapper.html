@@ -89,6 +89,14 @@
             centerMode: true,
             variableWidth: true
         });
+
+
+        const propertyInfo = $('IDX-propertyInfoList');
+        const returnToProperty = $('IDX-previousPage');
+        const contentToWrap = [propertyInfo, returnToProperty];
+        const content = "<div class='propertyInfo--container'></div>";
+        contentToWrap.wrapAll(content);
+
     });
     </script>
 </body>
