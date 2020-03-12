@@ -1447,7 +1447,7 @@ div.flex-grow {
   order: 2;
   width: 20%;
 }
-.IDX-page-photogallery .galleryContent--container .galleryContent--container {
+.IDX-page-photogallery .galleryContent--container .IDX-photoGallery {
   width: 80%;
 }
 
