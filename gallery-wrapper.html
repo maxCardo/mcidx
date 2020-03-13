@@ -68,31 +68,31 @@
     <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/slick.min.js"></script>
     <script>
-        $( document ).ready(function() {
+        idx( document ).ready(function() {
        
 
-        $.each($.grep(document.styleSheets, function(n) {
+        idx.each(idx.grep(document.styleSheets, function(n) {
             return n.href.search(/graphical/) != -1;
         }), function(i, n) {
             n.disabled = true;
         });
-        $('.IDX-arrow').remove();
+        idx('.IDX-arrow').remove();
 
-        $('.IDX-showcaseSlide').removeClass('IDX-active');
+        idx('.IDX-showcaseSlide').removeClass('IDX-active');
 
 
         const propInfoContainer = "<div class='propertyInfo--container'></div>";
-        $(".IDX-propertyInfoList, #IDX-previousPage").wrapAll(propInfoContainer);
+        idx(".IDX-propertyInfoList, #IDX-previousPage").wrapAll(propInfoContainer);
 
         const galleryContentContainer = "<div class='galleryContent--container'></div>";
-        $(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
+        idx(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
 
         const sliderInfo = "<h6 class='sliderInfo'> * Drag slider or use arrow keys to navigate</h6>";
 
-        $(".IDX-photoGalleryTitle").html("Photo Gallery");
-        $(".IDX-photoGalleryTitle").after(sliderInfo);
+        idx(".IDX-photoGalleryTitle").html("Photo Gallery");
+        idx(".IDX-photoGalleryTitle").after(sliderInfo);
         
-        $('#IDX-showcaseSlides').slick({
+        idx('#IDX-showcaseSlides').slick({
             dots: true,
             infinite: true,
             speed: 300,
