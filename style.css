@@ -1532,7 +1532,21 @@ div.flex-grow {
 /*END OF GALLERY PAGE*/
 /*MORTGAGE CALCULATOR*/
 #IDX-mortgageCalculatorContainer {
-  padding-top: 50px;
+  padding: 50px 0;
+}
+
+.mortgageCalculatorContent--container {
+  display: flex;
+  justify-content: center;
+}
+
+.propertyInfoContent--container {
+  margin-right: 20px;
+  width: 20%;
+}
+
+#IDX-mortgageCalculatorContent {
+  min-width: 40%;
 }
 
 /*MORTGAGE CALCULATOR*/

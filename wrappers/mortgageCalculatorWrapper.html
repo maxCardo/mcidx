@@ -75,12 +75,18 @@
         $(".IDX-photoGalleryTitle").html("Mortgage Calculator");
 
         const propertyInfo = "<div class='propertyInfoContent--container'></div>";
+        const mortgageData = $( "#IDX-mortgageCalculationResults" ).html();
+        $( "#IDX-mortgageCalculationResults" ).remove();
+        $("#IDX-mortgageCalculatorContainer > .IDX-well").after(mortgageData);
         $("#IDX-mortgageCalculatorContainer > .IDX-well, #IDX-previousPage").wrapAll(propertyInfo);
 
         const mortCalcPage = "<div class='mortgageCalculatorContent--container'></div>";
         $(".propertyInfoContent--container, #IDX-mortgageCalculatorContent").wrapAll(mortCalcPage);
 
         $("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('btn');
+
+        const 
+
 
 
         Waves.init();
