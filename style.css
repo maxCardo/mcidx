@@ -1545,7 +1545,7 @@ div.flex-grow {
   width: 20%;
 }
 .propertyInfoContent--container .IDX-well {
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22) !important;
   border: none;
   background: #fff !important;
   font-size: 1.35em;
@@ -1558,6 +1558,8 @@ div.flex-grow {
 }
 .propertyInfoContent--container .IDX-well li:last-child, .propertyInfoContent--container .IDX-well .IDX-row:last-child {
   border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 #IDX-mortgageCalculatorContent {
