@@ -1531,38 +1531,35 @@ div.flex-grow {
 
 /*END OF GALLERY PAGE*/
 /*MORTGAGE CALCULATOR*/
-#IDX-mortgageCalculatorContainer {
+#IDX-main.IDX-page-mortgage #IDX-mortgageCalculatorContainer {
   padding: 50px 0;
 }
-
-.mortgageCalculatorContent--container {
+#IDX-main.IDX-page-mortgage .mortgageCalculatorContent--container {
   display: flex;
   justify-content: center;
 }
-
-.propertyInfoContent--container {
+#IDX-main.IDX-page-mortgage .propertyInfoContent--container {
   margin-right: 20px;
   width: 20%;
 }
-.propertyInfoContent--container .IDX-well {
+#IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22) !important;
   border: none;
   background: #fff !important;
   font-size: 1.35em;
   padding: 25px;
 }
-.propertyInfoContent--container .IDX-well li, .propertyInfoContent--container .IDX-well .IDX-row {
+#IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well li, #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well .IDX-row {
   margin-bottom: 10px;
   border-bottom: 1px solid lightgray;
   padding-bottom: 10px;
 }
-.propertyInfoContent--container .IDX-well li:last-child, .propertyInfoContent--container .IDX-well .IDX-row:last-child {
+#IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well li:last-child, #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well .IDX-row:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-
-#IDX-mortgageCalculatorContent {
+#IDX-main.IDX-page-mortgage #IDX-mortgageCalculatorContent {
   min-width: 40%;
 }
 
