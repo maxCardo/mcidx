@@ -229,6 +229,26 @@ iframe {
   height: 100%;
 }
 
+/* NAVBAR COLORS BUGFIX */
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-collapse,
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-form {
+  border-color: lightgray;
+}
+
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-toggle .IDX-icon-bar {
+  background-color: #000;
+}
+
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-toggle:focus,
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-toggle:hover {
+  color: black;
+}
+
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-toggle:active {
+  background-color: unset;
+}
+
+/* END OF NAVBAR COLORS BUGFIX */
 #IDX-main.IDX-page-listings {
   height: 100vh;
 }
@@ -508,6 +528,11 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   #IDX-resultsRow #IDX-resultsContainer #IDX-resultsRefineSearchWrap {
     width: 204%;
     left: -102%;
+  }
+
+  .IDX-page-listing .IDX-nav.IDX-navbar-nav {
+    flex-direction: column;
+    margin: 0;
   }
 }
 .IDX-wrapper-standard .IDX-h2, .IDX-wrapper-standard h2 {
@@ -1442,7 +1467,7 @@ div.flex-grow {
 }
 .IDX-page-photogallery h2.IDX-photoGalleryTitle {
   font-size: 3em;
-  margin: 40px 0 25px 0;
+  margin: 40px 0 10px 0;
   text-align: center;
 }
 .IDX-page-photogallery .sliderInfo {
