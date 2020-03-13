@@ -1532,7 +1532,7 @@ div.flex-grow {
 /*END OF GALLERY PAGE*/
 /*MORTGAGE CALCULATOR*/
 #IDX-main.IDX-page-mortgage #IDX-mortgageCalculatorContainer {
-  padding: 50px 0;
+  padding: 70px 0;
 }
 #IDX-main.IDX-page-mortgage .mortgageCalculatorContent--container {
   display: flex;
@@ -1553,6 +1553,8 @@ div.flex-grow {
   margin-bottom: 10px;
   border-bottom: 1px solid lightgray;
   padding-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
 }
 #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well li:last-child, #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well .IDX-row:last-child {
   border-bottom: none;
