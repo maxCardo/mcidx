@@ -68,31 +68,31 @@
     <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/slick.min.js"></script>
     <script>
-        idx( document ).ready(function() {
+        $( document ).ready(function() {
        
 
-        idx.each(idx.grep(document.styleSheets, function(n) {
+        $.each($.grep(document.styleSheets, function(n) {
             return n.href.search(/graphical/) != -1;
         }), function(i, n) {
             n.disabled = true;
         });
-        idx('.IDX-arrow').remove();
+        $('.IDX-arrow').remove();
 
-        idx('.IDX-showcaseSlide').removeClass('IDX-active');
+        $('.IDX-showcaseSlide').removeClass('IDX-active');
 
 
         const propInfoContainer = "<div class='propertyInfo--container'></div>";
-        idx(".IDX-propertyInfoList, #IDX-previousPage").wrapAll(propInfoContainer);
+        $(".IDX-propertyInfoList, #IDX-previousPage").wrapAll(propInfoContainer);
 
         const galleryContentContainer = "<div class='galleryContent--container'></div>";
-        idx(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
+        $(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
 
         const sliderInfo = "<h6 class='sliderInfo'> * Drag slider or use arrow keys to navigate</h6>";
 
-        idx(".IDX-photoGalleryTitle").html("Photo Gallery");
-        idx(".IDX-photoGalleryTitle").after(sliderInfo);
+        $(".IDX-photoGalleryTitle").html("Photo Gallery");
+        $(".IDX-photoGalleryTitle").html("Photo Gallery").after(sliderInfo);
         
-        idx('#IDX-showcaseSlides').slick({
+        $('#IDX-showcaseSlides').slick({
             dots: true,
             infinite: true,
             speed: 300,
@@ -102,7 +102,7 @@
         });
 
     
-        idx("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('btn');
+        $("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('btn');
         
 
         Waves.init();
