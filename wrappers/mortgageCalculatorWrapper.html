@@ -77,9 +77,10 @@
         const propertyInfo = "<div class='propertyInfoContent--container'></div>";
         $("#IDX-mortgageCalculatorContainer > .IDX-well, #IDX-previousPage").wrapAll(propertyInfo);
 
+        const mortCalcPage = "<div class='mortgageCalculatorContent--container'></div>";
+        $("#IDX-mortgageCalculatorContainer, #IDX-mortgageCalculatorContent").wrapAll(mortCalcPage);
 
-
-        $("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('.btn');
+        $(".propertyInfoContent--container, #IDX-goToProperty").addClass('.btn');
 
 
         Waves.init();
