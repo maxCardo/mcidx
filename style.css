@@ -1547,14 +1547,17 @@ div.flex-grow {
 .propertyInfoContent--container .IDX-well {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
   border: none;
-  background: white;
+  background: #fff !important;
   font-size: 1.35em;
   padding: 25px;
 }
-.propertyInfoContent--container .IDX-well li {
+.propertyInfoContent--container .IDX-well li, .propertyInfoContent--container .IDX-well .IDX-row {
   margin-bottom: 10px;
   border-bottom: 1px solid lightgray;
   padding-bottom: 10px;
+}
+.propertyInfoContent--container .IDX-well li:last-child, .propertyInfoContent--container .IDX-well .IDX-row:last-child {
+  border-bottom: none;
 }
 
 #IDX-mortgageCalculatorContent {
