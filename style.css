@@ -245,7 +245,7 @@ iframe {
 }
 
 .IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-toggle:active {
-  background-color: unset;
+  background-color: lightgray;
 }
 
 /* END OF NAVBAR COLORS BUGFIX */
@@ -1530,6 +1530,12 @@ div.flex-grow {
 }
 
 /*END OF GALLERY PAGE*/
+/*MORTGAGE CALCULATOR*/
+#IDX-mortgageCalculatorContainer {
+  padding-top: 50px;
+}
+
+/*MORTGAGE CALCULATOR*/
 /* CUSTOM LOADER */
 .lds-ring {
   display: inline-block;
