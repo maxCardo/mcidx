@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcardo.github.io/mcidx/style.css">
-    <link rel="stylesheet" href="https://maxcardo.github.io/mcidx/assets/css/waves.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcardo.github.io/mcidx/assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcardo.github.io/mcidx/assets/css/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcardo.github.io/mcidx/assets/css/waves.min.css">
+
+
+
+    <link rel="stylesheet" type="text/css" href="https://maxcardo.github.io/mcidx/style.css">
+
     <title>Max Cardo Ltd</title>
 </head>
 
@@ -55,12 +61,31 @@
 
 <script src="https://maxcardo.github.io/mcidx/assets/js/waves.min.js"></script>
 
-<script>
-    Waves.init();
-    Waves.attach('.btn');
-</script>
+
 
 <script src="https://maxcardo.github.io/mcidx/main.js"></script>
+
+<script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/slick.min.js"></script>
+<script>
+    $( document ).ready(function() {
+
+
+        $('hr').remove();
+        $(".IDX-photoGalleryTitle").html("Photo Gallery");
+
+        const propertyInfo = "<div class='propertyInfoContent--container'></div>";
+        $("#IDX-mortgageCalculatorContainer > .IDX-well, #IDX-previousPage").wrapAll(propertyInfo);
+
+
+
+        $("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('.btn');
+
+
+        Waves.init();
+        Waves.attach('.btn');
+    });
+</script>
 </body>
 
 </html>

@@ -1,0 +1,207 @@
+{# mobileFirstMapsearch-1.002.twig #}
+{# --Content #}
+{% block idxContent %}
+    {% spaceless %}
+        <div class="detailsWrapper--right">
+            <div class="mat-form">
+                <div class="mat-form--header"><a href="tel:555-555-55-5"><i class="fa fa-phone"></i>&nbsp;
+                        555-555-55-5
+                    </a></div>
+                <div class="mat-form--body">
+                    <div class="element-wrapper"><input type="text" name="name" required=""><label for="name">First
+                            Name:</label></div>
+                    <div class="element-wrapper"><input type="text" name="lastName" required=""><label for="lastName">Last
+                            Name:</label></div>
+                    <div class="element-wrapper"><input type="email" name="email" required=""><label
+                                for="email">Email:</label></div>
+                    <div class="element-wrapper"><input type="text" name="phone" required=""><label
+                                for="phone">Phone:</label></div>
+                    <div class="element-wrapper with--checkbox">
+                        <label class="checkbox path">
+                            <input type="checkbox">
+                            <svg viewBox="0 0 21 21">
+                                <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                            </svg>
+                            &nbsp; Request Info
+                        </label>
+                    </div>
+                    <div class="element-wrapper with--checkbox">
+                        <label class="checkbox path" id="clickCustomMessage">
+                            <input type="checkbox" id="sendCustomMessage">
+                            <svg viewBox="0 0 21 21">
+                                <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                            </svg>
+                            &nbsp; Custom Message
+                        </label>
+                    </div>
+                    <div class="element-wrapper" id="customMessageContainer">
+                        <textarea id="contactCustomMessage" class="form__field" rows="6"></textarea>
+                        <label for="contactCustomMessage" class="form__label">Your Message</label>
+                    </div>
+                </div>
+                <div class="element-wrapper flex-centered">
+                    <button class="contact-btn--send btn-cta">Send</button>
+                </div>
+                <div class="mat-form--footer">
+                    <a href="tel:555-555-55-5">
+                        <i class="fa fa-building"></i>&nbsp;
+                        Max Cardo Ltd.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="IDX-searchPageWrapper"
+             style="width: 100vw; height: 100vh; background: url('http://cardo.tech/images/bg.jpg') no-repeat center center; background-size: cover;"
+             class="IDX-pageContainer IDX-mobileFirst--neutral">
+
+
+            <div class="IDX-searchPageContainer">
+                <div class="IDX-searchFormContainer advancedSearchContainer">
+                    {% include 'navbar-1.001.twig' %}
+                    <form id="IDX-MapSearch-Form">
+                        <div id="IDX-mapContainer">
+                            <div id="IDX-mapHeader-Search" class="IDX-mapHeader" data-autorefresh="no">
+                                <div id="IDX-mapCount">
+                                    Found <span id="IDX-mapResultsFound"></span> of <span
+                                            id="IDX-mapResultsPossible"></span>
+                                </div>
+                                <div id="IDX-mapSearchFields" class="IDX-row-content">
+                                    <div id="IDX-price-fields" class="IDX-row-content">
+                                        <div id="IDX-lp-group" class="IDX-control-group" data-role="fieldcontain">
+                                            <label for="IDX-lp"
+                                                   class="IDX-control-label">{{ minPrice.displayName }}</label>
+                                            <div class="IDX-controls">
+                                                <input
+                                                        type="text"
+                                                        name="lp"
+                                                        id="IDX-lp"
+                                                        value="{{ queryArray.lp }}"
+                                                        class="IDX-form-control"
+                                                        data-mini="true"
+                                                        placeholder="{{ minPrice.displayName }}"
+                                                >
+                                            </div>
+                                        </div>
+                                        <div id="IDX-hp-group" class="IDX-control-group" data-role="fieldcontain">
+                                            <label for="IDX-hp"
+                                                   class="IDX-control-label">{{ maxPrice.displayName }}</label>
+                                            <div class="IDX-controls">
+                                                <input
+                                                        type="text"
+                                                        name="hp"
+                                                        id="IDX-hp"
+                                                        value="{{ queryArray.hp }}"
+                                                        class="IDX-form-control"
+                                                        data-mini="true"
+                                                        placeholder="{{ maxPrice.displayName }}"
+                                                >
+                                            </div>
+                                        </div>
+                                        <a id="IDX-mapTab-criteria" class="IDX-btn IDX-btn-default" href="#">
+                                            <span class="fa fa-filter fa-lg"></span>
+                                            Filter
+                                        </a>
+                                        <a id="IDX-mapSearch" class="IDX-btn IDX-btn-default" href="#">
+                                            <span class="fa fa-search fa-lg"></span>
+                                            <span id="IDX-criteriaText" class="IDX-hide">Criteria</span>
+                                        </a>
+                                        <a id="IDX-userLocation" class="IDX-btn IDX-btn-default" href="#">
+                                            <span class="fa fa-location-arrow fa-lg"></span>
+                                            <span id="IDX-locationText" class="IDX-hide">Find Me</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="IDX-mapControlContainer">
+                                <div id="IDX-mapLoading" class="IDX-loading">
+                                    <div class="lds-ring">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div id="IDX-map"></div>
+                                <div id="IDX-criteriaWindow" class="IDX-mapControlWindow">
+                                    <div class="IDX-windowClose">
+                                        <button type="button" class="IDX-close" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div id="IDX-criteriaWindowContent">
+                                        {% include 'mobileFirstMapSearchForm-1.003.twig' %}
+                                    </div>
+                                </div>
+                                <div id="IDX-locationWindow" class="IDX-mapControlWindow">
+                                    <div class="IDX-windowClose">
+                                        <span class="IDX-closeControlWindow">[back to map]</span>
+                                    </div>
+                                </div>
+                                <div id="IDX-mapRefresh" class="IDX-mapButton">
+                                    <i class="fa fa-refresh"></i>
+                                    <span>Refresh</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="IDX-mapAlert" class="IDX-alert IDX-alert-info IDX-alert-dismissable" role="alert">
+                            <button type="button" class="IDX-close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div id="IDX-mapAlertHeader"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <input type="hidden" id="IDX-searchURL" value="{{ searchURL }}"/>
+            <div id="IDX-defaultPriceData" style="display:none !important;">{{ defaultPriceData|raw }}</div>
+            {% include 'multipleMlsDisclaimers-1.000.twig' %}
+
+            {# This forces the map to a specific location when it loads. #}
+            {% if mapCookie %}
+                <script>document.cookie = "IDX-mapPosition={{ mapCookie|raw }}" + "; path=/;"</script>{% endif %}
+        </div>
+    {% endspaceless %}
+{% endblock %}
+
+{% block idxSuffix %}
+    {% if middleware and mapExists %}
+        <script>
+            var idxMapData = {{ mapData|json_encode|raw }};
+            var mobile = false;
+        </script>
+        {# Loop through mapSourceJS array and include each script file for the mapEngine. #}
+        {% for script in mapData.mapSourceJS %}
+            <script type="text/javascript" src="{{ script }}"></script>
+        {% endfor %}
+
+        <script
+                type="text/javascript"
+                src="{{ cdn.make('/graphical/frontend/javascript/maps/idxmap'~mapData.mapEngine~'.1.0.1.min.js') }}"
+        ></script>
+    {% endif %}
+    {% if middleware %}
+        <link rel="stylesheet" id="font-awesome-css" href="{{ cdn.make('/graphical/css/font-awesome-4.7.0.min.css') }}"
+              type="text/css" media="all">
+
+        <link rel="stylesheet" href="{{ cdn.make('/graphical/css/mobileFirst.css') }}">
+        <style>
+            #IDX-lp, #IDX-hp {
+                height: 34px;
+            }
+        </style>
+    {% endif %}
+
+    {# Include our new pins/clusters. #}
+    {% include 'leaflet-1.001.twig' %}
+{% endblock %}
+
+
+<div class="sm-contact-bar">
+    <a href="#" class="">
+        <i class="fa fa-phone"></i>
+    </a>
+    <span class="contact-mail">
+        <i class="fa fa-envelope"></i>
+    </span>
+</div>
+

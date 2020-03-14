@@ -1,0 +1,221 @@
+{% import "forms-1.001.twig" as form %}
+{% import "searchTools-1.003.twig" as tools %}
+{% block idxContent %}
+    {% spaceless %}
+        <div class="detailsWrapper--right">
+            <div class="mat-form">
+                <div class="mat-form--header"><a href="tel:555-555-55-5"><i class="fa fa-phone"></i>&nbsp;
+                        555-555-55-5
+                    </a></div>
+                <div class="mat-form--body">
+                    <div class="element-wrapper"><input type="text" name="name" required=""><label for="name">First
+                            Name:</label></div>
+                    <div class="element-wrapper"><input type="text" name="lastName" required=""><label for="lastName">Last
+                            Name:</label></div>
+                    <div class="element-wrapper"><input type="email" name="email" required=""><label
+                                for="email">Email:</label></div>
+                    <div class="element-wrapper"><input type="text" name="phone" required=""><label
+                                for="phone">Phone:</label></div>
+                    <div class="element-wrapper with--checkbox">
+                        <label class="checkbox path">
+                            <input type="checkbox">
+                            <svg viewBox="0 0 21 21">
+                                <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                            </svg>
+                            &nbsp; Request Info
+                        </label>
+                    </div>
+                    <div class="element-wrapper with--checkbox">
+                        <label class="checkbox path" id="clickCustomMessage">
+                            <input type="checkbox" id="sendCustomMessage">
+                            <svg viewBox="0 0 21 21">
+                                <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                            </svg>
+                            &nbsp; Custom Message
+                        </label>
+                    </div>
+                    <div class="element-wrapper" id="customMessageContainer">
+                        <textarea id="contactCustomMessage" class="form__field" rows="6"></textarea>
+                        <label for="contactCustomMessage" class="form__label">Your Message</label>
+                    </div>
+                </div>
+                <div class="element-wrapper flex-centered">
+                    <button class="contact-btn--send btn-cta">Send</button>
+                </div>
+                <div class="mat-form--footer">
+                    <a href="tel:555-555-55-5">
+                        <i class="fa fa-building"></i>&nbsp;
+                        Max Cardo Ltd.
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="IDX-searchPageWrapper"
+             style="width: 100vw; height: 100vh; background: url('http://cardo.tech/images/bg.jpg') no-repeat center center; background-size: cover;"
+             class="IDX-pageContainer IDX-mobileFirst--neutral">
+
+            <div id="IDX-pageSettings" class="IDX-hidden">{{ pageSettings|json_encode }}</div>
+            {% if ssQueryArray %}
+                <div id="IDX-editSavedSearchData" style="display:none !important;">{{ ssQueryArray|raw }}</div>
+            {% endif %}
+            <div class="IDX-searchPageContainer">
+                <div class="IDX-searchFormContainer advancedSearchContainer">
+                    {% include 'navbar-1.001.twig' %}
+                    <form action="{{ formAction }}" method="get" name="IDXsearchForm" id="IDX-searchForm"
+                          class="IDX-searchForm IDX-searchForm-{{ currentScript }} {% if v1searchMarkup %}IDX-v1searchMarkup{% endif %}{% if emailUpdateSignup %}IDX-emailUpdateSignupForm{% endif %}"{% if middleware %} target="_blank"{% endif %}
+                          data-pageid="{{ pageID }}" data-middleware="{{ middleware }}"
+                          data-advfields="{{ advancedFields }}">
+                        {% if customNewSearch %}
+                            <input type="hidden" name="idxsrp" value="{{ pageID }}"/>
+                        {% endif %}
+                        {{ tools.mls({ force: true, includeBlank: true, blankDisplay: 'All', elementClass: 'IDX-select' }) }}
+                        <div id="IDX-coreSearchFields" class="IDX-row-content">
+                            {% spaceless %}
+                                <div id="IDX-pt-group"
+                                     class="IDX-control-group {% if hiddenFields.pt %}IDX-hidden{% endif %}">
+                                    <div class="IDX-controls">
+                                        <label for="IDX-pt"
+                                               class="{% if middleware %}IDX-control-label{% else %} IDX-label-for-nojs {% endif %}">{{ propTypes.displayName }}</label>
+                                        <select id="IDX-pt" class="IDX-select" name="pt" autocomplete="off">
+                                            <option></option>
+                                            {% for value, name in propTypes.values %}
+                                                <option value="{{ value }}"
+                                                        {% if currentPt.0 == value %}selected="selected"{% endif %}>{{ name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                            {% endspaceless %}
+                            {% spaceless %}
+                                {% if cczListRules|length > 0 %}
+                                    {# Hidden inputs for custom city/county/zipcode lists. #}
+                                    {% for customListType, customListID in customCityCountyZipLists %}
+                                        {% if customListType == 'city' %}
+                                            {% set customList = 'ciID' %}
+                                        {% elseif customListType == 'county' %}
+                                            {% set customList = 'coID' %}
+                                        {% elseif customListType == 'zipcode' %}
+                                            {% set customList = 'pcID' %}
+                                        {% endif %}
+                                        <input type="hidden" name="{{ customList }}" id="{{ customList }}"
+                                               value={{ customListID }}>
+                                    {% endfor %}
+
+                                    {% set cityClass = value %}
+                                    <div id="IDX-ccz-group"
+                                         class="IDX-control-group {% if hiddenFields.ccz %}IDX-hidden{% endif %}">
+                                        {% if options.controllerFirst %}
+                                            {{ local.cczController(options) }}
+                                        {% endif %}
+                                        {% set cczLabels = [] %}
+                                        {% for item in [cities, counties, zipcodes] %}
+                                            {% if item.displayName %}
+                                                {% set cczLabels = cczLabels|merge([item.displayName]) %}
+                                            {% endif %}
+                                        {% endfor %}
+                                        <div class="IDX-controls">
+                                            <label for="IDX-ccz-select"
+                                                   class="{% if middleware %}IDX-control-label{% else %} IDX-label-for-nojs {% endif %}">{{ cczLabels|join(', ') }}</label>
+                                            <select id="IDX-ccz-select" class="IDX-select" multiple="multiple">
+                                                {% for ccz, display in cczListRules %}
+                                                    {% set class %}IDX-cczList{% if loop.first %} IDX-active{% endif %}{% endset %}
+                                                    {% if ccz == 'city' %}
+                                                        <optgroup label="{{ cities.displayName }}" data-type="city">
+                                                            {% for value, name in cities.values %}
+                                                                <option value="{{ value }}"
+                                                                        data-type="city">{{ name }}</option>
+                                                            {% endfor %}
+                                                        </optgroup>
+                                                    {% elseif ccz == 'county' %}
+                                                        <optgroup label="{{ counties.displayName }}" data-type="county">
+                                                            {% for value, name in counties.values %}
+                                                                <option value="{{ value }}"
+                                                                        data-type="county">{{ name }}</option>
+                                                            {% endfor %}
+                                                        </optgroup>
+                                                    {% elseif ccz == 'zipcode' %}
+                                                        <optgroup label="{{ zipcodes.displayName }}"
+                                                                  data-type="zipcode">
+                                                            {% for value, name in zipcodes.values %}
+                                                                <option value="{{ value }}"
+                                                                        data-type="zipcode">{{ name }}</option>
+                                                            {% endfor %}
+                                                        </optgroup>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <input type="text" name="ccz" id="IDX-ccz" class="IDX-hide">
+                                    </div>
+                                {% endif %}
+                                {# Address. #}
+                                <div class="IDX-single" id="IDX-addressWrap">
+                                    <label for="IDX-address">Address</label>
+                                    <input type="text" id="IDX-address" name="aw_address">
+                                </div>
+
+                                {# Refinement. #}
+                                {% if refinement %}
+                                    <div id="IDX-searchRefinement-group"
+                                         class="IDX-control-group {% if hiddenFields.searchRefinement %}IDX-hidden{% endif %}">
+                                        <div class="IDX-controls">
+                                            <label for="IDX-searchRefinement"
+                                                   class="{% if middleware %}IDX-control-label{% else %} IDX-label-for-nojs {% endif %}">Refinement</label>
+                                            <select id="IDX-searchRefinement" name="searchRefinement" class="IDX-select"
+                                                    multiple="multiple">
+                                                {% if not hiddenFields.photocount %}
+                                                    <option value="amin_photocount">Has Image</option>
+                                                {% endif %}
+                                                {% if not hiddenFields.wvt %}
+                                                    <option value="wvt">Has Virtual Tour</option>
+                                                {% endif %}
+                                                {% if not hiddenFields.woh %}
+                                                    <option value="woh">Has Open House</option>
+                                                {% endif %}
+                                                {% if not hiddenFields.fl %}
+                                                    <option value="fl">Featured Listings</option>
+                                                {% endif %}
+                                            </select>
+                                        </div>
+                                        <input type="text" class='IDX-hide' name="amin_photocount" value="">
+                                        <input type="text" class='IDX-hide' name="wvt" value="">
+                                        <input type="text" class='IDX-hide' name="woh" value="">
+                                        <input type="text" class='IDX-hide' name="fl" value="">
+                                    </div>
+                                {% endif %}
+                            {% endspaceless %}
+                        </div>
+                        {% if 'sold' in statuses.values %}
+                            <input type="hidden" name="a_statusCategory[]" value="active"/>
+                            <input type="hidden" name="a_statusCategory[]" value="sold"/>
+                        {% endif %}
+                        <div id="IDX-action-buttons" class="IDX-row-content">
+                            <a href="advanced" type="button" id="IDX-formReset" class="IDX-btn IDX-btn-default btn">Reset</a>
+                            <a href="#" type="submit" id="IDX-formSubmit" class="IDX-btn IDX-btn-primary btn"
+                               data-action="search">
+                                Search
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            {% if not middleware %}
+                <div id="IDX-editSavedSearch" class="IDX-hide">
+                    <div style="text-align:center;" id="IDX-editSavedSearchMessage"></div>
+                </div>
+                {# Only include the disclaimers frontend. #}
+                {% include 'multipleMlsDisclaimers-1.000.twig' %}
+            {% endif %}
+        </div>
+    {% endspaceless %}
+{% endblock %}
+
+<div class="sm-contact-bar">
+    <a href="#" class="">
+        <i class="fa fa-phone"></i>
+    </a>
+    <span class="contact-mail">
+        <i class="fa fa-envelope"></i>
+    </span>
+</div>

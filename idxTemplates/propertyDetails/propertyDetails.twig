@@ -10,66 +10,7 @@
 
         <div id="IDX-detailsWrapper" class="IDX-pageContainer"
              data-collapse-details="{{ collapseMobileFirstDetailsFields }}">
-            {% block idxDetailsHeader %}
-                <div id="IDX-detailsTopNav" {% if nav.prev or nav.next %}class="IDX-detailsTrack"{% endif %}>
 
-                    <div id="IDX-detailsTopActions" class="IDX-topActions IDX-row-content">
-                        {% if nav.prev or nav.next %}
-                            <div id="IDX-prevButton">
-
-                                <a href="{{ detailsBaseURL }}{{ nav.prev.detailsURL }}"
-                                   class="IDX-btn IDX-btn-default {% if not nav.prev %}disabled{% endif %}"
-                                   {% if not nav.prev %}disabled={% endif %}>
-                                    <i class="fa fa-chevron-left"></i>
-                                </a>
-                            </div>
-                        {% endif %}
-                        {% spaceless %}
-                            {% if missingProperty == false and propArchived == false %}
-                                <div id="IDX-detailsActionSave" class="IDX-topAction">
-                                    {% if propertySavedPreviously %}
-                                        <a id="IDX-saveProperty" data-listingid="{{ listingID }}"
-                                           data-idxid="{{ idxID }}" href="#saveProperty"
-                                           class="IDX-saveProperty IDX-btn IDX-btn-default">Saved!</a>
-                                    {% else %}
-                                        <a id="IDX-saveProperty" data-listingid="{{ listingID }}"
-                                           data-idxid="{{ idxID }}" href="#saveProperty"
-                                           class="IDX-saveProperty IDX-btn IDX-btn-default">Save Property</a>
-                                    {% endif %}
-                                </div>
-                            {% endif %}
-                            <div id="IDX-detailsActionNew" class="IDX-topAction">
-                                {% if nav.newSearch %}
-                                    <a id="IDX-newSearch" href="{{ nav.newSearch }}" class="IDX-btn IDX-btn-default">New
-                                        Search</a>
-                                {% endif %}
-                            </div>
-                            {% if nav.modifySearch %}
-                                <div id="IDX-detailsActionModify" class="IDX-topAction">
-                                    <a id="IDX-modifySearch" href="{{ nav.modifySearch }}"
-                                       class="IDX-btn IDX-btn-default">Modify Search</a>
-                                </div>
-                            {% endif %}
-                            {% if nav.backToResults %}
-                                <div class="IDX-topAction" id="IDX-detailsActionBack">
-                                    <a id="IDX-backToResults" href="{{ nav.backToResults }}"
-                                       class="IDX-btn IDX-btn-default">Back to Results</a>
-                                </div>
-                            {% endif %}
-                        {% endspaceless %}
-                        {% if nav.prev or nav.next %}
-                            <div id="IDX-nextButton">
-                                {% if nav.next %}
-                                    <a href="{{ detailsBaseURL }}{{ nav.next.detailsURL }}"
-                                       class="IDX-btn IDX-btn-default">
-                                        <i class="fa fa-chevron-right"></i>
-                                    </a>
-                                {% endif %}
-                            </div>
-                        {% endif %}
-                    </div>
-                </div>
-            {% endblock %}
             <div class="detailsWrapper--left">
 
                 {% if missingProperty %}
@@ -97,78 +38,107 @@
 
                     <div id="IDX-detailsHead">
                         <div id="IDX-detailsMediaContaner--custom">
-                            <div id="IDX-details--actions-and-address-container">
-                                <div id="IDX-detailsHotActions">
-                                    {# virtual tours #}
-                                    {% if mediaData.vtCount > 0 %}
-                                        <div id="IDX-detailsHotAction-vt" class="IDX-detailsHotAction">
-                                            {% if mediaData.vtCount == 1 %}
-                                                <a onclick="window.open('{{ mediaData.vt.0.url }}', 'VirtualTour', 'width=800, height=600, resizable=1, scrollbars=1, status=0, titlebar=0')"
-                                                   href="javascript:void(0)"
-                                                   class="IDX-detailsVirtualTourAction IDX-btn IDX-btn-default">
-                                                    {{ mediaData.vt.0.descriptor|default('Virtual Tour') }}
-                                                </a>
-                                            {% else %}
-                                                <a href="#IDX-detailsMediaVirtualTour" id="IDX-detailsVirtualTour"
-                                                   class="IDX-psudolink IDX-mediaModal IDX-btn IDX-btn-default">Virtual
-                                                    Tours ({{ mediaData.vtCount }})</a>
-                                                <div id="IDX-detailsMediaVirtualTour" class="IDX-mediaContentVT"
-                                                     title="Virtual Tours for #{{ listingID }}">
-                                                    {% for media in mediaData.vt %}
-                                                        <div class="IDX-mediaModalVT">
-                                                            <a class="IDX-vtLink"
-                                                               onclick="window.open('{{ media.url }}', '{{ media.title }}', 'width={{ media.width|default('800') }}, height={{ media.height|default('600') }}, resizable=1, scrollbars=1, status=0, titlebar=0')"
-                                                               href="javascript:void(0)">
-                                                                {{ media.descriptor|default('Virtual Tour') }}
+                            {% block idxDetailsHeader %}
+                                <div id="IDX-detailsTopNav"
+                                     {% if nav.prev or nav.next %}class="IDX-detailsTrack"{% endif %}>
+
+                                    <nav id="IDX-navbar"
+                                         class="IDX-navbar IDX-navbar-default IDX-navbar-default--neutral"
+                                         role="navigation">
+                                        <div class="IDX-container-navbar">
+                                            <!-- Brand and toggle get grouped for better mobile display -->
+                                            <div class="IDX-navbar-header">
+                                                <button type="button" class="IDX-navbar-toggle IDX-collapsed"
+                                                        data-toggle="idx-collapse"
+                                                        data-target="#IDX-navbar-collapse">
+                                                    <span class="sr-only">Toggle navigation</span>
+                                                    <span class="IDX-icon-bar"></span>
+                                                    <span class="IDX-icon-bar"></span>
+                                                    <span class="IDX-icon-bar"></span>
+                                                </button>
+                                            </div><!-- Collect the nav links, forms, and other content for toggling -->
+                                            <div class="IDX-collapse IDX-navbar-collapse" id="IDX-navbar-collapse">
+                                                <ul class="IDX-nav IDX-navbar-nav">
+
+                                                    {% if nav.prev or nav.next %}
+                                                        <li class="IDX-searchNavItem IDX-nav-advanced IDX-prevProperty">
+
+                                                            <a href="{{ detailsBaseURL }}{{ nav.prev.detailsURL }}"
+                                                               class="IDX-btn IDX-btn-default {% if not nav.prev %}disabled{% endif %}"
+                                                               {% if not nav.prev %}disabled={% endif %}>
+                                                                <i class="fa fa-chevron-left"></i>
                                                             </a>
-                                                            <span class="IDX-mediaModalText">{{ media.text }}</span>
-                                                        </div>
-                                                    {% endfor %}
-                                                </div>
-                                            {% endif %}
-                                        </div>
-                                    {% endif %}
-                                    {# contact agent #}
-                                    <div id="IDX-detailsHotAction-contact" class="IDX-detailsHotAction">
-                                        {% if featuredAgentInfo %}
-                                            <a href="{{ "/idx/contact?agentID=" ~ featuredAgentInfo.userID }}"
-                                               id="IDX-contactAgent" class="IDX-btn IDX-btn-default">Contact Agent</a>
-                                        {% else %}
-                                            <a href="{{ moreInfoLink }}" id="IDX-moreinfo"
-                                               class="IDX-btn IDX-btn-default">More Information</a>
-                                        {% endif %}
+                                                        </li>
+                                                    {% endif %}
 
-                                    </div>
-                                    {% if idxStatus == 'active' %}
-                                        <div id="IDX-detailsHotAction-schedule" class="IDX-detailsHotAction">
-                                            <a id="IDX-scheduleShowing" href="{{ scheduleShowingLink }}"
-                                               class="IDX-btn IDX-btn-default">Schedule Showing</a>
-                                        </div>
-                                    {% endif %}
+                                                    {% spaceless %}
+                                                        {% if missingProperty == false and propArchived == false %}
+                                                            <li class="IDX-searchNavItem IDX-nav-listingid">
+                                                                {% if propertySavedPreviously %}
+                                                                    <a id="IDX-saveProperty"
+                                                                       data-listingid="{{ listingID }}"
+                                                                       data-idxid="{{ idxID }}" href="#saveProperty"
+                                                                       class="IDX-saveProperty IDX-btn IDX-btn-default">Saved!</a>
+                                                                {% else %}
+                                                                    <a id="IDX-saveProperty"
+                                                                       data-listingid="{{ listingID }}"
+                                                                       data-idxid="{{ idxID }}" href="#saveProperty"
+                                                                       class="IDX-saveProperty IDX-btn IDX-btn-default">Save
+                                                                        Property</a>
+                                                                {% endif %}
+                                                            </li>
+                                                        {% endif %}
+                                                        {% if nav.newSearch %}
 
+                                                            <li class="IDX-searchNavItem IDX-nav-address">
+                                                                <a id="IDX-newSearch" href="{{ nav.newSearch }}"
+                                                                   class="IDX-btn IDX-btn-default">New
+                                                                    Search</a>
+                                                            </li>
 
-                                    {# tools.displayMortgageCalcLink #}
-                                    {% if parentPtID not in [3, 10] and rntLsePrice == 0 and idxStatus == 'active' %}
-                                        <div id="IDX-detailsHotAction-mortgage" class="IDX-detailsHotAction">
-                                            <a id="IDX-mortgageLink" href="{{ mortgageLink }}"
-                                               class="IDX-btn IDX-btn-default">Mortgage Calculator</a>
-                                        </div>
-                                    {% endif %}
-                                    <div id="IDX-detailsHotAction-print" class="IDX-detailsHotAction">
-                                        <a target="_blank" href="?printable" id="IDX-printable"
-                                           class="IDX-btn IDX-btn-default">Printable Flyer</a>
-                                    </div>
-                                    {% if customLink.url and customLink.text %}
-                                        <div id="IDX-detailsHotAction-{{ customLink.text | lower | trim(' ') }}"
-                                             class="IDX-detailsHotAction">
-                                            <a class="IDX-CustomLink IDX-btn IDX-btn-default"
-                                               href="{{ customLink.url }}" target="_blank">{{ customLink.text }}</a>
-                                        </div>
-                                    {% endif %}
+                                                        {% endif %}
+                                                        {% if nav.modifySearch %}
+                                                            <li class="IDX-searchNavItem IDX-nav-mapsearch">
+                                                                <a id="IDX-modifySearch"
+                                                                   href="{{ nav.modifySearch }}"
+                                                                   class="IDX-btn IDX-btn-default">Modify Search</a>
+                                                            </li>
+
+                                                        {% endif %}
+                                                        {% if nav.backToResults %}
+                                                            <li class="IDX-searchNavItem IDX-nav-mapsearch">
+                                                                <a id="IDX-backToResults"
+                                                                   href="{{ nav.backToResults }}"
+                                                                   class="IDX-btn IDX-btn-default">Back to
+                                                                    Results</a>
+                                                            </li>
+
+                                                        {% endif %}
+                                                        {# tools.displayMortgageCalcLink #}
+                                                        {% if parentPtID not in [3, 10] and rntLsePrice == 0 and idxStatus == 'active' %}
+                                                            <li id="IDX-detailsHotAction-mortgage">
+                                                                <a id="IDX-mortgageLink" href="{{ mortgageLink }}"
+                                                                   class="IDX-btn IDX-btn-default">Mortgage Calculator</a>
+                                                            </li>
+                                                        {% endif %}
+                                                    {% endspaceless %}
+                                                    {% if nav.prev or nav.next %}
+                                                        <li class="IDX-searchNavItem IDX-nextProperty">
+                                                            {% if nav.next %}
+                                                                <a href="{{ detailsBaseURL }}{{ nav.next.detailsURL }}"
+                                                                   class="IDX-btn IDX-btn-default">
+                                                                    <i class="fa fa-chevron-right"></i>
+                                                                </a>
+                                                            {% endif %}
+                                                        </li>
+                                                    {% endif %}
+
+                                                </ul>
+                                            </div><!-- /.navbar-collapse -->
+                                        </div><!-- /.container-fluid -->
+                                    </nav>
                                 </div>
-
-                            </div>
-
+                            {% endblock %}
                             <div id="IDX-detailsMedia">
                                 <div id="IDX-primaryPhoto" class="IDX-detailsPhotosWrap">
                                     <a href="#" class="IDX-thumbnail">
@@ -526,6 +496,17 @@
                         </div>
                     {% endif %}
                 </div>
+                {# dislcaimer / courtesy / css selector #}
+                {% if missingProperty == false and propArchived == false %}
+                    <div class="disclaimer-container">
+                        {% include 'singleMlsDisclaimers-1.000.twig' %}
+                    </div>
+                {% endif %}
+
+                {# Similar Listings #}
+                {% if clientRules.displaySimilarListingsOnDetailsPage == 'y' %}
+                    {% include 'similarProperties-1.000.twig' %}
+                {% endif %}
             </div>
 
             <div class="detailsWrapper--right">
@@ -569,16 +550,7 @@
                                 <svg viewBox="0 0 21 21">
                                     <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
                                 </svg>
-                                &nbsp; Request Application
-                            </label>
-                        </div>
-                        <div class="element-wrapper with--checkbox">
-                            <label class="checkbox path">
-                                <input type="checkbox">
-                                <svg viewBox="0 0 21 21">
-                                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
-                                </svg>
-                                &nbsp; Confirm Availability
+                                &nbsp; Schedule Showing
                             </label>
                         </div>
                         <div class="element-wrapper with--checkbox">
@@ -629,17 +601,7 @@
 
 
 
-        {# dislcaimer / courtesy / css selector #}
-        {% if missingProperty == false and propArchived == false %}
-            <div class="disclaimer-container">
-                {% include 'singleMlsDisclaimers-1.000.twig' %}
-            </div>
-        {% endif %}
 
-        {# Similar Listings #}
-        {% if clientRules.displaySimilarListingsOnDetailsPage == 'y' %}
-            {% include 'similarProperties-1.000.twig' %}
-        {% endif %}
 
 
         {# Page Footer Content #}

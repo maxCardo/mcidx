@@ -42,6 +42,27 @@ iframe {
   height: 100%;
 }
 
+/* NAVBAR COLORS BUGFIX */
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-collapse,
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-form {
+  border-color: lightgray;
+}
+
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-toggle .IDX-icon-bar {
+  background-color: #000;
+}
+
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-toggle:focus,
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-toggle:hover {
+  color: black;
+}
+
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-toggle:active {
+  background-color: lightgray;
+}
+
+/* END OF NAVBAR COLORS BUGFIX */
+
 #IDX-main.IDX-page-listings {
   height: 100vh;
 }
@@ -300,6 +321,17 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 
 @media (max-width: 640px) {
+  .IDX-page-listing li.IDX-searchNavItem.IDX-prevProperty {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+  }
+  .IDX-page-listing li.IDX-searchNavItem.IDX-nextProperty {
+    position: absolute;
+    top: 3px;
+    left: 48px;
+  }
+
   #IDX-resultsRow .IDX-pageContainer #IDX-resultsTopActions > div {
     width: 50%;
     font-size: 18px;
@@ -318,6 +350,11 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   #IDX-resultsRow #IDX-resultsContainer #IDX-resultsRefineSearchWrap {
     width: 204%;
     left: -102%;
+  }
+
+  .IDX-page-listing .IDX-nav.IDX-navbar-nav {
+    flex-direction: column;
+    margin: 0;
   }
 }
 
@@ -458,7 +495,11 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   height: auto;
   max-width: 100%;
   width: 100%;
-  margin: 20px 0 15px 0;
+  margin: 0 0 15px 0;
+}
+
+.IDX-navbar-default .IDX-navbar-nav > li > a {
+  color: #000000;
 }
 
 .IDX-page-listing.IDX-wrapper-standard #IDX-detailsTopActions #IDX-detailsActionSave,
@@ -475,41 +516,6 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   justify-content: center;
 }
 
-.IDX-page-listing .IDX-topAction a#IDX-saveProperty,
-.IDX-page-listing .IDX-topAction a#IDX-newSearch,
-.IDX-page-listing .IDX-topAction a#IDX-modifySearch,
-.IDX-page-listing .IDX-topAction a#IDX-backToResults,
-.IDX-page-listing #IDX-detailsTopActions #IDX-prevButton a,
-.IDX-page-listing #IDX-detailsTopActions #IDX-nextButton a {
-  background: #3f51b5;
-  color: #fff;
-  position: relative;
-  transition: all 200ms;
-}
-
-.IDX-page-listing .IDX-topAction a#IDX-saveProperty:hover,
-.IDX-page-listing .IDX-topAction a#IDX-saveProperty:focus,
-.IDX-page-listing .IDX-topAction a#IDX-saveProperty:active,
-.IDX-page-listing .IDX-topAction a#IDX-newSearch:hover,
-.IDX-page-listing .IDX-topAction a#IDX-newSearch:focus,
-.IDX-page-listing .IDX-topAction a#IDX-newSearch:active,
-.IDX-page-listing .IDX-topAction a#IDX-modifySearch:hover,
-.IDX-page-listing .IDX-topAction a#IDX-modifySearch:focus,
-.IDX-page-listing .IDX-topAction a#IDX-modifySearch:active,
-.IDX-page-listing .IDX-topAction a#IDX-backToResults:hover,
-.IDX-page-listing .IDX-topAction a#IDX-backToResults:focus,
-.IDX-page-listing .IDX-topAction a#IDX-backToResults:active,
-.IDX-page-listing #IDX-detailsTopActions #IDX-prevButton a:hover,
-.IDX-page-listing #IDX-detailsTopActions #IDX-prevButton a:focus,
-.IDX-page-listing #IDX-detailsTopActions #IDX-prevButton a:active,
-.IDX-page-listing #IDX-detailsTopActions #IDX-nextButton a:hover,
-.IDX-page-listing #IDX-detailsTopActions #IDX-nextButton a:focus,
-.IDX-page-listing #IDX-detailsTopActions #IDX-nextButton a:active {
-  background: #757de8;
-  color: #fff;
-  top: -2px;
-  bottom: 2px;
-}
 
 .IDX-page-listing .IDX-wrapper-standard #IDX-detailsHotActions {
   display: flex;
@@ -526,16 +532,48 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   top: 0;
 }
 
-.IDX-page-listing #IDX-detailsHotActions > div > a {
-  font-size: 12px;
-  padding: 6px;
-  transition: all 250ms;
-
+.IDX-wrapper-standard #IDX-saveProperty,
+.IDX-wrapper-standard #IDX-newSearch,
+.IDX-wrapper-standard #IDX-modifySearch,
+.IDX-wrapper-standard #IDX-mortgageLink,
+.IDX-wrapper-standard #IDX-backToResults,
+.IDX-wrapper-standard .IDX-nextProperty > a.IDX-btn.IDX-btn-default,
+.IDX-wrapper-standard .IDX-searchNavItem.IDX-nav-advanced > a.IDX-btn.IDX-btn-default,
+.IDX-wrapper-standard #IDX-detailsHotAction-mortgage {
+  background-color: #e6e6e6;
+  color: #555;
 }
 
-.IDX-page-listing #IDX-detailsHotActions > div:hover {
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, .17), -2px 2px 5px rgba(0, 0, 0, .17);
-  top: -1px;
+.IDX-page-listing {
+  #IDX-navbar-collapse {
+    padding: 0;
+  }
+
+  ul.IDX-nav.IDX-navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    #IDX-saveProperty,
+    .IDX-nav-address,
+    .IDX-nav-mapsearch,
+    #IDX-detailsHotAction-mortgage {
+      flex-grow: 1;
+    }
+  }
+
+
+  #IDX-detailsHotActions > div > a {
+    font-size: 12px;
+    padding: 6px;
+    transition: all 250ms;
+
+  }
+
+  #IDX-detailsHotActions > div:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .17), -2px 2px 5px rgba(0, 0, 0, .17);
+    top: -1px;
+  }
 }
 
 .IDX-page-listing #IDX-detailsHead {
@@ -777,7 +815,9 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   }
 }
 
-.IDX-page-listing .mat-form {
+.IDX-page-listing .mat-form,
+.IDX-category-search .mat-form,
+.IDX-category-map .mat-form {
   width: 100%;
   background: white;
   box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.16), 0 0 200px 1px rgba(255, 255, 255, 0.15);
@@ -846,16 +886,12 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
         padding: 15px 5px 5px 5px;
       }
 
-      &:nth-child(9) {
-        width: 100%;
-        max-height: 65px;
-        /* TODO: HIDE ON LOAD, SHOW IF CUSTOM MASSAGE IS SELECTED */
-      }
-
       &#customMessageContainer {
         height: 0px;
         overflow: hidden;
         transition: height 200ms;
+        width: 100%;
+        max-height: 65px;
       }
 
       &#customMessageContainer.open {
@@ -989,23 +1025,536 @@ div.flex-grow {
 
 #IDX-detailsMediaContaner--custom {
   width: 70%;
+  align-self: flex-start;
 }
 
 .IDX-page-listing #IDX-detailsMedia {
   width: 100%;
 }
 
+.IDX-page-listing .IDX-navbar-default.IDX-navbar-default--neutral {
+  background-color: #f0f0f0;
+  border-color: #ddd;
+}
+
+/* END OF PROPERTY PAGE */
+
+
+/* LOADING SCREEN */
+
+#IDX-loadingScreen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, .35);
+  z-index: 99;
+
+  .lds-ring {
+    top: 45%;
+  }
+}
+
+#IDX-searchFormContainer {
+  position: relative;
+}
+
+/* END OF LOADING SCREEN*/
+
+
+.IDX-category-map #IDX-navbar {
+  margin-bottom: 0px;
+}
+
+.IDX-category-map #IDX-mapHeader-Search {
+  margin-top: 0px;
+}
+
+#IDX-mapLoading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*BASIC SEARCH PAGE*/
+.IDX-category-search,
+.IDX-category-map {
+  &#IDX-main {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .detailsWrapper--right {
+    padding: 20px 5px 18px 15px;
+    width: 85%;
+    position: absolute;
+    right: -100%;
+  }
+
+  .detailsWrapper--right.open {
+    right: 0;
+    width: 100%;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.75);
+    bottom: 0;
+    z-index: 19;
+
+  }
+
+  &#IDX-main {
+    overflow: hidden;
+    height: calc(100vh - 30px);
+  }
+
+  .select2-container.select2-container-multi .select2-choices,
+  #IDX-listingID,
+  #IDX-address {
+    box-shadow: none;
+    border-radius: 10px;
+  }
+
+  #IDX-searchPageWrapper {
+    padding: 52px 0 0 0;
+    height: calc(100vh - 37px) !important;
+  }
+
+  #IDX-action-buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  #IDX-coreSearchFields {
+    border: none;
+
+
+    .select2-choice {
+      border-radius: 10px;
+    }
+
+    .select2-container {
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    #IDX-search-property-content {
+      display: flex;
+      justify-content: center;
+    }
+
+    #IDX-search-primary-content {
+      padding: 0;
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .IDX-minPrice-maxPrice,
+      .IDX-bd-tb,
+      .IDX-sqft-acres {
+        width: 25%;
+      }
+    }
+
+    #IDX-bd-group, #IDX-ccz-group, #IDX-reduced-group {
+      padding: 0 10px 0 0;
+    }
+
+    #IDX-maxPrice-group, #IDX-acres-group, #IDX-srt-group {
+      padding: 0 0 0 10px;
+    }
+
+    #IDX-tb-group, #IDX-add-group, #IDX-minPrice-group, #IDX-sqft-group {
+      padding: 0 10px;
+    }
+
+    #IDX-srt-group {
+      margin: 0 0 0 0;
+    }
+
+    #IDX-per-group,
+    #IDX-searchRefinement-group {
+      display: none;
+    }
+
+    #IDX-reduced-group, #IDX-srt-group {
+      width: 40%;
+    }
+
+    #IDX-add-group {
+      width: 20%;
+    }
+
+
+  }
+
+
+  /* ADVANCED SEARCH PAGE */
+  &.IDX-page-advanced {
+    .IDX-searchFormContainer {
+      max-height: 64vh;
+      overflow: auto;
+    }
+
+    #IDX-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    .select2-choices,
+    .select2-container,
+    .select2-container-multi {
+      box-shadow: unset;
+    }
+  }
+
+  @media (min-width: 642px) {
+    #IDX-action-buttons .IDX-btn {
+      max-width: 200px;
+      margin: 10px;
+    }
+
+    #IDX-coreSearchFields .IDX-control-group {
+      margin: 0 0 20px 0;
+      border: none;
+    }
+    &.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd),
+    &.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd),
+    &.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd) {
+      border-right: none;
+      padding-left: 0;
+    }
+    &.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even),
+    &.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even),
+    &.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even) {
+      padding-right: 0;
+    }
+  }
+
+  .IDX-searchPageContainer {
+    height: calc(100vh - 98px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .IDX-searchFormContainer {
+    width: 76vw;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.65);
+
+    #IDX-action-buttons {
+      width: 100% !important;
+    }
+  }
+
+  #IDX-searchForm {
+    width: 76%;
+    margin: 70px auto 40px auto;
+  }
+
+  #IDX-navbar {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+  }
+
+  .IDX-help-block {
+    color: #000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .35);
+  }
+}
+
+/*END OF BASIC SEARCH PAGE*/
+
+/*GALLERY PAGE*/
+.IDX-page-photogallery {
+  padding-top: 50px;
+
+  h2.IDX-photoGalleryTitle {
+    font-size: 3em;
+    margin: 40px 0 10px 0;
+    text-align: center;
+  }
+
+  .sliderInfo {
+    margin: 0;
+    text-align: right;
+    color: gray;
+    padding-right: 15px;
+  }
+
+  .galleryContent--container {
+    display: flex;
+
+    .propertyInfo--container {
+      width: 20%;
+      padding: 0 20px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .IDX-propertyInfoList {
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
+        list-style: none;
+        font-size: 1.35em;
+        margin: 0 0 0 0;
+
+        li {
+          margin-bottom: 0.5em;
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid lightgray;
+        }
+
+        li:first-child {
+          text-align: center;
+          font-size: 1.45em;
+        }
+
+        li:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .IDX-photoGallery {
+      width: 80%;
+
+      .slick-list {
+        height: 65vh;
+      }
+    }
+  }
+
+  #IDX-previousPage {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #IDX-showcaseThumbnails-buttons {
+    display: none;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .slick-slide {
+    height: 65vh;
+
+    img {
+      height: 65vh;
+    }
+  }
+}
+
+/*END OF GALLERY PAGE*/
+
+/*MORTGAGE CALCULATOR*/
+#IDX-main.IDX-page-mortgage {
+  #IDX-mortgageCalculatorContainer {
+    padding: 70px 0;
+  }
+  .IDX-pageHeader {
+    margin: 30px 0;
+  }
+
+  .mortgageCalculatorContent--container {
+    display: flex;
+    justify-content: center;
+
+    #IDX-showAmortizationPagination {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    #IDX-pagination {
+      border-radius: 10px;
+      margin: 0 10px;
+    }
+    .select2-container, .select2-choice {
+      border-radius: 20px;
+    }
+  }
+
+  .propertyInfoContent--container {
+    margin-right: 20px;
+    width: 20%;
+
+    .IDX-well {
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22) !important;
+      border: none;
+      background: #fff !important;
+      font-size: 1.35em;
+      padding: 25px;
+
+
+      li, .IDX-row {
+        margin-bottom: 10px;
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      li:last-child, .IDX-row:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  #IDX-mortgageCalculatorContent {
+    min-width: 40%;
+  }
+}
+
+/*MORTGAGE CALCULATOR*/
+
+/* CUSTOM LOADER */
+.lds-ring {
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid variables.$base;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: variables.$base transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* END OF CUSTOM LOADER*/
+
+/* RESPONSIVE */
+
 @media (max-width: 748px) {
+  .IDX-category-search #IDX-searchForm,
+  .IDX-category-map #IDX-searchForm {
+    width: 85%;
+    margin: 20px auto 15px auto;
+  }
+  .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
+  .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
+  .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres,
+  .IDX-category-search #IDX-coreSearchFields #IDX-ccz-group,
+  .IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
+  .IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
+  .IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres {
+    width: 100%;
+    padding: 0;
+  }
+  .IDX-category-search .IDX-searchFormContainer #IDX-action-buttons,
+  .IDX-category-map .IDX-searchFormContainer #IDX-action-buttons {
+    justify-content: space-between;
+  }
   .disclaimer-container {
     padding: 0 10px;
   }
+  .IDX-category-map, .IDX-category-search {
+    .IDX-searchFormContainer {
+      height: 74vh;
+      width: 90vw !important;
+      max-height: unset !important;
+      overflow: auto;
+      align-self: flex-start;
+      margin-top: 15px;
+    }
+  }
 
+  .IDX-category-map {
+    #IDX-map {
+      min-height: 380px;
+    }
+  }
+
+  .IDX-category-search .mat-form .mat-form--header {
+    padding: 5px 15px 10px 15px;
+    font-size: 15px;
+  }
+
+  .IDX-wrapper-standard #IDX-mapHeader-Search {
+    #IDX-mapCount {
+      padding-top: 5px;
+    }
+
+    .IDX-control-group {
+      margin: 5px 0 0 0;
+    }
+  }
+
+  .IDX-container-navbar {
+    width: 100%;
+  }
+
+  .IDX-wrapper-standard .IDX-navbar-toggle {
+    margin-right: 5px !important;
+    border: none !important;
+  }
 
   #IDX-detailsMediaContaner--custom {
     width: 100%;
   }
 
-  .IDX-page-listing {
+  .IDX-category-search {
+    #IDX-search-additional-content,
+    #IDX-search-property-content,
+    #IDX-coreSearchFields {
+      flex-direction: column;
+      display: flex;
+
+      .IDX-control-group {
+        width: 100% !important;
+        padding: 0px !important;
+      }
+    }
+  }
+
+
+  .IDX-page-listing, .IDX-category-search, .IDX-category-map {
     .sm-contact-bar {
       position: fixed;
       bottom: 45px;
@@ -1014,7 +1563,7 @@ div.flex-grow {
       font-size: 25px;
       justify-content: space-between;
       padding: 0 15px;
-      z-index: 7;
+      z-index: 20;
     }
 
     .sm-contact-bar a,
@@ -1028,8 +1577,24 @@ div.flex-grow {
 
     .mat-form {
       top: 25px;
+
+      .mat-form--header {
+        padding: 5px 15px 10px 15px;
+        font-size: 22px;
+
+      }
+
+      .mat-form--body .element-wrapper {
+        width: calc(100% - 10px);
+      }
     }
 
+    .detailsWrapper--right {
+      transition: all 200ms;
+    }
+  }
+
+  .IDX-page-listing {
 
     &#IDX-main {
       position: relative;
@@ -1074,17 +1639,13 @@ div.flex-grow {
 
     .detailsWrapper--right {
       padding: 20px 5px 18px 15px;
-      width: 85%;
+      width: 90%;
       position: absolute;
       right: -100%;
     }
 
     .detailsWrapper--left {
       width: 100%;
-    }
-
-    .detailsWrapper--right {
-      transition: all 200ms;
     }
 
     .detailsWrapper--right.open {
@@ -1205,6 +1766,7 @@ div.flex-grow {
 @media (min-width: 1279px) {
   .IDX-page-listing #IDX-detailsMediaContaner--custom {
     width: 62%;
+    align-self: flex-start;
   }
 }
 
@@ -1267,200 +1829,4 @@ div.flex-grow {
   }
 }
 
-/* END OF PROPERTY PAGE */
-
-
-/*BASIC SEARCH PAGE*/
-.IDX-category-search {
-  &#IDX-main {
-    overflow: hidden;
-    height: calc(100vh - 30px);
-  }
-
-  .select2-container.select2-container-multi .select2-choices {
-    box-shadow: none;
-    border-radius: 10px;
-    max-height: 38px;
-  }
-
-  #IDX-searchPageWrapper {
-    padding: 52px 0 0 0;
-    height: calc(100vh - 37px) !important;
-  }
-
-  #IDX-action-buttons {
-    display: flex;
-    justify-content: center;
-  }
-
-  #IDX-coreSearchFields {
-    border: none;
-
-
-    .select2-choice {
-      border-radius: 10px;
-    }
-
-    .select2-container {
-      border-color: transparent;
-      box-shadow: none;
-    }
-
-    #IDX-search-property-content {
-      display: flex;
-      justify-content: center;
-    }
-
-    #IDX-search-primary-content {
-      padding: 10px 0 0 0;
-      justify-content: center;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-
-      .IDX-minPrice-maxPrice,
-      .IDX-bd-tb,
-      .IDX-sqft-acres {
-        width: 25%;
-      }
-    }
-
-    #IDX-bd-group, #IDX-ccz-group, #IDX-reduced-group {
-      padding: 0 10px 0 0;
-    }
-    #IDX-maxPrice-group, #IDX-acres-group, #IDX-srt-group {
-      padding: 0 0 0 10px;
-    }
-
-    #IDX-tb-group, #IDX-add-group, #IDX-minPrice-group, #IDX-sqft-group {
-      padding: 0 10px;
-    }
-
-    #IDX-srt-group {
-      margin: 0 0 0 0;
-    }
-    #IDX-per-group,
-    #IDX-searchRefinement-group {
-      display: none;
-    }
-
-    #IDX-reduced-group, #IDX-srt-group {
-      width: 40%;
-    }
-    #IDX-add-group {
-      width: 20%;
-    }
-
-
-  }
-
-  /* ADVANCED SEARCH PAGE */
-  &.IDX-page-advanced {
-    .IDX-searchFormContainer {
-      max-height: 64vh;
-      overflow: auto;
-    }
-    #IDX-navbar {
-      position: sticky;
-      top: 0;
-      z-index: 5;
-    }
-    .select2-choices,
-    .select2-container,
-    .select2-container-multi {
-      box-shadow: unset;
-    }
-  }
-
-  @media (min-width: 642px) {
-    #IDX-action-buttons .IDX-btn {
-      max-width: 200px;
-      margin: 10px;
-    }
-
-    #IDX-coreSearchFields .IDX-control-group {
-      margin: 0 0 20px 0;
-      border: none;
-    }
-    &.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd),
-    &.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd),
-    &.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd) {
-      border-right: none;
-      padding-left: 0;
-    }
-    &.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even),
-    &.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even),
-    &.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even) {
-      padding-right: 0;
-    }
-  }
-
-  .IDX-searchPageContainer {
-    height: calc(100vh - 98px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .IDX-searchFormContainer {
-    width: 76vw;
-    padding: 0;
-    background: rgba(255, 255, 255, 0.65);
-
-    #IDX-action-buttons {
-      width: 100% !important;
-    }
-  }
-
-  #IDX-searchForm {
-    width: 76%;
-    margin: 70px auto 40px auto;
-  }
-
-  #IDX-navbar {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-}
-
-/*END OF BASIC SEARCH PAGE*/
-
-/* CUSTOM LOADER */
-.lds-ring {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.lds-ring div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 8px solid variables.$base;
-  border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: variables.$base transparent transparent transparent;
-}
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* END OF CUSTOM LOADER*/
+/* END OF RESPONSIVE*/

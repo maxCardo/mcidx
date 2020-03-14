@@ -4,6 +4,54 @@
 {# --Content #}
 {% block idxContent %}
     {% spaceless %}
+        <div class="detailsWrapper--right">
+            <div class="mat-form">
+                <div class="mat-form--header"><a href="tel:555-555-55-5"><i class="fa fa-phone"></i>&nbsp;
+                        555-555-55-5
+                    </a></div>
+                <div class="mat-form--body">
+                    <div class="element-wrapper"><input type="text" name="name" required=""><label for="name">First
+                            Name:</label></div>
+                    <div class="element-wrapper"><input type="text" name="lastName" required=""><label for="lastName">Last
+                            Name:</label></div>
+                    <div class="element-wrapper"><input type="email" name="email" required=""><label
+                                for="email">Email:</label></div>
+                    <div class="element-wrapper"><input type="text" name="phone" required=""><label
+                                for="phone">Phone:</label></div>
+                    <div class="element-wrapper with--checkbox">
+                        <label class="checkbox path">
+                            <input type="checkbox">
+                            <svg viewBox="0 0 21 21">
+                                <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                            </svg>
+                            &nbsp; Request Info
+                        </label>
+                    </div>
+                    <div class="element-wrapper with--checkbox">
+                        <label class="checkbox path" id="clickCustomMessage">
+                            <input type="checkbox" id="sendCustomMessage">
+                            <svg viewBox="0 0 21 21">
+                                <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                            </svg>
+                            &nbsp; Custom Message
+                        </label>
+                    </div>
+                    <div class="element-wrapper" id="customMessageContainer">
+                        <textarea id="contactCustomMessage" class="form__field" rows="6"></textarea>
+                        <label for="contactCustomMessage" class="form__label">Your Message</label>
+                    </div>
+                </div>
+                <div class="element-wrapper flex-centered">
+                    <button class="contact-btn--send btn-cta">Send</button>
+                </div>
+                <div class="mat-form--footer">
+                    <a href="tel:555-555-55-5">
+                        <i class="fa fa-building"></i>&nbsp;
+                        Max Cardo Ltd.
+                    </a>
+                </div>
+            </div>
+        </div>
         <div id="IDX-searchPageWrapper"
              style="width: 100vw; height: 100vh; background: url('http://cardo.tech/images/bg.jpg') no-repeat center center; background-size: cover;"
              class="IDX-pageContainer IDX-mobileFirst--neutral IDX-hide {% if middleware %} hide {% endif %}">
@@ -590,3 +638,12 @@
         </script>
     {% endif %}
 {% endblock %}
+
+<div class="sm-contact-bar">
+    <a href="#" class="">
+        <i class="fa fa-phone"></i>
+    </a>
+    <span class="contact-mail">
+        <i class="fa fa-envelope"></i>
+    </span>
+</div>

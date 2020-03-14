@@ -603,6 +603,6 @@
     }
 
 
-    calcHeight(165, '.IDX-category-details #IDX-details-row-content', 'min-height', 0);
+    calcHeight(115, '.IDX-category-details #IDX-details-row-content', 'min-height', 0);
 
 })(window, undefined);
