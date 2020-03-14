@@ -518,6 +518,32 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 
 @media (max-width: 640px) {
+  .IDX-page-listing ul.IDX-nav.IDX-navbar-nav {
+    flex-direction: column;
+  }
+
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container {
+    margin-right: 0;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well {
+    width: 48%;
+  }
+
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well:nth-child(2) {
+    margin-left: 2%;
+  }
+
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container #IDX-previousPage {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
     margin-left: 0;
   }
@@ -746,6 +772,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .IDX-page-listing ul.IDX-nav.IDX-navbar-nav #IDX-saveProperty,
 .IDX-page-listing ul.IDX-nav.IDX-navbar-nav .IDX-nav-address,
