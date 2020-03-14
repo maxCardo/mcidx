@@ -513,7 +513,19 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   margin: 10px;
 }
 
+.IDX-page-listing div.IDX-searchNavItem.IDX-nextProperty {
+  margin: 10px 10px 10px 0;
+}
+
 @media (max-width: 640px) {
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
+    margin-left: 0;
+  }
+
+  .IDX-page-listing #IDX-detailsMainInfo {
+    width: 100%;
+  }
+
   #IDX-resultsRow .IDX-pageContainer #IDX-resultsTopActions > div {
     width: 50%;
     font-size: 18px;
