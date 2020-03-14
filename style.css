@@ -1265,26 +1265,26 @@ div.flex-grow {
 }
 @media (min-width: 642px) {
   .IDX-category-search #IDX-action-buttons .IDX-btn,
-.IDX-category-map #IDX-action-buttons .IDX-btn {
+  .IDX-category-map #IDX-action-buttons .IDX-btn {
     max-width: 200px;
     margin: 10px;
   }
   .IDX-category-search #IDX-coreSearchFields .IDX-control-group,
-.IDX-category-map #IDX-coreSearchFields .IDX-control-group {
+  .IDX-category-map #IDX-coreSearchFields .IDX-control-group {
     margin: 0 0 20px 0;
     border: none;
   }
   .IDX-category-search.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd), .IDX-category-search.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd), .IDX-category-search.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd),
-.IDX-category-map.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd),
-.IDX-category-map.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd),
-.IDX-category-map.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd) {
+  .IDX-category-map.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd),
+  .IDX-category-map.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd),
+  .IDX-category-map.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd) {
     border-right: none;
     padding-left: 0;
   }
   .IDX-category-search.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even), .IDX-category-search.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even), .IDX-category-search.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even),
-.IDX-category-map.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even),
-.IDX-category-map.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even),
-.IDX-category-map.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even) {
+  .IDX-category-map.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even),
+  .IDX-category-map.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even),
+  .IDX-category-map.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even) {
     padding-right: 0;
   }
 }
@@ -1394,7 +1394,7 @@ div.flex-grow {
 /*END OF GALLERY PAGE*/
 /*MORTGAGE CALCULATOR*/
 #IDX-main.IDX-page-mortgage #IDX-mortgageCalculatorContainer {
-  padding: 70px 0;
+  padding: 70px 0 0 0;
 }
 #IDX-main.IDX-page-mortgage .IDX-pageHeader {
   margin: 30px 0;
@@ -1490,20 +1490,17 @@ div.flex-grow {
     flex-direction: column;
   }
 
+  #IDX-main.IDX-page-mortgage .mortgageCalculatorContent--container {
+    flex-direction: column;
+  }
+
   #IDX-main.IDX-page-mortgage .propertyInfoContent--container {
     margin-right: 0;
     width: 100%;
-    flex-direction: row;
     display: flex;
     flex-wrap: wrap;
-  }
-
-  #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well {
-    width: 48%;
-  }
-
-  #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well:nth-child(2) {
-    margin-left: 2%;
+    order: 2;
+    flex-direction: column;
   }
 
   #IDX-main.IDX-page-mortgage .propertyInfoContent--container #IDX-previousPage {
@@ -1597,7 +1594,7 @@ div.flex-grow {
   }
 
   .IDX-resultsCellsContainer,
-#IDX-resultsCellsContent {
+  #IDX-resultsCellsContent {
     max-height: 59vh;
     overflow-y: scroll;
     background: transparent;
@@ -1667,31 +1664,31 @@ div.flex-grow {
   }
 
   #IDX-resultsRow .IDX-pageContainer .IDX-topActions > div,
-#IDX-resultsRow .IDX-pageContainer .IDX-topActions > div#IDX-resultsRefineSearchToggle a.IDX-refine-search--toggle#IDX-refineSearchFormToggle {
+  #IDX-resultsRow .IDX-pageContainer .IDX-topActions > div#IDX-resultsRefineSearchToggle a.IDX-refine-search--toggle#IDX-refineSearchFormToggle {
     height: 30px;
     line-height: 30px;
   }
 }
 @media (max-width: 748px) {
   .IDX-category-search #IDX-searchForm,
-.IDX-category-map #IDX-searchForm {
+  .IDX-category-map #IDX-searchForm {
     width: 85%;
     margin: 20px auto 15px auto;
   }
 
   .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
-.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
-.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres,
-.IDX-category-search #IDX-coreSearchFields #IDX-ccz-group,
-.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
-.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
-.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres {
+  .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
+  .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres,
+  .IDX-category-search #IDX-coreSearchFields #IDX-ccz-group,
+  .IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
+  .IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
+  .IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres {
     width: 100%;
     padding: 0;
   }
 
   .IDX-category-search .IDX-searchFormContainer #IDX-action-buttons,
-.IDX-category-map .IDX-searchFormContainer #IDX-action-buttons {
+  .IDX-category-map .IDX-searchFormContainer #IDX-action-buttons {
     justify-content: space-between;
   }
 
@@ -1738,14 +1735,14 @@ div.flex-grow {
   }
 
   .IDX-category-search #IDX-search-additional-content,
-.IDX-category-search #IDX-search-property-content,
-.IDX-category-search #IDX-coreSearchFields {
+  .IDX-category-search #IDX-search-property-content,
+  .IDX-category-search #IDX-coreSearchFields {
     flex-direction: column;
     display: flex;
   }
   .IDX-category-search #IDX-search-additional-content .IDX-control-group,
-.IDX-category-search #IDX-search-property-content .IDX-control-group,
-.IDX-category-search #IDX-coreSearchFields .IDX-control-group {
+  .IDX-category-search #IDX-search-property-content .IDX-control-group,
+  .IDX-category-search #IDX-coreSearchFields .IDX-control-group {
     width: 100% !important;
     padding: 0px !important;
   }
@@ -1761,9 +1758,9 @@ div.flex-grow {
     z-index: 20;
   }
   .IDX-page-listing .sm-contact-bar a,
-.IDX-page-listing .sm-contact-bar span, .IDX-category-search .sm-contact-bar a,
-.IDX-category-search .sm-contact-bar span, .IDX-category-map .sm-contact-bar a,
-.IDX-category-map .sm-contact-bar span {
+  .IDX-page-listing .sm-contact-bar span, .IDX-category-search .sm-contact-bar a,
+  .IDX-category-search .sm-contact-bar span, .IDX-category-map .sm-contact-bar a,
+  .IDX-category-map .sm-contact-bar span {
     padding: 0 15px;
     border: 5px solid white;
     background: rgba(0, 0, 0, 0.55);
@@ -1797,12 +1794,12 @@ div.flex-grow {
     flex-wrap: wrap;
   }
   .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionModify,
-.IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionBack {
+  .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionBack {
     order: 2;
     flex-grow: 1;
   }
   .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionNew,
-.IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionSave {
+  .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionSave {
     width: 126px;
   }
   .IDX-page-listing #IDX-primaryPhoto {
