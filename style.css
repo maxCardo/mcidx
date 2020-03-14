@@ -506,19 +506,14 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   position: relative;
 }
 
+.IDX-page-listing div.IDX-searchNavItem.IDX-prevProperty,
+.IDX-page-listing div.IDX-searchNavItem.IDX-nextProperty {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
 @media (max-width: 640px) {
-  .IDX-page-listing li.IDX-searchNavItem.IDX-prevProperty {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-  }
-
-  .IDX-page-listing li.IDX-searchNavItem.IDX-nextProperty {
-    position: absolute;
-    top: 3px;
-    left: 48px;
-  }
-
   #IDX-resultsRow .IDX-pageContainer #IDX-resultsTopActions > div {
     width: 50%;
     font-size: 18px;
@@ -675,6 +670,9 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 .IDX-page-listing {
   padding-top: 60px !important;
   padding-bottom: 20px !important;
+}
+.IDX-page-listing .IDX-navbar-header {
+  display: flex;
 }
 
 .IDX-page-listing #IDX-detailsTopNav {
