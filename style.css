@@ -1473,18 +1473,6 @@ div.flex-grow {
 }
 #IDX-main.IDX-page-advanced.IDX-category-search
   #IDX-searchForm
-  .IDX-advancedWrap {
-  display: flex;
-}
-#IDX-main.IDX-page-advanced.IDX-category-search
-  #IDX-searchForm
-  .IDX-advancedWrap
-  .IDX-advancedText {
-  max-width: 25%;
-  width: auto;
-}
-#IDX-main.IDX-page-advanced.IDX-category-search
-  #IDX-searchForm
   .IDX-advancedWrap
   input {
   border-radius: 20px;
