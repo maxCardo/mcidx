@@ -1498,24 +1498,20 @@ div.flex-grow {
 }
 #IDX-main.IDX-page-advanced.IDX-category-search
   #IDX-searchForm
-  .IDX-advancedWrap
-  #IDX-boxLabel_garageyn,
+  .IDX-advancedWrap#IDX-boxLabel_garageyn,
 #IDX-main.IDX-page-advanced.IDX-category-search
   #IDX-searchForm
-  .IDX-advancedWrap
-  #IDX-boxLabel_poolprivateyn {
+  .IDX-advancedWrap#IDX-boxLabel_poolprivateyn {
   display: flex;
   justify-content: center;
 }
 #IDX-main.IDX-page-advanced.IDX-category-search
   #IDX-searchForm
-  .IDX-advancedWrap
-  #IDX-boxLabel_garageyn
+  .IDX-advancedWrap#IDX-boxLabel_garageyn
   label,
 #IDX-main.IDX-page-advanced.IDX-category-search
   #IDX-searchForm
-  .IDX-advancedWrap
-  #IDX-boxLabel_poolprivateyn
+  .IDX-advancedWrap#IDX-boxLabel_poolprivateyn
   label {
   text-align: center;
 }
@@ -1715,6 +1711,17 @@ div.flex-grow {
 
 /*END OF GALLERY PAGE*/
 /*MORTGAGE CALCULATOR*/
+#IDX-main.IDX-page-mortgage #IDX-input-group-addon {
+  background: #1976d2;
+  font-weight: 600;
+  padding: 5px 12px;
+}
+#IDX-main.IDX-page-mortgage #IDX-input-group-addon:first-child {
+  border-radius: 20px 0 0 20px;
+}
+#IDX-main.IDX-page-mortgage #IDX-input-group-addon:last-child {
+  border-radius: 0 20px 20px 0;
+}
 #IDX-main.IDX-page-mortgage #IDX-mortgageCalculatorContainer {
   padding: 70px 0 0 0;
 }
