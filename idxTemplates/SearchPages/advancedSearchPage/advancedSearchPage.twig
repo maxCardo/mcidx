@@ -325,32 +325,33 @@
                                                    placeholder="{{ acres.displayName }}">
                                         </div>
                                     </div>
-                                    {# Price reduction. #}
-                                    {% set reductionOptions = [
-                                        { label: 'day', value: '1d' },
-                                        { label: '3 days', value: '3d' },
-                                        { label: '7 days', value: '7d' },
-                                        { label: '2 weeks', value: '14d' },
-                                        { label: 'month', value: '30d' }
-                                    ] %}
-                                    <div id="IDX-reduced-group"
-                                         class="IDX-control-group{% if hiddenFields.reduced %} IDX-hidden{% endif %}">
-                                        <div class="IDX-controls">
-                                            <label for="IDX-reduced"
-                                                   class="{% if middleware %}IDX-control-label{% else %}IDX-label-for-nojs{% endif %}">Price
-                                                Reduction</label>
-                                            <select id="IDX-reduced" class="IDX-input" name="reduced">
-                                                <option></option>
-                                                {% for field in reductionOptions %}
-                                                    <option value="{{ field.value }}">In the
-                                                        last {{ field.label }}</option>
-                                                {% endfor %}
-                                            </select>
-                                        </div>
-                                    </div>
+
                                 {% endspaceless %}
                             </div>
                             <div id="IDX-search-additional-content" class="IDX-row-content">
+                                {# Price reduction. #}
+                                {% set reductionOptions = [
+                                    { label: 'day', value: '1d' },
+                                    { label: '3 days', value: '3d' },
+                                    { label: '7 days', value: '7d' },
+                                    { label: '2 weeks', value: '14d' },
+                                    { label: 'month', value: '30d' }
+                                ] %}
+                                <div id="IDX-reduced-group"
+                                     class="IDX-control-group{% if hiddenFields.reduced %} IDX-hidden{% endif %}">
+                                    <div class="IDX-controls">
+                                        <label for="IDX-reduced"
+                                               class="{% if middleware %}IDX-control-label{% else %}IDX-label-for-nojs{% endif %}">Price
+                                            Reduction</label>
+                                        <select id="IDX-reduced" class="IDX-input" name="reduced">
+                                            <option></option>
+                                            {% for field in reductionOptions %}
+                                                <option value="{{ field.value }}">In the
+                                                    last {{ field.label }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
                                 {# max days Listed #}
                                 <div id="IDX-add-group"
                                      class="IDX-control-group {% if hiddenFields.add %}IDX-hidden{% endif %}">

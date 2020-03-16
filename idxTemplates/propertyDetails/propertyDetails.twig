@@ -48,6 +48,27 @@
                                         <div class="IDX-container-navbar">
                                             <!-- Brand and toggle get grouped for better mobile display -->
                                             <div class="IDX-navbar-header">
+                                                {% if nav.prev or nav.next %}
+                                                    <div class="IDX-searchNavItem IDX-nav-advanced IDX-prevProperty">
+
+                                                        <a href="{{ detailsBaseURL }}{{ nav.prev.detailsURL }}"
+                                                           class="IDX-btn IDX-btn-default {% if not nav.prev %}disabled{% endif %}"
+                                                           {% if not nav.prev %}disabled={% endif %}>
+                                                            <i class="fa fa-chevron-left"></i>
+                                                        </a>
+                                                    </div>
+                                                    {% if nav.prev or nav.next %}
+                                                        <div class="IDX-searchNavItem IDX-nextProperty">
+                                                            {% if nav.next %}
+                                                                <a href="{{ detailsBaseURL }}{{ nav.next.detailsURL }}"
+                                                                   class="IDX-btn IDX-btn-default">
+                                                                    <i class="fa fa-chevron-right"></i>
+                                                                </a>
+                                                            {% endif %}
+                                                        </div>
+                                                    {% endif %}
+                                                {% endif %}
+                                                <div class="flex-grow"></div>
                                                 <button type="button" class="IDX-navbar-toggle IDX-collapsed"
                                                         data-toggle="idx-collapse"
                                                         data-target="#IDX-navbar-collapse">
@@ -60,16 +81,7 @@
                                             <div class="IDX-collapse IDX-navbar-collapse" id="IDX-navbar-collapse">
                                                 <ul class="IDX-nav IDX-navbar-nav">
 
-                                                    {% if nav.prev or nav.next %}
-                                                        <li class="IDX-searchNavItem IDX-nav-advanced IDX-prevProperty">
 
-                                                            <a href="{{ detailsBaseURL }}{{ nav.prev.detailsURL }}"
-                                                               class="IDX-btn IDX-btn-default {% if not nav.prev %}disabled{% endif %}"
-                                                               {% if not nav.prev %}disabled={% endif %}>
-                                                                <i class="fa fa-chevron-left"></i>
-                                                            </a>
-                                                        </li>
-                                                    {% endif %}
 
                                                     {% spaceless %}
                                                         {% if missingProperty == false and propArchived == false %}
@@ -122,16 +134,7 @@
                                                             </li>
                                                         {% endif %}
                                                     {% endspaceless %}
-                                                    {% if nav.prev or nav.next %}
-                                                        <li class="IDX-searchNavItem IDX-nextProperty">
-                                                            {% if nav.next %}
-                                                                <a href="{{ detailsBaseURL }}{{ nav.next.detailsURL }}"
-                                                                   class="IDX-btn IDX-btn-default">
-                                                                    <i class="fa fa-chevron-right"></i>
-                                                                </a>
-                                                            {% endif %}
-                                                        </li>
-                                                    {% endif %}
+
 
                                                 </ul>
                                             </div><!-- /.navbar-collapse -->
