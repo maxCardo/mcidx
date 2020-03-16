@@ -1805,6 +1805,10 @@ div.flex-grow {
   outline-color: transparent;
 }
 
+.IDX-advancedWrap .IDX-advWildText {
+  border: 1px solid lightsteelblue;
+}
+
 /* RESPONSIVE */
 @media (max-width: 640px) {
   #IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm #s2id_IDX-propStatus {
