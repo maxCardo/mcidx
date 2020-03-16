@@ -1802,6 +1802,14 @@ div.flex-grow {
 /* END OF CUSTOM LOADER*/
 /* RESPONSIVE */
 @media (max-width: 640px) {
+  #IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm #s2id_IDX-propStatus {
+    padding: 0 0 0 0;
+  }
+
+  .IDX-advMinMax input {
+    width: 40%;
+  }
+
   .IDX-page-listing ul.IDX-nav.IDX-navbar-nav {
     flex-direction: column;
   }
