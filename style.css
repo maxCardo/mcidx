@@ -1800,6 +1800,11 @@ div.flex-grow {
 }
 
 /* END OF CUSTOM LOADER*/
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-advancedBox:focus,
+.IDX-wrapper-standard .IDX-mobileFirst--neutral input {
+  outline-color: transparent;
+}
+
 /* RESPONSIVE */
 @media (max-width: 640px) {
   #IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm #s2id_IDX-propStatus {
@@ -1808,6 +1813,10 @@ div.flex-grow {
 
   input.IDX-advMinMax {
     width: 40%;
+  }
+
+  #IDX-aw_remarksConcat {
+    width: 100%;
   }
 
   .IDX-page-listing ul.IDX-nav.IDX-navbar-nav {
