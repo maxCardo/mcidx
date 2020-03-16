@@ -1464,12 +1464,17 @@ div.flex-grow {
 }
 
 #IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm #IDX-pt-group {
-  padding: 0 0 0 10px;
+  padding: 0 10px 0 0;
 }
 #IDX-main.IDX-page-advanced.IDX-category-search
   #IDX-searchForm
-  #IDX-search-property-content {
+  #IDX-propSubType-group {
   padding: 0 10px 0 10px;
+}
+#IDX-main.IDX-page-advanced.IDX-category-search
+  #IDX-searchForm
+  #s2id_IDX-propStatus {
+  padding: 0 0 0 10px;
 }
 #IDX-main.IDX-page-advanced.IDX-category-search
   #IDX-searchForm
@@ -1477,6 +1482,8 @@ div.flex-grow {
   input {
   border-radius: 20px;
   box-shadow: unset;
+  border: none;
+  margin: 0 10px;
 }
 
 /*END OF BASIC SEARCH PAGE*/
