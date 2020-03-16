@@ -1482,9 +1482,37 @@ div.flex-grow {
 }
 #IDX-main.IDX-page-advanced.IDX-category-search
   #IDX-searchForm
+  #IDX-propStatus-group {
+  padding: 0;
+}
+#IDX-main.IDX-page-advanced.IDX-category-search
+  #IDX-searchForm
   .IDX-advancedWrap {
   display: flex;
   flex-wrap: wrap;
+}
+#IDX-main.IDX-page-advanced.IDX-category-search
+  #IDX-searchForm
+  .IDX-advancedWrap
+  #IDX-boxLabel_garageyn,
+#IDX-main.IDX-page-advanced.IDX-category-search
+  #IDX-searchForm
+  .IDX-advancedWrap
+  #IDX-boxLabel_poolprivateyn {
+  display: flex;
+  justify-content: center;
+}
+#IDX-main.IDX-page-advanced.IDX-category-search
+  #IDX-searchForm
+  .IDX-advancedWrap
+  #IDX-boxLabel_garageyn
+  label,
+#IDX-main.IDX-page-advanced.IDX-category-search
+  #IDX-searchForm
+  .IDX-advancedWrap
+  #IDX-boxLabel_poolprivateyn
+  label {
+  text-align: center;
 }
 #IDX-main.IDX-page-advanced.IDX-category-search
   #IDX-searchForm
@@ -1494,6 +1522,7 @@ div.flex-grow {
   box-shadow: unset;
   border: none;
   margin: 0 10px;
+  padding: 5px;
 }
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   #IDX-main.IDX-page-advanced.IDX-category-search input[type="radio"] {
@@ -1558,7 +1587,7 @@ div.flex-grow {
   }
   #IDX-main.IDX-page-advanced.IDX-category-search
     input[type="radio"]:not(.switch) {
-    width: 21px;
+    width: 19px;
   }
   #IDX-main.IDX-page-advanced.IDX-category-search
     input[type="radio"]:not(.switch):after {
