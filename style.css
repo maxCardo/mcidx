@@ -1487,6 +1487,11 @@ div.flex-grow {
 }
 #IDX-main.IDX-page-advanced.IDX-category-search
   #IDX-searchForm
+  .select2-search-choice {
+  margin: 5px 10px;
+}
+#IDX-main.IDX-page-advanced.IDX-category-search
+  #IDX-searchForm
   .IDX-advancedWrap {
   display: flex;
   flex-wrap: wrap;
