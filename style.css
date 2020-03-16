@@ -1448,6 +1448,42 @@ div.flex-grow {
     #IDX-search-property-content {
     padding: 0 10px 0 10px;
   }
+  .IDX-category-search
+    #IDX-main.IDX-page-advanced.IDX-category-search
+    #IDX-searchForm
+    .IDX-advancedWrap,
+  .IDX-category-map
+    #IDX-main.IDX-page-advanced.IDX-category-search
+    #IDX-searchForm
+    .IDX-advancedWrap {
+    display: flex;
+  }
+  .IDX-category-search
+    #IDX-main.IDX-page-advanced.IDX-category-search
+    #IDX-searchForm
+    .IDX-advancedWrap
+    .IDX-advancedText,
+  .IDX-category-map
+    #IDX-main.IDX-page-advanced.IDX-category-search
+    #IDX-searchForm
+    .IDX-advancedWrap
+    .IDX-advancedText {
+    max-width: 25%;
+    width: auto;
+  }
+  .IDX-category-search
+    #IDX-main.IDX-page-advanced.IDX-category-search
+    #IDX-searchForm
+    .IDX-advancedWrap
+    input,
+  .IDX-category-map
+    #IDX-main.IDX-page-advanced.IDX-category-search
+    #IDX-searchForm
+    .IDX-advancedWrap
+    input {
+    border-radius: 20px;
+    box-shadow: unset;
+  }
 }
 .IDX-category-search .IDX-searchPageContainer,
 .IDX-category-map .IDX-searchPageContainer {
