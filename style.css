@@ -901,7 +901,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 
 .IDX-page-listing .mat-form,
 .IDX-category-search .mat-form,
-.IDX-category-map .mat-form {
+.IDX-category-map .mat-form,
+.mortgageCalcContainer .mat-form {
   width: 100%;
   background: white;
   box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.16),
@@ -917,7 +918,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 .IDX-page-listing .mat-form .mat-form--header,
 .IDX-category-search .mat-form .mat-form--header,
-.IDX-category-map .mat-form .mat-form--header {
+.IDX-category-map .mat-form .mat-form--header,
+.mortgageCalcContainer .mat-form .mat-form--header {
   padding: 5px 20px;
   text-align: center;
   font-size: 30px;
@@ -927,12 +929,14 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 .IDX-page-listing .mat-form .mat-form--header a,
 .IDX-category-search .mat-form .mat-form--header a,
-.IDX-category-map .mat-form .mat-form--header a {
+.IDX-category-map .mat-form .mat-form--header a,
+.mortgageCalcContainer .mat-form .mat-form--header a {
   color: white;
 }
 .IDX-page-listing .mat-form .mat-form--header .fa,
 .IDX-category-search .mat-form .mat-form--header .fa,
-.IDX-category-map .mat-form .mat-form--header .fa {
+.IDX-category-map .mat-form .mat-form--header .fa,
+.mortgageCalcContainer .mat-form .mat-form--header .fa {
   position: relative;
   top: 8px;
   font-size: 40px;
@@ -941,7 +945,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 .IDX-page-listing .mat-form .mat-form--body,
 .IDX-category-search .mat-form .mat-form--body,
-.IDX-category-map .mat-form .mat-form--body {
+.IDX-category-map .mat-form .mat-form--body,
+.mortgageCalcContainer .mat-form .mat-form--body {
   display: flex;
   flex-wrap: wrap;
   padding: 15px;
@@ -950,7 +955,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 .IDX-page-listing .mat-form .mat-form--body .element-wrapper,
 .IDX-category-search .mat-form .mat-form--body .element-wrapper,
-.IDX-category-map .mat-form .mat-form--body .element-wrapper {
+.IDX-category-map .mat-form .mat-form--body .element-wrapper,
+.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper {
   display: flex;
   flex-direction: column;
   width: calc(50% - 10px);
@@ -959,19 +965,28 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 .IDX-page-listing .mat-form .mat-form--body .element-wrapper.flex-centered,
 .IDX-category-search .mat-form .mat-form--body .element-wrapper.flex-centered,
-.IDX-category-map .mat-form .mat-form--body .element-wrapper.flex-centered {
+.IDX-category-map .mat-form .mat-form--body .element-wrapper.flex-centered,
+.mortgageCalcContainer
+  .mat-form
+  .mat-form--body
+  .element-wrapper.flex-centered {
   padding-bottom: 15px;
 }
 .IDX-page-listing .mat-form .mat-form--body .element-wrapper.with--checkbox,
 .IDX-category-search .mat-form .mat-form--body .element-wrapper.with--checkbox,
-.IDX-category-map .mat-form .mat-form--body .element-wrapper.with--checkbox {
+.IDX-category-map .mat-form .mat-form--body .element-wrapper.with--checkbox,
+.mortgageCalcContainer
+  .mat-form
+  .mat-form--body
+  .element-wrapper.with--checkbox {
   min-height: 20px;
   display: flex;
   flex-direction: row;
 }
 .IDX-page-listing .mat-form .mat-form--body .element-wrapper label,
 .IDX-category-search .mat-form .mat-form--body .element-wrapper label,
-.IDX-category-map .mat-form .mat-form--body .element-wrapper label {
+.IDX-category-map .mat-form .mat-form--body .element-wrapper label,
+.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper label {
   position: absolute;
   font-size: 14px;
   left: 4px;
@@ -981,7 +996,9 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 .IDX-category-search .mat-form .mat-form--body .element-wrapper input,
 .IDX-category-search .mat-form .mat-form--body .element-wrapper textarea,
 .IDX-category-map .mat-form .mat-form--body .element-wrapper input,
-.IDX-category-map .mat-form .mat-form--body .element-wrapper textarea {
+.IDX-category-map .mat-form .mat-form--body .element-wrapper textarea,
+.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper input,
+.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper textarea {
   padding: 15px 5px 5px 5px;
 }
 .IDX-page-listing
@@ -993,6 +1010,10 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   .mat-form--body
   .element-wrapper#customMessageContainer,
 .IDX-category-map
+  .mat-form
+  .mat-form--body
+  .element-wrapper#customMessageContainer,
+.mortgageCalcContainer
   .mat-form
   .mat-form--body
   .element-wrapper#customMessageContainer {
@@ -1013,17 +1034,23 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 .IDX-category-map
   .mat-form
   .mat-form--body
+  .element-wrapper#customMessageContainer.open,
+.mortgageCalcContainer
+  .mat-form
+  .mat-form--body
   .element-wrapper#customMessageContainer.open {
   height: 70px;
 }
 .IDX-page-listing .mat-form .contact-btn--send,
 .IDX-category-search .mat-form .contact-btn--send,
-.IDX-category-map .mat-form .contact-btn--send {
+.IDX-category-map .mat-form .contact-btn--send,
+.mortgageCalcContainer .mat-form .contact-btn--send {
   margin: 0 15px 15px;
 }
 .IDX-page-listing .mat-form .mat-form--footer,
 .IDX-category-search .mat-form .mat-form--footer,
-.IDX-category-map .mat-form .mat-form--footer {
+.IDX-category-map .mat-form .mat-form--footer,
+.mortgageCalcContainer .mat-form .mat-form--footer {
   padding: 10px 20px;
   text-align: center;
   font-size: 16px;
@@ -1034,12 +1061,14 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 .IDX-page-listing .mat-form .mat-form--footer a,
 .IDX-category-search .mat-form .mat-form--footer a,
-.IDX-category-map .mat-form .mat-form--footer a {
+.IDX-category-map .mat-form .mat-form--footer a,
+.mortgageCalcContainer .mat-form .mat-form--footer a {
   color: white;
 }
 .IDX-page-listing .mat-form .mat-form--footer .fa,
 .IDX-category-search .mat-form .mat-form--footer .fa,
-.IDX-category-map .mat-form .mat-form--footer .fa {
+.IDX-category-map .mat-form .mat-form--footer .fa,
+.mortgageCalcContainer .mat-form .mat-form--footer .fa {
   font-size: 35px;
   position: relative;
   top: 4px;
