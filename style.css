@@ -1909,10 +1909,6 @@ div.flex-grow {
     margin-left: 0;
   }
 
-  .IDX-page-listing #IDX-detailsMainInfo {
-    width: 100%;
-  }
-
   #IDX-resultsRow .IDX-pageContainer #IDX-resultsTopActions > div {
     width: 50%;
     font-size: 18px;
@@ -2206,12 +2202,6 @@ div.flex-grow {
     width: 100%;
     justify-content: stretch;
   }
-  .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
-    font-size: 14px;
-  }
-  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-body {
-    padding-bottom: 50px;
-  }
   .IDX-page-listing #IDX-description p {
     padding: 25px 15px;
     background: rgba(0, 0, 0, 0.38);
@@ -2260,6 +2250,18 @@ div.flex-grow {
   }
 }
 @media (max-width: 1025px) {
+  .IDX-page-listing #IDX-detailsMainInfo {
+    width: 100%;
+  }
+
+  #IDX-detailsMainInfo .IDX-field {
+    font-size: 14px;
+  }
+
+  #IDX-detailsMainInfo .IDX-panel-body {
+    padding-bottom: 50px;
+  }
+
   .detailsWrapper--right {
     padding: 20px 5px 18px 15px;
     width: 90%;
@@ -2424,14 +2426,6 @@ div.flex-grow {
     width: 100%;
   }
 
-  .IDX-page-listing .detailsWrapper--left {
-    width: 70%;
-  }
-
-  .IDX-page-listing .detailsWrapper--right {
-    width: 30%;
-  }
-
   .IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer {
     width: 49%;
   }
@@ -2455,6 +2449,17 @@ div.flex-grow {
 
   .IDX-wrapper-standard .IDX-advancedWrap input.IDX-advancedRange {
     width: 40%;
+  }
+
+  .IDX-page-listing #IDX-detailsWrapper {
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .IDX-page-listing .detailsWrapper--right {
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 }
 /* END OF RESPONSIVE*/
