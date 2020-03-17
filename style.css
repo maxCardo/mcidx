@@ -2431,8 +2431,48 @@ div.flex-grow {
   }
 
   .IDX-page-listing #IDX-detailsMainInfo {
-    margin-left: 0;
+    margin: 0;
     padding-bottom: 30px;
+    width: 100%;
+  }
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
+    margin-left: 0;
+  }
+  .IDX-page-listing
+    #IDX-detailsMainInfo
+    .IDX-panel-default
+    #IDX-detailsAddress {
+    font-size: 1.25em;
+    padding: 10px;
+  }
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default .IDX-panel-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default .IDX-field {
+    font-size: 1.35em;
+    line-height: 1.5;
+    width: 33.3333333%;
+  }
+  .IDX-page-listing
+    #IDX-detailsMainInfo
+    .IDX-panel-default
+    .IDX-field.IDX-field-propSubType {
+    width: 100%;
+    text-align: center;
+  }
+  .IDX-page-listing
+    #IDX-detailsMainInfo
+    .IDX-panel-default
+    .IDX-field-listingPrice {
+    order: 2;
+    width: 100%;
+    border-bottom: none;
+    text-align: center;
+    position: static;
   }
 
   .IDX-category-search.IDX-page-advanced .IDX-searchFormContainer,
