@@ -1230,39 +1230,14 @@ div.flex-grow {
   align-items: center;
 }
 
-.mortgageCalcContainer {
+.mortgageCalcContainer,
+.IDX-category-search,
+.IDX-category-map {
   overflow: hidden;
   height: calc(100vh - 30px);
   position: relative;
 }
-.mortgageCalcContainer .detailsWrapper--right {
-  padding: 20px 5px 18px 15px;
-  width: 85%;
-  position: absolute;
-  right: -100%;
-}
-.mortgageCalcContainer .detailsWrapper--right.open {
-  right: 0;
-  width: 100%;
-  position: fixed;
-  top: 40px;
-  left: 0;
-  padding: 40px;
-  background: rgba(0, 0, 0, 0.75);
-  bottom: 0;
-  z-index: 19;
-}
-
-/*BASIC SEARCH PAGE*/
-.IDX-category-search,
-.IDX-category-map {
-  /* ADVANCED SEARCH PAGE */
-}
-.IDX-category-search#IDX-main,
-.IDX-category-map#IDX-main {
-  position: relative;
-  overflow-x: hidden;
-}
+.mortgageCalcContainer .detailsWrapper--right,
 .IDX-category-search .detailsWrapper--right,
 .IDX-category-map .detailsWrapper--right {
   padding: 20px 5px 18px 15px;
@@ -1270,6 +1245,12 @@ div.flex-grow {
   position: absolute;
   right: -100%;
 }
+.mortgageCalcContainer .detailsWrapper--right a,
+.IDX-category-search .detailsWrapper--right a,
+.IDX-category-map .detailsWrapper--right a {
+  text-decoration: none;
+}
+.mortgageCalcContainer .detailsWrapper--right.open,
 .IDX-category-search .detailsWrapper--right.open,
 .IDX-category-map .detailsWrapper--right.open {
   right: 0;
@@ -1281,9 +1262,18 @@ div.flex-grow {
   background: rgba(0, 0, 0, 0.75);
   bottom: 0;
   z-index: 19;
+  display: flex;
+  align-items: center;
+}
+
+/*BASIC SEARCH PAGE*/
+.IDX-category-search,
+.IDX-category-map {
+  /* ADVANCED SEARCH PAGE */
 }
 .IDX-category-search#IDX-main,
 .IDX-category-map#IDX-main {
+  position: relative;
   overflow: hidden;
   height: calc(100vh - 30px);
 }
