@@ -449,13 +449,10 @@ a.IDX-psudolink {
 
 .IDX-resultsAction:hover,
 .IDX-resultsAction:focus,
-.IDX-resultsAction:active,
 .IDX-wrapper-standard #IDX-refineSearchFormToggle:focus,
 .IDX-wrapper-standard #IDX-refineSearchFormToggle:hover,
-.IDX-wrapper-standard #IDX-refineSearchFormToggle:active,
 .IDX-page-listings .IDX-topAction > a:hover,
-.IDX-page-listings .IDX-topAction > a:focus,
-.IDX-page-listings .IDX-topAction > a:active {
+.IDX-page-listings .IDX-topAction > a:focus {
   background: darkgray;
   color: #000;
   top: -2px;
@@ -672,8 +669,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 
 .IDX-page-listing #IDX-detailsAddress .IDX-psudolink:hover,
-.IDX-page-listing #IDX-detailsAddress .IDX-psudolink:focus,
-.IDX-page-listing #IDX-detailsAddress .IDX-psudolink:active {
+.IDX-page-listing #IDX-detailsAddress .IDX-psudolink:focus {
   bottom: -34px;
   color: black;
   text-decoration: underline;
@@ -697,8 +693,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 
 .IDX-page-listing #IDX-photoGalleryLink:hover,
-.IDX-page-listing #IDX-photoGalleryLink:focus,
-.IDX-page-listing #IDX-photoGalleryLink:active {
+.IDX-page-listing #IDX-photoGalleryLink:focus {
   top: -2px;
   bottom: 2px;
 }
@@ -2496,6 +2491,22 @@ div.flex-grow {
     justify-content: center;
     align-items: center;
     display: flex;
+  }
+
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container {
+    margin-right: 20px;
+    width: 50%;
+  }
+
+  #IDX-main.IDX-page-mortgage #IDX-mortgageCalculatorContent {
+    width: 49%;
+  }
+
+  #IDX-main.IDX-page-mortgage .mortgageCalculatorContent--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
   }
 }
 /* END OF RESPONSIVE*/
