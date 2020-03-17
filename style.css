@@ -1233,8 +1233,7 @@ div.flex-grow {
 .mortgageCalcContainer,
 .IDX-category-search,
 .IDX-category-map {
-  overflow: hidden;
-  height: calc(100vh - 30px);
+  overflow-x: hidden;
   position: relative;
 }
 .mortgageCalcContainer .detailsWrapper--right,
@@ -2367,6 +2366,12 @@ div.flex-grow {
   .IDX-category-map .mat-form .mat-form--body .element-wrapper,
   .mortgageCalcContainer .mat-form .mat-form--body .element-wrapper {
     width: calc(100% - 10px);
+  }
+  .IDX-page-listing .mat-form .mat-form--body .element-wrapper input,
+  .IDX-category-search .mat-form .mat-form--body .element-wrapper input,
+  .IDX-category-map .mat-form .mat-form--body .element-wrapper input,
+  .mortgageCalcContainer .mat-form .mat-form--body .element-wrapper input {
+    border: 1px solid black;
   }
   .IDX-page-listing .detailsWrapper--right,
   .IDX-category-search .detailsWrapper--right,
