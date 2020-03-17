@@ -780,7 +780,10 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   -webkit-transition: all 250ms;
   transition: all 250ms;
   font-size: 25px;
-  top: 400px;
+}
+
+.IDX-page-listing #IDX-primaryPhoto .IDX-arrow {
+  top: 352px;
 }
 
 .IDX-page-listing #IDX-detailsShowcaseSlides .IDX-carouselNavWrapper {
@@ -1638,8 +1641,29 @@ div.flex-grow {
   }
 }
 /* END OF CUSTOM LOADER*/
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-advancedBox:focus,
+.IDX-wrapper-standard .IDX-mobileFirst--neutral input {
+  outline-color: transparent;
+}
+
+.IDX-advancedWrap .IDX-advMinMax, .IDX-advancedWrap .IDX-advWildText {
+  border: 1px solid gray;
+}
+
 /* RESPONSIVE */
 @media (max-width: 640px) {
+  #IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm #s2id_IDX-propStatus {
+    padding: 0 0 0 0;
+  }
+
+  input.IDX-advMinMax {
+    width: 40%;
+  }
+
+  #IDX-aw_remarksConcat {
+    width: 100%;
+  }
+
   .IDX-page-listing ul.IDX-nav.IDX-navbar-nav {
     flex-direction: column;
   }
@@ -1699,6 +1723,11 @@ div.flex-grow {
     margin: 0;
   }
 }
+.IDX-page-listing .IDX-nav .IDX-nav-propertyArrows {
+  display: flex;
+  height: 52px;
+}
+
 .IDX-wrapper-standard .IDX-h2, .IDX-wrapper-standard h2 {
   font-size: 30px;
   margin: 20px;
