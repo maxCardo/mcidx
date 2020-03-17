@@ -2269,7 +2269,7 @@ div.flex-grow {
     right: -100%;
   }
 
-  .detailsWrapper--left {
+  .IDX-page-listing .detailsWrapper--left {
     width: 100%;
   }
 
@@ -2340,14 +2340,6 @@ div.flex-grow {
     margin: 0 20px 10px 40px;
     width: 260px;
     padding-bottom: 30px;
-  }
-
-  .IDX-page-listing .IDX-description-container {
-    margin-right: 20px;
-  }
-
-  .IDX-page-listing #IDX-fieldsWrapper {
-    padding: 20px 20px 0 0;
   }
 }
 @media (min-width: 1210px) {
@@ -2440,7 +2432,7 @@ div.flex-grow {
     width: 100%;
   }
   .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
-    margin-left: 0;
+    margin: 40px 0 0 0;
   }
   .IDX-page-listing
     #IDX-detailsMainInfo
