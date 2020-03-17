@@ -2206,26 +2206,6 @@ div.flex-grow {
     width: 100%;
     justify-content: stretch;
   }
-  .IDX-page-listing .detailsWrapper--right {
-    padding: 20px 5px 18px 15px;
-    width: 90%;
-    position: absolute;
-    right: -100%;
-  }
-  .IDX-page-listing .detailsWrapper--left {
-    width: 100%;
-  }
-  .IDX-page-listing .detailsWrapper--right.open {
-    right: 0;
-    width: 100%;
-    position: fixed;
-    top: 40px;
-    left: 0;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.75);
-    bottom: 0;
-    z-index: 6;
-  }
   .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
     font-size: 14px;
   }
@@ -2280,6 +2260,29 @@ div.flex-grow {
   }
 }
 @media (max-width: 1025px) {
+  .detailsWrapper--right {
+    padding: 20px 5px 18px 15px;
+    width: 90%;
+    position: absolute;
+    right: -100%;
+  }
+
+  .detailsWrapper--left {
+    width: 100%;
+  }
+
+  .detailsWrapper--right.open {
+    right: 0;
+    width: 100%;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.75);
+    bottom: 0;
+    z-index: 6;
+  }
+
   .IDX-page-listing .sm-contact-bar,
   .IDX-category-search .sm-contact-bar,
   .IDX-category-map .sm-contact-bar {
