@@ -1201,6 +1201,29 @@ div.flex-grow {
   align-items: center;
 }
 
+.mortgageCalcContainer {
+  overflow: hidden;
+  height: calc(100vh - 30px);
+  position: relative;
+}
+.mortgageCalcContainer .detailsWrapper--right {
+  padding: 20px 5px 18px 15px;
+  width: 85%;
+  position: absolute;
+  right: -100%;
+}
+.mortgageCalcContainer .detailsWrapper--right.open {
+  right: 0;
+  width: 100%;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.75);
+  bottom: 0;
+  z-index: 19;
+}
+
 /*BASIC SEARCH PAGE*/
 .IDX-category-search,
 .IDX-category-map {
