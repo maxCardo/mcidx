@@ -156,25 +156,31 @@
 
     <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/slick.min.js"></script>
+
     <script>
         $(document).ready(function () {
 
 
             $('hr').remove();
-            $(".IDX-photoGalleryTitle").html("Photo Gallery");
+            $(".IDX-photoGalleryTitle").html("Mortgage Calculator");
 
             const propertyInfo = "<div class='propertyInfoContent--container'></div>";
+            const mortgageData = $("#IDX-mortgageCalculationResults").html();
+            $("#IDX-mortgageCalculationResults").remove();
+            $("#IDX-mortgageCalculatorContainer > .IDX-well").after(mortgageData);
             $("#IDX-mortgageCalculatorContainer > .IDX-well, #IDX-previousPage").wrapAll(propertyInfo);
 
+            const mortCalcPage = "<div class='mortgageCalculatorContent--container'></div>";
+            $(".propertyInfoContent--container, #IDX-mortgageCalculatorContent").wrapAll(mortCalcPage);
 
-
-            $("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('.btn');
-
+            $("#IDX-returnToPreviousPage, #IDX-goToProperty, #IDX-hideAmortization, #IDX-pagination-next, #IDX-pagination-prev, #IDX-showAmortization")
+                .addClass('btn');
 
             Waves.init();
             Waves.attach('.btn');
         });
     </script>
+
 </body>
 
 </html>
