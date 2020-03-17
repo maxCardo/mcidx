@@ -2426,6 +2426,10 @@ div.flex-grow {
     width: 100%;
   }
 
+  .IDX-page-listing .detailsWrapper--left {
+    width: 100%;
+  }
+
   .IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer {
     width: 49%;
   }
