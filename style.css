@@ -1235,6 +1235,7 @@ div.flex-grow {
 .IDX-category-map {
   overflow-x: hidden;
   position: relative;
+  padding-bottom: 40px;
 }
 .mortgageCalcContainer .detailsWrapper--right,
 .IDX-category-search .detailsWrapper--right,
@@ -1243,6 +1244,7 @@ div.flex-grow {
   width: 85%;
   position: absolute;
   right: -100%;
+  top: 0;
 }
 .mortgageCalcContainer .detailsWrapper--right a,
 .IDX-category-search .detailsWrapper--right a,
