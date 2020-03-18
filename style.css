@@ -2302,6 +2302,7 @@ div.flex-grow {
   .IDX-page-photogallery .galleryContent--container .propertyInfo--container {
     order: 2;
     width: 100%;
+    padding: 0 20px;
   }
   .IDX-page-photogallery
     .galleryContent--container
