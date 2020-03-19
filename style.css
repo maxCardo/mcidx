@@ -1903,9 +1903,9 @@ div.flex-grow {
 }
 
 @media (max-width: 640px) {
-  .mortgageCalcContainer .detailsWrapper--right.open,
-  .IDX-category-search .detailsWrapper--right.open,
-  .IDX-category-map .detailsWrapper--right.open {
+  .mortgageCalcContainer .detailsWrapper--right.open .mat-form,
+  .IDX-category-search .detailsWrapper--right.open .mat-form,
+  .IDX-category-map .detailsWrapper--right.open .mat-form {
     top: unset;
   }
 
