@@ -1908,6 +1908,39 @@ div.flex-grow {
   .IDX-category-map .detailsWrapper--right.open .mat-form {
     top: unset;
   }
+  .mortgageCalcContainer
+    .detailsWrapper--right.open
+    .mat-form
+    .mat-form--footer
+    a,
+  .IDX-category-search
+    .detailsWrapper--right.open
+    .mat-form
+    .mat-form--footer
+    a,
+  .IDX-category-map .detailsWrapper--right.open .mat-form .mat-form--footer a {
+    font-size: 11px;
+  }
+  .mortgageCalcContainer
+    .detailsWrapper--right.open
+    .mat-form
+    .mat-form--footer
+    a
+    i,
+  .IDX-category-search
+    .detailsWrapper--right.open
+    .mat-form
+    .mat-form--footer
+    a
+    i,
+  .IDX-category-map
+    .detailsWrapper--right.open
+    .mat-form
+    .mat-form--footer
+    a
+    i {
+    font-size: 25px;
+  }
 
   #IDX-main.IDX-page-advanced.IDX-category-search
     #IDX-searchForm
