@@ -1234,6 +1234,10 @@ div.flex-grow {
   padding-bottom: 60px;
 }
 
+.search-results-page .mortgageCalcContainer {
+  padding-bottom: 0;
+}
+
 .mortgageCalcContainer,
 .IDX-category-search,
 .IDX-category-map {
@@ -1903,7 +1907,7 @@ div.flex-grow {
 
 .IDX-advancedWrap .IDX-advMinMax,
 .IDX-advancedWrap .IDX-advWildText {
-  border: 1px solid gray;
+  border: 1px solid lightgray;
 }
 
 /* RESPONSIVE */
