@@ -29,26 +29,6 @@ $(document).ready(function () {
             }
         });
     }
-
-    $('.contact-mail').on('click', function () {
-        if ($('.detailsWrapper--right').hasClass('open')) {
-            $('.detailsWrapper--right').removeClass('open');
-        } else {
-            $('.detailsWrapper--right').addClass('open');
-        }
-    });
-
-    /*CHECKBOX MSG COMPONENT*/
-    $("#clickCustomMessage").on('click', function () {
-        var isChecked = idx("#sendCustomMessage").is(":checked");
-        if (isChecked) {
-            $('#customMessageContainer').addClass('open');
-        } else {
-            $('#customMessageContainer').removeClass('open');
-        }
-    });
-    /*END OF CHECKBOX MSG COMPONENT*/
-
 });
 
 
