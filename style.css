@@ -414,7 +414,10 @@ iframe {
 }
 
 .IDX-wrapper-standard #IDX-refineSearchFormToggle::after {
-  color: #fff;
+  border-top-color: #fff;
+  top: 40%;
+  right: 10px;
+  position: absolute;
 }
 
 .IDX-wrapper-standard #IDX-refineSearchFormToggle {
@@ -2083,8 +2086,8 @@ div.flex-grow {
   }
 
   .IDX-wrapper-standard #IDX-resultsContent {
-    height: calc(90.5vh - 62px);
-    top: 35px;
+    height: calc(89.5vh - 62px);
+    top: 27px;
   }
 
   .IDX-resultsCellsContainer,
@@ -2107,7 +2110,7 @@ div.flex-grow {
   }
 
   #IDX-resultsTopActions.IDX-topActions {
-    margin: 25px auto 10px 0;
+    margin: 15px auto 0 0;
     top: -15px;
   }
 }
@@ -2136,7 +2139,7 @@ div.flex-grow {
   }
 
   #IDX-resultsTopActions.IDX-topActions {
-    width: 450px;
+    width: 500px;
     margin-right: auto;
     height: unset;
   }
@@ -2555,7 +2558,16 @@ div.flex-grow {
   }
 
   .IDX-wrapper-standard #IDX-resultsContent {
-    height: calc(89.5vh - 62px);
+    height: calc(91.5vh - 62px);
+    top: 27px;
+  }
+
+  #IDX-main.IDX-page-listings {
+    height: 97vh;
+  }
+
+  .search-results-page .mortgageCalcContainer {
+    max-height: 97.5vh;
   }
 }
 @media only screen and (min-device-width: 767px) and (max-device-width: 1025px) {
