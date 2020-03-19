@@ -486,6 +486,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 
 .IDX-page-listings #IDX-resultsRefineSearchToggle {
   position: relative;
+  min-width: 110px;
+  line-height: 20px;
 }
 
 .IDX-page-listings
@@ -2145,8 +2147,7 @@ div.flex-grow {
     .IDX-topActions
     > div#IDX-resultsRefineSearchToggle
     a.IDX-refine-search--toggle#IDX-refineSearchFormToggle {
-    height: 30px;
-    line-height: 30px;
+    line-height: 20px;
   }
 }
 @media (max-width: 748px) {
