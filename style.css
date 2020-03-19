@@ -1224,10 +1224,6 @@ div.flex-grow {
   align-items: center;
 }
 
-.mortgageCalcContainer {
-  padding-bottom: 60px;
-}
-
 .search-results-page .mortgageCalcContainer {
   padding-bottom: 0;
   max-height: 96.5vh;
@@ -1911,6 +1907,10 @@ div.flex-grow {
 }
 
 @media (max-width: 640px) {
+  .mortgageCalcContainer {
+    padding-bottom: 60px;
+  }
+
   .mortgageCalcContainer .detailsWrapper--right.open .mat-form,
   .IDX-category-search .detailsWrapper--right.open .mat-form,
   .IDX-category-map .detailsWrapper--right.open .mat-form {
