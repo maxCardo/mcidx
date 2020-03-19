@@ -455,8 +455,6 @@ a.IDX-psudolink {
 .IDX-page-listings .IDX-topAction > a:focus {
   background: darkgray;
   color: #000;
-  top: -2px;
-  bottom: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.17);
 }
 
@@ -471,6 +469,7 @@ a.IDX-psudolink {
 
 #IDX-resultsTopActions.IDX-topActions {
   margin: 25px auto 0 auto;
+  z-index: 12;
 }
 
 #IDX-results-pagination {
@@ -1964,7 +1963,6 @@ div.flex-grow {
 
   #IDX-resultsRow .IDX-pageContainer #IDX-resultsTopActions > div > a {
     color: #fff;
-    background: #3f51b5;
     display: block;
   }
 
