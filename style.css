@@ -1222,6 +1222,7 @@ div.flex-grow {
 
 .search-results-page .mortgageCalcContainer {
   padding-bottom: 0;
+  max-height: 96.5vh;
 }
 
 .mortgageCalcContainer,
