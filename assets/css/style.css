@@ -84,9 +84,6 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
     background-color: transparent; }
-  .header__logo .logo {
-    color: black;
-    font-size: 30px; }
   .header__links {
     display: flex;
     -webkit-align-content: center;
@@ -117,26 +114,6 @@ body {
     .header__link:hover div {
       width: 100%;
       left: 0; }
-  .header__down {
-    display: none; }
-    .header__down .container ul {
-      position: fixed;
-      display: flex;
-      top: 87px;
-      left: 50%;
-      z-index: 5000000000000000; }
-      .header__down .container ul li a {
-        display: inline-block;
-        margin: 0 10px;
-        padding: 5px 10px;
-        background-color: #e2a855;
-        color: white;
-        -webkit-transition: all 0.2s ease-in-out;
-        -o-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-        border-radius: 5px; }
-        .header__down .container ul li a:hover {
-          background-color: rgba(226, 168, 85, 0.8); }
 
 /* FOOTER */
 .footer {
@@ -227,12 +204,6 @@ body {
 .rentalValuation__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
-
-.blog__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 30px;
-  row-gap: 30px; }
 
 .strongLeadership__grid {
   display: grid;
@@ -559,6 +530,7 @@ body {
     font-size: 30px;
     text-align: center;
     margin-bottom: 30px;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
     color: white;
     font-weight: bold;
     position: relative;
@@ -620,8 +592,16 @@ body {
   border-radius: 10px; }
 
 /* Handle on hover */
-.listings .container h2 {
+.strongLeadership__heading,
+.testimonials__heading,
+.approach__heading,
+.listings__heading {
+  font-size: 30px;
   text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
+
+.listings__heading {
   margin-bottom: 50px; }
 
 .listings__box a {
@@ -638,11 +618,6 @@ body {
     background-color: white;
     color: black; }
 
-.approach__heading {
-  font-size: 30px;
-  text-align: center;
-  margin-bottom: 30px; }
-
 .approach__box--front h3 {
   position: absolute;
   left: 50%;
@@ -654,16 +629,6 @@ body {
 
 .approach__box--back h3 {
   margin-bottom: 20px; }
-
-.strongLeadership__heading {
-  font-size: 30px;
-  text-align: center;
-  margin-bottom: 30px; }
-
-.testimonials__heading {
-  font-size: 30px;
-  text-align: center;
-  margin-bottom: 30px; }
 
 .testimonials__box p:first-of-type {
   font-style: italic;
@@ -703,11 +668,6 @@ body {
   .hero__link:hover {
     color: rgba(255, 255, 255, 0.8); }
 
-.blog__heading {
-  font-size: 30px;
-  text-align: center;
-  margin-bottom: 30px; }
-
 @media only screen and (max-width: 992px) {
   .testimonials__box {
     text-align: center; }
@@ -728,8 +688,7 @@ body {
   transition: all 0.5s ease-in-out; }
   .btn__block:hover {
     transform: scaleX(1.2);
-    color: white;
-    letter-spacing: 1.2px; }
+    color: white; }
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 992px) {

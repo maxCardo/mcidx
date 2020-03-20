@@ -1,5 +1,6 @@
 /* components */
 
+// FOOTER BUTTON
 .btn__block {
     display: block;
     background-color: transparent;
@@ -10,6 +11,5 @@
     &:hover {
         transform: scaleX(1.2);
         color: white;
-        letter-spacing: 1.2px;
     }
 }

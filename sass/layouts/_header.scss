@@ -15,12 +15,6 @@
         background-color: transparent;
     }
 
-    &__logo {
-        .logo {
-            color: black;
-            font-size: 30px;
-        }
-    }
 
     &__links {
         display: flex;
@@ -57,30 +51,4 @@
         }
     }
 
-    // display:none 
-    &__down {
-        display: none;
-
-        .container ul {
-            position: fixed;
-            display: flex;
-            top: 87px;
-            left: 50%;
-            z-index: 5000000000000000;
-
-            li a {
-                display: inline-block;
-                margin: 0 10px;
-                padding: 5px 10px;
-                background-color: #e2a855;
-                color: white;
-                @include transitionAll2ms;
-                border-radius: 5px;
-
-                &:hover {
-                    background-color: rgba(226, 168, 85, 0.8);
-                }
-            }
-        }
-    }
 }

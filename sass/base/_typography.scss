@@ -1,11 +1,20 @@
+// HEADINGS 
+.strongLeadership,
+.testimonials,
+.approach,
+.listings {
+    &__heading {
+        @include heading;
+    }
+}
+
+
 // SECTION LISTINGS
 
 .listings {
-    .container {
-        h2 {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+
+    &__heading {
+        margin-bottom: 50px;
     }
 
     &__box {
@@ -32,9 +41,7 @@
 
 .approach {
 
-    &__heading {
-        @include heading;
-    }
+
 
     &__box {
         &--front {
@@ -59,21 +66,10 @@
 
 }
 
-// SECTION STRONG LEADERSHIP
-
-.strongLeadership {
-
-    &__heading {
-        @include heading;
-    }
-}
-
 // SECTION TESTIMONIALS 
 
 .testimonials {
-    &__heading {
-        @include heading;
-    }
+
 
     &__box {
         p:first-of-type {
@@ -134,12 +130,6 @@
     }
 }
 
-// SECTION BLOG
-.blog {
-    &__heading {
-        @include heading;
-    }
-}
 
 @media only screen and (max-width:992px) {
     .testimonials {
