@@ -79,6 +79,10 @@
         transition: all 0.4s ease-in-out;
         font-weight: bold;
 
+        .middlepic {
+            filter: brightness(70%);
+        }
+
         img {
             height: 100%;
             width: 100%;
@@ -153,7 +157,7 @@
                 visibility: visible;
             }
 
-            .approach__box--front h2 {
+            .approach__box--front h3 {
                 display: none;
             }
         }
@@ -217,7 +221,8 @@
 }
 
 // HOME VALUATION
-.homeValuation {
+.homeValuation,
+.rentalValuation {
     &__box {
         align-content: center;
         align-self: center;
@@ -229,6 +234,7 @@
 
         img {
             width: 100%;
+            max-height: 350px;
         }
 
         h2,
@@ -247,31 +253,26 @@
     }
 }
 
-// SECTION BLOG
-
-.blog {
-    width: 100vw;
-    padding: 50px 0;
+.rentalValuation {
+    .container-fluid {
+        padding: 0 !important;
+    }
 
     &__box {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background-color: green;
-
-        &--top {
-            padding: 20px;
+        &:first-of-type {
+            padding: 0 !important;
         }
 
-        &--bottom {
-            display: flex;
-            font-size: 12px;
-            padding: 5px;
-            justify-content: space-between;
+        &:nth-of-type(2) {
+            padding: 50px;
+            text-align: center;
         }
     }
-}
 
+    &__grid {
+        column-gap: 0px;
+    }
+}
 
 // MENU
 
@@ -378,20 +379,21 @@
 }
 
 
+
 // bg dark contact form
 
 .bgDark {
     background-color: rgba(0, 0, 0, .8);
     position: fixed;
     padding: 100px 0;
-    top: -500px;
+    top: 0;
     left: 0;
     z-index: 9999999999999999;
     width: 100vw;
     height: 100vh;
     color: white;
-    visibility: hidden;
-    opacity: 0;
+    // visibility: hidden;
+    // opacity: 0;
     transition: all .4s ease-in-out;
     text-align: center;
 

@@ -40,66 +40,7 @@
 <body class="body" id="body">
 
   <div class="wrapper">
-    <div class="bgDark" id='bgDark'>
-      <a href="#wrapper" class='close'>X</a>
-      <div class="container">
-        <h2 class="bgDark__heading">Contact</h2>
 
-        <div class="bgDark__flex">
-          <div class="bgDark__box">
-            <form action='#' method="GET">
-              <h5>ONLINE INQUIRY</h5>
-              <div class="form-group">
-
-                <input type="text" class="form-control" id="name" placeholder="Enter name">
-              </div>
-              <div class="form-group">
-
-                <input type="email" class="form-control" id="email" placeholder="Email">
-              </div>
-              <div class="form-group">
-
-                <input type="tel" class="form-control" id="phone" placeholder="Enter phone number">
-              </div>
-              <div class="form-group">
-                <select class='form-control'>
-                  <option value="" disabled selected>What are you intrested in?</option>
-                  <option value="buying">Buying</option>
-                  <option value="selling">Selling</option>
-                  <option value="media">Media</option>
-                  <option value="area information">Area Information</option>
-                  <option value="home valuation">Home valuation</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <textarea placeholder='Message' class='form-control' name="message" id="message" cols="30"
-                  rows="3"></textarea>
-              </div>
-
-              <button type="submit">Send</button>
-            </form>
-          </div>
-
-
-
-          <div class="bgDark__box">
-            <h5>CONTACT DETAILS</h5>
-            <a href="tel:5554280940">Tel: 555-428-0940</a>
-            <p>Mon - Sat, 8:30 AM - 9 PM</p>
-            <p>6101 Penn Ave</p>
-            <p>Luxury Real Estate Agent</p>
-            <p>in Pittsburgh, PA</p>
-            <ul>
-              <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- sidepanel -->
     <div class="menu">
@@ -114,8 +55,7 @@
           <a href="#" class="menu__link"><i class="fas fa-wrench"></i> My Portal</a>
         </li>
         <li>
-          <a href="mailto:someone@something.com?subject=your title&body=TThe message" class="menu__link"><i
-              class="fas fa-envelope"></i> Contact Us</a>
+          <a href="contact.html" class="menu__link"><i class="fas fa-envelope"></i> Contact Us</a>
         </li>
 
         <li>
@@ -132,7 +72,7 @@
       <div class="container">
         <div class="header__logo">
           <a href="#">
-            <h3 class="logo">Max Cardo <span>Ltd</span></h3>
+            <img src="/images/small.png" alt="" class="logo">
           </a>
         </div>
         <ul class="header__links">
@@ -145,16 +85,12 @@
               <div></div></a>
           </li>
           <li>
-            <a href="#" class="header__link link"><i class="fas fa-wrench"></i> My Portal
-              <div></div></a>
-          </li>
-          <li>
-            <a href="#bgDark" class=" header__link link"><i class="fas fa-envelope"></i> Contact Us
+            <a href="contact.html" class=" header__link link"><i class="fas fa-envelope"></i> Contact Us
               <div></div></a>
           </li>
 
           <li>
-            <a href="tel:5554280940" class="header__link link"><i class="fas fa-phone"></i> 555-428-0940
+            <a href="tel:412-444-5181" class="header__link link"><i class="fas fa-phone"></i> 412-444-5181
               <div></div></a>
           </li>
         </ul>
@@ -175,7 +111,6 @@
     <section class="hero" id="input">
       <div class="container">
         <form action="index.html">
-          <h1 class="hero__heading">Street smart and market wise</h1>
           <p class="hero__paragraph">Start your search today</p>
 
           <div class="form-control">
@@ -199,15 +134,15 @@
       <div class="approach__grid">
 
         <div class="approach__box">
-          <img src="/images/1.jpg" alt="">
+          <img src="/images/hands.png" alt="">
 
           <div class="approach__box--front">
-            <h2>Analytics</h2>
+            <h3>Integrity</h3>
           </div>
 
           <div class="approach__box--back">
             <div class="top">
-              <h2>Analytics</h2>
+              <h3>Integrity</h3>
 
             </div>
             <div class="bottom">
@@ -219,15 +154,15 @@
           </div>
         </div>
         <div class="approach__box">
-          <img src="/images/1.jpg" alt="">
+          <img class='middlepic' src="/images/AdobeStock_79793714.jpeg" alt="">
 
           <div class="approach__box--front">
-            <h2>Creativity</h2>
+            <h3>Experience</h3>
           </div>
 
           <div class="approach__box--back">
             <div class="top">
-              <h2>Creativity</h2>
+              <h3>Experience</h3>
 
             </div>
 
@@ -241,13 +176,13 @@
 
         </div>
         <div class="approach__box">
-          <img src="/images/1.jpg" alt="">
+          <img src="/images/first.png" alt="">
           <div class="approach__box--front">
-            <h2>Innovation</h2>
+            <h3>Innovation</h3>
           </div>
           <div class="approach__box--back">
             <div class="top">
-              <h2>Innovation</h2>
+              <h3>Innovation</h3>
             </div>
             <div class="bottom">
               <p>Websites and mobile app technologies are constantly evolving. Our techies are constantly researching
@@ -279,11 +214,33 @@
           <a href="#">FREE HOME VALUATION</a>
         </div>
         <div class="homeValuation__box">
-          <img src="/images/1.jpg" alt="">
+          <img src="/images/homevaluation.jpeg" alt="">
         </div>
       </div>
 
       <!-- </div> -->
+    </section>
+
+    <!-- rental valuation -->
+
+    <section data-aos="fade-right" class="rentalValuation">
+      <div class="container-fluid">
+        <div class="rentalValuation__grid">
+          <div class="rentalValuation__box">
+            <img src="/images/rentalvaluation.jpeg" alt="">
+          </div>
+          <div class="rentalValuation__box">
+            <h2>Rental Rate Projections</h2>
+            <p>Whether you are buying a new investment property, moving in a new tenant or renewing and existing lease,
+              knowing the going rate for rent is key. Contact us today and let us help maximize you return on
+              investment.
+            </p>
+            <a href="#">FREE RENTAL PROJECTION</a>
+          </div>
+
+        </div>
+
+      </div>
     </section>
 
     <!-- strong leadership -->
@@ -352,71 +309,6 @@
     </section>
 
 
-    <!-- blog -->
-
-    <div data-aos="fade-left" class="blog">
-      <h2 class="blog__heading">Blog</h2>
-      <div class="container">
-        <div class="blog__grid">
-          <div class="blog__box blog__box-1">
-            <div class="blog__box--top">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa est dolores corrupti explicabo
-                exercitationem veritatis, nihil a fugit, assumenda, eum consectetur architecto maxime praesentium ad
-                ducimus
-                nulla neque cum cumque?</p>
-            </div>
-
-            <div class="blog__box--bottom">
-              <p>February 15, 2020</p> <a href="#">Read more</a>
-            </div>
-          </div>
-          <div class="blog__box blog__box-2">
-            <div class="blog__box--top">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa est dolores corrupti explicabo
-                exercitationem veritatis, nihil a fugit, assumenda, eum consectetur architecto maxime praesentium ad
-                ducimus
-                nulla neque cum cumque?</p>
-            </div>
-            <div class="blog__box--bottom">
-              <p>February 15, 2020</p> <a href="#">Read more</a>
-            </div>
-          </div>
-          <div class="blog__box blog__box-3">
-            <div class="blog__box--top">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa est dolores corrupti explicabo
-                exercitationem veritatis, nihil a fugit, assumenda, eum consectetur architecto maxime praesentium ad
-                ducimus
-                nulla neque cum cumque?</p>
-            </div>
-            <div class="blog__box--bottom">
-              <p>February 15, 2020</p> <a href="#">Read more</a>
-            </div>
-          </div>
-          <div class="blog__box blog__box-4">
-            <div class="blog__box--top">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa est dolores corrupti explicabo
-                exercitationem veritatis, nihil a fugit, assumenda, eum consectetur architecto maxime praesentium ad
-                ducimus
-                nulla neque cum cumque?</p>
-            </div>
-            <div class="blog__box--bottom">
-              <p>February 15, 2020</p> <a href="#">Read more</a>
-            </div>
-          </div>
-          <div class="blog__box blog__box-5">
-            <div class="blog__box--top">
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa est dolores corrupti explicabo
-                exercitationem veritatis, nihil a fugit, assumenda, eum consectetur architecto maxime praesentium ad
-                ducimus
-                nulla neque cum cumque?</p>
-            </div>
-            <div class="blog__box--bottom">
-              <p>February 15, 2020</p> <a href="#">Read more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- map -->
     <section id="mapDiv" data-aos="fade-right"></section>
 
@@ -450,12 +342,12 @@
             <h3>Contact Us</h3>
             <ul>
               <li>
-                <a href="mailto:someone@something.com?subject=your title&body=The message">
+                <a href="contact.html">
                   <i class="fas fa-envelope"></i>
-                  <span>dejnns55@gmail.com</span></a>
+                  <span>adam_tlg@outlook.com</span></a>
               </li>
               <li>
-                <a href="tel:555-428-0940"><i class="fas fa-phone"></i> 555-428-0940</a>
+                <a href="tel:412-444-5181"><i class="fas fa-phone"></i> 412-444-5181</a>
               </li>
             </ul>
           </div>

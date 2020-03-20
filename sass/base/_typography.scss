@@ -38,19 +38,19 @@
 
     &__box {
         &--front {
-            h2 {
+            h3 {
                 position: absolute;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                color: black;
+                color: white;
                 font-weight: bold;
-
+                text-shadow: 4px 4px black;
             }
         }
 
         &--back {
-            h2 {
+            h3 {
                 margin-bottom: 20px;
             }
         }
