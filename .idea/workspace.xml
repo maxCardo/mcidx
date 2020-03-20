@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ba9d72f0-d15d-4343-afff-464f267591fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1YcyVVFjZVf8FACB2DFNvnGlrfa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\mcidx" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\mcidx\idxTemplates\SearchPages" />
+      <recent name="D:\xampp\htdocs\mcidx\idxTemplates\propertyDetails" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba9d72f0-d15d-4343-afff-464f267591fe" name="Default Changelist" comment="" />
+      <created>1583256200986</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583256200986</updated>
+      <workItem from="1583256202147" duration="8965000" />
+      <workItem from="1583313637432" duration="101443000" />
+      <workItem from="1584034042952" duration="9027000" />
+      <workItem from="1584107853478" duration="6982000" />
+      <workItem from="1584209883820" duration="13905000" />
+      <workItem from="1584471521809" duration="27433000" />
+      <workItem from="1584727058842" duration="2643000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="772" y="274" key="#File_Watchers" timestamp="1583257290217">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="772" y="274" key="#File_Watchers/0.0.2560.1400/2560.0.1600.860@0.0.2560.1400" timestamp="1583257290217" />
+    <state x="978" y="185" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583257729610">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="978" y="185" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400/2560.0.1600.860@0.0.2560.1400" timestamp="1583257729610" />
+    <state x="814" y="423" width="932" height="826" key="EditFileWatcherDialog" timestamp="1583257289319">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="814" y="423" width="932" height="826" key="EditFileWatcherDialog/0.0.2560.1400/2560.0.1600.860@0.0.2560.1400" timestamp="1583257289319" />
+    <state x="1010" y="533" key="FileChooserDialogImpl" timestamp="1583430006623">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="533" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.1600.860@0.0.2560.1400" timestamp="1583430006623" />
+    <state x="657" y="255" key="SettingsEditor" timestamp="1583349592796">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="657" y="255" key="SettingsEditor/0.0.2560.1400/2560.0.1600.860@0.0.2560.1400" timestamp="1583349592796" />
+  </component>
+</project>
