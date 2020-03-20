@@ -29,6 +29,30 @@ $(document).ready(function () {
             }
         });
     }
+
+    const countyMap = [''];
+
+
+    $('#initiateSearch').on('click', function(event){
+        event.preventDefault();
+        var url = window.location.href;
+        history.pushState(null, "", url);
+
+        let hrefBase = 'http://cardo.idxbroker.com/idx/results/listings?pt=sfr&ccz=';
+        let searchTerm = $("#searchField").val();
+        let isnum = /^\d+$/.test(searchTerm);
+        let searchTermLength = searchTerm.length;
+
+        if (isnum && (searchTermLength == 5)) {
+            let fullHref = hrefBase+'zipcode&zipcode%5B%5D=' + searchTerm;
+            window.location.replace(fullHref);
+        } else if (isnum && (searchTermLength > 5)) {
+
+        }
+        console.log(isnum);
+
+
+    });
 });
 
 
