@@ -6,6 +6,11 @@
     position: relative;
     width: 100vw;
 
+
+    * {
+        text-shadow: 2px 4px 3px rgba(0, 0, 0, .3);
+    }
+
     &__flex {
         display: flex;
         @include justifyContentSpaceBetween;
@@ -15,10 +20,12 @@
         max-width: 350px;
         color: black;
 
+
         h3 {
             margin-bottom: 20px;
             padding-bottom: 15px;
             border-bottom: 1px solid black;
+
         }
 
         li {
