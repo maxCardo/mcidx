@@ -44,6 +44,10 @@
             &:hover {
                 color: black;
                 font-weight: bold;
+
+                @supports (-ms-ime-align: auto) {
+                    color: black !important;
+                }
             }
         }
     }
@@ -69,6 +73,7 @@
         background-color: transparent;
         border-bottom: 1px solid black;
     }
+
 }
 
 .bg-video {
@@ -106,5 +111,12 @@
         .footer {
             height: 400px;
         }
+    }
+}
+
+@supports (-ms-ime-align: auto) {
+    input[type="email"]::-ms-input-placeholder {
+        color: black;
+        font-weight: bold;
     }
 }
