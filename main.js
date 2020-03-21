@@ -412,8 +412,7 @@ $(document).ready(function () {
                 dataType: 'json',
                 contentType: 'application/json',
                 success: function (data) {
-                    console.log(data);
-                    //window.location.replace('http://cardo.tech');
+                    window.location.replace('http://cardo.tech');
                 },
                 data: JSON.stringify(data)
             });
