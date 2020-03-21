@@ -54,14 +54,14 @@ html {
 
 body {
   position: relative;
-  width: 100vw; }
+  max-width: 1980px;
+  margin: 0 auto; }
 
-.hero,
-.about,
-.listings,
-#mapDiv,
-.footer {
-  overflow-x: hidden; }
+.wrapper {
+  max-width: 100%;
+  overflow: hidden; }
+  .wrapper:target .bgDark {
+    top: -500px; }
 
 /* HEADER */
 .header {
@@ -72,9 +72,9 @@ body {
   top: 0;
   left: 0;
   z-index: 500;
-  -webkit-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out; }
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
   .header .container {
     display: -webkit-box;
     display: -webkit-flex;
@@ -86,9 +86,6 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
     background-color: transparent; }
-  .header__logo .logo {
-    color: black;
-    font-size: 30px; }
   .header__links {
     display: flex;
     -webkit-align-content: center;
@@ -99,9 +96,9 @@ body {
     padding: 10px;
     color: black !important;
     position: relative;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out; }
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
     .header__link:hover {
       transform: scale(1.2); }
     .header__link div {
@@ -112,43 +109,23 @@ body {
       bottom: 0;
       height: 2px;
       background-color: #fff;
-      -webkit-transition: all .2s ease-in-out;
-      -o-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
       width: 0; }
     .header__link:hover div {
       width: 100%;
       left: 0; }
-  .header__down .container ul {
-    display: flex;
-    position: fixed;
-    top: 87px;
-    left: 50%;
-    z-index: 5000000000000000; }
-    .header__down .container ul li a {
-      display: inline-block;
-      margin: 0 10px;
-      padding: 5px 10px;
-      background-color: #e2a855;
-      color: white;
-      -webkit-transition: all .2s ease-in-out;
-      -o-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out;
-      border-radius: 5px; }
-      .header__down .container ul li a:hover {
-        background-color: rgba(226, 168, 85, 0.8); }
 
 /* FOOTER */
 .footer {
   padding: 50px;
   width: 100vw;
   position: relative;
-  color: white; }
+  color: white;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
   .footer__flex {
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between; }
   .footer__box {
     max-width: 350px;
@@ -207,16 +184,76 @@ body {
     min-height: 100%;
     width: auto;
     height: auto;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%); }
   @media only screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
     .footer {
       height: 400px; } } }
 
+.approach__grid,
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px; }
+
+.approach__grid {
+  column-gap: 20px; }
+
+.valuation {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); }
+
+.homeValuation__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+.rentalValuation__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+.strongLeadership__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  margin-bottom: 30px; }
+
+@media only screen and (max-width: 992px) {
+  .approach__grid,
+  .testimonials__grid,
+  .strongLeadership__grid {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px; }
+  .homeValuation__grid,
+  .rentalValuation__grid {
+    grid-template-columns: repeat(1, 1fr); }
+  .rentalValuation__grid {
+    display: flex;
+    flex-direction: column-reverse; }
+  .approach__grid {
+    justify-items: center;
+    width: 90vw;
+    margin: 0 auto; } }
+
+@media only screen and (max-width: 900px) {
+  .footer__flex {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 30px; } }
+
+@media only screen and (max-width: 768px) {
+  .approach__grid {
+    margin-top: 30px; } }
+
 .listings {
   padding: 50px 0;
-  width: 100vw; }
+  width: 100vw;
+  background-color: rgba(236, 235, 235, 0.5); }
   .listings__flex {
     display: flex;
     max-width: 100%;
@@ -231,9 +268,9 @@ body {
     height: 400px;
     background-position: center center;
     background-size: cover;
+    position: relative;
     font-weight: bold;
-    padding: 15px;
-    position: relative; }
+    padding: 15px; }
     .listings__box:nth-child(2) {
       background-image: url("/images/1.jpg"); }
 
@@ -246,58 +283,132 @@ body {
   background-size: cover;
   z-index: 498;
   filter: grayscale(50%); }
-  .hero__input {
-    width: 30vw;
-    min-width: 330px;
-    text-align: center;
-    display: inline-block;
-    border-radius: 15px;
-    padding: 5px 0; }
-  .hero .container form .wrap {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    align-items: center;
-    max-width: 330px;
+  .hero .form-control {
     position: absolute;
-    top: 75%;
+    min-width: 300px;
+    max-width: 570px;
+    top: 77%;
     left: 50%;
-    transform: translate(-50%, -75%); }
-    .hero .container form .wrap button {
-      background-color: transparent;
-      display: inline-block; }
-      .hero .container form .wrap button i {
-        position: relative;
-        margin-left: -40px;
-        z-index: 5000000;
-        height: 100%;
-        width: 100%; }
+    width: 80%;
+    transform: translate(-50%, -77%);
+    z-index: 99999999999999999999999;
+    display: Flex;
+    border-radius: 25px;
+    flex-direction: row-reverse; }
+    .hero .form-control input {
+      width: 100%;
+      margin-left: 15px;
+      height: 100%; }
+    .hero .form-control button {
+      background-color: transparent; }
 
-.about {
+.approach {
+  width: 100vw;
+  padding: 50px 30px;
+  background-color: rgba(236, 235, 235, 0.5); }
+  .approach__box {
+    text-align: center;
+    position: relative;
+    height: 600px;
+    transition: all 0.4s ease-in-out;
+    font-weight: bold;
+    max-width: 600px; }
+    .approach__box .middlepic {
+      filter: brightness(70%); }
+    .approach__box img {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .approach__box--front {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .approach__box--back {
+      transition: all 0.2s ease;
+      background-color: rgba(250, 250, 250, 0.7);
+      position: relative;
+      visibility: hidden;
+      opacity: 1;
+      top: 0;
+      padding: 50px; }
+      .approach__box--back .top,
+      .approach__box--back .bottom {
+        transition: all 0.4s ease-in;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%; }
+      .approach__box--back .top {
+        top: 0; }
+      .approach__box--back .bottom {
+        bottom: 0;
+        padding: 0 20px; }
+    .approach__box--front, .approach__box--back {
+      height: 100%;
+      width: 100%; }
+    .approach__box:hover img {
+      filter: blur(15px); }
+    .approach__box:hover .approach__box--back {
+      opacity: 1;
+      visibility: visible; }
+      .approach__box:hover .approach__box--back .top,
+      .approach__box:hover .approach__box--back .bottom {
+        visibility: visible;
+        opacity: 1; }
+      .approach__box:hover .approach__box--back .top {
+        top: 50px; }
+      .approach__box:hover .approach__box--back .bottom {
+        bottom: 100px; }
+    .approach__box:hover .approach__box--front h3 {
+      display: none; }
+
+.strongLeadership {
   width: 100vw;
   padding: 50px 0;
-  background-color: rgba(236, 235, 235, 0.5); }
-  .about .container img {
-    border-radius: 50%;
-    height: 200px;
-    max-width: 200px;
-    margin-right: 50px; }
-  .about__flex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
+  background-color: rgba(236, 235, 235, 0.5);
+  text-align: center; }
+  .strongLeadership__box {
+    width: 100%;
+    text-align: center; }
+    .strongLeadership__box img {
+      width: 100%;
+      margin-bottom: 30px; }
+
+.testimonials {
+  padding: 50px 0; }
+  .testimonials__box {
+    padding: 20px;
+    height: fit-content;
+    transition: all 0.5s ease-out; }
+    .testimonials__box:hover {
+      border: 1px solid black;
+      box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75); }
 
 /* map */
 #mapDiv {
   width: 100vw;
   height: 400px; }
+
+.homeValuation__box,
+.rentalValuation__box {
+  align-content: center;
+  align-self: center;
+  text-align: center; }
+  .homeValuation__box img,
+  .rentalValuation__box img {
+    width: 100%;
+    max-height: 350px; }
+  .homeValuation__box a,
+  .rentalValuation__box a {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 25px; }
 
 .menu {
   position: fixed;
@@ -318,11 +429,11 @@ body {
     left: 0;
     position: fixed; }
   .menu__link {
+    color: black;
     display: inline-block;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    color: black; }
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
     .menu__link:hover {
       color: white; }
     .menu__link:last-of-type {
@@ -368,9 +479,9 @@ body {
     .menu__toggler.active > span {
       background-color: transparent; }
       .menu__toggler.active > span::before, .menu__toggler.active > span::after {
-        background-color: black;
         top: 50px;
-        position: fixed; }
+        position: fixed;
+        background-color: black; }
       .menu__toggler.active > span::before {
         -webkit-transform: rotate(-225deg);
         transform: rotate(-225deg); }
@@ -378,8 +489,118 @@ body {
         -webkit-transform: rotate(225deg);
         transform: rotate(225deg); }
 
-.listings .container h2 {
+.valuation .container-fluid {
+  padding: 0 !important; }
+
+.bgDark {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  padding: 100px 0;
+  top: 0;
+  left: 0;
+  z-index: 9999999999999999;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  transition: all .4s ease-in-out;
+  text-align: center; }
+  .bgDark:target {
+    visibility: visible;
+    opacity: 1;
+    top: 0; }
+  .bgDark .close {
+    font-size: 35px;
+    position: fixed;
+    top: 50px;
+    right: 100px;
+    color: white; }
+  .bgDark__heading {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 999999999999999999999999999999999; }
+    @media only screen and (max-width: 768px) {
+      .bgDark__heading {
+        font-size: 35px;
+        margin-bottom: 20px; } }
+  .bgDark__flex {
+    display: flex;
+    justify-content: space-around; }
+  .bgDark__box h5 {
+    margin-bottom: 40px; }
+  .bgDark__box a,
+  .bgDark__box ul li a,
+  .bgDark__box button {
+    color: White; }
+  .bgDark__box a {
+    display: inline-block;
+    margin-bottom: 30px; }
+  .bgDark__box p {
+    font-style: italic; }
+    .bgDark__box p:last-of-type {
+      margin-bottom: 40px; }
+    .bgDark__box p:nth-of-type(2) {
+      margin-bottom: 30px; }
+  .bgDark__box ul {
+    display: flex;
+    text-align: center;
+    justify-content: center; }
+    .bgDark__box ul li a {
+      margin: 10px;
+      padding: 15px 20px;
+      border-radius: 50%;
+      border: 1px solid white;
+      transition: all .4s ease-in-out; }
+      .bgDark__box ul li a:hover {
+        border-color: black;
+        color: black; }
+  .bgDark__box input {
+    min-width: 500px; }
+  .bgDark__box button {
+    display: inline-block;
+    padding: 5px 50px;
+    border: 1px solid white;
+    background-color: transparent;
+    transition: all .2s ease-in-out; }
+    .bgDark__box button:hover {
+      color: black;
+      background-color: white; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px; }
+
+/* Handle on hover */
+.strongLeadership__heading,
+.testimonials__heading,
+.approach__heading,
+.listings__heading {
+  font-size: 50px;
   text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 768px) {
+    .strongLeadership__heading,
+    .testimonials__heading,
+    .approach__heading,
+    .listings__heading {
+      font-size: 35px;
+      margin-bottom: 20px; } }
+
+.listings__heading {
   margin-bottom: 50px; }
 
 .listings__box a {
@@ -396,13 +617,112 @@ body {
     background-color: white;
     color: black; }
 
-.about .container h2,
-.about .container p {
+.approach__box--front h3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 4px 4px black; }
+
+.approach__box--back h3 {
+  margin-bottom: 20px; }
+
+.approach__box--back p {
+  font-size: 25px;
+  line-height: 1.2; }
+
+.approach__box--front h3, .approach__box--back h3 {
+  font-size: 40px;
+  font-weight: bold; }
+
+.testimonials__box p:first-of-type {
+  font-style: italic;
+  color: grey; }
+
+.homeValuation,
+.rentalValuation {
   text-align: center; }
+  .homeValuation h2,
+  .homeValuation p,
+  .rentalValuation h2,
+  .rentalValuation p {
+    margin-bottom: 10px; }
+  .homeValuation p,
+  .rentalValuation p {
+    padding: 0 20px; }
 
 .menu p {
   font-size: 14px;
   margin-bottom: 10px; }
+
+.hero__paragraph, .hero__heading, .hero__link {
+  color: white;
+  position: absolute;
+  font-weight: bold;
+  left: 50%;
+  width: 100%;
+  text-align: center; }
+
+.hero__heading {
+  top: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%); }
+
+.hero__paragraph {
+  top: 68%;
+  text-transform: uppercase;
+  transform: translate(-50%, -68%);
+  font-size: 17px; }
+
+.hero__link {
+  top: 85%;
+  transform: translate(-50%, -85%);
+  display: inline-block;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-size: 14px; }
+  .hero__link:hover {
+    color: rgba(255, 255, 255, 0.8); }
+
+.about .container h2,
+.about .container p {
+  text-align: center; }
+
+@media only screen and (max-width: 992px) {
+  .testimonials__box {
+    text-align: center; }
+    .testimonials__box p {
+      margin-bottom: 20px; }
+  .homeValuation__box p,
+  .rentalValuation__box p {
+    padding: 0; }
+  .listings .container h2 {
+    text-align: center;
+    margin-bottom: 50px; }
+  .listings__box a {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.2s ease-in-out; }
+    .listings__box a:hover {
+      background-color: white;
+      color: black; }
+  .approach__box p {
+    font-size: 30px; } }
+
+@media only screen and (max-width: 768px) {
+  .approach__box h3 {
+    font-size: 30px; }
+  .approach__box p {
+    font-size: 25px;
+    line-height: 1.4; } }
 
 /* components */
 .btn__block {
@@ -413,27 +733,49 @@ body {
   transition: all 0.5s ease-in-out; }
   .btn__block:hover {
     transform: scaleX(1.2);
+    color: white; }
+
+.strongLeadership__btn {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 5px 15px;
+  color: black;
+  transition: all .4s ease-in-out;
+  border-radius: 25px; }
+  .strongLeadership__btn:hover {
     color: white;
-    letter-spacing: 1.2px; }
+    background-color: black; }
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 992px) {
-  header .container .header__links li .header__link,
+  .header, .header__link,
   .header__down .container ul,
-  .header .container .header__logo .logo,
-  header {
+  .header .container .header__logo .logo {
     display: none; }
   .menu__toggler {
     opacity: 1;
     visibility: visible; }
-  .listings .container .listings__flex {
+  .listings__flex {
     flex-direction: column;
     align-items: center; }
-  .listings .container .listings__flex .listings__box {
+  .listings__box {
     width: 100%;
     height: 300px; }
-  .listings .container .listings__flex .listings__box:first-of-type {
-    margin-bottom: 30px; } }
+    .listings__box:first-of-type {
+      margin-bottom: 30px; }
+  .approach {
+    padding: 50px 0; }
+    .approach__box {
+      width: 100%;
+      height: 700px; }
+      .approach__box img {
+        width: 100%; }
+      .approach__box .bottom {
+        top: 35%; }
+  .homeValuation__box:first-of-type {
+    padding: 30px; }
+  .rentalValuation__box:nth-of-type(2) {
+    padding: 30px; } }
 
 @media only screen and (max-width: 900px) {
   .menu__link {
@@ -443,15 +785,6 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column; }
-  .footer__flex {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    -webkit-align-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-    row-gap: 30px; }
   .footer__box {
     text-align: center; }
     .footer__box form {
@@ -460,22 +793,13 @@ body {
         border-bottom: 1px solid black;
         border-right: 1px solid black;
         border-bottom-right-radius: 15px;
-        -webkit-transition: all .2s ease-in-out;
-        -o-transition: all .2s ease-in-out;
-        transition: all .2s ease-in-out; } }
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; } }
 
 @media only screen and (max-width: 780px) {
   .menu {
     padding: 0 50px 0 50px; } }
-
-@media only screen and (max-width: 768px) {
-  .about .container .about__flex {
-    flex-direction: column; }
-  .about .container img {
-    margin-right: 0; }
-  .about .container h2,
-  .about .container img {
-    margin-bottom: 30px; } }
 
 @media only screen and (max-width: 610px) {
   .menu {
@@ -487,14 +811,13 @@ body {
     left: -250px; }
   .footer form {
     flex-direction: column; }
-  .footer form input,
-  .footer__flex,
-  .footer__box {
+  .footer__flex, .footer__box,
+  .footer form input {
     width: 100%; }
   .btn__block {
     margin: 0 auto; }
-  .btn__block:hover {
-    background-color: white; }
+    .btn__block:hover {
+      background-color: white; }
   input[type='email'] {
     margin-bottom: 20px;
     min-width: 100%; } }
@@ -511,15 +834,32 @@ body {
 @media only screen and (max-width: 500px) {
   .footer__copyright {
     max-width: 250px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .approach__box {
+    height: 600px; }
+    .approach__box:hover .bottom {
+      top: 20%; }
+      .approach__box:hover .bottom:last-of-type {
+        top: 25%; }
+  .homeValuation,
+  .rentalValuation {
+    box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.75); }
+    .homeValuation img,
+    .rentalValuation img {
+      display: none; } }
 
 @media only screen and (max-width: 400px) {
-  .hero .container .wrap .hero__input {
+  .hero__input {
     min-width: 280px;
-    /* margin: 0 auto; */
     font-size: 13px; }
   .footer__copyright {
-    max-width: 240px; } }
+    max-width: 240px; }
+  .approach__grid {
+    width: 100vw; }
+  .approach__box {
+    height: 600px !important; }
+    .approach__box:hover .bottom {
+      top: 20%; } }
 
 @media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .menu ul {
