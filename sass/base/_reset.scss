@@ -77,13 +77,17 @@ html {
 
 body {
     position: relative;
-    width: 100vw;
+    max-width: 1980px;
+    margin: 0 auto;
 }
 
-.hero,
-.about,
-.listings,
-#mapDiv,
-.footer {
-    overflow-x: hidden;
+.wrapper {
+    max-width: 100%;
+    overflow: hidden;
+
+    &:target {
+        .bgDark {
+            top: -500px;
+        }
+    }
 }

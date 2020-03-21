@@ -10,19 +10,31 @@
 
 .approach {
     &__grid {
-        column-gap: 50px;
+        column-gap: 20px;
     }
 }
 
-.homeValuation,
+.valuation {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.homeValuation {
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .rentalValuation {
+
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
 }
-
 
 .strongLeadership {
     &__grid {
@@ -35,20 +47,37 @@
 
 @media only screen and (max-width:992px) {
 
-
     .approach,
     .testimonials,
-    .homeValuation,
     .strongLeadership {
         &__grid {
             grid-template-columns: repeat(1, 1fr);
             row-gap: 50px;
         }
-
     }
 
+    .homeValuation,
+    .rentalValuation {
 
+        &__grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
 
+    .rentalValuation {
+        &__grid {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    .approach {
+        &__grid {
+            justify-items: center;
+            width: 90vw;
+            margin: 0 auto;
+        }
+    }
 }
 
 @media only screen and (max-width:900px) {
@@ -65,9 +94,9 @@
 }
 
 @media only screen and (max-width:768px) {
-    .blog {
+    .approach {
         &__grid {
-            grid-template-columns: repeat(1, 1fr);
+            margin-top: 30px;
         }
     }
 }

@@ -44,24 +44,39 @@
 
     }
 
-    .homeValuation {
-        padding: 50px 0;
-        text-align: center;
-    }
-
     .approach {
-
+        padding: 50px 0;
 
         &__box {
+            width: 100%;
+            height: 700px;
+
+            img {
+                width: 100%;
+            }
+
             .bottom {
-                top: 150px;
+                top: 35%;
             }
         }
     }
 
+    .homeValuation {
+        &__box {
+            &:first-of-type {
+                padding: 30px;
+            }
+        }
+    }
 
+    .rentalValuation {
+        &__box {
+            &:nth-of-type(2) {
+                padding: 30px;
 
-
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -163,6 +178,37 @@
             margin: 0 auto;
         }
     }
+
+    .approach {
+
+        &__box {
+            height: 600px;
+
+
+            &:hover {
+                .bottom {
+                    top: 20%;
+
+                    &:last-of-type {
+                        top: 25%;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .homeValuation,
+    .rentalValuation {
+        box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.75);
+
+        img {
+            display: none;
+        }
+    }
+
+
+
 }
 
 @media only screen and (max-width:400px) {
@@ -178,6 +224,23 @@
         &__copyright {
             max-width: 240px;
         }
+    }
+
+    .approach {
+        &__grid {
+            width: 100vw;
+        }
+
+        &__box {
+            height: 600px !important;
+
+            &:hover {
+                .bottom {
+                    top: 20%;
+                }
+            }
+        }
+
     }
 }
 
