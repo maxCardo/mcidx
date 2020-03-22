@@ -311,9 +311,10 @@
       </div>
     </section>
 
-
     <!-- map -->
-    <section id="mapDiv" data-aos-duration='1500' data-aos="fade-right"></section>
+    <iframe data-aos-duration="1500" data-aos="fade-right" width="100%" height="450" frameborder="0" style="border:0"
+      src="https://maps.google.com/?q=40.46115,-79.92341&output=svembed" allowfullscreen>
+    </iframe>
 
     <!-- footer -->
     <footer class="footer" data-aos-duration='1500' data-aos="fade-left">
@@ -367,22 +368,34 @@
   </div>
 
   <script>
-    // position we will use later
-    var lat = 40.46115;
-    var lon = -79.92341;
-    // initialize map
-    map = L.map('mapDiv').setView([lat, lon], 13);
-    // set map tiles source
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-      maxZoom: 18
-    }).addTo(map);
-    // add marker to the map
-    marker = L.marker([lat, lon]).addTo(map);
-    // add popup to the marker
-    marker
-      .bindPopup('<b>Max Cardo Ltd</b><br />6101 Penn Ave<br />Pittsburgh')
-      .openPopup();
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      var uluru = {
+        lat: -25.344,
+        lng: 131.036
+      };
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+        document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
+  <!--Load the API from the specified URL
+        * The async attribute allows the browser to render the page while the API loads
+        * The key parameter will contain your own API key (which is not needed for this tutorial)
+        * The callback parameter executes the initMap() function
+        -->
+  <script async defer src="https://www.google.com/maps/embed/v1/place
+  ?key=AIzaSyD8Mqch9inDidK7TYMRP3gKJJPonVfpeJo
+  &q=6101+penn+ave+pittsburgh+pa+15206">
   </script>
 
   <script>
