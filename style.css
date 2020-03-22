@@ -238,6 +238,7 @@
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
+  list-style: none;
 }
 
 .header__link {
@@ -2046,6 +2047,12 @@ div.flex-grow {
 
   .IDX-wrapper-standard .IDX-results--cell--disclaimer {
     min-height: 50px;
+  }
+
+  .IDX-wrapper-standard .IDX-advancedWrap input.IDX-advancedRange {
+    display: inline-block;
+    width: 43%;
+    padding: 0 2.5% !important;
   }
 }
 
