@@ -5,6 +5,10 @@
     width: 100vw;
     background-color: rgba(236, 235, 235, 0.5);
 
+    .container {
+        padding: 0 !important;
+    }
+
     &__flex {
         display: flex;
         max-width: 100%;
@@ -77,7 +81,7 @@
     &__box {
         text-align: center;
         position: relative;
-        height: 600px;
+        height: 550px;
         transition: all 0.4s ease-in-out;
         font-weight: bold;
         max-width: 600px;
@@ -124,7 +128,7 @@
 
             .bottom {
                 bottom: 0;
-                padding: 0 20px;
+                padding: 0 10px;
             }
         }
 
@@ -134,7 +138,6 @@
         }
 
         &:hover {
-
 
             img {
                 filter: blur(15px);
@@ -156,6 +159,12 @@
 
                 .bottom {
                     bottom: 100px;
+
+                    &-1 {
+                        bottom: 7%;
+
+                        @media only screen and (min-width:1200px) {}
+                    }
                 }
 
             }

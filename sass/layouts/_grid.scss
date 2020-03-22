@@ -45,9 +45,46 @@
     }
 }
 
+@media only screen and (min-width:1900px) {
+    .approach {
+
+        &__box {
+            justify-self: center;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .approach {
+        &__grid {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 50px;
+            align-content: center;
+            justify-content: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        &__box {
+            height: 700px !important;
+
+            .bottom {
+                top: 25%;
+
+                p {
+                    line-height: 1.8;
+                }
+            }
+        }
+
+
+    }
+}
+
 @media only screen and (max-width:992px) {
 
-    .approach,
+
     .testimonials,
     .strongLeadership {
         &__grid {
@@ -97,6 +134,19 @@
     .approach {
         &__grid {
             margin-top: 30px;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width:500px) {
+    .p-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+        .none {
+            display: none;
         }
     }
 }

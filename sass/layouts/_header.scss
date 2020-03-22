@@ -1,13 +1,15 @@
 /* HEADER */
 
+
 .header {
-    width: 100vw;
+    width: 100%;
     padding: 20px 0;
     background-color: transparent;
     position: fixed;
     @include topleft0;
     z-index: 500;
     @include transitionAll2ms;
+
 
     .container {
         @include flexAlignItemsCenter;
