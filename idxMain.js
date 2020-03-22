@@ -1002,6 +1002,25 @@ idx(document).ready(function() {
     }
     /* END OF CONTACT PAGE CONTACT FORM */
   });
+
+if(idx('.mat-form').length) {
+    idx('.mat-form').on('click', function(event) {
+        event.stopPropagation();
+    });
+    
+    idx('.detailsWrapper--right.open').on('click', function() {
+        idx('.detailsWrapper--right').removeClass('open');
+    });
+    
+    idx('.contact-mail').on('click', function () {
+        if (idx('.detailsWrapper--right').hasClass('open')) {
+            idx('.detailsWrapper--right').removeClass('open');
+        } else {
+            idx('.detailsWrapper--right').addClass('open');
+        }
+    });    
+}
+
   
   if (idx(".menu__toggler").length && idx(".menu").length) {
     const toggler = document.querySelector(".menu__toggler");
