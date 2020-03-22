@@ -246,6 +246,7 @@
   padding: 10px;
   color: black !important;
   position: relative;
+  text-decoration: none;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -253,6 +254,7 @@
 
 .header__link:hover {
   transform: scale(1.2);
+  border-bottom: 2px solid black;
 }
 
 .header__link div {
