@@ -341,60 +341,97 @@ $(document).ready(function () {
         {"id":"Cherry Valley - WSH","text":"Cherry Valley - WSH"}
     ];
 
-    $('#initiateSearch').on('click', function(event){
-        event.preventDefault();
-        var url = window.location.href;
-        history.pushState(null, "", url);
+    /* HOME PAGE SEARCH */
+    if ($('#initiateSearch').length) {
+        $('#initiateSearch').on('click', function (event) {
+            event.preventDefault();
+            var url = window.location.href;
+            history.pushState(null, "", url);
 
-        let hrefBase = 'http://cardo.idxbroker.com/idx/results/listings?';
+            let hrefBase = 'http://cardo.idxbroker.com/idx/results/listings?';
 
-        let searchTerm = $("#searchField").val().trim().toLowerCase();
+            let searchTerm = $('#searchField').val().trim().toLowerCase();
 
-        let isnum = /^\d+$/.test(searchTerm);
+            let isnum = /^\d+$/.test(searchTerm);
 
-        let isCounty = countyIdMap.hasOwnProperty(searchTerm);
+            let isCounty = countyIdMap.hasOwnProperty(searchTerm);
 
-        let isNeighborhood = false;
-        let targetNeighborhood;
-        neighborhoodMap.forEach(function(item) {
-           if (item.id.toLowerCase() == searchTerm) {
-               isNeighborhood = true;
-               targetNeighborhood = item.id.toLowerCase().replace(/\s/g, '+');
-           }
+            let isNeighborhood = false;
+            let targetNeighborhood;
+            neighborhoodMap.forEach(function (item) {
+                if (item.id.toLowerCase() == searchTerm) {
+                    isNeighborhood = true;
+                    targetNeighborhood = item.id.toLowerCase().replace(/\s/g, '+');
+                }
+            });
+
+            let searchTermLength = searchTerm.length;
+
+            if (isnum && (searchTermLength == 5)) {
+                let fullHref = hrefBase + 'pt=sfr&ccz=zipcode&zipcode%5B%5D=' + searchTerm;
+                window.location.replace(fullHref);
+            } else if (isCounty) {
+                let fullHref = hrefBase + 'pt=sfr&ccz=county&county%5B%5D=' + countyIdMap[searchTerm];
+                window.location.replace(fullHref);
+            } else if (isCounty) {
+                let fullHref = hrefBase + 'pt=sfr&ccz=county&county%5B%5D=' + countyIdMap[searchTerm];
+                window.location.replace(fullHref);
+            } else if (isNeighborhood) {
+                let fullHref = hrefBase + 'idxID=d504&pt=1&a_mlsareaminor%5B%5D=' + targetNeighborhood;
+                window.location.replace(fullHref);
+            } else {
+                console.log("THE ELSE");
+            }
+
+            console.log(neighborhoodMap.length);
+
         });
+    }
+    /* END OF HOME PAGE SEARCH */
 
-        let searchTermLength = searchTerm.length;
+    if ($('#cfc_contact_form').length) {
+        $('#submitContactForm').on('click', function (event) {
+            event.preventDefault();
+            let name = $('#cfc_name').val().trim();
+            let email = $('#cfc_email').val().trim();
+            let phone = $('#cfc_phone').val().trim();
+            let subject = $('#cfc_interest').val();
+            let message = $('#cfc_message').val().trim();
 
-        if (isnum && (searchTermLength == 5)) {
-            let fullHref = hrefBase + 'pt=sfr&ccz=zipcode&zipcode%5B%5D=' + searchTerm;
-            window.location.replace(fullHref);
-        } else if (isCounty) {
-            let fullHref = hrefBase + 'pt=sfr&ccz=county&county%5B%5D=' + countyIdMap[searchTerm];
-            window.location.replace(fullHref);
-        } else if (isCounty) {
-            let fullHref = hrefBase + 'pt=sfr&ccz=county&county%5B%5D=' + countyIdMap[searchTerm];
-            window.location.replace(fullHref);
-        } else if (isNeighborhood) {
-            let fullHref = hrefBase + 'idxID=d504&pt=1&a_mlsareaminor%5B%5D=' +targetNeighborhood;
-            window.location.replace(fullHref);
-        } else {
-            console.log("THE ELSE");
-        }
+            let data = {
+                'name': name,
+                'email': email,
+                'phone': phone,
+                'subject': subject,
+                'message': message
+            };
 
-        console.log(neighborhoodMap.length);
+            $.ajax({
+                url: 'https://rethink-dev.herokuapp.com/api/sales/web_lead',
+                type: 'post',
+                dataType: 'json',
+                contentType: 'application/json',
+                success: function (data) {
+                    window.location.replace('http://cardo.tech');
+                },
+                data: JSON.stringify(data)
+            });
+        });
+    }
+});
 
+
+if ($('.menu__toggler').length && $('.menu')) {
+    const toggler = document.querySelector('.menu__toggler');
+    const menu = document.querySelector('.menu');
+
+    toggler.addEventListener('click', () => {
+        toggler.classList.toggle('active');
+        menu.classList.toggle('active');
     });
-});
+}
 
 
-
-const toggler = document.querySelector('.menu__toggler');
-const menu = document.querySelector('.menu');
-
-toggler.addEventListener('click', () => {
-    toggler.classList.toggle('active');
-    menu.classList.toggle('active');
-});
 (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
     i[r] = i[r] || function () {
