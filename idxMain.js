@@ -3302,25 +3302,26 @@ idx(document).ready(function () {
     if (idx(".mat-form").length) {
         idx("#sendContactForm").on("click", function (event) {
             event.preventDefault();
-            let name = $("#cfc_name")
+            let name = idx("#cfc_name")
                 .val()
                 .trim();
-            let lastName = $("#cfc_last_name")
+            let lastName = idx("#cfc_last_name")
                 .val()
                 .trim();
-            let email = $("#cfc_email")
+            let email = idx("#cfc_email")
                 .val()
                 .trim();
-            let phone = $("#cfc_phone")
+            let phone = idx("#cfc_phone")
                 .val()
                 .trim();
-            let requestInfo = $("#cfc_request_info").val();
-            let message = $("#contactCustomMessage")
+            let requestInfo = idx("#cfc_request_info").val();
+            let message = idx("#contactCustomMessage")
                 .val()
                 .trim();
 
             let data = {
                 name: name,
+                lastName: lastName,
                 email: email,
                 phone: phone,
                 requestInfo: requestInfo,
