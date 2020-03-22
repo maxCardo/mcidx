@@ -3300,7 +3300,7 @@ idx(document).ready(function () {
     });
 
     if (idx(".mat-form").length) {
-        idx("#submitContactForm").on("click", function (event) {
+        idx("#sendContactForm").on("click", function (event) {
             event.preventDefault();
             let name = $("#cfc_name")
                 .val()
