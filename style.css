@@ -2529,6 +2529,7 @@ div.flex-grow {
 
   .container {
     max-width: 1140px;
+    margin: 0 auto;
   }
 }
 
@@ -2774,6 +2775,26 @@ div.flex-grow {
   flex-direction: column;
   justify-content: center;
   transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.header {
+  width: 100vw;
+  padding: 10px 0;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+  top: 0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0;
 }
 
 @media only screen and (max-width: 900px) {
