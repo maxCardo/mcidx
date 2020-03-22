@@ -3338,6 +3338,8 @@ idx(document).ready(function () {
                 success: function (data) {
                     window.location.replace("http://cardo.tech");
                 }
+            }).done(function () {
+                location.reload();
             });
         });
     }
