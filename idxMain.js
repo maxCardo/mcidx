@@ -3279,46 +3279,39 @@ idx(document).ready(function () {
     }
     /* END OF HOME PAGE SEARCH */
 
-    /* CONTACT PAGE CONTACT FORM */
-    if (idx("#cfc_contact_form").length) {
-        idx("#submitContactForm").on("click", function (event) {
-            event.preventDefault();
-            let name = idx("#cfc_name")
-                .val()
-                .trim();
-            let email = idx("#cfc_email")
-                .val()
-                .trim();
-            let phone = idx("#cfc_phone")
-                .val()
-                .trim();
-            let subject = idx("#cfc_interest").val();
-            let message = idx("#cfc_message")
-                .val()
-                .trim();
 
-            let data = {
-                name: name,
-                email: email,
-                phone: phone,
-                subject: subject,
-                message: message
-            };
+    /* CONTACT FORM */
+    idx('.mat-form').on('click', function (event) {
+        event.stopPropagation();
+    });
 
-            $.ajax({
-                url: "https://rethink-dev.herokuapp.com/api/sales/web_lead",
-                type: "post",
-                dataType: "json",
-                contentType: "application/json",
-                data: JSON.stringify(data),
+    idx('.detailsWrapper--right').on('click', function () {
+        if (idx('.detailsWrapper--right').hasClass('open')) {
+            idx('.detailsWrapper--right').removeClass('open');
+        }
+    });
 
-                success: function (data) {
-                    window.location.replace("http://cardo.tech");
-                }
-            });
+    idx('.contact-mail').on('click', function () {
+        if (idx('.detailsWrapper--right').hasClass('open')) {
+            idx('.detailsWrapper--right').removeClass('open');
+        } else {
+            idx('.detailsWrapper--right').addClass('open');
+        }
+    });
+
+    /*CHECKBOX MSG COMPONENT*/
+    idx(function () {
+        idx("#clickCustomMessage").on('click', function () {
+            var isChecked = idx("#sendCustomMessage").is(":checked");
+            if (isChecked) {
+                idx('#customMessageContainer').addClass('open');
+            } else {
+                idx('#customMessageContainer').removeClass('open');
+            }
         });
-    }
-    /* END OF CONTACT PAGE CONTACT FORM */
+        /*END OF CHECKBOX MSG COMPONENT*/
+    });
+    /* END OF CONTACT FORM */
 });
 
 

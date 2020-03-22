@@ -1139,6 +1139,10 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   max-height: unset;
 }
 
+#IDX-mapRefresh {
+  z-index: 11;
+}
+
 .IDX-page-listing .mat-form,
 .IDX-category-search .mat-form,
 .IDX-category-map .mat-form,
