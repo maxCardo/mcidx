@@ -112,9 +112,7 @@
             height: 400px;
         }
     }
-}
 
-@supports (-ms-ime-align: auto) {
     input[type="email"]::-ms-input-placeholder {
         color: black;
         font-weight: bold;
