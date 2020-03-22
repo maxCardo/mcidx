@@ -3299,6 +3299,48 @@ idx(document).ready(function () {
         }
     });
 
+    if (idx(".mat-form").length) {
+        idx("#submitContactForm").on("click", function (event) {
+            event.preventDefault();
+            let name = $("#cfc_name")
+                .val()
+                .trim();
+            let lastName = $("#cfc_last_name")
+                .val()
+                .trim();
+            let email = $("#cfc_email")
+                .val()
+                .trim();
+            let phone = $("#cfc_phone")
+                .val()
+                .trim();
+            let requestInfo = $("#cfc_request_info").val();
+            let message = $("#contactCustomMessage")
+                .val()
+                .trim();
+
+            let data = {
+                name: name,
+                email: email,
+                phone: phone,
+                requestInfo: requestInfo,
+                message: message
+            };
+
+            idx.ajax({
+                url: "https://rethink-dev.herokuapp.com/api/sales/web_lead",
+                type: "post",
+                dataType: "json",
+                contentType: "application/json",
+                data: JSON.stringify(data),
+
+                success: function (data) {
+                    window.location.replace("http://cardo.tech");
+                }
+            });
+        });
+    }
+
     /*CHECKBOX MSG COMPONENT*/
     idx(function () {
         idx("#clickCustomMessage").on('click', function () {
