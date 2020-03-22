@@ -866,7 +866,7 @@ $(document).ready(function () {
             if (isnum && (searchTermLength == 5)) {
                 let fullHref = hrefBase + 'pt=sfr&ccz=zipcode&zipcode%5B%5D=' + searchTerm;
                 window.location.replace(fullHref);
-            } else if (isnum && (searchTermLength > 5)) {
+            } else if (isnum && (searchTermLength === 7)) {
                 let fullHref = hrefBase + 'csv_listingID=' + searchTerm + '&a_statusCategory%5B%5D=active&a_statusCategory%5B%5D=sold';
                 window.location.replace(fullHref);
             } else if (isCounty) {
