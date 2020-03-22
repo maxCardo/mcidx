@@ -1,0 +1,53 @@
+@mixin transitionAll2ms {
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+@mixin flexAlignItemsCenter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+
+@mixin topleft0 {
+  top: 0;
+  left: 0;
+}
+
+@mixin heightWidth100 {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin leftTop50 {
+  top: 50%;
+  left: 50%;
+}
+
+@mixin alignContentCenter {
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+@mixin justifyContentSpaceBetween {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@mixin heading {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+
+  @media only screen and (max-width:768px) {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+}

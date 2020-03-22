@@ -1,0 +1,58 @@
+@import 'mixins';
+/* HEADER */
+
+.header {
+  width: 100vw;
+  padding: 20px 0;
+  background-color: transparent;
+  position: fixed;
+  @include topleft0;
+  z-index: 500;
+  @include transitionAll2ms;
+
+  .container {
+    @include flexAlignItemsCenter;
+    @include justifyContentSpaceBetween;
+    background-color: transparent;
+  }
+
+  &__links {
+    display: flex;
+    @include alignContentCenter;
+    list-style: none;
+    margin: 0;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 10px;
+    color: black !important;
+    position: relative;
+    text-decoration: none;
+
+    @include transitionAll2ms;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+
+    div {
+      display: inline-block;
+      position: absolute;
+      background: none repeat scroll 0 0 transparent;
+      left: 50%;
+      bottom: 0;
+      height: 2px;
+      background-color: #000000;
+      @include transitionAll2ms;
+      width: 0;
+    }
+
+    &:hover div {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+}
