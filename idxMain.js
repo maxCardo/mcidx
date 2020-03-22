@@ -1,25 +1,25 @@
-$(document).ready(function() {
+idx(document).ready(function() {
     var scroll_start = 0;
-    var startchange = $(".body");
+    var startchange = idx(".body");
     var offset = startchange.offset();
   
     if (startchange.length) {
-      $(document).scroll(function() {
-        scroll_start = $(this).scrollTop();
+      idx(document).scroll(function() {
+        scroll_start = idx(this).scrollTop();
         if (scroll_start > offset.top) {
-          $("#header").css("background-color", "white");
-          $("#header").css("top", "0");
-          $("#header").css("box-shadow", "0 2px 5px 0 rgba(0,0,0,.75)");
-          $(".link").css("color", "black");
-          $(".logo").css("color", "black");
-          $(".hamburger div").css("background-color", "black");
-          $(".header__link div").css("background-color", "black");
+          idx("#header").css("background-color", "white");
+          idx("#header").css("top", "0");
+          idx("#header").css("box-shadow", "0 2px 5px 0 rgba(0,0,0,.75)");
+          idx(".link").css("color", "black");
+          idx(".logo").css("color", "black");
+          idx(".hamburger div").css("background-color", "black");
+          idx(".header__link div").css("background-color", "black");
         } else {
-          $("#header").css("background-color", "transparent");
-          $(".link").css("color", "white");
-          $(".logo").css("color", "white");
-          $("#header").css("box-shadow", "none");
-          $(".header__link div").css("background-color", "white");
+          idx("#header").css("background-color", "transparent");
+          idx(".link").css("color", "white");
+          idx(".logo").css("color", "white");
+          idx("#header").css("box-shadow", "none");
+          idx(".header__link div").css("background-color", "white");
         }
       });
     }
@@ -962,20 +962,20 @@ $(document).ready(function() {
     /* END OF HOME PAGE SEARCH */
   
     /* CONTACT PAGE CONTACT FORM */
-    if ($("#cfc_contact_form").length) {
-      $("#submitContactForm").on("click", function(event) {
+    if (idx("#cfc_contact_form").length) {
+      idx("#submitContactForm").on("click", function(event) {
         event.preventDefault();
-        let name = $("#cfc_name")
+        let name = idx("#cfc_name")
           .val()
           .trim();
-        let email = $("#cfc_email")
+        let email = idx("#cfc_email")
           .val()
           .trim();
-        let phone = $("#cfc_phone")
+        let phone = idx("#cfc_phone")
           .val()
           .trim();
-        let subject = $("#cfc_interest").val();
-        let message = $("#cfc_message")
+        let subject = idx("#cfc_interest").val();
+        let message = idx("#cfc_message")
           .val()
           .trim();
   
@@ -1003,7 +1003,7 @@ $(document).ready(function() {
     /* END OF CONTACT PAGE CONTACT FORM */
   });
   
-  if ($(".menu__toggler").length && $(".menu").length) {
+  if (idx(".menu__toggler").length && idx(".menu").length) {
     const toggler = document.querySelector(".menu__toggler");
     const menu = document.querySelector(".menu");
   
