@@ -2202,6 +2202,12 @@ div.flex-grow {
     box-shadow: rgba(0, 0, 0, 0.25) 0 2px 5px 0;
   }
 
+  .header__logo--mobile {
+    position: absolute;
+    right: 5px;
+    top: 15px;
+  }
+
   .IDX-category-search #IDX-searchForm,
 .IDX-category-map #IDX-searchForm {
     width: 85%;
@@ -2712,6 +2718,13 @@ div.flex-grow {
 @media only screen and (min-device-width: 767px) and (max-device-width: 769px) {
   .IDX-wrapper-standard #IDX-resultsContent {
     top: 0;
+  }
+}
+@media (min-width: 748px) {
+  .header__logo--mobile {
+    position: absolute;
+    right: 5px;
+    top: 15px;
   }
 }
 /* END OF RESPONSIVE*/
