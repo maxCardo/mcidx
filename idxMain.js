@@ -3330,7 +3330,7 @@ idx(document).ready(function() {
 
       idx
         .ajax({
-          url: "https://rethink-dev.herokuapp.com/api/sales/web_lead",
+          url: "https://rethink-dev.herokuapp.com/api/sales/idx_lead",
           type: "post",
           //dataType: "json",
           contentType: "application/json",
