@@ -6,15 +6,19 @@
     background-color: transparent;
     margin-left: auto;
     margin-top: 15px;
-    transition: all 0.5s ease-in-out;
 
+    &:active,
+    &:focus,
+    &:visited,
     &:hover {
-        transform: scaleX(1.2);
-        color: white;
+        background-color: transparent !important;
     }
 }
 
-.strongLeadership {
+.strongLeadership,
+.homeValuation,
+.rentalValuation,
+.bgDark {
     &__btn {
         display: inline-block;
         border: 1px solid black;
@@ -26,6 +30,22 @@
         &:hover {
             color: white;
             background-color: black;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.bgDark {
+    &__btn {
+        padding: 5px 50px;
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+
+        &:hover {
+            border-color: black;
+            background-color: transparent;
+            color: black;
         }
     }
 }

@@ -1,5 +1,20 @@
 /* MEDIA QUERIES */
+@media only screen and (max-width:1024px) {
+    .approach {
+        &__box {
+            height: 700px !important;
 
+            .bottom {
+                top: 25%;
+
+                p {
+                    line-height: 1.8;
+                }
+            }
+        }
+
+    }
+}
 
 @media only screen and (max-width: 992px) {
 
@@ -67,6 +82,31 @@
 
             }
         }
+    }
+
+    .bgDark {
+
+
+        &__box {
+            a {
+                &:first-of-type {
+                    margin-bottom: 15px;
+                }
+            }
+
+            p {
+
+                &:nth-of-type(2),
+                &:last-of-type {
+                    margin-bottom: 15px;
+                }
+            }
+
+            h5 {
+                margin-bottom: 15px;
+            }
+        }
+
     }
 }
 
@@ -226,10 +266,22 @@
     }
 }
 
+// IPAD PRO MEDIA QUERY FOR CONTACT FORM
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .bgDark {
+        height: 100vh;
+    }
+}
+
+// IPAD MEDIA QUERY FOR CONTACT FORM
 @media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation : portrait) {
     .menu {
         ul {
             margin-bottom: 400px;
         }
+    }
+
+    .bgDark {
+        height: 100vh;
     }
 }
