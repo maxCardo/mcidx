@@ -129,42 +129,42 @@
 
 
 
-    <script src="https://maxcardo.github.io/mcidx/main.js"></script>
+    <script src="https://maxcardo.github.io/mcidx/idxMain.js"></script>
 
     <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/slick.min.js"></script>
     <script>
-        $(document).ready(function () {
+        idx(document).ready(function () {
 
 
-            $.each($.grep(document.styleSheets, function (n) {
+            idx.each(idx.grep(document.styleSheets, function (n) {
                 return n.href.search(/graphical/) != -1;
             }), function (i, n) {
                 n.disabled = true;
             });
-            $('.IDX-arrow').remove();
+            idx('.IDX-arrow').remove();
 
-            $('.IDX-showcaseSlide').removeClass('IDX-active');
+            idx('.IDX-showcaseSlide').removeClass('IDX-active');
 
 
             const propInfoContainer = "<div class='propertyInfo--container'></div>";
-            $(".IDX-propertyInfoList, #IDX-previousPage").wrapAll(propInfoContainer);
+            idx(".IDX-propertyInfoList, #IDX-previousPage").wrapAll(propInfoContainer);
 
             const galleryContentContainer = "<div class='galleryContent--container'></div>";
-            $(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
+            idx(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
 
-            let headingText = $(".IDX-photoGalleryTitle").text();
+            let headingText = idx(".IDX-photoGalleryTitle").text();
             let listingID = headingText.split(" ");
                 listingID = listingID[listingID.length - 1];
             
-            $("#listingIdHidden").val(listingID);
-            $(".IDX-photoGalleryTitle").html("Photo Gallery");
+                idx("#listingIdHidden").val(listingID);
+                idx(".IDX-photoGalleryTitle").html("Photo Gallery");
             
             // NEEDS TO BE REWORKED IN THE FUTURE
-            $("#IDX-leadToolsBar").remove();
+            idx("#IDX-leadToolsBar").remove();
 
 
-            $('#IDX-showcaseSlides').slick({
+            idx('#IDX-showcaseSlides').slick({
                 dots: true,
                 infinite: true,
                 speed: 300,
@@ -173,36 +173,14 @@
                 variableWidth: true
             });
 
-            $('#IDX-showcaseSlides').on('setPosition', function () {
+            idx('#IDX-showcaseSlides').on('setPosition', function () {
                 $(this).find('.slick-slide').height('auto');
-                var slickTrack = $(this).find('.slick-track');
-                var slickTrackHeight = $(slickTrack).height();
+                var slickTrack = idx(this).find('.slick-track');
+                var slickTrackHeight = idx(slickTrack).height();
                 $(this).find('.slick-slide').css('height', slickTrackHeight + 'px');
             });
 
-            $("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('btn');
-
-
-            $('.contact-mail').on('click', function () {
-                if ($('.detailsWrapper--right').hasClass('open')) {
-                    $('.detailsWrapper--right').removeClass('open');
-                } else {
-                    $('.detailsWrapper--right').addClass('open');
-                }
-            });
-
-            /*CHECKBOX MSG COMPONENT*/
-            $(function () {
-                $("#clickCustomMessage").on('click', function () {
-                    var isChecked = idx("#sendCustomMessage").is(":checked");
-                    if (isChecked) {
-                        $('#customMessageContainer').addClass('open');
-                    } else {
-                        $('#customMessageContainer').removeClass('open');
-                    }
-                });
-                /*END OF CHECKBOX MSG COMPONENT*/
-            });
+            idx("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('btn');
 
             Waves.init();
             Waves.attach('.btn');
