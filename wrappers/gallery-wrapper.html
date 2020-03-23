@@ -186,7 +186,7 @@
             $("#listingIdHidden").val(listingID);
             $(".IDX-photoGalleryTitle").html("Photo Gallery");
             let textAfterheading = '<div class="sliderInfo">Drag images or use arrow keys to navigate</div>';
-            $(".IDX-photoGalleryTitle").insertAfter(textAfterheading);
+            $(textAfterheading).insertAfter(".IDX-photoGalleryTitle");
             
             // NEEDS TO BE REWORKED IN THE FUTURE
             $("#IDX-leadToolsBar").remove();
