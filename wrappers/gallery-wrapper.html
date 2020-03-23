@@ -128,43 +128,42 @@
     <script src="https://maxcardo.github.io/mcidx/assets/js/waves.min.js"></script>
 
 
-
-    <script src="https://maxcardo.github.io/mcidx/idxMain.js"></script>
-
     <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/jquery.min.js"></script>
+    <script src="https://maxcardo.github.io/mcidx/main.js"></script>
     <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/slick.min.js"></script>
+    
     <script>
-        idx(document).ready(function () {
+        $(document).ready(function () {
 
 
-            idx.each(idx.grep(document.styleSheets, function (n) {
+            $.each($.grep(document.styleSheets, function (n) {
                 return n.href.search(/graphical/) != -1;
             }), function (i, n) {
                 n.disabled = true;
             });
-            idx('.IDX-arrow').remove();
+            $('.IDX-arrow').remove();
 
-            idx('.IDX-showcaseSlide').removeClass('IDX-active');
+            $('.IDX-showcaseSlide').removeClass('IDX-active');
 
 
             const propInfoContainer = "<div class='propertyInfo--container'></div>";
-            idx(".IDX-propertyInfoList, #IDX-previousPage").wrapAll(propInfoContainer);
+            $(".IDX-propertyInfoList, #IDX-previousPage").wrapAll(propInfoContainer);
 
             const galleryContentContainer = "<div class='galleryContent--container'></div>";
-            idx(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
+            $(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
 
-            let headingText = idx(".IDX-photoGalleryTitle").text();
+            let headingText = $(".IDX-photoGalleryTitle").text();
             let listingID = headingText.split(" ");
                 listingID = listingID[listingID.length - 1];
             
-                idx("#listingIdHidden").val(listingID);
-                idx(".IDX-photoGalleryTitle").html("Photo Gallery");
+            $("#listingIdHidden").val(listingID);
+            $(".IDX-photoGalleryTitle").html("Photo Gallery");
             
             // NEEDS TO BE REWORKED IN THE FUTURE
-            idx("#IDX-leadToolsBar").remove();
+            $("#IDX-leadToolsBar").remove();
 
 
-            idx('#IDX-showcaseSlides').slick({
+            $('#IDX-showcaseSlides').slick({
                 dots: true,
                 infinite: true,
                 speed: 300,
@@ -173,14 +172,14 @@
                 variableWidth: true
             });
 
-            idx('#IDX-showcaseSlides').on('setPosition', function () {
+            $('#IDX-showcaseSlides').on('setPosition', function () {
                 $(this).find('.slick-slide').height('auto');
-                var slickTrack = idx(this).find('.slick-track');
-                var slickTrackHeight = idx(slickTrack).height();
+                var slickTrack = $(this).find('.slick-track');
+                var slickTrackHeight = $(slickTrack).height();
                 $(this).find('.slick-slide').css('height', slickTrackHeight + 'px');
             });
 
-            idx("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('btn');
+            $("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('btn');
 
             Waves.init();
             Waves.attach('.btn');
