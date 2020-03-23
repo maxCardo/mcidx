@@ -67,8 +67,6 @@
             background-color: transparent;
         }
     }
-
-
 }
 
 // SECTION APPROACH
@@ -162,8 +160,6 @@
 
                     &-1 {
                         bottom: 7%;
-
-                        @media only screen and (min-width:1200px) {}
                     }
                 }
 
@@ -191,6 +187,10 @@
         img {
             width: 100%;
             margin-bottom: 30px;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
         }
     }
 
@@ -213,13 +213,8 @@
     }
 }
 
-/* map */
-#mapDiv {
-    width: 100vw;
-    height: 400px;
-}
 
-// HOME VALUATION
+// HOME VALUATION & RENTAL VALUATION
 .homeValuation,
 .rentalValuation {
 
@@ -231,15 +226,6 @@
         img {
             width: 100%;
             max-height: 350px;
-        }
-
-        a {
-            display: inline-block;
-            background-color: black;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 25px;
-
         }
     }
 }
@@ -267,19 +253,6 @@
         position: fixed;
     }
 
-    &__link {
-        color: black;
-        display: inline-block;
-        @include transitionAll2ms;
-
-        &:hover {
-            color: white;
-        }
-
-        &:last-of-type {
-            margin-bottom: 20px;
-        }
-    }
 
     &__toggler {
         position: fixed;
@@ -373,119 +346,46 @@
 // bg dark contact form
 
 .bgDark {
-    background-color: rgba(0, 0, 0, .8);
-    position: fixed;
-    padding: 100px 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .40), rgba(0, 0, 0, .8));
+    position: absolute;
+    padding: 50px 0;
     top: 0;
     left: 0;
     z-index: 9999999999999999;
     width: 100vw;
-    height: 100vh;
+    min-height: 700px;
     color: white;
-    // visibility: hidden;
-    // opacity: 0;
     transition: all .4s ease-in-out;
     text-align: center;
 
+
     &:target {
-        visibility: visible;
-        opacity: 1;
         top: 0;
     }
 
-    .close {
-        font-size: 35px;
-        position: fixed;
-        top: 50px;
-        right: 100px;
-        color: white;
-    }
 
-    &__heading {
-        @include heading;
-        color: white;
-        font-weight: bold;
-        position: relative;
-        z-index: 999999999999999999999999999999999;
-
-    }
-
-    &__flex {
-        display: flex;
-        justify-content: space-around;
-    }
 
     &__box {
-
-        h5 {
-            margin-bottom: 40px;
-        }
-
-        a,
-        ul li a,
-        button {
-            color: White;
-        }
-
-        a {
-            display: inline-block;
-            margin-bottom: 30px;
-        }
-
-
-        p {
-            font-style: italic;
-
-            &:last-of-type {
-                margin-bottom: 40px;
-            }
-
-            &:nth-of-type(2) {
-                margin-bottom: 30px;
-            }
-        }
-
-
 
         ul {
             display: flex;
             text-align: center;
             justify-content: center;
-
-            li a {
-                margin: 10px;
-                padding: 15px 20px;
-                border-radius: 50%;
-                border: 1px solid white;
-                transition: all .4s ease-in-out;
-
-                &:hover {
-                    border-color: black;
-                    color: black;
-                }
-            }
         }
 
-        input {
-            min-width: 500px;
-        }
 
-        button {
-            display: inline-block;
-            padding: 5px 50px;
-            border: 1px solid white;
-            background-color: transparent;
-            transition: all .2s ease-in-out;
-
-            &:hover {
-                color: black;
-                background-color: white;
-            }
-        }
     }
 }
 
+// body of the contact page
+.contactBody {
+    overflow-x: hidden;
+}
 
+////////////////////////////////////////////////////////////////////
+
+
+// SCROLL BAR
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
@@ -503,8 +403,3 @@
     background-color: black;
     border-radius: 10px;
 }
-
-/* Handle on hover */
-// ::-webkit-scrollbar-thumb:hover {
-//     background: #555;
-// }

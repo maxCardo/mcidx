@@ -2,94 +2,83 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    <!-- font -->
-    <link rel="stylesheet" href="fonts/css/all.css" />
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <title>Contact</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <!-- font -->
+  <link rel="stylesheet" href="fonts/css/all.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <title>Contact</title>
 </head>
 
-<style>
-    body {
-        background-image: url('/images/bg.jpg');
-        width: 100vw;
-        height: 100vh;
-        background-position: center center;
-        position: relative;
-        background-size: cover;
-        z-index: 498;
-        filter: grayscale(50%);
-    }
-</style>
 
-<body>
-    <div class="bgDark" id='bgDark'>
-        <a href="#wrapper" class='close'>X</a>
-        <div class="container">
-            <h2 class="bgDark__heading">Contact</h2>
-            <div class="bgDark__flex">
-                <div class="bgDark__box">
-                    <form action='#' id="cfc_contact_form">
-                        <h5>ONLINE INQUIRY</h5>
-                        <div class="form-group">
-
-                            <input type="text" class="form-control" id="cfc_name" placeholder="Enter name" required>
-                        </div>
-                        <div class="form-group">
-
-                            <input type="email" class="form-control" id="cfc_email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-
-                            <input type="tel" class="form-control" id="cfc_phone" placeholder="Enter phone number"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <select class='form-control' id="cfc_interest" required>
-                                <option value="" disabled selected>What are you intrested in?</option>
-                                <option value="buying">Buying</option>
-                                <option value="selling">Selling</option>
-                                <option value="media">Media</option>
-                                <option value="area information">Area Information</option>
-                                <option value="home valuation">Home valuation</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea placeholder='Message' class='form-control' name="message" id="cfc_message"
-                                required cols="30" rows="3"></textarea>
-                        </div>
-
-                        <button id="submitContactForm" type="submit">Send</button>
-                    </form>
-                </div>
-
-
-                <div class="bgDark__box">
-                    <h5>CONTACT DETAILS</h5>
-                    <a href="tel:412-444-5181">Tel: 412-444-5181</a>
-                    <p>Mon - Sat, 8:30 AM - 9 PM</p>
-                    <p>6101 Penn Ave</p>
-                    <p>Luxury Real Estate Agent</p>
-                    <p>in Pittsburgh, PA</p>
-                    <ul>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i> </a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
+<body class='contactBody'>
+  <div class="bgDark" id="bgDark">
+    <a href="index.html" class="close">X</a>
+    <div class="container">
+      <h2 class="bgDark__heading">Contact</h2>
+      <div class="bgDark__grid">
+        <div class="bgDark__box">
+          <form class='form' action="#" id="cfc_contact_form">
+            <h5>ONLINE INQUIRY</h5>
+            <div class="form-group">
+              <input type="text" class="form-control" id="cfc_name" placeholder="Enter name" required />
             </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="cfc_email" placeholder="Email" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" id="cfc_phone" placeholder="Enter phone number" required />
+            </div>
+            <div class="form-group">
+              <select class="form-control" id="cfc_interest" required>
+                <option value="" disabled selected>What are you intrested in?</option>
+                <option value="buying">Buying</option>
+                <option value="selling">Selling</option>
+                <option value="media">Media</option>
+                <option value="area information">Area Information</option>
+                <option value="home valuation">Home valuation</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <textarea placeholder="Message" class="form-control" name="message" id="cfc_message" required cols="30"
+                rows="3"></textarea>
+            </div>
+
+            <button id="submitContactForm" type="submit" class='bgDark__btn'>Send</button>
+          </form>
         </div>
+
+        <div class="bgDark__box">
+          <h5>CONTACT DETAILS</h5>
+          <a href="tel:412-444-5181">Tel: 412-444-5181</a>
+          <p>Mon - Sat, 8:30 AM - 9 PM</p>
+          <p>6101 Penn Ave</p>
+          <p>Luxury Real Estate Agent</p>
+          <p>in Pittsburgh, PA</p>
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i> </a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <script src=""></script>
-    <script src="./main.js"></script>
+  </div>
+  <script src=""></script>
+  <script src="./main.js"></script>
 </body>
 
 </html>

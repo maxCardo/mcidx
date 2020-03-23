@@ -114,7 +114,7 @@
 
     <!-- SECTION APPROACH -->
 
-    <section id="approach" class="approach" data-aos-duration='1500' data-aos="fade-right">
+    <section id="approach" class="approach" data-aos-duration='1000' data-aos="fade-right">
 
       <h2 class="approach__heading">Our Approach</h2>
 
@@ -187,11 +187,11 @@
 
     </section>
 
+    <!-- GRID CONTAINER FOR RENTAL VALUATION AND HOME VALUATION -->
     <div class="valuation">
       <div class="container-fluid">
         <!-- home valuation -->
-
-        <section data-aos="fade-left" data-aos-duration='1500' class="homeValuation">
+        <section data-aos="fade-left" data-aos-duration='1000' class="homeValuation">
 
           <div class="homeValuation__grid">
             <div class="homeValuation__box">
@@ -200,7 +200,7 @@
                 comprehensive
                 market overview report so you can decide to sell at a price thats right for both you and your market.
               </p>
-              <a href="#">FREE HOME VALUATION</a>
+              <a href="#" class='homeValuation__btn'>FREE HOME VALUATION</a>
             </div>
             <div class="homeValuation__box">
               <img src="/images/homevaluation.jpeg" alt="">
@@ -212,7 +212,7 @@
 
         <!-- rental valuation -->
 
-        <section data-aos="fade-right" data-aos-duration='1500' class="rentalValuation">
+        <section data-aos="fade-right" data-aos-duration='1000' class="rentalValuation">
 
           <div class="rentalValuation__grid">
             <div class="rentalValuation__box">
@@ -225,7 +225,7 @@
                 knowing the going rate for rent is key. Contact us today and let us help maximize you return on
                 investment.
               </p>
-              <a href="#">FREE RENTAL PROJECTION</a>
+              <a href="#" class='rentalValuation__btn'>FREE RENTAL PROJECTION</a>
             </div>
 
           </div>
@@ -236,33 +236,32 @@
 
     </div>
 
-
     <!-- strong leadership -->
 
-    <section data-aos="fade-right" data-aos-duration='1500' class="strongLeadership">
+    <section data-aos="fade-right" data-aos-duration='1000' class="strongLeadership">
       <h2 class="strongLeadership__heading">Strong Leadership</h2>
       <div class="container">
         <div class="strongLeadership__grid">
           <div class="strongLeadership__box">
             <img src="/images/adam.jpeg" alt="">
-            <p>Adam Poznanski</p>
+            <h4>Adam Poznanski</h4>
             <p>Senior Partner | PA Real Estate Broker</p>
             <p class='p-grid'> <span>Commercial Sales</span> <span class='none'>|</span> <span>Asset Management</span>
               <span class='none'>|</span>
               <span>Investment
                 Analysis</span> </p>
-            <p>Adam_tlg@outlook.com</p>
+            <p>adamp@fifthgrant.com</p>
           </div>
           <div class="strongLeadership__box">
-            <img src="/images/1.jpg" alt="">
-            <p>David Knoll</p>
+            <img src="/images/david.JPG" alt="">
+            <h4>David Knoll</h4>
             <p>Senior Partner | PA Real Estate Sales</p>
             <p class='p-grid'><span>Residential & Commercial Sales</span> <span class="none">|</span>
               <span>Real
                 Estate
                 Development</span>
             </p>
-            <p>knolldavid@gmail.com</p>
+            <p>davidk@fifthgrant.com</p>
           </div>
         </div>
         <a href="#" class='strongLeadership__btn'>Meet The Team</a>
@@ -271,7 +270,7 @@
 
     <!-- TESTIMONIALS -->
 
-    <section data-aos='fade-left' data-aos-duration='1500' class="testimonials">
+    <section data-aos='fade-left' data-aos-duration='1000' class="testimonials">
       <h2 class="testimonials__heading">Testimonials</h2>
 
       <div class="container">
@@ -281,7 +280,7 @@
             <p>— MAUREEN P.</p>
           </div>
           <div class="testimonials__box">
-            <p>"David was in our corner at all times in both finding us our new home and selling our old one. He was
+            <p>"Adam was in our corner at all times in both finding us our new home and selling our old one. He was
               always available and quickly responsive to our questions or concerns. I heartily recommend him to anyone
               who
               is either buying or selling a home. This guy is good!"</p>
@@ -297,7 +296,7 @@
     </section>
 
     <!-- listings -->
-    <section data-aos="fade-right" data-aos-duration='1500' class="listings" data-aos="fade-right">
+    <!-- <section data-aos="fade-right" data-aos-duration='1000' class="listings" data-aos="fade-right">
       <div class="container">
         <h2 class='listings__heading'>Listings</h2>
         <div class="listings__flex">
@@ -309,15 +308,17 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- map -->
-    <iframe data-aos-duration="1500" data-aos="fade-right" width="100%" height="450" frameborder="0" style="border:0"
-      src="https://maps.google.com/?q=40.46115,-79.92341&output=svembed" allowfullscreen>
-    </iframe>
+    <div style="width: 100%; overflow: hidden; height: 300px;">
+      <iframe id='mapDiv' src=" https://maps.google.com/?q=40.46115,-79.92341&output=svembed" width="100%" height="600"
+        frameborder="0" style="border:0; margin-top: -150px;">
+      </iframe>
+    </div>
 
     <!-- footer -->
-    <footer class="footer" data-aos-duration='1500' data-aos="fade-left">
+    <footer class="footer" data-aos-duration='1000' data-aos="fade-left">
       <div class="bg-video">
         <video playsinline autoplay loop muted class="bg-video__content">
           <source src="/images/video.mp4" type="video/mp4" />
@@ -403,6 +404,11 @@
   </script>
   <script src="main.js"></script>
 
+  <style>
+    #mapDiv>div>div>div:nth-child(10)>div {
+      visibility: hidden !important;
+    }
+  </style>
 </body>
 
 </html>
