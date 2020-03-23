@@ -52,6 +52,9 @@
   top: 0;
   border-color: transparent !important;
   color: #FFF !important;
+  overflow: hidden;
+  outline: none;
+  border: transparent;
 }
 .btn:hover {
   background: #3578b2 !important;
@@ -522,7 +525,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   background: white;
   padding: 5px;
   font-size: 10px;
-  z-index: 18;
+  z-index: 5;
 }
 
 #IDX-resultsRow .IDX-pageContainer .IDX-topActions > div {
