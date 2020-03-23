@@ -10,6 +10,9 @@
     z-index: 500;
     @include transitionAll2ms;
 
+    img {
+        max-width: 330px;
+    }
 
     .container {
         @include flexAlignItemsCenter;

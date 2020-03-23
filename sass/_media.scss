@@ -18,7 +18,13 @@
 
 @media only screen and (min-width:991px) {
     .bgDark {
-        min-height: 800px;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width:993px) {
+    .bgDark {
+        min-height: 900px;
     }
 }
 
@@ -91,7 +97,7 @@
     }
 
     .bgDark {
-
+        height: 100vh;
 
         &__box {
             a {
@@ -277,6 +283,12 @@
     .bgDark {
         height: 100vh;
     }
+
+    .menu {
+        display: none;
+    }
+
+
 }
 
 // IPAD MEDIA QUERY FOR CONTACT FORM

@@ -9,22 +9,8 @@
 
     &__flex {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
-
-    input {
-
-        &::placeholder,
-        &:hover {
-            color: black;
-            font-weight: bold;
-
-            @supports (-ms-ime-align: auto) {
-                color: black !important;
-            }
-        }
-    }
-
 
     &__copyright {
         text-align: center;
@@ -38,14 +24,6 @@
         background-color: black;
         height: 2px;
         margin-top: 20px;
-    }
-
-    form input[type='email'] {
-        max-width: 250px;
-        transition: all 0.5s ease-in-out;
-        border: none;
-        background-color: transparent;
-        border-bottom: 1px solid black;
     }
 
 }
@@ -85,10 +63,5 @@
         .footer {
             height: 400px;
         }
-    }
-
-    input[type="email"]::-ms-input-placeholder {
-        color: black;
-        font-weight: bold;
     }
 }
