@@ -12,6 +12,7 @@ $(document).ready(function () {
         $("#header").css("box-shadow", "0 2px 5px 0 rgba(0,0,0,.75)");
         $(".link").css("color", "black");
         $(".logo").css("color", "black");
+        $(".logo").css("transition", "width 200ms");
         $(".hamburger div").css("background-color", "black");
         $(".header__link div").css("background-color", "black");
         $(".logo").css('width', '150px');
