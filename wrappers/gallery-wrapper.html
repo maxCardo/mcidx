@@ -98,7 +98,7 @@
                         <textarea id="contactCustomMessage" class="form__field" rows="6"></textarea>
                         <label for="contactCustomMessage" class="form__label">Your Message</label>
                     </div>
-                    <input type="hiddne" class="hidden" id="listingIdHidden" value=""> 
+                    <input type="hidden" class="hidden" id="listingIdHidden" value=""> 
                 </div>
                 <div class="element-wrapper flex-centered">
                     <button id="sendContactForm" class="contact-btn--send btn-cta btn">Send</button>
@@ -153,7 +153,15 @@
             const galleryContentContainer = "<div class='galleryContent--container'></div>";
             $(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
 
-            //$(".IDX-photoGalleryTitle").html("Photo Gallery");
+            let headingText = $(".IDX-photoGalleryTitle").text();
+            let listingID = headingText.split(" ");
+                listingID = listingID[listingID.length - 1];
+            
+            $("#listingIdHidden").val(listingID);
+            $(".IDX-photoGalleryTitle").html("Photo Gallery");
+            
+            // NEEDS TO BE REWORKED IN THE FUTURE
+            $("#IDX-leadToolsBar").remove();
 
 
             $('#IDX-showcaseSlides').slick({
