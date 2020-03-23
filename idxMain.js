@@ -3319,15 +3319,34 @@ idx(document).ready(function() {
         .val()
         .trim();
 
-      let data = {
-        name: name,
-        lastName: lastName,
-        email: email,
-        phone: phone,
-        requestInfo: requestInfo,
-        message: message
-      };
+      let listingID, data;
+      if (idx("#listingIdHidden").length) {
+        
+        listingID = idx("#listingIdHidden").val();
 
+        data = {
+          name: name,
+          lastName: lastName,
+          email: email,
+          phone: phone,
+          requestInfo: requestInfo,
+          message: message,
+          listingID: listingID
+        };
+  
+      } else {
+        data = {
+          name: name,
+          lastName: lastName,
+          email: email,
+          phone: phone,
+          requestInfo: requestInfo,
+          message: message
+        };
+  
+      }
+
+     
       idx
         .ajax({
           url: "https://rethink-dev.herokuapp.com/api/sales/idx_lead",
