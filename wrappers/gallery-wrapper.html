@@ -67,7 +67,7 @@
                   <div></div></a>
               </li>
               <li>
-                <a href="http://cardo.idxbroker.com/idx/map/mapsearch" class="header__link link"><i class="fa fa-map-marker-alt"></i> Map Search
+                <a href="http://cardo.idxbroker.com/idx/map/mapsearch" class="header__link link"><i class="fa fa-map-marker"></i> Map Search
                   <div></div></a>
               </li>
               <li>
@@ -205,6 +205,85 @@
                 var slickTrackHeight = $(slickTrack).height();
                 $(this).find('.slick-slide').css('height', slickTrackHeight + 'px');
             });
+
+                    if ($(".mat-form").length) {
+            $("#sendContactForm").on("click", function(event) {
+            event.preventDefault();
+            let name = $("#cfc_name")
+                .val()
+                .trim();
+            let lastName = $("#cfc_last_name")
+                .val()
+                .trim();
+            let email = $("#cfc_email")
+                .val()
+                .trim();
+            let phone = $("#cfc_phone")
+                .val()
+                .trim();
+            let requestInfo = $("#cfc_request_info").is(":checked");
+            let message = $("#contactCustomMessage")
+                .val()
+                .trim();
+
+            let listingID, data;
+            if ($("#listingIdHidden").length) {
+                
+                listingID = $("#listingIdHidden").val();
+
+                data = {
+                name: name,
+                lastName: lastName,
+                email: email,
+                phone: phone,
+                requestInfo: requestInfo,
+                message: message,
+                listingID: listingID
+                };
+        
+            } else {
+                data = {
+                name: name,
+                lastName: lastName,
+                email: email,
+                phone: phone,
+                requestInfo: requestInfo,
+                message: message
+                };
+        
+            }
+
+            
+            $.ajax({
+                url: "https://rethink-dev.herokuapp.com/api/sales/idx_lead",
+                type: "post",
+                //dataType: "json",
+                contentType: "application/json",
+                data: JSON.stringify(data),
+
+                success: function(data) {
+                    window.location.replace("http://cardo.tech");
+                }
+                })
+                .done(function() {
+                location.reload();
+                });
+            });
+        }
+
+        /*CHECKBOX MSG COMPONENT*/
+        $(function() {
+            $("#clickCustomMessage").on("click", function() {
+            var isChecked = $("#sendCustomMessage").is(":checked");
+            if (isChecked) {
+                $("#customMessageContainer").addClass("open");
+            } else {
+                $("#customMessageContainer").removeClass("open");
+            }
+            });
+            /*END OF CHECKBOX MSG COMPONENT*/
+        });
+  /* END OF CONTACT FORM */
 
             $("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('btn');
 
