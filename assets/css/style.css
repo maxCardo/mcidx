@@ -299,16 +299,16 @@ body {
   padding: 0 !important; }
 
 .bgDark {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   padding: 50px 0;
   top: 0;
   left: 0;
   z-index: 9999999999999999;
   width: 100vw;
-  min-height: 700px;
+  height: auto;
   color: white;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   text-align: center; }
   .bgDark:target {
     top: 0; }
@@ -318,7 +318,11 @@ body {
     justify-content: center; }
 
 .contactBody {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background-image: url("/images/bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center; }
 
 /* width */
 ::-webkit-scrollbar {
@@ -652,7 +656,7 @@ body {
 .bgDark .close {
   font-size: 35px;
   position: absolute;
-  top: 50px;
+  top: 30px;
   right: 5%;
   color: white; }
 
@@ -791,6 +795,10 @@ body {
       .approach__box .bottom p {
         line-height: 1.8; } }
 
+@media only screen and (min-width: 991px) {
+  .bgDark {
+    min-height: 800px; } }
+
 @media only screen and (max-width: 992px) {
   .header, .header__link,
   .header__down .container ul,
@@ -914,4 +922,6 @@ body {
   .menu ul {
     margin-bottom: 400px; }
   .bgDark {
-    height: 100vh; } }
+    height: 100vh; }
+  .bgDark__grid {
+    grid-template-columns: repeat(2, 1fr); } }
