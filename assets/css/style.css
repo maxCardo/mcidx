@@ -308,7 +308,7 @@ body {
   width: 100vw;
   height: auto;
   color: white;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   text-align: center; }
   .bgDark:target {
     top: 0; }
@@ -795,6 +795,10 @@ body {
       .approach__box .bottom p {
         line-height: 1.8; } }
 
+@media only screen and (min-width: 991px) {
+  .bgDark {
+    min-height: 800px; } }
+
 @media only screen and (max-width: 992px) {
   .header, .header__link,
   .header__down .container ul,
@@ -918,4 +922,6 @@ body {
   .menu ul {
     margin-bottom: 400px; }
   .bgDark {
-    height: 100vh; } }
+    height: 100vh; }
+  .bgDark__grid {
+    grid-template-columns: repeat(2, 1fr); } }
