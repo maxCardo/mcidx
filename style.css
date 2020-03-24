@@ -1979,20 +1979,6 @@ div.flex-grow {
   display: none;
 }
 
-#IDX-leadToolsBar {
-  background: #6f9dd4;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  height: unset;
-  text-align: center;
-  padding: 10px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.22);
-}
-
 @media (max-width: 640px) {
   .IDX-wrapper-standard #IDX-detailsGalleryAction {
     margin: 10px 0;
