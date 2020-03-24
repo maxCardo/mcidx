@@ -962,7 +962,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 .IDX-page-listing #IDX-description p {
   padding: 40px 60px;
   background: rgba(0, 0, 0, 0.38);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
 }
 
 .IDX-page-listing #IDX-fieldsWrapper {
@@ -2675,6 +2675,7 @@ div.flex-grow {
   .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default #IDX-detailsAddress {
     font-size: 1.25em;
     padding: 10px;
+    line-height: 1.35;
   }
   .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default .IDX-panel-body {
     display: flex;
