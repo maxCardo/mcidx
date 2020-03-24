@@ -53,8 +53,9 @@
   overflow: hidden;
   outline: none;
   border: transparent;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.22);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.55);
   text-decoration: none !important;
+  letter-spacing: 0.125em;
 }
 .btn:hover {
   background: #5088ca !important;
@@ -1202,6 +1203,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 .IDX-category-map .mat-form .contact-btn--send,
 .mortgageCalcContainer .mat-form .contact-btn--send {
   margin: 0 15px 15px;
+  overflow: hidden;
 }
 .IDX-page-listing .mat-form .mat-form--footer,
 .IDX-category-search .mat-form .mat-form--footer,
@@ -1987,7 +1989,7 @@ div.flex-grow {
   .mortgageCalcContainer .detailsWrapper--right.open .mat-form .mat-form--footer a,
 .IDX-category-search .detailsWrapper--right.open .mat-form .mat-form--footer a,
 .IDX-category-map .detailsWrapper--right.open .mat-form .mat-form--footer a {
-    font-size: 11px;
+    font-size: 1em;
   }
   .mortgageCalcContainer .detailsWrapper--right.open .mat-form .mat-form--footer a i,
 .IDX-category-search .detailsWrapper--right.open .mat-form .mat-form--footer a i,
@@ -2465,6 +2467,8 @@ div.flex-grow {
     background: rgba(0, 0, 0, 0.75);
     bottom: 0;
     z-index: 6;
+    display: flex;
+    align-content: center;
   }
 
   .IDX-page-listing .sm-contact-bar, .IDX-category-search .sm-contact-bar, .IDX-category-map .sm-contact-bar, .mortgageCalcContainer .sm-contact-bar {
@@ -2490,6 +2494,7 @@ div.flex-grow {
   }
   .IDX-page-listing .mat-form, .IDX-category-search .mat-form, .IDX-category-map .mat-form, .mortgageCalcContainer .mat-form {
     top: 25px;
+    align-self: center;
   }
   .IDX-page-listing .mat-form .mat-form--header, .IDX-category-search .mat-form .mat-form--header, .IDX-category-map .mat-form .mat-form--header, .mortgageCalcContainer .mat-form .mat-form--header {
     padding: 5px 15px 10px 15px;
