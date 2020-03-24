@@ -208,6 +208,17 @@
                 $(this).find('.slick-slide').css('height', slickTrackHeight + 'px');
             });
 
+            /* CONTACT FORM */
+            idx(".mat-form").on("click", function(event) {
+                event.stopPropagation();
+            });
+
+            idx(".detailsWrapper--right").on("click", function() {
+                if (idx(".detailsWrapper--right").hasClass("open")) {
+                idx(".detailsWrapper--right").removeClass("open");
+                }
+            });
+
             if ($(".mat-form").length) {
                 $("#sendContactForm").on("click", function(event) {
                 event.preventDefault();

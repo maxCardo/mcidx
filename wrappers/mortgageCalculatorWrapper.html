@@ -183,8 +183,20 @@
             $("#IDX-returnToPreviousPage, #IDX-goToProperty, #IDX-hideAmortization, #IDX-pagination-next, #IDX-pagination-prev, #IDX-showAmortization")
                 .addClass('btn');
 
-                if ($(".mat-form").length) {
-                $("#sendContactForm").on("click", function(event) {
+
+            /* CONTACT FORM */
+            idx(".mat-form").on("click", function(event) {
+                event.stopPropagation();
+            });
+
+            idx(".detailsWrapper--right").on("click", function() {
+                if (idx(".detailsWrapper--right").hasClass("open")) {
+                idx(".detailsWrapper--right").removeClass("open");
+                }
+            });
+
+            if ($(".mat-form").length) {
+            $("#sendContactForm").on("click", function(event) {
                 event.preventDefault();
                 let name = $("#cfc_name")
                     .val()
