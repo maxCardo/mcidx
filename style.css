@@ -1977,6 +1977,10 @@ div.flex-grow {
 }
 
 @media (max-width: 640px) {
+  .IDX-wrapper-standard #IDX-detailsGalleryAction {
+    margin: 10px 0;
+  }
+
   .mortgageCalcContainer {
     padding-bottom: 60px;
   }
@@ -2507,6 +2511,7 @@ div.flex-grow {
     border: 1px solid black;
   }
   .IDX-page-listing .detailsWrapper--right, .IDX-category-search .detailsWrapper--right, .IDX-category-map .detailsWrapper--right, .mortgageCalcContainer .detailsWrapper--right {
+    z-index: 55;
     transition: all 200ms;
   }
 }
