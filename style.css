@@ -1748,6 +1748,14 @@ div.flex-grow {
 }
 
 /*END OF BASIC SEARCH PAGE*/
+#IDX-main #IDX-addressWrap {
+  margin-bottom: 30px;
+}
+#IDX-main #IDX-addressWrap input {
+  padding: 5px 6px;
+  border-color: #ccc;
+}
+
 /*GALLERY PAGE*/
 .IDX-page-photogallery {
   padding-top: 80px;
