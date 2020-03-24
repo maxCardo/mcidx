@@ -517,45 +517,25 @@
             <div class="detailsWrapper--right">
 
                 <div class="mat-form">
-                    <div class="mat-form--header">
-                        <a href="tel:555-555-55-5">
-                            <i class="fa fa-phone"></i>&nbsp;
-                            555-555-55-5
-                        </a>
-                    </div>
+                    <div class="mat-form--header"><a href="tel:412-444-5181"><i class="fa fa-phone"></i>&nbsp;
+                            412-444-5181
+                        </a></div>
                     <div class="mat-form--body">
-                        <div class="element-wrapper">
-                            <input type="text" name="name" required>
-                            <label for="name">First Name:</label>
-                        </div>
-                        <div class="element-wrapper">
-                            <input type="text" name="lastName" required>
-                            <label for="lastName">Last Name:</label>
-                        </div>
-                        <div class="element-wrapper">
-                            <input type="email" name="email" required>
-                            <label for="email">Email:</label>
-                        </div>
-                        <div class="element-wrapper">
-                            <input type="text" name="phone" required>
-                            <label for="phone">Phone:</label>
-                        </div>
+                        <div class="element-wrapper"><input type="text" name="name" id="cfc_name" required=""><label for="name">First
+                                Name:</label></div>
+                        <div class="element-wrapper"><input type="text" name="last_name" id="cfc_last_name" required=""><label for="lastName">Last
+                                Name:</label></div>
+                        <div class="element-wrapper"><input type="email" name="email" id="cfc_email" required=""><label
+                                    for="email">Email:</label></div>
+                        <div class="element-wrapper"><input type="text" name="phone" id="cfc_phone" required=""><label
+                                    for="phone">Phone:</label></div>
                         <div class="element-wrapper with--checkbox">
                             <label class="checkbox path">
-                                <input type="checkbox">
+                                <input type="checkbox" id="cfc_request_info">
                                 <svg viewBox="0 0 21 21">
                                     <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
                                 </svg>
                                 &nbsp; Request Info
-                            </label>
-                        </div>
-                        <div class="element-wrapper with--checkbox">
-                            <label class="checkbox path">
-                                <input type="checkbox">
-                                <svg viewBox="0 0 21 21">
-                                    <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
-                                </svg>
-                                &nbsp; Schedule Showing
                             </label>
                         </div>
                         <div class="element-wrapper with--checkbox">
@@ -567,18 +547,19 @@
                                 &nbsp; Custom Message
                             </label>
                         </div>
+                        <input type="hidden" value="{{ listingID }}" id="listingIdHidden">
                         <div class="element-wrapper" id="customMessageContainer">
                             <textarea id="contactCustomMessage" class="form__field" rows="6"></textarea>
                             <label for="contactCustomMessage" class="form__label">Your Message</label>
                         </div>
                     </div>
                     <div class="element-wrapper flex-centered">
-                        <button class="contact-btn--send btn-cta">Send</button>
+                        <button id="sendContactForm" class="contact-btn--send btn-cta btn">Send</button>
                     </div>
                     <div class="mat-form--footer">
-                        <a href="tel:555-555-55-5">
+                        <a href="tel:412-444-5181">
                             <i class="fa fa-building"></i>&nbsp;
-                            See property website
+                            Fifth & Grant
                         </a>
                     </div>
                 </div>

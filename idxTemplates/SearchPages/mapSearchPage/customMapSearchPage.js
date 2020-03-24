@@ -153,27 +153,4 @@
                 changeOptions('#IDX-propStatus', statuses[pt]);
         }
     });
-
-    idx(document).ready(function () {
-        idx('.contact-mail').on('click', function () {
-            if (idx('.detailsWrapper--right').hasClass('open')) {
-                idx('.detailsWrapper--right').removeClass('open');
-            } else {
-                idx('.detailsWrapper--right').addClass('open');
-            }
-        });
-
-        /*CHECKBOX MSG COMPONENT*/
-        idx(function () {
-            idx("#clickCustomMessage").on('click', function () {
-                var isChecked = idx("#sendCustomMessage").is(":checked");
-                if (isChecked) {
-                    idx('#customMessageContainer').addClass('open');
-                } else {
-                    idx('#customMessageContainer').removeClass('open');
-                }
-            });
-            /*END OF CHECKBOX MSG COMPONENT*/
-        });
-    });
 })(window);
