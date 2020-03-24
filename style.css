@@ -523,6 +523,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   padding: 5px;
   font-size: 10px;
   z-index: 5;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25);
 }
 
 #IDX-resultsRow .IDX-pageContainer .IDX-topActions > div {
@@ -2773,6 +2774,10 @@ div.flex-grow {
     position: absolute;
     top: 0;
   }
+
+  .IDX-page-listing #IDX-similar-listings-result {
+    padding: 0 0 0 0;
+  }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
   .IDX-page-photogallery .galleryContent--container .IDX-photoGallery .slick-list,
@@ -2796,6 +2801,14 @@ div.flex-grow {
   .IDX-wrapper-standard #IDX-custom-resultsMap {
     position: relative;
     top: 10px;
+  }
+
+  .IDX-similar-listings--item-image {
+    width: 100%;
+  }
+
+  .IDX-page-listing .IDX-similar-listings--item {
+    width: 35%;
   }
 }
 @media only screen and (min-device-width: 767px) and (max-device-width: 769px) {
