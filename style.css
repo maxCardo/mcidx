@@ -2805,10 +2805,12 @@ div.flex-grow {
 
   .IDX-similar-listings--item-image {
     width: 100%;
+    height: auto;
   }
 
   .IDX-page-listing .IDX-similar-listings--item {
     width: 35%;
+    margin: 20px;
   }
 }
 @media only screen and (min-device-width: 767px) and (max-device-width: 769px) {
