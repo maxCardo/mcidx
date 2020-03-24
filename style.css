@@ -2453,7 +2453,7 @@ div.flex-grow {
   .detailsWrapper--right {
     padding: 20px 5px 18px 15px;
     width: 90%;
-    position: absolute;
+    position: fixed;
     right: -100%;
   }
 
@@ -2511,7 +2511,7 @@ div.flex-grow {
     border: 1px solid black;
   }
   .IDX-page-listing .detailsWrapper--right, .IDX-category-search .detailsWrapper--right, .IDX-category-map .detailsWrapper--right, .mortgageCalcContainer .detailsWrapper--right {
-    z-index: 55;
+    z-index: 12;
     transition: all 200ms;
   }
 }
