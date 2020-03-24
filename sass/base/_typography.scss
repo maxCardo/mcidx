@@ -1,40 +1,9 @@
 // HEADINGS
 .strongLeadership,
 .testimonials,
-.approach,
-.listings {
+.approach {
     &__heading {
         @include heading;
-    }
-}
-
-// SECTION LISTINGS
-
-.listings {
-
-    &__heading {
-        margin-bottom: 50px;
-    }
-
-    &__box {
-        a {
-            background-color: black;
-            color: white;
-            padding: 5px 10px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-top-right-radius: 5px;
-            display: inline-block;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            transition: all 0.2s ease-in-out;
-
-            &:hover {
-                background-color: white;
-                color: black;
-            }
-        }
     }
 }
 
@@ -292,34 +261,6 @@
         }
     }
 
-    .listings {
-        .container {
-            h2 {
-                text-align: center;
-                margin-bottom: 50px;
-            }
-        }
-
-        &__box {
-            a {
-                background-color: black;
-                color: white;
-                padding: 5px 10px;
-                border-radius: 5px;
-                display: inline-block;
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                transition: all 0.2s ease-in-out;
-
-                &:hover {
-                    background-color: white;
-                    color: black;
-                }
-            }
-        }
-    }
-
     .approach {
 
         &__box {
@@ -329,7 +270,6 @@
             }
         }
     }
-
 }
 
 @media only screen and (max-width:768px) {
