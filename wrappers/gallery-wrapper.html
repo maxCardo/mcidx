@@ -188,9 +188,12 @@
             let textAfterheading = '<div class="sliderInfo">Drag images or use arrow keys to navigate</div>';
             $(textAfterheading).insertAfter(".IDX-photoGalleryTitle");
             
-            // NEEDS TO BE REWORKED IN THE FUTURE
-            $("#IDX-leadToolsBar").remove();
+            const theBtnsArr = $("#IDX-previousPage").html().split("</a>");
+            let prevPageBtn = theBtnsArr[0] + '</a>';
+            let propertyPageBtn = theBtnsArr[1] + '</a>';
 
+            $(prevPageBtn).insertBefore("#IDX-propertyInfoList");
+            $("#IDX-previousPage").html(propertyPageBtn);
 
             $('#IDX-showcaseSlides').slick({
                 dots: true,
