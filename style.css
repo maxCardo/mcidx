@@ -2809,6 +2809,11 @@ div.flex-grow {
     width: 100%;
     padding-left: 0;
   }
+
+  input.IDX-advMinMax {
+    width: 45%;
+    margin: 0 1% !important;
+  }
 }
 /* END OF RESPONSIVE*/
 
