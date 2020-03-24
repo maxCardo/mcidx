@@ -669,11 +669,16 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 
 .menu__link {
+  font-size: 1.125em;
+  text-decoration: none;
   color: black;
   display: inline-block;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+.menu__link i {
+  margin-right: 5px;
 }
 
 .menu__link:hover {
@@ -2797,6 +2802,12 @@ div.flex-grow {
 .IDX-category-map .mat-form .mat-form--header i.fa,
 .mortgageCalcContainer .mat-form .mat-form--header i.fa {
     font-size: 26px;
+  }
+
+  .menu ul {
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
   }
 }
 /* END OF RESPONSIVE*/
