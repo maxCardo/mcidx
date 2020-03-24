@@ -2187,7 +2187,7 @@ div.flex-grow {
 @media (min-width: 992px) and (max-width: 1599px) {
   #IDX-main > div:last-child {
     text-align: left !important;
-    padding-left: 15px !important;
+    padding-left: 90px !important;
   }
 
   #IDX-resultsContent > div > div:last-child {
@@ -2647,6 +2647,10 @@ div.flex-grow {
   }
 }
 @media only screen and (min-device-width: 767px) and (max-device-width: 1025px) {
+  .header {
+    padding: 20px 20px;
+  }
+
   .IDX-page-listing #IDX-detailsMediaContaner--custom {
     width: 100%;
   }
@@ -2696,7 +2700,7 @@ div.flex-grow {
   }
 
   .IDX-category-search.IDX-page-advanced .IDX-searchFormContainer,
-.IDX-category-map.IDX-page-advanced .IDX-searchFormContainer {
+.IDX-category-map .IDX-searchFormContainer {
     max-height: 85vh;
     width: 93vw;
   }
