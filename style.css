@@ -2792,8 +2792,8 @@ div.flex-grow {
   }
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
-  .IDX-category-search #IDX-searchForm, .IDX-category-map #IDX-searchForm {
-    padding-top: 364px;
+  .IDX-category-search #IDX-searchForm {
+    padding-top: 440px;
   }
 }
 @media (max-width: 374px) {
