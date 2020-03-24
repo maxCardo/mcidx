@@ -1744,6 +1744,11 @@ div.flex-grow {
 .IDX-page-photogallery {
   padding-top: 80px;
 }
+.IDX-page-photogallery #IDX-goToProperty,
+.IDX-page-photogallery #IDX-returnToPreviousPage {
+  width: 100%;
+  text-align: center;
+}
 .IDX-page-photogallery h2.IDX-photoGalleryTitle {
   font-size: 3em;
   margin: 40px 0 0 0;
@@ -1772,7 +1777,7 @@ div.flex-grow {
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
   list-style: none;
-  font-size: 1.35em;
+  font-size: 1em;
   margin: 0 0 0 0;
 }
 .IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList li {
@@ -2538,6 +2543,11 @@ div.flex-grow {
     width: 62%;
     align-self: flex-start;
   }
+
+  .IDX-page-photogallery h2.IDX-photoGalleryTitle {
+    font-size: 2em;
+    margin: 20px 0 0 0;
+  }
 }
 @media (min-width: 1359px) {
   .IDX-page-listing #IDX-detailsMediaContaner--custom {
@@ -2590,6 +2600,16 @@ div.flex-grow {
 
   .search-results-page .mortgageCalcContainer {
     max-height: 97.5vh;
+  }
+
+  .IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList {
+    font-size: 1.35em;
+  }
+
+  .IDX-page-photogallery h2.IDX-photoGalleryTitle {
+    font-size: 3em;
+    margin: 40px 0 0 0;
+    text-align: center;
   }
 }
 @media only screen and (min-device-width: 767px) and (max-device-width: 1025px) {
