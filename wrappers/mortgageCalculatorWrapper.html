@@ -165,7 +165,13 @@
 
 
             $('hr').remove();
-            //$(".IDX-photoGalleryTitle").html("Mortgage Calculator");
+            let headingText = $(".IDX-photoGalleryTitle").text();
+            let listingID = headingText.split(" ");
+                listingID = listingID[listingID.length - 1];
+            
+            $("#listingIdHidden").val(listingID);
+            
+            $(".IDX-photoGalleryTitle").html("Mortgage Calculator");
 
             const propertyInfo = "<div class='propertyInfoContent--container'></div>";
             const mortgageData = $("#IDX-mortgageCalculationResults").html();
