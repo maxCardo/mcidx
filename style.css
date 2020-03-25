@@ -2303,6 +2303,7 @@ div.flex-grow {
   }
   #IDX-resultsTopActions.IDX-topActions + #IDX-resultsContent {
     padding-top: 0;
+    background: white;
   }
   #IDX-resultsTopActions.IDX-topActions + #IDX-resultsContent > div > div:last-child {
     padding: 10px 0 40px 0 !important;
@@ -2746,6 +2747,14 @@ div.flex-grow {
   }
   .IDX-page-listing .mat-form .mat-form--header i {
     font-size: 30px;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent {
+    height: calc(83.5vh - 62px);
+  }
+
+  .IDX-wrapper-standard .IDX-custom-map {
+    max-height: 72.85vh;
   }
 }
 @media (min-width: 1599px) {
