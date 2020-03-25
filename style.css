@@ -2782,6 +2782,10 @@ div.flex-grow {
   }
 }
 @media only screen and (min-device-width: 767px) and (max-device-width: 1025px) {
+  #IDX-main.IDX-page-listings {
+    height: calc(100vh - 50px);
+  }
+
   #IDX-resultsRefineSearchToggle {
     z-index: 8;
   }
@@ -2939,10 +2943,6 @@ div.flex-grow {
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
   .IDX-wrapper-standard .IDX-custom-map {
     max-height: 84.75vh;
-  }
-
-  #IDX-main.IDX-page-listings {
-    height: calc(100vh - 50px);
   }
 
   .IDX-page-photogallery .galleryContent--container .IDX-photoGallery .slick-list,
