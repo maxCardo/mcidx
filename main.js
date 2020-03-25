@@ -3294,13 +3294,46 @@ $(document).ready(function () {
   /* CONTACT PAGE CONTACT FORM */
   if ($("#cfc_contact_form").length) {
 
-    $("#cfc_name").on("blur", function() {
-      if ( $(this).val().match('^[a-zA-Z]{3,16}$') ) {
-          alert( "Valid name" );
+   
+    let isNameValid, isEmailValid, isPhoneValid;
+
+
+    $("#cfc_name").on("keyup", function() {
+      if ( $(this).val().match(/^[a-zA-Z]{3,16}$/) ) {
+
+        isNameValid = true;
+        $("#cfc_name").css('border-color', 'green');
+
       } else {
-          alert("That's not a name");
+
+        $("#cfc_name").css('border-color', 'red');
+
       }
-  });
+    });
+  
+    $("#cfc_email").on("keyup", function() {
+      if ( $(this).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) ) {
+
+        isEmailValid = true;
+        $("#cfc_email").css('border-color', 'green');
+
+      } else {
+
+        $("#cfc_email").css('border-color', 'red');
+      }
+    });
+
+    $("#cfc_phone").on("keyup", function() {
+      if ( $(this).val().match(/^([2-9][0-9]{2}[\-]{0,1}){2}[0-9]{4}$/) ) {
+
+        isPhoneValid = true;
+        $("#cfc_phone").css('border-color', 'green');
+
+      } else {
+
+        $("#cfc_phone").css('border-color', 'red');
+      }
+    });
 
     $("#submitContactForm").on("click", function (event) {
       event.preventDefault();
@@ -3326,17 +3359,22 @@ $(document).ready(function () {
         message: message
       };
 
-      $.ajax({
-        url: "https://rethink-dev.herokuapp.com/api/sales/web_lead",
-        type: "post",
-        dataType: "json",
-        contentType: "application/json",
-        data: JSON.stringify(data),
+      if (isNameValid && isEmailValid && isPhoneValid) {
 
-        success: function (data) {
-          window.location.replace("http://cardo.tech");
-        }
-      });
+        $.ajax({
+          url: "https://rethink-dev.herokuapp.com/api/sales/web_lead",
+          type: "post",
+          dataType: "json",
+          contentType: "application/json",
+          data: JSON.stringify(data),
+
+          success: function (data) {
+            window.location.replace("http://cardo.tech");
+          }
+        });
+        
+      }
+
     });
   }
   /* END OF CONTACT PAGE CONTACT FORM */
