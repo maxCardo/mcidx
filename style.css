@@ -2941,6 +2941,10 @@ div.flex-grow {
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  #IDX-main.IDX-page-listings {
+    overflow: hidden;
+  }
+
   .IDX-wrapper-standard .IDX-custom-map {
     max-height: 84.75vh;
   }
