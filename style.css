@@ -2613,7 +2613,7 @@ div.flex-grow {
     padding: 30px 70px;
   }
 }
-@media (min-width: 1359px) and (max-width: 1580px) {
+@media (min-width: 1299px) and (max-width: 1580px) {
   .IDX-page-listing #IDX-primaryPhoto .IDX-arrow {
     top: 200px;
   }
