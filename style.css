@@ -773,6 +773,24 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   }
 }
 /* END OF MAIN SITE MENU */
+.resultsBurgerBtn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 12;
+  height: 28px;
+  width: 28px;
+  outline: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
 .resultsBurgerBtn span {
   position: absolute;
   content: "";
@@ -2879,6 +2897,10 @@ div.flex-grow {
     position: absolute;
     right: 5px;
     top: 15px;
+  }
+
+  .resultsBurgerBtn {
+    display: none;
   }
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
