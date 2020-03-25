@@ -3293,6 +3293,15 @@ $(document).ready(function () {
 
   /* CONTACT PAGE CONTACT FORM */
   if ($("#cfc_contact_form").length) {
+
+    $("#cfc_name").on("blur", function() {
+      if ( $(this).val().match('^[a-zA-Z]{3,16}$') ) {
+          alert( "Valid name" );
+      } else {
+          alert("That's not a name");
+      }
+  });
+
     $("#submitContactForm").on("click", function (event) {
       event.preventDefault();
       let name = $("#cfc_name")
