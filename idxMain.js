@@ -3311,7 +3311,7 @@ idx(document).ready(function() {
         idx("#cfc_name").css('border-color', 'green');
 
       } else {
-
+        isNameValid = false;
         idx("#cfc_name").css('border-color', 'red');
 
       }
@@ -3323,7 +3323,7 @@ idx(document).ready(function() {
         idx("#cfc_last_name").css('border-color', 'green');
 
       } else {
-
+        isLastNameValid = false;
         idx("#cfc_last_name").css('border-color', 'red');
       }
     });
@@ -3335,7 +3335,7 @@ idx(document).ready(function() {
         idx("#cfc_email").css('border-color', 'green');
 
       } else {
-
+        isEmailValid = false;
         idx("#cfc_email").css('border-color', 'red');
       }
     });
@@ -3347,7 +3347,7 @@ idx(document).ready(function() {
         idx("#cfc_phone").css('border-color', 'green');
 
       } else {
-
+        isPhoneValid = false;
         idx("#cfc_phone").css('border-color', 'red');
       }
     });

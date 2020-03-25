@@ -3305,7 +3305,7 @@ $(document).ready(function () {
         $("#cfc_name").css('border-color', 'green');
 
       } else {
-
+        isNameValid = false;
         $("#cfc_name").css('border-color', 'red');
 
       }
@@ -3318,7 +3318,7 @@ $(document).ready(function () {
         $("#cfc_email").css('border-color', 'green');
 
       } else {
-
+        isEmailValid = false;
         $("#cfc_email").css('border-color', 'red');
       }
     });
@@ -3330,7 +3330,7 @@ $(document).ready(function () {
         $("#cfc_phone").css('border-color', 'green');
 
       } else {
-
+        isEmailValid = false;
         $("#cfc_phone").css('border-color', 'red');
       }
     });
@@ -3372,7 +3372,7 @@ $(document).ready(function () {
             window.location.replace("http://cardo.tech");
           }
         });
-        
+
       }
 
     });
