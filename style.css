@@ -2781,6 +2781,17 @@ div.flex-grow {
     text-align: center;
   }
 }
+@media all and (device-width: 2560px) and (device-height: 1440px) {
+  .IDX-wrapper-standard .IDX-custom-map {
+    max-height: 85.5vh;
+    top: -5px;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent {
+    height: calc(90vh - 60px);
+    top: 27px;
+  }
+}
 @media only screen and (min-device-width: 767px) and (max-device-width: 1025px) {
   #IDX-main.IDX-page-listings {
     height: calc(100vh - 50px);
