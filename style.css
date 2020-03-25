@@ -2453,7 +2453,7 @@ div.flex-grow {
   .IDX-page-photogallery .slick-slide img {
     height: 30vh;
   }
-  .IDX-page-photogallery .sliderInfo {
+  .IDX-page-photogallery .show--desktop {
     display: none;
   }
   .IDX-page-photogallery #IDX-previousPage {
@@ -2594,7 +2594,7 @@ div.flex-grow {
   .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
     position: sticky;
     height: unset;
-    top: 70px;
+    top: 100px;
     margin: 0;
     padding-bottom: 30px;
   }
