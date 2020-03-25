@@ -2263,6 +2263,14 @@ div.flex-grow {
   }
 }
 @media (max-width: 748px) {
+  .resultsMobileNav {
+    position: relative;
+  }
+
+  #IDX-resultsContainer {
+    position: relative;
+  }
+
   .IDX-page-photogallery {
     padding-top: 50px;
   }
@@ -2899,7 +2907,7 @@ div.flex-grow {
     top: 15px;
   }
 
-  .resultsBurgerBtn {
+  .resultsBurgerBtn, .resultsMobileNav {
     display: none;
   }
 }
