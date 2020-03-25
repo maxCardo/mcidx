@@ -2287,12 +2287,16 @@ div.flex-grow {
   }
 }
 @media (max-width: 748px) {
+  .leaflet-top.leaflet-left {
+    z-index: 4;
+  }
+
   .IDX-category-results {
     padding: 82px 15px 0;
   }
 
   #IDX-resultsTopActions.IDX-topActions {
-    margin: -10px auto 0 auto;
+    margin: 15px auto 0 auto;
     height: 0;
     transition: all 200ms;
     overflow: hidden;
@@ -2778,6 +2782,14 @@ div.flex-grow {
   }
 }
 @media only screen and (min-device-width: 767px) and (max-device-width: 1025px) {
+  #IDX-resultsRefineSearchToggle {
+    z-index: 8;
+  }
+
+  .IDX-btn--map-toggle {
+    z-index: 5;
+  }
+
   .header {
     padding: 20px 20px;
   }
@@ -2949,6 +2961,14 @@ div.flex-grow {
   }
 }
 @media only screen and (min-device-width: 767px) and (max-device-width: 769px) {
+  .IDX-category-results {
+    padding: 124px 15px 0;
+  }
+
+  .IDX-wrapper-standard.IDX-page-listing #IDX-map {
+    height: 93%;
+  }
+
   .IDX-wrapper-standard #IDX-resultsContent {
     top: 0;
   }
