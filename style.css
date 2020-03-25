@@ -1588,7 +1588,7 @@ div.flex-grow {
 }
 .IDX-category-search .IDX-searchPageContainer,
 .IDX-category-map .IDX-searchPageContainer {
-  height: calc(100vh - 98px);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
