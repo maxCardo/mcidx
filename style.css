@@ -2613,6 +2613,29 @@ div.flex-grow {
     padding: 30px 70px;
   }
 }
+@media (min-width: 1359px) and (max-width: 1580px) {
+  .IDX-page-listing #IDX-primaryPhoto .IDX-arrow {
+    top: 200px;
+  }
+
+  .IDX-page-listing #IDX-detailsMediaContaner--custom {
+    width: 55%;
+  }
+
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
+    font-size: 12px;
+  }
+
+  .IDX-page-listing .mat-form .mat-form--body .element-wrapper.with--checkbox {
+    width: 100%;
+  }
+  .IDX-page-listing .mat-form .mat-form--header {
+    font-size: 20px;
+  }
+  .IDX-page-listing .mat-form .mat-form--header i {
+    font-size: 30px;
+  }
+}
 @media (min-width: 1599px) {
   .IDX-page-listing #IDX-detailsMediaContaner--custom {
     width: 52%;
