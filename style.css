@@ -2263,6 +2263,16 @@ div.flex-grow {
   }
 }
 @media (max-width: 748px) {
+  #IDX-resultsTopActions.IDX-topActions {
+    height: 0;
+    transition: height 200ms;
+    overflow: hidden;
+  }
+
+  #IDX-resultsTopActions.IDX-topActions.open {
+    height: auto;
+  }
+
   .resultsMobileNav {
     position: relative;
     height: 40px;
