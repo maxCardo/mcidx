@@ -500,7 +500,7 @@ a.IDX-psudolink {
 }
 
 #IDX-resultsTopActions.IDX-topActions {
-  margin: 25px auto 0 auto;
+  margin: -10px auto 0 auto;
   z-index: 10;
 }
 
@@ -2303,6 +2303,9 @@ div.flex-grow {
     height: 132px;
     overflow: visible;
     position: relative;
+  }
+  #IDX-resultsTopActions.IDX-topActions.open + #IDX-resultsContent {
+    padding-top: 0;
   }
 
   .resultsMobileNav {
