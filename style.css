@@ -776,7 +776,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 .resultsBurgerBtn {
   position: absolute;
   top: 6px;
-  left: 6px;
+  right: 6px;
   z-index: 12;
   height: 28px;
   width: 28px;
