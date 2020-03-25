@@ -3301,19 +3301,54 @@ idx(document).ready(function() {
 
   if (idx(".mat-form").length) {
 
+    let isNameValid, isLastNameValid, isEmailValid, isPhoneValid;
+
 
     idx("#cfc_name").on("blur", function() {
       if ( idx(this).val().match('^[a-zA-Z]{3,16}$') ) {
-        idx("#cfc_name").css('border-color', 'red');
-      } else {
+
+        isNameValid = true;
         idx("#cfc_name").css('border-color', 'green');
+
+      } else {
+
+        idx("#cfc_name").css('border-color', 'red');
+
       }
     });
     idx("#cfc_last_name").on("blur", function() {
       if ( idx(this).val().match('^[a-zA-Z]{3,16}$') ) {
-        idx("#cfc_last_name").css('border-color', 'red');
-      } else {
+
+        isLastNameValid = true;
         idx("#cfc_last_name").css('border-color', 'green');
+
+      } else {
+
+        idx("#cfc_last_name").css('border-color', 'red');
+      }
+    });
+
+    idx("#cfc_email").on("blur", function() {
+      if ( idx(this).val().match('^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$') ) {
+
+        isLastNameValid = true;
+        idx("#cfc_email").css('border-color', 'green');
+
+      } else {
+
+        idx("#cfc_email").css('border-color', 'red');
+      }
+    });
+
+    idx("#cfc_phone").on("blur", function() {
+      if ( idx(this).val().match('^([2-9][0-9]{2}[\-]{0,1}){2}[0-9]{4}$') ) {
+
+        isLastNameValid = true;
+        idx("#cfc_phone").css('border-color', 'green');
+
+      } else {
+
+        idx("#cfc_phone").css('border-color', 'red');
       }
     });
 
@@ -3364,8 +3399,7 @@ idx(document).ready(function() {
       }
 
      
-      idx
-        .ajax({
+      idx.ajax({
           url: "https://rethink-dev.herokuapp.com/api/sales/idx_lead",
           type: "post",
           //dataType: "json",
@@ -3379,6 +3413,7 @@ idx(document).ready(function() {
         .done(function() {
           location.reload();
         });
+
     });
   }
 
