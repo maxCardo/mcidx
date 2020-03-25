@@ -788,7 +788,6 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   display: flex;
   align-items: center;
   visibility: visible;
-  opacity: 0;
 }
 
 .resultsBurgerBtn span {
@@ -802,7 +801,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.resultsBurgerBtn span::before, .resultsBurgerBtn span::after {
+.resultsBurgerBtn span::before,
+.resultsBurgerBtn span::after {
   position: absolute;
   content: "";
   width: 28px;
