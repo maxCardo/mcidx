@@ -2283,6 +2283,10 @@ div.flex-grow {
     padding: 0 10px;
   }
 
+  .IDX-category-map .IDX-searchPageContainer, .IDX-category-search .IDX-searchPageContainer {
+    height: 100vh;
+    align-items: center;
+  }
   .IDX-category-map .IDX-searchFormContainer, .IDX-category-search .IDX-searchFormContainer {
     height: 74vh;
     width: 90vw !important;
