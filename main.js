@@ -3366,11 +3366,10 @@ $(document).ready(function () {
           type: "post",
           dataType: "json",
           contentType: "application/json",
-          data: JSON.stringify(data),
-
-          success: function (data) {
-            window.location.replace("http://cardo.tech");
-          }
+          data: JSON.stringify(data)
+        })
+        .done(function() {
+          window.location.replace("http://cardo.tech");
         });
 
       }
