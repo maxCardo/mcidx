@@ -155,6 +155,15 @@
             const mobileMenuResults = '<div class="resultsMobileNav">Actions<div class="resultsBurgerBtn"><span></span></div></div>';
             $(mobileMenuResults).insertBefore("#IDX-resultsTopActions");
 
+            $(".resultsBurgerBtn").on("click", function() {
+              if ($("#IDX-resultsTopActions").hasClass("open")) {
+                $("#IDX-resultsTopActions").removeClass("open");
+              } else {
+                $("#IDX-resultsTopActions").addClass("open");
+              }
+            });
+
+
             Waves.init();
             Waves.attach('.btn');
 
