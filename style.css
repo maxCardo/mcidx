@@ -2762,13 +2762,29 @@ div.flex-grow {
   }
 
   .search-results-page .mortgageCalcContainer {
-    padding-bottom: 0;
     max-height: 100vh;
   }
 }
 @media (min-width: 1599px) {
   .IDX-page-listing #IDX-detailsMediaContaner--custom {
     width: 52%;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent {
+    height: calc(83.5vh - 62px);
+    background: #ffffff;
+  }
+
+  .IDX-wrapper-standard .IDX-custom-map {
+    max-height: 72.85vh;
+  }
+
+  #IDX-main.IDX-page-listings {
+    height: 96vh;
+  }
+
+  .search-results-page .mortgageCalcContainer {
+    max-height: 100vh;
   }
 }
 @media (min-width: 1899px) {
@@ -2809,6 +2825,14 @@ div.flex-grow {
     height: calc(90vh - 60px);
     top: 27px;
     padding-top: 15px;
+  }
+
+  #IDX-main.IDX-page-listings {
+    height: 100vh;
+  }
+
+  .search-results-page .mortgageCalcContainer {
+    max-height: 100vh;
   }
 }
 @media only screen and (min-device-width: 767px) and (max-device-width: 1025px) {
