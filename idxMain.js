@@ -3305,7 +3305,7 @@ idx(document).ready(function() {
 
 
     idx("#cfc_name").on("blur", function() {
-      if ( idx(this).val().match('^[a-zA-Z]{3,16}$') ) {
+      if ( idx(this).val().match(/^[a-zA-Z]{3,16}$/) ) {
 
         isNameValid = true;
         idx("#cfc_name").css('border-color', 'green');
@@ -3317,7 +3317,7 @@ idx(document).ready(function() {
       }
     });
     idx("#cfc_last_name").on("blur", function() {
-      if ( idx(this).val().match('^[a-zA-Z]{3,16}$') ) {
+      if ( idx(this).val().match(/^[a-zA-Z]{3,16}$/) ) {
 
         isLastNameValid = true;
         idx("#cfc_last_name").css('border-color', 'green');
@@ -3331,7 +3331,7 @@ idx(document).ready(function() {
     idx("#cfc_email").on("blur", function() {
       if ( idx(this).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) ) {
 
-        isLastNameValid = true;
+        isEmailValid = true;
         idx("#cfc_email").css('border-color', 'green');
 
       } else {
@@ -3341,9 +3341,9 @@ idx(document).ready(function() {
     });
 
     idx("#cfc_phone").on("blur", function() {
-      if ( idx(this).val().match('^([2-9][0-9]{2}[\-]{0,1}){2}[0-9]{4}$') ) {
+      if ( idx(this).val().match(/^([2-9][0-9]{2}[\-]{0,1}){2}[0-9]{4}$/) ) {
 
-        isLastNameValid = true;
+        isPhoneValid = true;
         idx("#cfc_phone").css('border-color', 'green');
 
       } else {
