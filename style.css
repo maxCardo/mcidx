@@ -510,9 +510,16 @@ a.IDX-psudolink {
   margin-bottom: 0px;
 }
 
-IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
+.IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   width: 100%;
   padding-top: 25px;
+}
+
+.IDX-wrapper-standard .IDX-btn.IDX-btn--results-refinement {
+  background: #ccc !important;
+}
+.IDX-wrapper-standard .IDX-btn.IDX-btn--results-refinement input {
+  background-color: #6f9dd4;
 }
 
 #IDX-main > div:last-child {
@@ -2275,7 +2282,7 @@ div.flex-grow {
   #IDX-resultsTopActions.IDX-topActions {
     margin: 15px auto 0 auto;
     height: 0;
-    transition: height 200ms;
+    transition: all 200ms;
     overflow: hidden;
   }
 
