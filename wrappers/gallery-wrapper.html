@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="gallery-page">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="http://cardo.tech/fonts/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcardo.github.io/mcidx/assets/css/slick.css">
     <link rel="stylesheet" type="text/css" href="https://maxcardo.github.io/mcidx/assets/css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="https://maxcardo.github.io/mcidx/assets/css/waves.min.css">
@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" type="text/css" href="https://maxcardo.github.io/mcidx/style.css">
 
-    <title>Fifth And Grant Real Estate Services</title>
+    <title>Fifth & Grant Real Estate Services</title>
 </head>
 
 <body>
@@ -25,20 +25,20 @@
         <div class="menu">
           <ul class="menu__links">
             <li>
-                <a href="http://cardo.tech" class="menu__link"><i class="fas fa-home"></i> Home</a>
+                <a href="http://cardo.tech" class="menu__link"><i class="fa fa-home"></i> Home</a>
             </li>
             <li>
-              <a href="http://cardo.idxbroker.com/idx/search" class="menu__link"><i class="fas fa-search"></i> Search</a>
+              <a href="http://cardo.idxbroker.com/idx/search" class="menu__link"><i class="fa fa-search"></i> Search</a>
             </li>
             <li>
-              <a href="http://cardo.idxbroker.com/idx/map/mapsearch" class="menu__link"><i class="fas fa-map-marker-alt"></i> Map Search</a>
+              <a href="http://cardo.idxbroker.com/idx/map/mapsearch" class="menu__link"><i class="fa fa-map-marker-alt"></i> Map Search</a>
             </li>
             <li>
-              <a href="http://cardo.tech/contact.html" class="menu__link"><i class="fas fa-envelope"></i> Contact Us</a>
+              <a href="http://cardo.tech/contact.html" class="menu__link"><i class="fa fa-envelope"></i> Contact Us</a>
             </li>
     
             <li>
-              <a href="tel:412-444-5181" class="menu__link"><i class="fas fa-phone"></i>Call Us</a>
+              <a href="tel:412-444-5181" class="menu__link"><i class="fa fa-phone"></i>Call Us</a>
             </li>
           </ul>
         </div>
@@ -63,27 +63,28 @@
             </div>
             <ul class="header__links">
               <li>
-                <a href="http://cardo.idxbroker.com/idx/search" class="header__link link"><i class="fas fa-search"></i> Search
+                <a href="http://cardo.idxbroker.com/idx/search" class="header__link link"><i class="fa fa-search"></i> Search
                   <div></div></a>
               </li>
               <li>
-                <a href="http://cardo.idxbroker.com/idx/map/mapsearch" class="header__link link"><i class="fas fa-map-marker-alt"></i> Map Search
+                <a href="http://cardo.idxbroker.com/idx/map/mapsearch" class="header__link link"><i class="fa fa-map-marker"></i> Map Search
                   <div></div></a>
               </li>
               <li>
-                <a href="http://cardo.tech/contact.html" class=" header__link link"><i class="fas fa-envelope"></i> Contact Us
+                <a href="http://cardo.tech/contact.html" class=" header__link link"><i class="fa fa-envelope"></i> Contact Us
                   <div></div></a>
               </li>
     
               <li>
-                <a href="tel:412-444-5181" class="header__link link"><i class="fas fa-phone"></i> 412-444-5181
+                <a href="tel:412-444-5181" class="header__link link"><i class="fa fa-phone"></i> 412-444-5181
                   <div></div></a>
               </li>
             </ul>
           </div>
         </header>
-        <!-- Header with full-height image -->
+
         <div class="mortgageCalcContainer">
+
             <div class="bgimg-1 w3-display-container w3-grayscale-min" id="idxStart"></div>
             <div id="idxStop"></div>
 
@@ -138,6 +139,7 @@
                 </div>
 
             </div>
+
             <div class="sm-contact-bar">
                 <a href="tel:412-444-5181" class="">
                     <i class="fa fa-phone"></i>
@@ -148,7 +150,6 @@
             </div>
         </div>
     </div>
-
 
 
     <script src="https://maxcardo.github.io/mcidx/assets/js/waves.min.js"></script>
@@ -162,27 +163,54 @@
         $(document).ready(function () {
 
 
-            $('hr').remove();
+            $.each($.grep(document.styleSheets, function (n) {
+                return n.href.search(/graphical/) != -1;
+            }), function (i, n) {
+                n.disabled = true;
+            });
+            $('.IDX-arrow').remove();
+
+            $('.IDX-showcaseSlide').removeClass('IDX-active');
+
+
+            const propInfoContainer = "<div class='propertyInfo--container'></div>";
+            $(".IDX-propertyInfoList, #IDX-previousPage").wrapAll(propInfoContainer);
+
+            const galleryContentContainer = "<div class='galleryContent--container'></div>";
+            $(".propertyInfo--container, #IDX-photoGallery").wrapAll(galleryContentContainer);
+
             let headingText = $(".IDX-photoGalleryTitle").text();
             let listingID = headingText.split(" ");
                 listingID = listingID[listingID.length - 1];
             
             $("#listingIdHidden").val(listingID);
+            $(".IDX-photoGalleryTitle").html("Photo Gallery");
+            let textAfterheading = '<div class="sliderInfo">Drag images <span class="show--desktop">or use arrow keys</span> to navigate</div>';
+            $(textAfterheading).insertAfter(".IDX-photoGalleryTitle");
+            
+            const theBtnsArr = $("#IDX-previousPage").html().split("</a>");
+            $("#IDX-previousPage").html("");
+            let prevPageBtn = theBtnsArr[0] + '</a>';
+            let propertyPageBtn = theBtnsArr[1] + '</a>';
 
-            $(".IDX-photoGalleryTitle").html("Mortgage Calculator");
+            $(prevPageBtn).insertBefore(".IDX-propertyInfoList");
+            $("#IDX-previousPage").html(propertyPageBtn);
 
-            const propertyInfo = "<div class='propertyInfoContent--container'></div>";
-            const mortgageData = $("#IDX-mortgageCalculationResults").html();
-            $("#IDX-mortgageCalculationResults").remove();
-            $("#IDX-mortgageCalculatorContainer > .IDX-well").after(mortgageData);
-            $("#IDX-mortgageCalculatorContainer > .IDX-well, #IDX-previousPage").wrapAll(propertyInfo);
+            $('#IDX-showcaseSlides').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true
+            });
 
-            const mortCalcPage = "<div class='mortgageCalculatorContent--container'></div>";
-            $(".propertyInfoContent--container, #IDX-mortgageCalculatorContent").wrapAll(mortCalcPage);
-
-            $("#IDX-returnToPreviousPage, #IDX-goToProperty, #IDX-hideAmortization, #IDX-pagination-next, #IDX-pagination-prev, #IDX-showAmortization")
-                .addClass('btn');
-
+            $('#IDX-showcaseSlides').on('setPosition', function () {
+                $(this).find('.slick-slide').height('auto');
+                var slickTrack = $(this).find('.slick-track');
+                var slickTrackHeight = $(slickTrack).height();
+                $(this).find('.slick-slide').css('height', slickTrackHeight + 'px');
+            });
 
             /* CONTACT FORM */
             idx(".mat-form").on("click", function(event) {
@@ -196,7 +224,7 @@
             });
 
             if ($(".mat-form").length) {
-            $("#sendContactForm").on("click", function(event) {
+                $("#sendContactForm").on("click", function(event) {
                 event.preventDefault();
                 let name = $("#cfc_name")
                     .val()
@@ -267,8 +295,9 @@
                 $(".detailsWrapper--right").addClass("open");
                 }
             });
-               /*CHECKBOX MSG COMPONENT*/
-               $(function() {
+
+            /*CHECKBOX MSG COMPONENT*/
+            $(function() {
                 $("#clickCustomMessage").on("click", function() {
                 var isChecked = $("#sendCustomMessage").is(":checked");
                 if (isChecked) {
@@ -281,11 +310,12 @@
             });
             /* END OF CONTACT FORM */
 
+            $("#IDX-returnToPreviousPage, #IDX-goToProperty").addClass('btn');
+
             Waves.init();
             Waves.attach('.btn');
         });
     </script>
-
 </body>
 
 </html>
