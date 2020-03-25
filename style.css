@@ -2756,6 +2756,10 @@ div.flex-grow {
   .IDX-wrapper-standard .IDX-custom-map {
     max-height: 72.85vh;
   }
+
+  #IDX-main.IDX-page-listings {
+    height: 96vh;
+  }
 }
 @media (min-width: 1599px) {
   .IDX-page-listing #IDX-detailsMediaContaner--custom {
