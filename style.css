@@ -2098,10 +2098,14 @@ div.flex-grow {
     margin-left: 0;
   }
 
+  .IDX-wrapper-standard #IDX-refineSearchFormToggle {
+    line-height: 30px;
+  }
+
   #IDX-resultsRow .IDX-pageContainer #IDX-resultsTopActions > div {
     width: 50%;
     font-size: 18px;
-    line-height: 50px;
+    line-height: 30px;
     color: #fff;
     border: 1px solid white;
   }
@@ -2270,7 +2274,9 @@ div.flex-grow {
   }
 
   #IDX-resultsTopActions.IDX-topActions.open {
-    height: auto;
+    height: 132px;
+    overflow: visible;
+    position: relative;
   }
 
   .resultsMobileNav {
@@ -2278,6 +2284,8 @@ div.flex-grow {
     height: 40px;
     background: #ccc;
     z-index: 12;
+    line-height: 40px;
+    padding-left: 10px;
   }
 
   #IDX-resultsContainer {
