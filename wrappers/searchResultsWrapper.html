@@ -151,6 +151,10 @@
             $('#IDX-saveSearch, .IDX-newSearch, .IDX-modifySearch, #IDX-refineSearchFormToggle, #IDX-resultsRefineSubmit, .IDX-btn--map-toggle')
                 .addClass('btn');
 
+            
+            const mobileMenuResults = '<div class="resultsBurgerBtn"><span></span></div>'
+            $(mobileMenuResults).insertBefore("#IDX-resultsTopActions");
+
             Waves.init();
             Waves.attach('.btn');
 
