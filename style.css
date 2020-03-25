@@ -2240,6 +2240,16 @@ div.flex-grow {
     margin: 15px auto 0 0;
     top: -15px;
   }
+
+  .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
+    width: 50%;
+    padding-top: 0;
+  }
+  .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent > div {
+    width: 100%;
+    margin-left: auto;
+    background: white;
+  }
 }
 @media (min-width: 992px) and (max-width: 1599px) {
   #IDX-main > div:last-child {
