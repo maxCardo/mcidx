@@ -2297,18 +2297,18 @@ div.flex-grow {
     transition: all 200ms;
     overflow: hidden;
   }
+  #IDX-resultsTopActions.IDX-topActions + #IDX-resultsContent {
+    padding-top: 0;
+  }
+  #IDX-resultsTopActions.IDX-topActions + #IDX-resultsContent > div > div:last-child {
+    padding: 10px 0 40px 0 !important;
+  }
 
   #IDX-resultsTopActions.IDX-topActions.open {
     margin: 25px auto 0 auto;
     height: 132px;
     overflow: visible;
     position: relative;
-  }
-  #IDX-resultsTopActions.IDX-topActions.open + #IDX-resultsContent {
-    padding-top: 0;
-  }
-  #IDX-resultsTopActions.IDX-topActions.open + #IDX-resultsContent > div > div:last-child {
-    padding: 10px 0 40px 0 !important;
   }
 
   .resultsMobileNav {
