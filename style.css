@@ -2292,7 +2292,7 @@ div.flex-grow {
   }
 
   #IDX-resultsTopActions.IDX-topActions {
-    margin: 15px auto 0 auto;
+    margin: -10px auto 0 auto;
     height: 0;
     transition: all 200ms;
     overflow: hidden;
