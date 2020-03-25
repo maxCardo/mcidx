@@ -3304,9 +3304,16 @@ idx(document).ready(function() {
 
     idx("#cfc_name").on("blur", function() {
       if ( idx(this).val().match('^[a-zA-Z]{3,16}$') ) {
-          alert( "Valid name" );
+        idx("#cfc_name").css('border-color', 'red');
       } else {
-          alert("That's not a name");
+        idx("#cfc_name").css('border-color', 'green');
+      }
+    });
+    idx("#cfc_last_name").on("blur", function() {
+      if ( idx(this).val().match('^[a-zA-Z]{3,16}$') ) {
+        idx("#cfc_last_name").css('border-color', 'red');
+      } else {
+        idx("#cfc_last_name").css('border-color', 'green');
       }
     });
 
