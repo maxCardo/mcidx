@@ -788,6 +788,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   display: flex;
   align-items: center;
   visibility: visible;
+  overflow: hidden;
 }
 
 .resultsBurgerBtn span {
