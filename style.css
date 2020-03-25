@@ -2760,6 +2760,11 @@ div.flex-grow {
   #IDX-main.IDX-page-listings {
     height: 96vh;
   }
+
+  .search-results-page .mortgageCalcContainer {
+    padding-bottom: 0;
+    max-height: 100vh;
+  }
 }
 @media (min-width: 1599px) {
   .IDX-page-listing #IDX-detailsMediaContaner--custom {
