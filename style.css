@@ -2307,6 +2307,9 @@ div.flex-grow {
   #IDX-resultsTopActions.IDX-topActions.open + #IDX-resultsContent {
     padding-top: 0;
   }
+  #IDX-resultsTopActions.IDX-topActions.open + #IDX-resultsContent > div > div:last-child {
+    padding: 10px 0 40px 0 !important;
+  }
 
   .resultsMobileNav {
     position: relative;
