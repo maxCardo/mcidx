@@ -784,7 +784,7 @@ a.IDX-psudolink {
 /* END OF MAIN SITE MENU */
 .resultsBurgerBtn {
   position: absolute;
-  top: 12px;
+  top: 15px;
   right: 12px;
   z-index: 12;
   height: 16px;
@@ -2325,6 +2325,7 @@ div.flex-grow {
     justify-content: center;
     align-items: center;
     display: flex;
+    background-color: #f0f0f0;
     border: 1px solid #ddd;
   }
 
