@@ -784,10 +784,10 @@ a.IDX-psudolink {
 /* END OF MAIN SITE MENU */
 .resultsBurgerBtn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
   z-index: 12;
-  height: 22px;
+  height: 16px;
   width: 22px;
   outline: none;
   cursor: pointer;
@@ -824,11 +824,11 @@ a.IDX-psudolink {
 }
 
 .resultsBurgerBtn span::before {
-  top: -8px;
+  top: -6px;
 }
 
 .resultsBurgerBtn span::after {
-  top: 8px;
+  top: 6px;
 }
 
 /* PROPERTY PAGE */
@@ -2318,11 +2318,14 @@ div.flex-grow {
 
   .resultsMobileNav {
     position: relative;
-    height: 40px;
-    background: #ccc;
     z-index: 10;
     line-height: 40px;
     padding-left: 10px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 1px solid #ddd;
   }
 
   #IDX-resultsContainer {
