@@ -3275,7 +3275,15 @@ $(document).ready(function () {
           targetNeighborhood;
         window.location.replace(fullHref);
       } else {
-        console.log("THE ELSE");
+        let searchArr = searchTerm.split(" ");
+        let fullHref;
+        if(searchArr.length > 1) {
+          searchArr = searchArr.join("+");
+          fullHref =  hrefBase +  "idxID=d504&pt=1&ccz=city&aw_address=" + searchArr;
+        } else {
+          fullHref =  hrefBase +  "idxID=d504&pt=1&ccz=city&aw_address=" + searchTerm;
+        }
+         window.location.replace(fullHref);
       }
 
       console.log(neighborhoodMap.length);
