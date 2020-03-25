@@ -3398,8 +3398,9 @@ idx(document).ready(function() {
   
       }
 
-     
-      idx.ajax({
+      if (isNameValid && isLastNameValid && isEmailValid && isPhoneValid) {
+
+        idx.ajax({
           url: "https://rethink-dev.herokuapp.com/api/sales/idx_lead",
           type: "post",
           //dataType: "json",
@@ -3414,6 +3415,8 @@ idx(document).ready(function() {
           location.reload();
         });
 
+      }
+      
     });
   }
 
