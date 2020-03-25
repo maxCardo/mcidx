@@ -775,8 +775,8 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 /* END OF MAIN SITE MENU */
 .resultsBurgerBtn {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 6px;
+  left: 6px;
   z-index: 12;
   height: 28px;
   width: 28px;
@@ -787,7 +787,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  visibility: hidden;
+  visibility: visible;
   opacity: 0;
 }
 
@@ -2265,7 +2265,7 @@ div.flex-grow {
 @media (max-width: 748px) {
   .resultsMobileNav {
     position: relative;
-    height: 30px;
+    height: 40px;
     background: #ccc;
     z-index: 12;
   }
