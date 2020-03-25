@@ -774,7 +774,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 }
 /* END OF MAIN SITE MENU */
 .resultsBurgerBtn {
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
   z-index: 12;
@@ -802,7 +802,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
   transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.resultsBurgerBtn span::before, .menu__toggler span::after {
+.resultsBurgerBtn span::before, .resultsBurgerBtn span::after {
   position: absolute;
   content: "";
   width: 28px;
@@ -2265,6 +2265,9 @@ div.flex-grow {
 @media (max-width: 748px) {
   .resultsMobileNav {
     position: relative;
+    height: 30px;
+    background: #ccc;
+    z-index: 12;
   }
 
   #IDX-resultsContainer {
