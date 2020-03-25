@@ -2749,7 +2749,7 @@ div.flex-grow {
   }
 
   .IDX-wrapper-standard #IDX-resultsContent {
-    height: calc(87vh - 62px);
+    height: calc(87vh - 60px);
     top: 27px;
   }
 
