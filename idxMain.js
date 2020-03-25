@@ -3300,6 +3300,16 @@ idx(document).ready(function() {
   });
 
   if (idx(".mat-form").length) {
+
+
+    idx("#cfc_name").on("blur", function() {
+      if ( idx(this).val().match('^[a-zA-Z]{3,16}$') ) {
+          alert( "Valid name" );
+      } else {
+          alert("That's not a name");
+      }
+    });
+
     idx("#sendContactForm").on("click", function(event) {
       event.preventDefault();
       let name = idx("#cfc_name")
