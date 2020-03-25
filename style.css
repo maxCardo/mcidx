@@ -1128,6 +1128,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 .mortgageCalcContainer .mat-form .mat-form--header a {
   color: white;
   text-decoration: none;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
 }
 .IDX-page-listing .mat-form .mat-form--header .fa,
 .IDX-category-search .mat-form .mat-form--header .fa,
@@ -1230,6 +1231,7 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
 .IDX-category-map .mat-form .mat-form--footer a,
 .mortgageCalcContainer .mat-form .mat-form--footer a {
   color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
 }
 .IDX-page-listing .mat-form .mat-form--footer .fa,
 .IDX-category-search .mat-form .mat-form--footer .fa,
