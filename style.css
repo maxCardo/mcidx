@@ -2937,6 +2937,10 @@ div.flex-grow {
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .IDX-wrapper-standard .IDX-custom-map {
+    max-height: 84.75vh;
+  }
+
   .IDX-page-photogallery .galleryContent--container .IDX-photoGallery .slick-list,
 .IDX-page-photogallery .slick-list {
     height: 50vh;
@@ -2965,12 +2969,16 @@ div.flex-grow {
     padding: 124px 15px 0;
   }
 
-  .IDX-wrapper-standard.IDX-page-listings #IDX-map {
-    height: 93%;
+  .IDX-wrapper-standard.IDX-page-listings .IDX-custom-map {
+    max-height: 81.75vh;
   }
 
   .IDX-wrapper-standard #IDX-resultsContent {
     top: 0;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
+    padding-top: 0;
   }
 }
 @media (min-width: 748px) {
