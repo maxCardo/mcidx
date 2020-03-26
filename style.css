@@ -1873,7 +1873,7 @@ div.flex-grow {
 }
 .IDX-page-photogallery #IDX-previousPage {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 .IDX-page-photogallery #IDX-showcaseThumbnails-buttons {
   display: none;
@@ -2530,6 +2530,7 @@ div.flex-grow {
 
   #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well {
     font-size: 1em;
+    width: 100%;
   }
 
   #IDX-main.IDX-page-mortgage .propertyInfoContent--container {
@@ -3066,6 +3067,10 @@ div.flex-grow {
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .IDX-category-search.IDX-page-advanced #IDX-searchForm {
     padding-top: 440px;
+  }
+
+  .mortgageCalcContainer #IDX-previousPage {
+    flex-direction: column;
   }
 }
 @media (max-width: 374px) {
