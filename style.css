@@ -3057,6 +3057,10 @@ div.flex-grow {
   .resultsBurgerBtn, .resultsMobileNav {
     display: none;
   }
+
+  .IDX-category-search .IDX-searchPageContainer {
+    padding-top: 36px;
+  }
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .IDX-category-search.IDX-page-advanced #IDX-searchForm {
