@@ -1770,6 +1770,7 @@ div.flex-grow {
   }
   #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:not(.switch) {
     width: 19px;
+    margin-bottom: 15px !important;
   }
   #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:not(.switch):after {
     opacity: var(--o, 0);
