@@ -1918,7 +1918,7 @@ div.flex-grow {
   top: 34px;
 }
 #IDX-main.IDX-page-mortgage #IDX-mortgageCalculatorContainer {
-  padding: 70px 0 0 0;
+  padding: 130px 0 0 0;
 }
 #IDX-main.IDX-page-mortgage .IDX-pageHeader {
   margin: 0 0 30px 0;
@@ -2781,7 +2781,7 @@ div.flex-grow {
   }
 
   .IDX-wrapper-standard .IDX-custom-map {
-    max-height: 72.85vh;
+    max-height: 80.85vh;
   }
 
   #IDX-main.IDX-page-listings {
