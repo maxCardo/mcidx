@@ -3364,7 +3364,6 @@ $(document).ready(function () {
                 $.ajax({
                     url: "https://rethink-dev.herokuapp.com/api/sales/web_lead",
                     type: "post",
-                    dataType: "json",
                     contentType: "application/json",
                     data: JSON.stringify(data)
                 })
