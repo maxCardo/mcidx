@@ -1,29 +1,25 @@
-$(document).ready(function () {
+idx(document).ready(function() {
     var scroll_start = 0;
-    var startchange = $(".body");
+    var startchange = idx(".body");
     var offset = startchange.offset();
 
     if (startchange.length) {
-        $(document).scroll(function () {
-            scroll_start = $(this).scrollTop();
+        idx(document).scroll(function() {
+            scroll_start = idx(this).scrollTop();
             if (scroll_start > offset.top) {
-                $("#header").css("background-color", "white");
-                $("#header").css("top", "0");
-                $("#header").css("box-shadow", "0 2px 5px 0 rgba(0,0,0,.75)");
-                $(".link").css("color", "black");
-                $(".logo").css("color", "black");
-                $(".logo").css("transition", "width 200ms");
-                $(".hamburger div").css("background-color", "black");
-                $(".header__link div").css("background-color", "black");
-                $(".logo").css('width', '150px');
-
+                idx("#header").css("background-color", "white");
+                idx("#header").css("top", "0");
+                idx("#header").css("box-shadow", "0 2px 5px 0 rgba(0,0,0,.75)");
+                idx(".link").css("color", "black");
+                idx(".logo").css("color", "black");
+                idx(".hamburger div").css("background-color", "black");
+                idx(".header__link div").css("background-color", "black");
             } else {
-                $("#header").css("background-color", "transparent");
-                $(".link").css("color", "white");
-                $(".logo").css("color", "white");
-                $("#header").css("box-shadow", "none");
-                $(".header__link div").css("background-color", "white");
-                $(".logo").css('width', '350px');
+                idx("#header").css("background-color", "transparent");
+                idx(".link").css("color", "white");
+                idx(".logo").css("color", "white");
+                idx("#header").css("box-shadow", "none");
+                idx(".header__link div").css("background-color", "white");
             }
         });
     }
@@ -36,10 +32,11 @@ $(document).ready(function () {
         washington: 719
     };
 
-    const neighborhoodMap = [{
-        id: "Adamsburg",
-        text: "Adamsburg"
-    },
+    const neighborhoodMap = [
+        {
+            id: "Adamsburg",
+            text: "Adamsburg"
+        },
         {
             id: "Albion",
             text: "Albion"
@@ -3223,15 +3220,15 @@ $(document).ready(function () {
     ];
 
     /* HOME PAGE SEARCH */
-    if ($("#initiateSearch").length) {
-        $("#initiateSearch").on("click", function (event) {
+    if (idx("#initiateSearch").length) {
+        idx("#initiateSearch").on("click", function(event) {
             event.preventDefault();
             var url = window.location.href;
             history.pushState(null, "", url);
 
             let hrefBase = "http://cardo.idxbroker.com/idx/results/listings?";
 
-            let searchTerm = $("#searchField")
+            let searchTerm = idx("#searchField")
                 .val()
                 .trim()
                 .toLowerCase();
@@ -3242,7 +3239,7 @@ $(document).ready(function () {
 
             let isNeighborhood = false;
             let targetNeighborhood;
-            neighborhoodMap.forEach(function (item) {
+            neighborhoodMap.forEach(function(item) {
                 if (item.id.toLowerCase() == searchTerm) {
                     isNeighborhood = true;
                     targetNeighborhood = item.id.toLowerCase().replace(/\s/g, "+");
@@ -3275,15 +3272,7 @@ $(document).ready(function () {
                     targetNeighborhood;
                 window.location.replace(fullHref);
             } else {
-                let searchArr = searchTerm.split(" ");
-                let fullHref;
-                if(searchArr.length > 1) {
-                    searchArr = searchArr.join("+");
-                    fullHref =  hrefBase +  "idxID=d504&pt=1&ccz=city&aw_address=" + searchArr;
-                } else {
-                    fullHref =  hrefBase +  "idxID=d504&pt=1&ccz=city&aw_address=" + searchTerm;
-                }
-                window.location.replace(fullHref);
+                console.log("THE ELSE");
             }
 
             console.log(neighborhoodMap.length);
@@ -3291,95 +3280,162 @@ $(document).ready(function () {
     }
     /* END OF HOME PAGE SEARCH */
 
-    /* CONTACT PAGE CONTACT FORM */
-    if ($("#cfc_contact_form").length) {
+    /* CONTACT FORM */
+    idx(".mat-form").on("click", function(event) {
+        event.stopPropagation();
+    });
+
+    idx(".detailsWrapper--right").on("click", function() {
+        if (idx(".detailsWrapper--right").hasClass("open")) {
+            idx(".detailsWrapper--right").removeClass("open");
+        }
+    });
+
+    idx(".contact-mail").on("click", function() {
+        if (idx(".detailsWrapper--right").hasClass("open")) {
+            idx(".detailsWrapper--right").removeClass("open");
+        } else {
+            idx(".detailsWrapper--right").addClass("open");
+        }
+    });
+
+    if (idx(".mat-form").length) {
+
+        let isNameValid, isLastNameValid, isEmailValid, isPhoneValid;
 
 
-        let isNameValid, isEmailValid, isPhoneValid;
-
-
-        $("#cfc_name").on("keyup", function() {
-            if ( $(this).val().match(/^[a-zA-Z]{3,16}$/) ) {
+        idx("#cfc_name").on("keyup", function() {
+            if ( idx(this).val().match(/^[a-zA-Z]{3,16}$/) ) {
 
                 isNameValid = true;
-                $("#cfc_name").css('border-color', 'green');
+                idx("#cfc_name").css('border-color', 'green');
 
             } else {
                 isNameValid = false;
-                $("#cfc_name").css('border-color', 'red');
+                idx("#cfc_name").css('border-color', 'red');
 
             }
         });
+        idx("#cfc_last_name").on("keyup", function() {
+            if ( idx(this).val().match(/^[a-zA-Z]{3,16}$/) ) {
 
-        $("#cfc_email").on("keyup", function() {
-            if ( $(this).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) ) {
+                isLastNameValid = true;
+                idx("#cfc_last_name").css('border-color', 'green');
+
+            } else {
+                isLastNameValid = false;
+                idx("#cfc_last_name").css('border-color', 'red');
+            }
+        });
+
+        idx("#cfc_email").on("keyup", function() {
+            if ( idx(this).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) ) {
 
                 isEmailValid = true;
-                $("#cfc_email").css('border-color', 'green');
+                idx("#cfc_email").css('border-color', 'green');
 
             } else {
                 isEmailValid = false;
-                $("#cfc_email").css('border-color', 'red');
+                idx("#cfc_email").css('border-color', 'red');
             }
         });
 
-        $("#cfc_phone").on("keyup", function() {
-            if ( $(this).val().match(/^([2-9][0-9]{2}[\-]{0,1}){2}[0-9]{4}$/) ) {
+        idx("#cfc_phone").on("keyup", function() {
+            if ( idx(this).val().match(/^([2-9][0-9]{2}[\-]{0,1}){2}[0-9]{4}$/) ) {
 
                 isPhoneValid = true;
-                $("#cfc_phone").css('border-color', 'green');
+                idx("#cfc_phone").css('border-color', 'green');
 
             } else {
-                isEmailValid = false;
-                $("#cfc_phone").css('border-color', 'red');
+                isPhoneValid = false;
+                idx("#cfc_phone").css('border-color', 'red');
             }
         });
 
-        $("#submitContactForm").on("click", function (event) {
+        idx("#sendContactForm").on("click", function(event) {
             event.preventDefault();
-            let name = $("#cfc_name")
+            let name = idx("#cfc_name")
                 .val()
                 .trim();
-            let email = $("#cfc_email")
+            let lastName = idx("#cfc_last_name")
                 .val()
                 .trim();
-            let phone = $("#cfc_phone")
+            let email = idx("#cfc_email")
                 .val()
                 .trim();
-            let subject = $("#cfc_interest").val();
-            let message = $("#cfc_message")
+            let phone = idx("#cfc_phone")
+                .val()
+                .trim();
+            let requestInfo = idx("#cfc_request_info").is(":checked");
+            let message = idx("#contactCustomMessage")
                 .val()
                 .trim();
 
-            let data = {
-                name: name,
-                email: email,
-                phone: phone,
-                subject: subject,
-                message: message
-            };
+            let listingID, data;
+            if (idx("#listingIdHidden").length) {
 
-            if (isNameValid && isEmailValid && isPhoneValid) {
+                listingID = idx("#listingIdHidden").val();
 
-                $.ajax({
-                    url: "https://rethink-dev.herokuapp.com/api/sales/web_lead",
+                data = {
+                    name: name,
+                    lastName: lastName,
+                    email: email,
+                    phone: phone,
+                    requestInfo: requestInfo,
+                    message: message,
+                    listingID: listingID
+                };
+
+            } else {
+                data = {
+                    name: name,
+                    lastName: lastName,
+                    email: email,
+                    phone: phone,
+                    requestInfo: requestInfo,
+                    message: message
+                };
+
+            }
+
+            if (isNameValid && isLastNameValid && isEmailValid && isPhoneValid) {
+
+                idx.ajax({
+                    url: "https://rethink-dev.herokuapp.com/api/sales/idx_lead",
                     type: "post",
-                    dataType: "json",
+                    //dataType: "json",
                     contentType: "application/json",
-                    data: JSON.stringify(data)
+                    data: JSON.stringify(data),
+
+                    success: function(data) {
+                        window.location.replace("http://cardo.tech");
+                    }
                 })
                     .done(function() {
-                        window.location.replace("http://cardo.tech");
+                        location.reload();
                     });
 
             }
 
         });
     }
-    /* END OF CONTACT PAGE CONTACT FORM */
+
+    /*CHECKBOX MSG COMPONENT*/
+    idx(function() {
+        idx("#clickCustomMessage").on("click", function() {
+            var isChecked = idx("#sendCustomMessage").is(":checked");
+            if (isChecked) {
+                idx("#customMessageContainer").addClass("open");
+            } else {
+                idx("#customMessageContainer").removeClass("open");
+            }
+        });
+        /*END OF CHECKBOX MSG COMPONENT*/
+    });
+    /* END OF CONTACT FORM */
 });
 
-if ($(".menu__toggler").length && $(".menu").length) {
+if (idx(".menu__toggler").length && idx(".menu").length) {
     const toggler = document.querySelector(".menu__toggler");
     const menu = document.querySelector(".menu");
 
@@ -3389,11 +3445,11 @@ if ($(".menu__toggler").length && $(".menu").length) {
     });
 }
 
-(function (i, s, o, g, r, a, m) {
+(function(i, s, o, g, r, a, m) {
     i["GoogleAnalyticsObject"] = r;
     (i[r] =
         i[r] ||
-        function () {
+        function() {
             (i[r].q = i[r].q || []).push(arguments);
         }),
         (i[r].l = 1 * new Date());

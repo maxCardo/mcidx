@@ -10,170 +10,166 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcardo.github.io/mcidx/style.css">
     <link rel="stylesheet" href="https://maxcardo.github.io/mcidx/assets/css/waves.min.css">
-    <title>Max Cardo Ltd</title>
+    <title>Fifth & Grant Real Estate Services</title>
 </head>
 
 <body>
-<div class="w3-top">
-    <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href="https://maxcardo.github.io/mcidx/" class="w3-bar-item w3-button w3-wide">
-            <span style="font-family:Brush Script MT; font-size: 20px">Max Cardo</span> <span
-                style=" font-family: Brush Script MT;font-size: 10px">Ltd</span>
+<div class="global-wrapper">
+    <!-- sidepanel -->
+    <div class="menu">
+        <ul class="menu__links">
+            <li>
+                <a href="http://cardo.tech" class="menu__link"><i class="fa fa-home"></i> Home</a>
+            </li>
+            <li>
+                <a href="http://cardo.idxbroker.com/idx/search" class="menu__link"><i class="fa fa-search"></i> Search</a>
+            </li>
+            <li>
+                <a href="http://cardo.idxbroker.com/idx/map/mapsearch" class="menu__link"><i class="fa fa-map-marker"></i> Map Search</a>
+            </li>
+            <li>
+                <a href="http://cardo.tech/contact.html" class="menu__link"><i class="fa fa-envelope"></i> Contact Us</a>
+            </li>
 
-        </a>
-        <!-- Right-sided navbar links -->
-        <div class="w3-right w3-tiny w3-hide-small" style="margin-top: 10px">
-            <a href="http://cardo.idxbroker.com/idx/search/basic" class="w3-bar-item w3-button"><i
-                    class="fa fa-th"></i> Search</a>
-            <a href="http://cardo.idxbroker.com/idx/map/mapsearch" class="w3-bar-item w3-button"><i
-                    class="fa fa-wrench"></i>Map Search</a>
-            <a href="" class="https://rethinkpm.herokuapp.com/dashboard"><i class="fa fa-wrench"></i>My Portal</a>
-            <a href="contactGF.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT US</a>
-        </div>
-        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
-           onclick="w3_open()">
-            <i class="fa fa-bars"></i>
-        </a>
+            <li>
+                <a href="tel:412-444-5181" class="menu__link"><i class="fa fa-phone"></i>Call Us</a>
+            </li>
+        </ul>
     </div>
-</div>
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
-     style="display:none" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close
-        ×</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About Us</a>
-    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Apartment Rentals</a>
-    <a href="#buy" onclick="w3_close()" class="w3-bar-item w3-button">Sell Your Property</a>
-    <a href="#resident" onclick="w3_close()" class="w3-bar-item w3-button">Current Resident</a>
-    <a href="contactGF.html" onclick="w3_close()" class="w3-bar-item w3-button">Contact Us</a>
-</nav>
-<!-- Header with full-height image -->
-<div class="mortgageCalcContainer">
-    <div class="bgimg-1 w3-display-container w3-grayscale-min" id="idxStart"></div>
-    <div id="idxStop"></div>
 
-    <div class="detailsWrapper--right">
+    <div class="menu__toggler--container">
+        <!-- hamburger menu -->
+        <div class="menu__toggler"><span></span></div>
+        <div class="header__logo--mobile">
+            <a href="http://cardo.tech">
+                <img src="http://cardo.tech/images/small.png" alt="" class="logo">
+            </a>
+        </div>
+    </div>
 
-        <div class="mat-form">
-            <div class="mat-form--header">
-                <a href="tel:555-555-55-5">
-                    <i class="fa fa-phone"></i>&nbsp;
-                    555-555-55-5
+    <!-- header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href="http://cardo.tech">
+                    <img src="http://cardo.tech/images/small.png" alt="" class="logo">
                 </a>
             </div>
-            <div class="mat-form--body">
-                <div class="element-wrapper">
-                    <input type="text" id="name" name="name" required>
-                    <label for="name">First Name:</label>
-                </div>
-                <div class="element-wrapper">
-                    <input type="text" id="lastName" name="lastName" required>
-                    <label for="lastName">Last Name:</label>
-                </div>
-                <div class="element-wrapper">
-                    <input type="email" id="email" name="email" required>
-                    <label for="email">Email:</label>
-                </div>
-                <div class="element-wrapper">
-                    <input type="text" id="phone" name="phone" required>
-                    <label for="phone">Phone:</label>
-                </div>
-                <div class="element-wrapper with--checkbox">
-                    <label class="checkbox path">
-                        <input type="checkbox">
-                        <svg viewBox="0 0 21 21">
-                            <path
-                                    d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186">
-                            </path>
-                        </svg>
-                        &nbsp; Request Info
-                    </label>
-                </div>
-                <div class="element-wrapper with--checkbox">
-                    <label class="checkbox path">
-                        <input type="checkbox">
-                        <svg viewBox="0 0 21 21">
-                            <path
-                                    d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186">
-                            </path>
-                        </svg>
-                        &nbsp; Schedule Showing
-                    </label>
-                </div>
-                <div class="element-wrapper with--checkbox">
-                    <label class="checkbox path" id="clickCustomMessage">
-                        <input type="checkbox" id="sendCustomMessage">
-                        <svg viewBox="0 0 21 21">
-                            <path
-                                    d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186">
-                            </path>
-                        </svg>
-                        &nbsp; Custom Message
-                    </label>
-                </div>
-                <div class="element-wrapper" id="customMessageContainer">
-                    <textarea id="contactCustomMessage" class="form__field" rows="6"></textarea>
-                    <label for="contactCustomMessage" class="form__label">Your Message</label>
-                </div>
-            </div>
-            <div class="element-wrapper flex-centered">
-                <button class="contact-btn--send btn-cta">Send</button>
-            </div>
-            <div class="mat-form--footer">
-                <a href="tel:555-555-55-5">
-                    <i class="fa fa-building"></i>&nbsp;
-                    See property website
-                </a>
-            </div>
-        </div>
+            <ul class="header__links">
+                <li>
+                    <a href="http://cardo.idxbroker.com/idx/search" class="header__link link"><i class="fa fa-search"></i> Search
+                        <div></div></a>
+                </li>
+                <li>
+                    <a href="http://cardo.idxbroker.com/idx/map/mapsearch" class="header__link link"><i class="fa fa-map-marker"></i> Map Search
+                        <div></div></a>
+                </li>
+                <li>
+                    <a href="http://cardo.tech/contact.html" class=" header__link link"><i class="fa fa-envelope"></i> Contact Us
+                        <div></div></a>
+                </li>
 
-    </div>
-    <div class="sm-contact-bar">
-        <a href="#" class="">
-            <i class="fa fa-phone"></i>
-        </a>
-        <span class="contact-mail">
+                <li>
+                    <a href="tel:412-444-5181" class="header__link link"><i class="fa fa-phone"></i> 412-444-5181
+                        <div></div></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- Header with full-height image -->
+    <div class="mortgageCalcContainer">
+        <div class="bgimg-1 w3-display-container w3-grayscale-min" id="idxStart"></div>
+        <div id="idxStop"></div>
+
+        <div class="detailsWrapper--right">
+
+            <div class="mat-form">
+                <div class="mat-form--header"><a href="tel:412-444-5181"><i class="fa fa-phone"></i>&nbsp;
+                    412-444-5181
+                </a></div>
+                <div class="mat-form--body">
+                    <div class="element-wrapper"><input type="text" name="name" id="cfc_name" required=""><label for="name">First
+                        Name:</label></div>
+                    <div class="element-wrapper"><input type="text" name="last_name" id="cfc_last_name" required=""><label for="lastName">Last
+                        Name:</label></div>
+                    <div class="element-wrapper"><input type="email" name="email" id="cfc_email" required=""><label
+                            for="email">Email:</label></div>
+                    <div class="element-wrapper"><input type="text" name="phone" id="cfc_phone" required=""><label
+                            for="phone">Phone:</label></div>
+                    <div class="element-wrapper with--checkbox">
+                        <label class="checkbox path">
+                            <input type="checkbox" id="cfc_request_info">
+                            <svg viewBox="0 0 21 21">
+                                <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                            </svg>
+                            &nbsp; Request Info
+                        </label>
+                    </div>
+                    <div class="element-wrapper with--checkbox">
+                        <label class="checkbox path" id="clickCustomMessage">
+                            <input type="checkbox" id="sendCustomMessage">
+                            <svg viewBox="0 0 21 21">
+                                <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
+                            </svg>
+                            &nbsp; Custom Message
+                        </label>
+                    </div>
+                    <div class="element-wrapper" id="customMessageContainer">
+                        <textarea id="contactCustomMessage" class="form__field" rows="6"></textarea>
+                        <label for="contactCustomMessage" class="form__label">Your Message</label>
+                    </div>
+                </div>
+                <div class="element-wrapper flex-centered">
+                    <button id="sendContactForm" class="contact-btn--send btn-cta btn">Send</button>
+                </div>
+                <div class="mat-form--footer">
+                    <a href="tel:412-444-5181">
+                        <i class="fa fa-building"></i>&nbsp;
+                        Fifth & Grant
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="sm-contact-bar">
+            <a href="tel:412-444-5181" class="">
+                <i class="fa fa-phone"></i>
+            </a>
+            <span class="contact-mail">
                 <i class="fa fa-envelope"></i>
             </span>
+        </div>
     </div>
 </div>
 <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcardo.github.io/mcidx/idxMain.js"></script>
 <script src="https://maxcardo.github.io/mcidx/assets/js/waves.min.js"></script>
 
 <script>
     $(document).ready(function () {
 
-        $('.contact-mail').on('click', function () {
-            if ($('.detailsWrapper--right').hasClass('open')) {
-                $('.detailsWrapper--right').removeClass('open');
-            } else {
-                $('.detailsWrapper--right').addClass('open');
-            }
-        });
-
-        /*CHECKBOX MSG COMPONENT*/
-        $("#clickCustomMessage").on('click', function () {
-            var isChecked = idx("#sendCustomMessage").is(":checked");
-            if (isChecked) {
-                $('#customMessageContainer').addClass('open');
-            } else {
-                $('#customMessageContainer').removeClass('open');
-            }
-        });
-        /*END OF CHECKBOX MSG COMPONENT*/
-
         $('#IDX-saveSearch, .IDX-newSearch, .IDX-modifySearch, #IDX-refineSearchFormToggle, #IDX-resultsRefineSubmit, .IDX-btn--map-toggle')
             .addClass('btn');
+
+
+        const mobileMenuResults = '<div class="resultsMobileNav"><div class="resultsBurgerBtn"><span></span></div></div>';
+        $(mobileMenuResults).insertBefore("#IDX-resultsTopActions");
+
+        $(".resultsBurgerBtn").on("click", function() {
+            console.log("wtf not owrking!");
+            if ($("#IDX-resultsTopActions").hasClass("open")) {
+                $("#IDX-resultsTopActions").removeClass("open");
+            } else {
+                $("#IDX-resultsTopActions").addClass("open");
+            }
+        });
+
 
         Waves.init();
         Waves.attach('.btn');
 
     });
 </script>
-
-<script src="https://maxcardo.github.io/mcidx/main.js"></script>
 </body>
 
 </html>
