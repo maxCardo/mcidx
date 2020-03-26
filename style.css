@@ -1955,6 +1955,7 @@ div.flex-grow {
   background: #fff !important;
   font-size: 1.35em;
   padding: 25px;
+  margin-bottom: 15px;
 }
 #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well li, #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well .IDX-row {
   margin-bottom: 10px;
