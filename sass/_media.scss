@@ -20,6 +20,10 @@
     .bgDark {
         height: 100%;
     }
+
+    .mobile-logo {
+        display: none;
+    }
 }
 
 @media only screen and (max-width:993px) {
@@ -34,10 +38,10 @@
 
         &,
         &__link,
-        &__down .container ul,
         & .container .header__logo .logo {
             display: none;
         }
+
     }
 
     .menu__toggler {

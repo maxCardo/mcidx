@@ -14,6 +14,7 @@
         max-width: 330px;
     }
 
+
     .container {
         @include flexAlignItemsCenter;
         @include justifyContentSpaceBetween;
