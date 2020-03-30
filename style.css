@@ -1245,6 +1245,7 @@ a.IDX-psudolink {
 .mortgageCalcContainer .mat-form .mat-form--body .element-wrapper input,
 .mortgageCalcContainer .mat-form .mat-form--body .element-wrapper textarea {
   padding: 15px 5px 5px 5px;
+  border: 2px solid black;
 }
 .IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer,
 .IDX-category-search .mat-form .mat-form--body .element-wrapper#customMessageContainer,
@@ -2253,6 +2254,7 @@ div.flex-grow {
   .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     width: 50%;
     padding-top: 0;
+    background: #fff;
   }
   .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent > div {
     width: 100%;
