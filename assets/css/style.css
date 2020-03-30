@@ -179,6 +179,7 @@ body {
   .testimonials__box {
     padding: 20px;
     height: fit-content;
+    border: 1px solid transparent;
     transition: all 0.5s ease-out; }
     .testimonials__box:hover {
       border: 1px solid black;
@@ -709,8 +710,8 @@ body {
   background-color: transparent;
   color: white; }
   .bgDark__btn:hover {
-    border-color: black;
-    background-color: transparent;
+    border-color: white;
+    background-color: white;
     color: black; }
 
 /* MEDIA QUERIES */
