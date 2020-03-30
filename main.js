@@ -3295,8 +3295,21 @@ $(document).ready(function () {
   if ($("#cfc_contact_form").length) {
 
 
-      let isEmailValid, isPhoneValid;
+      let isNameValid, isEmailValid, isPhoneValid;
 
+
+      $("#cfc_name").on("keyup", function() {
+          if ( $(this).val().match(/^[a-zA-Z]{3,}$/) ) {
+
+              isNameValid = true;
+              $("#cfc_name").css('border-color', 'green');
+
+          } else {
+              isNameValid = false;
+              $("#cfc_name").css('border-color', 'red');
+
+          }
+      });
 
       $("#cfc_email").on("keyup", function() {
           if ( $(this).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) ) {
@@ -3346,7 +3359,7 @@ $(document).ready(function () {
               message: message
           };
 
-          if (isEmailValid && isPhoneValid) {
+          if (isNameValid && isEmailValid && isPhoneValid) {
 
               $.ajax({
                   url: "https://rethink-dev.herokuapp.com/api/sales/web_lead",
