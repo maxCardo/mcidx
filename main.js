@@ -3299,7 +3299,7 @@ $(document).ready(function () {
 
 
       $("#cfc_name").on("keyup", function() {
-          if ( $(this).val().match(/^[a-zA-Z]{3,}$/) ) {
+          if ( $(this).val().match(/^[a-zA-Z ]{3,}$/) ) {
 
               isNameValid = true;
               $("#cfc_name").css('border-color', 'green');
