@@ -151,6 +151,20 @@
             $('#IDX-saveSearch, .IDX-newSearch, .IDX-modifySearch, #IDX-refineSearchFormToggle, #IDX-resultsRefineSubmit, .IDX-btn--map-toggle')
                 .addClass('btn');
 
+            
+            const mobileMenuResults = '<div class="resultsMobileNav"><div class="resultsBurgerBtn"><span></span></div></div>';
+            $(mobileMenuResults).insertBefore("#IDX-resultsTopActions");
+
+            $(".resultsBurgerBtn").on("click", function() {
+              console.log("wtf not owrking!");
+              if ($("#IDX-resultsTopActions").hasClass("open")) {
+                $("#IDX-resultsTopActions").removeClass("open");
+              } else {
+                $("#IDX-resultsTopActions").addClass("open");
+              }
+            });
+
+
             Waves.init();
             Waves.attach('.btn');
 

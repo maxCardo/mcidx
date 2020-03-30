@@ -3300,6 +3300,58 @@ idx(document).ready(function() {
   });
 
   if (idx(".mat-form").length) {
+
+    let isNameValid, isLastNameValid, isEmailValid, isPhoneValid;
+
+
+    idx("#cfc_name").on("keyup", function() {
+      if ( idx(this).val().match(/^[a-zA-Z]{3,16}$/) ) {
+
+        isNameValid = true;
+        idx("#cfc_name").css('border-color', 'green');
+
+      } else {
+        isNameValid = false;
+        idx("#cfc_name").css('border-color', 'red');
+
+      }
+    });
+    idx("#cfc_last_name").on("keyup", function() {
+      if ( idx(this).val().match(/^[a-zA-Z]{3,16}$/) ) {
+
+        isLastNameValid = true;
+        idx("#cfc_last_name").css('border-color', 'green');
+
+      } else {
+        isLastNameValid = false;
+        idx("#cfc_last_name").css('border-color', 'red');
+      }
+    });
+
+    idx("#cfc_email").on("keyup", function() {
+      if ( idx(this).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) ) {
+
+        isEmailValid = true;
+        idx("#cfc_email").css('border-color', 'green');
+
+      } else {
+        isEmailValid = false;
+        idx("#cfc_email").css('border-color', 'red');
+      }
+    });
+
+    idx("#cfc_phone").on("keyup", function() {
+      if ( idx(this).val().match(/^([2-9][0-9]{2}[\-]{0,1}){2}[0-9]{4}$/) ) {
+
+        isPhoneValid = true;
+        idx("#cfc_phone").css('border-color', 'green');
+
+      } else {
+        isPhoneValid = false;
+        idx("#cfc_phone").css('border-color', 'red');
+      }
+    });
+
     idx("#sendContactForm").on("click", function(event) {
       event.preventDefault();
       let name = idx("#cfc_name")
@@ -3346,9 +3398,9 @@ idx(document).ready(function() {
   
       }
 
-     
-      idx
-        .ajax({
+      if (isNameValid && isLastNameValid && isEmailValid && isPhoneValid) {
+
+        idx.ajax({
           url: "https://rethink-dev.herokuapp.com/api/sales/idx_lead",
           type: "post",
           //dataType: "json",
@@ -3362,6 +3414,9 @@ idx(document).ready(function() {
         .done(function() {
           location.reload();
         });
+
+      }
+      
     });
   }
 
