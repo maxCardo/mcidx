@@ -294,6 +294,10 @@ body {
     display: flex;
     text-align: center;
     justify-content: center; }
+    .bgDark__box ul a:hover {
+      color: black;
+      background: white;
+      border-color: white; }
 
 .contactBody {
   overflow-x: hidden;
@@ -301,6 +305,8 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center center; }
+  .contactBody input {
+    border: 2px solid transparent; }
 
 /* width */
 ::-webkit-scrollbar {

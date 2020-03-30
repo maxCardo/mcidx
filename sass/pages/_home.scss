@@ -334,6 +334,11 @@
             display: flex;
             text-align: center;
             justify-content: center;
+            a:hover {
+                color: black;
+                background: white;
+                border-color: white;
+            }
         }
     }
 }
@@ -345,6 +350,10 @@
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
+
+    input {
+        border: 2px solid transparent;
+    }
 }
 
 ////////////////////////////////////////////////////////////////////
