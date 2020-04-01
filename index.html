@@ -26,10 +26,7 @@
 
   <title>Fifth and Grant, Real Estate Services</title>
   <style>
-    .loaderHidden {
-      opacity: 0;
-      z-index: -1;
-    }
+   
     .loader {
         position: fixed;
         top: 0;
@@ -39,6 +36,10 @@
         background: white;
         z-index: 999999999;
         transition: opacity 1000ms;
+    }
+    .loader.loaderHidden {
+      opacity: 0;
+      z-index: -1;
     }
     svg.thumb {
         width: 100%;
