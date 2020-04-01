@@ -9,7 +9,7 @@ $(document).ready(function () {
           if (scroll_start > offset.top) {
               $("#header").css("background-color", "white");
               $("#header").css("top", "0");
-              $("#header").css("box-shadow", "0 2px 5px 0 rgba(0,0,0,.75)");
+              $("#header").css("box-shadow", "0 2px 5px 0 rgba(0,0,0,.35)");
               $(".link").css("color", "black");
               $(".logo").css("color", "black");
               $(".logo").css("transition", "width 200ms");
