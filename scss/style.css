@@ -1237,20 +1237,21 @@ a.IDX-psudolink {
   font-size: 14px;
   left: 4px;
 }
-.IDX-page-listing .mat-form .mat-form--body .element-wrapper input, .IDX-page-listing .mat-form .mat-form--body .element-wrapper textarea,
-.IDX-category-search .mat-form .mat-form--body .element-wrapper input,
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper input:not([type=checkbox]), .IDX-page-listing .mat-form .mat-form--body .element-wrapper textarea,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper input:not([type=checkbox]),
 .IDX-category-search .mat-form .mat-form--body .element-wrapper textarea,
-.IDX-category-map .mat-form .mat-form--body .element-wrapper input,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper input:not([type=checkbox]),
 .IDX-category-map .mat-form .mat-form--body .element-wrapper textarea,
-.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper input,
+.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper input:not([type=checkbox]),
 .mortgageCalcContainer .mat-form .mat-form--body .element-wrapper textarea {
   padding: 15px 5px 5px 5px;
+  border: 2px solid black;
 }
 .IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer,
 .IDX-category-search .mat-form .mat-form--body .element-wrapper#customMessageContainer,
 .IDX-category-map .mat-form .mat-form--body .element-wrapper#customMessageContainer,
 .mortgageCalcContainer .mat-form .mat-form--body .element-wrapper#customMessageContainer {
-  height: 0px;
+  height: 0;
   overflow: hidden;
   transition: height 200ms;
   width: 100%;

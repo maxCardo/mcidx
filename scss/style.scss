@@ -953,12 +953,12 @@ a.IDX-psudolink {
         left: 4px;
       }
 
-      input, textarea {
+      input:not([type="checkbox"]), textarea {
         padding: 15px 5px 5px 5px;
+        border: 2px solid black;
       }
-
       &#customMessageContainer {
-        height: 0px;
+        height: 0;
         overflow: hidden;
         transition: height 200ms;
         width: 100%;
