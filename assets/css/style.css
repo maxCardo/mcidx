@@ -122,7 +122,8 @@ body {
       visibility: hidden;
       opacity: 1;
       top: 0;
-      padding: 50px; }
+      padding: 50px;
+      overflow: hidden; }
       .approach__box--back .top,
       .approach__box--back .bottom {
         transition: all 0.4s ease-in;
@@ -263,15 +264,18 @@ body {
       .menu__toggler.active > span::after {
         -webkit-transform: rotate(225deg);
         transform: rotate(225deg); }
-  @media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
-    .menu__links {
-      margin-bottom: 150px; } }
-  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-    .menu__links {
-      margin-bottom: 150px; } }
-  @media only screen and (device-width: 800px) and (device-height: 1280px) and (orientation: portrait) {
-    .menu__links {
-      margin-bottom: 550px; } }
+  .menu__links {
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35); }
+    @media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+      .menu__links {
+        margin-bottom: 150px; } }
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+      .menu__links {
+        margin-bottom: 150px; } }
+    @media only screen and (device-width: 800px) and (device-height: 1280px) and (orientation: portrait) {
+      .menu__links {
+        margin-bottom: 550px; } }
 
 .valuation .container-fluid {
   padding: 0 !important; }
@@ -356,6 +360,7 @@ body {
     padding: 10px;
     color: black !important;
     position: relative;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
@@ -383,7 +388,7 @@ body {
   width: 100vw;
   position: relative;
   color: white;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.47); }
   .footer__flex {
     display: flex;
     justify-content: space-around; }
