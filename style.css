@@ -3222,6 +3222,10 @@ div.flex-grow {
     width: 45%;
     margin: 0 1% !important;
   }
+
+  .lds-ellipsis.in {
+    left: 35%;
+  }
 }
 /* END OF RESPONSIVE*/
 
