@@ -2172,18 +2172,12 @@ div.flex-grow {
 
 @media (max-width: 640px) {
   .lds-ellipsis.in {
-    left: 35%;
+    left: 42%;
   }
 
   .lds-ellipsis {
-    z-index: 10;
-    display: inline-block;
-    position: absolute;
-    top: 56%;
-    left: -100%;
-    width: 30%;
-    height: 100px;
-    transition: left 1.2s;
+    width: 78px;
+    top: 55%;
   }
 
   .IDX-wrapper-standard #IDX-detailsGalleryAction {
