@@ -2171,6 +2171,10 @@ div.flex-grow {
 }
 
 @media (max-width: 640px) {
+  .lds-ellipsis.in {
+    left: 35%;
+  }
+
   .IDX-wrapper-standard #IDX-detailsGalleryAction {
     margin: 10px 0;
   }
@@ -3221,10 +3225,6 @@ div.flex-grow {
   input.IDX-advMinMax {
     width: 45%;
     margin: 0 1% !important;
-  }
-
-  .lds-ellipsis.in {
-    left: 35%;
   }
 }
 /* END OF RESPONSIVE*/
