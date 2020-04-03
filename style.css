@@ -3134,7 +3134,7 @@ div.flex-grow {
     margin: 20px;
   }
 }
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
   #IDX-main.IDX-page-listings {
     overflow: hidden;
   }
@@ -3164,6 +3164,10 @@ div.flex-grow {
   .IDX-wrapper-standard #IDX-custom-resultsMap {
     position: relative;
     top: 10px;
+  }
+
+  .IDX-category-search #IDX-searchForm, .IDX-category-map #IDX-searchForm {
+    padding-top: 200px;
   }
 }
 @media only screen and (min-width: 767px) and (max-width: 769px) {
