@@ -3116,7 +3116,6 @@ div.flex-grow {
     height: 85vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     position: relative;
   }
 
@@ -3173,10 +3172,6 @@ div.flex-grow {
   .IDX-wrapper-standard #IDX-custom-resultsMap {
     position: relative;
     top: 10px;
-  }
-
-  .IDX-category-search #IDX-searchForm, .IDX-category-map #IDX-searchForm {
-    padding-top: 200px;
   }
 }
 @media only screen and (min-width: 767px) and (max-width: 769px) {
