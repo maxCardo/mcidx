@@ -2955,6 +2955,10 @@ div.flex-grow {
     margin: 40px 0 0 0;
     text-align: center;
   }
+
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well li, #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well .IDX-row {
+    font-size: 0.85em;
+  }
 }
 @media all and (device-width: 2560px) and (device-height: 1440px) {
   .IDX-wrapper-standard .IDX-custom-map {
@@ -2974,6 +2978,10 @@ div.flex-grow {
 
   .search-results-page .mortgageCalcContainer {
     max-height: 100vh;
+  }
+
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well li, #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well .IDX-row {
+    font-size: 1em;
   }
 }
 @media only screen and (min-device-width: 767px) and (max-device-width: 1025px) {
