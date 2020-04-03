@@ -3174,7 +3174,8 @@ div.flex-grow {
     top: 10px;
   }
 
-  .IDX-page-listingid.IDX-category-search.IDX-type-listingID .IDX-searchFormContainer {
+  .IDX-page-listingid.IDX-category-search.IDX-type-listingID .IDX-searchFormContainer,
+IDX-page-address.IDX-category-search.IDX-type-address .IDX-searchFormContainer {
     justify-content: center;
   }
 }
