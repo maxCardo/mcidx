@@ -3329,8 +3329,8 @@ $(document).ready(function () {
               $("#cfc_phone").css('border-color', 'green');
 
           } else {
-              isEmailValid = false;
-              $("#cfc_phone").css('border-color', 'red');
+                isPhoneValid = false;
+                $("#cfc_phone").css('border-color', 'red');
           }
       });
 
@@ -3366,7 +3366,7 @@ $(document).ready(function () {
             $("#cfc_phone").css('border-color', 'green');
 
         } else {
-            isEmailValid = false;
+            isPhoneValid = false;
             $("#cfc_phone").css('border-color', 'red');
         }
     });
