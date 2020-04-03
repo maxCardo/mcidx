@@ -281,7 +281,7 @@ svg.thumb {
 }
 
 .transform {
-  moz-transform-origin: 0 0 0;
+  moz-transform-origin: 50 50 0;
   transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
   -webkit-transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
   -moz-transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
