@@ -3311,7 +3311,7 @@ $(document).ready(function () {
       });
 
       $("#cfc_email").on("keyup", function() {
-          if ( $(this).val().match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) ) {
+          if ( $(this).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) ) {
 
               isEmailValid = true;
               $("#cfc_email").css('border-color', 'green');
@@ -3348,7 +3348,7 @@ $(document).ready(function () {
     });
 
     $("#cfc_email").on("blur", function() {
-        if ( $(this).val().match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+        if ( $(this).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
 
             isEmailValid = true;
             $("#cfc_email").css('border-color', 'green');
