@@ -103,10 +103,47 @@ idx(function() {
         idx('#IDX-searchForm #IDX-formSubmit').text('Save Search');
         idx('#IDX-searchForm #IDX-formSubmit').attr('data-action', 'editSavedSearch');
     }
+    idx( "#IDX-searchForm" ).on('submit', function() {
+        var el = document.getElementById('mainLoaderG');
+        document.getElementsByClassName('loader')[0].classList.remove('loaderHidden');
+        setTimeout(function() {
+            el.classList.add('transition');
+        }, 50);
+        setTimeout(function() {
+            document.getElementsByClassName('lds-ellipsis')[0].classList.add('in');
+        }, 50);
+        setTimeout(function() {
+            el.classList.remove('transform');
+        }, 800);
+        setTimeout(function() {
+            document.getElementsByClassName('logoTagLine')[0].classList.add('showIt');
+        }, 2050);
+        setTimeout(function() {
+            document.getElementsByClassName('loader')[0].classList.add('loaderHidden');
+        }, 3050);
+    });
     idx('#IDX-formSubmit').on('click', function(e) {
         e.preventDefault();
+        var el = document.getElementById('mainLoaderG');
+        document.getElementsByClassName('loader')[0].classList.remove('loaderHidden');
+        setTimeout(function() {
+            el.classList.add('transition');
+        }, 50);
+        setTimeout(function() {
+            document.getElementsByClassName('lds-ellipsis')[0].classList.add('in');
+        }, 50);
+        setTimeout(function() {
+            el.classList.remove('transform');
+        }, 800);
+        setTimeout(function() {
+            document.getElementsByClassName('logoTagLine')[0].classList.add('showIt');
+        }, 2050);
+        setTimeout(function() {
+            document.getElementsByClassName('loader')[0].classList.add('loaderHidden');
+        }, 3050);
         var dataAction = idx(this).attr('data-action');
         if (dataAction == 'search') {
+
             idxSearchForm.submit();
         } else if (dataAction == 'editSavedSearch') {
             var match = window.location.search.match(/ssid=(\d*)/);

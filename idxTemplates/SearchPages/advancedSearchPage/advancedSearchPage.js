@@ -1183,16 +1183,24 @@
                 buildCCZSelect(idxSearchForm);
                 buildQuickListInputs(idxSearchForm);
 
-                idx('#IDX-loadingScreen').dialog({
-                    autoOpen: false,
-                    resizable: false,
-                    width: 100,
-                    open: function() {
-                        idx('.ui-dialog-titlebar').hide();
-                    },
-                    hide: 'fold',
-                    modal: true
-                });
+                var el = document.getElementById('mainLoaderG');
+                document.getElementsByClassName('loader')[0].classList.remove('loaderHidden');
+                setTimeout(function() {
+                    el.classList.add('transition');
+                }, 50);
+                setTimeout(function() {
+                    document.getElementsByClassName('lds-ellipsis')[0].classList.add('in');
+                }, 50);
+                setTimeout(function() {
+                    el.classList.remove('transform');
+                }, 800);
+                setTimeout(function() {
+                    document.getElementsByClassName('logoTagLine')[0].classList.add('showIt');
+                }, 2050);
+                setTimeout(function() {
+                    document.getElementsByClassName('loader')[0].classList.add('loaderHidden');
+                }, 3050);
+
                 if (!idx.middleware) {
                     idx('#IDX-loadingScreen').dialog('open');
                 }
