@@ -35,109 +35,6 @@
   <link rel="stylesheet" href="/assets/css/style.css" />
 
   <title>Fifth and Grant, Real Estate Services</title>
-  <style>
-   
-    .loader {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background: white;
-        z-index: 999999999;
-        transition: opacity 1000ms;
-    }
-    .loader.loaderHidden {
-      opacity: 0;
-      z-index: -1;
-    }
-    svg.thumb {
-        width: 100%;
-        height: 100%;
-    }
-    .transition {
-    transition: all 1.2s ease-in-out;
-    -webkit-transition: all 1.2 ease-in-out;
-    -moz-transition: all 1.2 ease-in-out;
-    }
-    .transform {
-    transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
-    -webkit-transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
-    -moz-transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
-    }
-    .logoTagLine {
-        opacity: 0;
-        transition: opacity 250ms;
-    }
-    .showIt {
-        opacity: 1;
-    }
-    /*LOADER DOTS*/
-    .lds-ellipsis {
-        z-index: 10;
-        display: inline-block;
-        position: absolute;
-        top: 56%;
-        left: -100%;
-        width: 200px;
-        height: 100px;
-        transition: left 1.2s;
-
-    }
-    .lds-ellipsis div {
-        position: absolute;
-        top: 33px;
-        width: 13px;
-        height: 13px;
-        border-radius: 50%;
-        background: #6f9dd4;
-        animation-timing-function: cubic-bezier(0, 1, 1, 0);
-    }
-    .lds-ellipsis div:nth-child(1) {
-    left: 8px;
-    animation: lds-ellipsis1 0.6s infinite;
-    }
-    .lds-ellipsis div:nth-child(2) {
-    left: 8px;
-    animation: lds-ellipsis2 0.6s infinite;
-    }
-    .lds-ellipsis div:nth-child(3) {
-    left: 32px;
-    animation: lds-ellipsis2 0.6s infinite;
-    }
-    .lds-ellipsis div:nth-child(4) {
-    left: 56px;
-    animation: lds-ellipsis3 0.6s infinite;
-    }
-    .lds-ellipsis.in {
-        left: 48%;
-    }
-    @keyframes lds-ellipsis1 {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-    }
-    @keyframes lds-ellipsis3 {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0);
-    }
-    }
-    @keyframes lds-ellipsis2 {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(24px, 0);
-    }
-    }
-    /*LOADER DOTS*/
-</style>
 </head>
 
 
@@ -150,7 +47,7 @@
   <div class="loader">
     <svg class="thumb" width="1000" height="1000" viewBox="0,0,600,600" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ns1="http://www.inkscape.org/namespaces/inkscape" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
         <defs></defs>
-        <g transform="matrix(0.854,0,0,0.854,-51.6831,211.9308)">
+        <g class="transform" transform="matrix(0.854,0,0,0.854,-51.6831,211.9308)">
           <g transform="matrix(1.557,0,0,1.557,147.144,66.0752)">
             <svg width="109.52000000000001" height="50.184" viewBox="-4.702,24.965999999999998,109.52000000000001,50.184">
               <defs>
@@ -465,9 +362,6 @@
 <script>
   var el = document.getElementsByTagName('g')[0];
 
-  setTimeout(function() {
-  el.classList.add('transform');
-  }, 0);
   setTimeout(function() {
   el.classList.add('transition');
   }, 50);

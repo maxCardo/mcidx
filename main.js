@@ -3294,7 +3294,6 @@ $(document).ready(function () {
   /* CONTACT PAGE CONTACT FORM */
   if ($("#cfc_contact_form").length) {
 
-
       let isNameValid, isEmailValid, isPhoneValid;
 
 
@@ -3330,10 +3329,47 @@ $(document).ready(function () {
               $("#cfc_phone").css('border-color', 'green');
 
           } else {
-              isEmailValid = false;
-              $("#cfc_phone").css('border-color', 'red');
+                isPhoneValid = false;
+                $("#cfc_phone").css('border-color', 'red');
           }
       });
+
+      $("#cfc_name").on("blur", function() {
+        if ( $(this).val().match(/^[a-zA-Z ]{3,}$/) ) {
+
+            isNameValid = true;
+            $("#cfc_name").css('border-color', 'green');
+
+        } else {
+            isNameValid = false;
+            $("#cfc_name").css('border-color', 'red');
+
+        }
+    });
+
+    $("#cfc_email").on("blur", function() {
+        if ( $(this).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+
+            isEmailValid = true;
+            $("#cfc_email").css('border-color', 'green');
+
+        } else {
+            isEmailValid = false;
+            $("#cfc_email").css('border-color', 'red');
+        }
+    });
+
+    $("#cfc_phone").on("blur", function() {
+        if ( $(this).val().match(/^([2-9][0-9]{2}[\-]{0,1}){2}[0-9]{4}$/) ) {
+
+            isPhoneValid = true;
+            $("#cfc_phone").css('border-color', 'green');
+
+        } else {
+            isPhoneValid = false;
+            $("#cfc_phone").css('border-color', 'red');
+        }
+    });
 
       $("#submitContactForm").on("click", function (event) {
           event.preventDefault();
@@ -3368,7 +3404,7 @@ $(document).ready(function () {
                   data: JSON.stringify(data)
               })
                   .done(function() {
-                      window.location.replace("http://cardo.tech");
+                      window.location.replace("https://fifthgrant.com");
                   });
 
           }
