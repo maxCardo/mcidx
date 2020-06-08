@@ -126,6 +126,17 @@
         Waves.init();
         Waves.attach('.btn');
 
+        if ($('.bushafSlider')) {
+            $('.bushafSlider').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true
+            });
+        }
+
     });
 </script>
 </body>
