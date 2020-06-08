@@ -1036,7 +1036,7 @@ a.IDX-psudolink {
 .IDX-page-listing #IDX-detailsHead {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px 0 0 0;
+  margin: 76px 0 0 0;
   justify-content: space-between;
   position: relative;
   width: 100%;
@@ -1194,6 +1194,10 @@ a.IDX-psudolink {
   line-height: 1.65;
   background: transparent;
   box-shadow: none;
+}
+
+#IDX-detailsShowcaseSlides {
+  padding: 0 !important;
 }
 
 .IDX-page-listing #IDX-primaryPhoto .IDX-arrow,
@@ -1467,7 +1471,7 @@ a.IDX-psudolink {
 }
 
 .IDX-page-listing .detailsWrapper--right {
-  padding: 20px 15px 18px 5px;
+  padding: 76px 15px 18px 5px;
   width: 25%;
 }
 
@@ -2806,7 +2810,7 @@ div.flex-grow {
   }
 
   .IDX-page-listing #IDX-detailsMainInfo {
-    margin: 0 20px 10px 40px;
+    margin: 0 auto 10px auto;
   }
 
   .IDX-page-listing #IDX-details-row-content {
@@ -2839,7 +2843,7 @@ div.flex-grow {
 }
 @media (min-width: 1359px) {
   .IDX-page-listing #IDX-detailsMediaContaner--custom {
-    align-self: center;
+    align-self: baseline;
     padding-bottom: 40px;
   }
 
@@ -2865,6 +2869,11 @@ div.flex-grow {
 
   .IDX-page-listing .disclaimer-container {
     padding: 30px 70px;
+  }
+
+  .detailsWrapper--right .mat-form {
+    margin: 0;
+    max-width: unset;
   }
 }
 @media (min-width: 1299px) and (max-width: 1580px) {
