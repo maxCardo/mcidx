@@ -2940,6 +2940,15 @@ div.flex-grow {
   }
 }
 @media (min-width: 1299px) and (max-width: 1580px) {
+  .IDX-page-listing .detailsWrapper--right {
+    padding: 10px 15px 18px 5px;
+    width: 25%;
+  }
+
+  .IDX-page-listing .IDX-similar-listings--item {
+    margin-bottom: 22px;
+  }
+
   .IDX-page-listing #IDX-detailsMediaContaner--custom {
     width: 64%;
   }
