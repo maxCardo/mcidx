@@ -3027,6 +3027,14 @@ div.flex-grow {
     padding: 66px 15px 18px 5px;
     width: 25%;
   }
+
+  .IDX-page-listing .IDX-similar-listings--item {
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.16), 0 0 200px 1px rgba(255, 255, 255, 0.15);
+    position: relative;
+    top: 0;
+    transition: top 200ms, box-shadow 200ms;
+    margin-bottom: 40px;
+  }
 }
 @media (min-width: 1899px) {
   .IDX-page-listing #IDX-detailsMediaContaner--custom {
@@ -3056,8 +3064,17 @@ div.flex-grow {
     text-align: center;
   }
 
-  #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well li, #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well .IDX-row {
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well li,
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well .IDX-row {
     font-size: 0.85em;
+  }
+
+  #IDX-detailsWrapper .slick-slide img {
+    height: 660px;
+  }
+
+  .IDX-page-listing #IDX-details-row-content {
+    min-height: 810px !important;
   }
 }
 @media all and (device-width: 2560px) and (device-height: 1440px) {
