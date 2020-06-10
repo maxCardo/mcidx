@@ -2940,6 +2940,9 @@ div.flex-grow {
   }
 }
 @media (min-width: 1299px) and (max-width: 1580px) {
+  #IDX-detailsWrapper .IDX-page-listing #IDX-detailsHead {
+    margin: 10px 0 0 0;
+  }
   #IDX-detailsWrapper .IDX-page-listing .detailsWrapper--right {
     padding: 10px 15px 18px 5px;
     width: 25%;
@@ -2956,7 +2959,7 @@ div.flex-grow {
   #IDX-detailsWrapper .IDX-page-listing #IDX-details-row-content {
     min-height: unset !important;
   }
-  #IDX-detailsWrapper #IDX-detailsWrapper .slick-slide img {
+  #IDX-detailsWrapper .slick-slide img {
     height: 464px;
   }
 
