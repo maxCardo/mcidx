@@ -2940,37 +2940,24 @@ div.flex-grow {
   }
 }
 @media (min-width: 1299px) and (max-width: 1580px) {
-  .IDX-page-listing .detailsWrapper--right {
+  #IDX-detailsWrapper .IDX-page-listing .detailsWrapper--right {
     padding: 10px 15px 18px 5px;
     width: 25%;
   }
-
-  .IDX-page-listing .IDX-similar-listings--item {
+  #IDX-detailsWrapper .IDX-page-listing .IDX-similar-listings--item {
     margin-bottom: 22px;
   }
-
-  .IDX-page-listing #IDX-detailsMediaContaner--custom {
+  #IDX-detailsWrapper .IDX-page-listing #IDX-detailsMediaContaner--custom {
     width: 64%;
   }
-
-  .IDX-page-listing #IDX-detailsMainInfo {
+  #IDX-detailsWrapper .IDX-page-listing #IDX-detailsMainInfo {
     width: 326px;
   }
-
-  .IDX-page-listing #IDX-details-row-content {
+  #IDX-detailsWrapper .IDX-page-listing #IDX-details-row-content {
     min-height: unset !important;
   }
-
-  #IDX-detailsWrapper .slick-slide img {
+  #IDX-detailsWrapper #IDX-detailsWrapper .slick-slide img {
     height: 464px;
-  }
-
-  .IDX-page-listing #IDX-primaryPhoto .IDX-arrow {
-    top: 200px;
-  }
-
-  .IDX-page-listing #IDX-detailsMediaContaner--custom {
-    width: 55%;
   }
 
   .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
