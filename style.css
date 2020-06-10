@@ -2897,7 +2897,7 @@ div.flex-grow {
   }
 
   .IDX-page-listing #IDX-details-row-content {
-    margin: 0 auto 40px auto;
+    margin: 0 auto 20px auto;
   }
 
   .IDX-page-listing #IDX-detailsHead {
@@ -2951,7 +2951,7 @@ div.flex-grow {
     margin-bottom: 22px;
   }
   .IDX-page-listing #IDX-detailsWrapper #IDX-detailsMediaContaner--custom {
-    width: 64%;
+    width: 62%;
   }
   .IDX-page-listing #IDX-detailsWrapper #IDX-detailsMainInfo {
     width: 326px;
@@ -2995,7 +2995,7 @@ div.flex-grow {
 }
 @media (min-width: 1599px) {
   .IDX-page-listing #IDX-detailsMediaContaner--custom {
-    width: 52%;
+    width: 66%;
   }
 
   .IDX-wrapper-standard #IDX-resultsContent {
@@ -3013,6 +3013,19 @@ div.flex-grow {
 
   .search-results-page .mortgageCalcContainer {
     max-height: 100vh;
+  }
+
+  .IDX-page-listing #IDX-detailsHead {
+    margin: 66px 0 0 0;
+  }
+
+  .IDX-page-listing #IDX-details-row-content {
+    margin: 0 auto 80px auto;
+  }
+
+  .IDX-page-listing .detailsWrapper--right {
+    padding: 66px 15px 18px 5px;
+    width: 25%;
   }
 }
 @media (min-width: 1899px) {
