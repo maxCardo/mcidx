@@ -3242,6 +3242,10 @@ div.flex-grow {
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  #IDX-detailsWrapper .IDX-page-listing #IDX-detailsHead {
+    margin: 20px 0 0 0;
+  }
+
   #IDX-detailsWrapper .slick-next.slick-arrow {
     right: 42px;
   }
