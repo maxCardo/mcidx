@@ -1564,6 +1564,10 @@ div.flex-grow {
   display: none;
 }
 
+.slick-dotted.slick-slider {
+  margin-bottom: 8px;
+}
+
 /*END OF NEW SLIDER*/
 /* END OF PROPERTY PAGE */
 /* LOADING SCREEN */
