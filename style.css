@@ -1536,12 +1536,12 @@ div.flex-grow {
 }
 
 .slick-prev.slick-arrow {
-  left: 24px;
+  left: 5px;
   z-index: 2;
 }
 
 .slick-next.slick-arrow {
-  right: 24px;
+  right: 32px;
 }
 
 .slick-prev:before,
@@ -1549,12 +1549,19 @@ div.flex-grow {
   color: #fff;
   font-size: 35px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.375), 1px 0px 2px rgba(0, 0, 0, 0.875);
+  background: rgba(255, 255, 255, 0.12575);
+  border-radius: 50%;
+  padding: 5PX;
 }
 
 .slick-slide img {
   display: block;
-  height: 600px;
+  height: 220px;
   width: auto;
+}
+
+.slick-dots {
+  display: none;
 }
 
 /*END OF NEW SLIDER*/
@@ -2903,6 +2910,14 @@ div.flex-grow {
   .detailsWrapper--right .mat-form {
     margin: 0;
     max-width: unset;
+  }
+
+  .slick-slide img {
+    height: 600px;
+  }
+
+  .slick-prev.slick-arrow {
+    left: 25px;
   }
 }
 @media (min-width: 1299px) and (max-width: 1580px) {
