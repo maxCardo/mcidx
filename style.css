@@ -3253,7 +3253,7 @@ div.flex-grow {
   }
 
   #IDX-detailsWrapper .slick-slide img {
-    height: 680px;
+    height: 680px !important;
   }
 
   #IDX-main.IDX-page-listings {
