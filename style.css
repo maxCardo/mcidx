@@ -2885,7 +2885,7 @@ div.flex-grow {
 @media (min-width: 1359px) {
   .IDX-page-listing #IDX-detailsMediaContaner--custom {
     align-self: baseline;
-    padding-bottom: 40px;
+    padding-bottom: 0;
   }
 
   .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
