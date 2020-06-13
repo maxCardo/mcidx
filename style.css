@@ -281,9 +281,9 @@ svg.thumb {
 }
 
 .transform {
-  -webkit-transform-origin: -100% 0%;
-  -ms-transform-origin: -100% 0%;
-  transform-origin: -100% 0%;
+  -webkit-transform-origin: -100% 50%;
+  -ms-transform-origin: -100% 50%;
+  transform-origin: -100% 50%;
   -webkit-transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
   -ms-transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
   transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
