@@ -280,15 +280,6 @@ svg.thumb {
   transition: all 1.2s ease-in-out;
 }
 
-.transform {
-  -webkit-transform-origin: -100% 25vh;
-  -ms-transform-origin: -100% 25vh;
-  transform-origin: -100% 25vh;
-  -webkit-transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
-  -ms-transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
-  transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
-}
-
 .logoTagLine {
   opacity: 0;
   transition: opacity 250ms;
