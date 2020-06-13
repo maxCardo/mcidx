@@ -55,7 +55,7 @@ svg.thumb {
 
   @media (max-width: 460px) {
     &.in {
-      left: calc(50% - 35px);
+        left: calc(50% - 35px) !important;
       align-items: center;
       justify-content: center;
       max-width: 100px;
