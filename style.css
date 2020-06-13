@@ -3209,6 +3209,11 @@ div.flex-grow {
   .IDX-category-search #IDX-searchForm, .IDX-category-map #IDX-searchForm {
     width: 95%;
     margin: 40px auto 40px auto;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .IDX-wrapper-standard .IDX-advancedWrap input.IDX-advancedRange {
