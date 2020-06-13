@@ -308,7 +308,7 @@ svg.thumb {
   transition: left 1.2s;
 }
 @media (max-width: 460px) {
-  .lds-ellipsis {
+  .lds-ellipsis.in {
     left: calc(50% - 35px);
     align-items: center;
     justify-content: center;
