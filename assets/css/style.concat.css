@@ -5322,11 +5322,6 @@ svg.thumb {
   -webkit-transition: all 1.2 ease-in-out;
   -moz-transition: all 1.2 ease-in-out; }
 
-.transform {
-  transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
-  -webkit-transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233);
-  -moz-transform: matrix(-0.668, -0.669, -0.602, 0.743, -737.944, 185.233); }
-
 .logoTagLine {
   opacity: 0;
   transition: opacity 250ms; }
