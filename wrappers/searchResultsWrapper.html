@@ -579,7 +579,7 @@
             $.ajax({
                 url : "http://localhost",
                 type: "POST",
-                dataType: "application/json",
+                contentType: 'application/json; charset=utf-8',
                 data : {
                     name: name,
                 },
