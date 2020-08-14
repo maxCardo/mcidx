@@ -574,14 +574,12 @@
 
         $("#IDX-registrationSignup #IDX-submitBtn").on('click', function() {
 
-            const name = $("IDX-firstName").val();
-
             $.ajax({
                 url : "http://localhost",
                 type: "POST",
                 contentType: 'application/json; charset=utf-8',
                 data : {
-                    name: name,
+                    event: "hapened",
                 },
                 success: function(data, textStatus, jqXHR)
                 {
