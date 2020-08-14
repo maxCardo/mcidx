@@ -573,6 +573,25 @@
         console.log(" this does");
 
         $("#IDX-registrationSignup #IDX-submitBtn").on('click', function() {
+
+            const name = $("IDX-firstName").val();
+
+            $.ajax({
+                url : "localhost",
+                type: "POST",
+                data : {
+                    name: name,
+                },
+                success: function(data, textStatus, jqXHR)
+                {
+                    //data - response from server
+                },
+                error: function (jqXHR, textStatus, errorThrown)
+                {
+                    console.log('it errored');
+                }
+            });
+
            console.log("does this works");
         });
 
