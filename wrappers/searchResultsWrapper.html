@@ -574,6 +574,8 @@
 
         $("#IDX-registrationSignup #IDX-submitBtn").on('click', function() {
 
+            const name = $("IDX-firstName").val();
+
             $.ajax({
                 url : "http://localhost",
                 type: "POST",
