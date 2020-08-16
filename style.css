@@ -2191,10 +2191,8 @@ div.flex-grow {
   border: 1px solid lightgray;
 }
 
-/* RESPONSIVE */
-#scroll-top {
-  display: none;
-}
+
+/*CLIENT AREAS*/
 
 #IDX-leadToolsBar {
   background: #fff;
@@ -2219,6 +2217,18 @@ div.flex-grow {
 #IDX-leadToolsBar .IDX-clear {
   display: none;
 }
+
+#idx-mlm-app {
+  padding-top: 86px;
+}
+
+/*CLIENT AREAS*/
+
+/* RESPONSIVE */
+#scroll-top {
+  display: none;
+}
+
 
 @media (max-width: 640px) {
   .lds-ellipsis.in {
