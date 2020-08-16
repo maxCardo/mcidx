@@ -2216,6 +2216,10 @@ div.flex-grow {
   text-decoration: none;
 }
 
+#IDX-leadToolsBar .IDX-clear {
+  display: none;
+}
+
 @media (max-width: 640px) {
   .lds-ellipsis.in {
     left: 42%;
