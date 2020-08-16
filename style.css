@@ -635,7 +635,9 @@ a.IDX-psudolink {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.17);
 }
 
-.IDX-resultsSaveProperty:hover a {
+.IDX-resultsSaveProperty:hover a,
+.IDX-resultsSaveProperty a:focus,
+.IDX-resultsSaveProperty a:hover {
     background: transparent !important;
 }
 
@@ -2411,6 +2413,22 @@ div.flex-grow {
 
 .mlm-card.mlm-card__default, .mlm-saved-property {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
+}
+
+#idx-mlm-my-account .form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 /*CLIENT AREAS*/
