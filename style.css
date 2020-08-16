@@ -2221,7 +2221,12 @@ div.flex-grow {
 #idx-mlm-app {
   padding-top: 86px;
 }
-
+.mlm-alert__info {
+  background-color: #428bca;
+}
+.mlm-button {
+  background-color: #428bca;
+}
 /*CLIENT AREAS*/
 
 /* RESPONSIVE */
