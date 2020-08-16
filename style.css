@@ -2224,8 +2224,11 @@ div.flex-grow {
 .mlm-alert__info {
   background-color: #428bca;
 }
-.idx-mlm-landing-search-button {
+#idx-mlm-landing-search-button {
   background-color: #428bca;
+}
+.mlm-bar__link {
+  color: #428bca;
 }
 /*CLIENT AREAS*/
 
