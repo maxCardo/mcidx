@@ -607,7 +607,7 @@ a.IDX-psudolink {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.17);
 }
 
-.IDX-resultsSaveProperty:hover {
+.IDX-resultsSaveProperty:hover a {
   background: transparent!important;
 }
 
