@@ -2226,6 +2226,10 @@ div.flex-grow {
 }
 #idx-mlm-landing-search-button {
   background-color: #428bca;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#idx-mlm-verify-action {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .mlm-bar__link {
   color: #428bca;
