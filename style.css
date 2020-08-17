@@ -2441,7 +2441,7 @@ div.flex-grow {
   border: 2px solid #007bff;
 }
 #IDX-registration .IDX-btn-primary,
-#idx-leadLoginCotainer .IDX-btn {
+#IDX-leadLoginContainer #IDX-loginSubmit {
     color: #fff;
     background-color: #428bca;
     width: auto;
