@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .bg-3 {
     background: #488dc8;
 }
@@ -2400,10 +2404,13 @@ div.flex-grow {
 
 #idx-mlm-landing-search-button {
     background-color: #428bca;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-#idx-mlm-verify-action {
+#idx-mlm-verify-action,
+#idx-mlm-reset-password,
+#idx-mlm-landing-search-button,
+#idx-mlm-cancelButton,
+#idx-mlm-saveButton {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
