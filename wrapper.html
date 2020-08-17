@@ -436,7 +436,10 @@
   /* Signup Page Form */
   $("#IDX-leadSignupContainer #IDX-signupFormSubmitBtn").on('click', function() {
 
-    const name = $("#IDX-firstName").val();
+    const firstName = $("#IDX-signupfirstName").val();
+    const lastName = $("#IDX-signuplastName").val();
+    const email = $("#IDX-signupemail").val();
+    const phone = $("#IDX-signupphone").val();
 
     $.ajax({
       url : "http://localhost",
@@ -444,7 +447,10 @@
       crossDomain: true,
       dataType: "json",
       data : {
-        firstName: name,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
         event: "hapened",
       },
       success: function(data, textStatus, jqXHR)
