@@ -2440,7 +2440,8 @@ div.flex-grow {
 #idx-mlm-my-account .form-control:focus {
   border: 2px solid #007bff;
 }
-#IDX-registration .IDX-btn-primary {
+#IDX-registration .IDX-btn-primary,
+#idx-leadLoginCotainer .IDX-btn-primary {
     color: #fff;
     background-color: #428bca;
     width: auto;
@@ -2449,6 +2450,10 @@ div.flex-grow {
     padding: 8px 16px;
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#IDX-leadLoginContainer {
+    padding-top: 120px;
 }
 /*CLIENT AREAS*/
 
