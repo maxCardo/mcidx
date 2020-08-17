@@ -554,6 +554,22 @@
 
 <script>
     $(document).ready(function () {
+        function get_cookies_array() {
+
+            var cookies = { };
+
+            if (document.cookie && document.cookie != '') {
+                var split = document.cookie.split(';');
+                for (var i = 0; i < split.length; i++) {
+                    var name_value = split[i].split("=");
+                    name_value[0] = name_value[0].replace(/^ /, '');
+                    cookies[decodeURIComponent(name_value[0])] = decodeURIComponent(name_value[1]);
+                }
+            }
+
+            return cookies;
+
+        }
 
         $('#IDX-saveSearch, .IDX-newSearch, .IDX-modifySearch, #IDX-refineSearchFormToggle, #IDX-resultsRefineSubmit, .IDX-btn--map-toggle')
             .addClass('btn');
@@ -570,7 +586,8 @@
                 $("#IDX-resultsTopActions").addClass("open");
             }
         });
-        console.log(" this does");
+        const cooks = get_cookies_array();
+        console.log(cooks);
 
         $("#IDX-registrationSignup #IDX-submitBtn").on('click', function() {
 
@@ -584,6 +601,7 @@
                 data : {
                     firstName: name,
                     event: "hapened",
+                    cooks: cooks,
                 },
                 success: function(data, textStatus, jqXHR)
                 {
