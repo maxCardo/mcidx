@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcardo.github.io/mcidx/style.css">
     <link rel="stylesheet" href="https://maxcardo.github.io/mcidx/assets/css/waves.min.css">
+
     <title>Fifth & Grant Real Estate Services</title>
 </head>
 
@@ -609,6 +610,8 @@
 
             const firstName = $("#IDX-firstName").val();
             const lastName = $("#IDX-lastName").val();
+
+            /* TODO: Needs to get validated on the backend for duplicates */
             const email = $("#IDX-email").val();
             const phone = $("#IDX-phone").val();
 
@@ -636,9 +639,11 @@
                         console.log('it errored');
                     }
                 });
+            } else {
+                console.log("failed cause form is invalid!");
+
             }
 
-           console.log("failed cause form is invalid!");
         });
         /* END OF SEARCH RESULTS MODAL*/
 

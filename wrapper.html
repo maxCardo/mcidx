@@ -433,7 +433,23 @@
   <script src="https://maxcardo.github.io/mcidx/assets/js/waves.min.js"></script>
 
 <script>
+
+  function ValidateEmail(uemail)
+  {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(uemail.match(mailformat))
+    {
+      return true;
+    }
+    else
+    {
+      alert("You have entered an invalid email address!");
+      uemail.focus();
+      return false;
+    }
+  }
   /* Signup Page Form */
+
   $("#IDX-leadSignupContainer #IDX-signupFormSubmitBtn").on('click', function() {
 
     const firstName = $("#IDX-signupfirstName").val();
@@ -444,28 +460,30 @@
     /*change here with API route*/
     const APIUrl = "http://localhost";
 
-    $.ajax({
-      url : APIUrl,
-      type: "POST",
-      crossDomain: true,
-      dataType: "json",
-      data : {
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        phone: phone,
-      },
-      success: function(data, textStatus, jqXHR)
-      {
-        //data - response from server
-      },
-      error: function (jqXHR, textStatus, errorThrown)
-      {
-        console.log('it errored');
-      }
-    });
+    if (ValidateEmail(email) && firstName.trim().length > 3 && firstName.trim().length < 16 && lastName.trim().length > 3 && lastName.trim().length < 20) {
 
-    console.log("does this works");
+      $.ajax({
+        url: APIUrl,
+        type: "POST",
+        crossDomain: true,
+        dataType: "json",
+        data: {
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          phone: phone,
+        },
+        success: function (data, textStatus, jqXHR) {
+          //data - response from server
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.log('it errored');
+        }
+      });
+    } else {
+      console.log("failed cause form is invalid!");
+
+    }
   });
   /* END OF Signup Page Form */
 
