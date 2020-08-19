@@ -147,7 +147,16 @@
         };
 
 
-        alert($.urlParam('redirected'));
+        const recomendation = $.urlParam('redirected');
+
+        if (recomendation) {
+            const userData = {
+                name: 'wook',
+                response: 'shet',
+                somethingElse: 'shaize',
+            };
+            alert(userData)
+        }
 
     });
 </script>
