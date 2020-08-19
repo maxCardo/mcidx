@@ -2477,6 +2477,8 @@ div.flex-grow {
 }
 .client-feedback__items {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 /*CLIENT AREAS*/
 
