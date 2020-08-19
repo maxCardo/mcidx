@@ -2473,6 +2473,7 @@ div.flex-grow {
 
 .alert.alert__client-feedback {
     position: absolute;
+    display: flex;
 }
 /*CLIENT AREAS*/
 
