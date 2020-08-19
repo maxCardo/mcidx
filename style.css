@@ -3878,13 +3878,13 @@ div.flex-grow {
 }
 @keyframes bounce-down {
     0% {
-        top: 0;
+        top: 6px;
     }
     50% {
-        top: 10px;
+        top: 16px;
     }
     100% {
-        top: 0;
+        top: 6px;
     }
 }
 
