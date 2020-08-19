@@ -2486,9 +2486,24 @@ div.flex-grow {
 .client-feedback__items .fa-thumbs-down {
     color: red;
 }
+.client-feedback__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-feedback__item h4 {
+    margin: 0;
+    align-self: center;
+}
 .client-feedback__item svg {
     width: 36px;
     height: 36px;
+}
+.client-feedback__item svg:first-child {
+    margin-right: 16px;
+}
+.client-feedback__item svg:last-child {
+    margin-left: 16px;
 }
 /*CLIENT AREAS*/
 
