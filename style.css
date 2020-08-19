@@ -1,5 +1,5 @@
-a {
-  text-decoration: none;
+a, a:hover {
+  text-decoration: none !important;
 }
 
 .bg-3 {
@@ -3164,6 +3164,9 @@ div.flex-grow {
 }
 
 @media (min-width: 1210px) {
+    .header__links {
+        margin: 0 12px 0 0;
+    }
     .IDX-page-listing .IDX-description-container {
         margin-right: 20px;
     }
