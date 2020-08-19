@@ -2480,6 +2480,16 @@ div.flex-grow {
     flex-direction: row;
     justify-content: space-between;
 }
+.client-feedback__items .fa-thumbs-up {
+    color: green;
+}
+.client-feedback__items .fa-thumbs-down {
+    color: red;
+}
+.client-feedback__item svg {
+    width: 36px;
+    height: 36px;
+}
 /*CLIENT AREAS*/
 
 /* RESPONSIVE */
