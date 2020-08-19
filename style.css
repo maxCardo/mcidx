@@ -2885,12 +2885,12 @@ div.flex-grow {
     }
 
     .IDX-category-map .IDX-searchFormContainer, .IDX-category-search .IDX-searchFormContainer {
-        height: 74vh;
+        height: 71vh;
         width: 90vw !important;
         max-height: unset !important;
         overflow: auto;
-        align-self: center;
-        margin-top: 15px;
+        align-self: baseline;
+        margin-top: 75px;
     }
 
     .IDX-category-map #IDX-map {
