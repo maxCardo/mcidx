@@ -1492,6 +1492,10 @@ a.IDX-psudolink {
     border-color: #6f9dd4;
 }
 
+.client-feedback__item svg {
+    position: relative;
+}
+
 .client-feedback__item:hover svg {
     animation-name: bounce-up;
     animation-duration: 675ms;
