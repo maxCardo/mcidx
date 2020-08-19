@@ -589,6 +589,20 @@
         const cooks = get_cookies_array();
         console.log(cooks);
 
+        function ValidateEmail(uemail)
+        {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(uemail.value.match(mailformat))
+            {
+                return true;
+            }
+            else
+            {
+                alert("You have entered an invalid email address!");
+                uemail.focus();
+                return false;
+            }
+        }
 
         /* SEARCH RESULTS MODAL*/
         $("#IDX-registrationSignup #IDX-submitBtn").on('click', function() {
@@ -601,28 +615,30 @@
             /*change here with API route*/
             const APIUrl = "http://localhost";
 
-            $.ajax({
-                url : APIUrl,
-                type: "POST",
-                crossDomain: true,
-                dataType: "json",
-                data : {
-                    firstName: firstName,
-                    lastName: lastName,
-                    email: email,
-                    phone: phone,
-                },
-                success: function(data, textStatus, jqXHR)
-                {
-                    //data - response from server
-                },
-                error: function (jqXHR, textStatus, errorThrown)
-                {
-                    console.log('it errored');
-                }
-            });
+            if (ValidateEmail(email) && firstName.trim().length > 3 && firstName.trim().length < 16 && lastName.trim().length > 3 && lastName.trim().length < 20) {
+                $.ajax({
+                    url : APIUrl,
+                    type: "POST",
+                    crossDomain: true,
+                    dataType: "json",
+                    data : {
+                        firstName: firstName,
+                        lastName: lastName,
+                        email: email,
+                        phone: phone,
+                    },
+                    success: function(data, textStatus, jqXHR)
+                    {
+                        //data - response from server
+                    },
+                    error: function (jqXHR, textStatus, errorThrown)
+                    {
+                        console.log('it errored');
+                    }
+                });
+            }
 
-           console.log("does this works");
+           console.log("failed cause form is invalid!");
         });
         /* END OF SEARCH RESULTS MODAL*/
 
