@@ -2509,6 +2509,7 @@ div.flex-grow {
 .client-feedback__item svg {
     width: 36px;
     height: 36px;
+    cursor: pointer;
 }
 .client-feedback__item svg:first-child {
     margin-right: 16px;
