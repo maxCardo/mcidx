@@ -1492,6 +1492,11 @@ a.IDX-psudolink {
     border-color: #6f9dd4;
 }
 
+.client-feedback__item:hover svg {
+    animation-name: bounce-up;
+    animation-duration: 675ms;
+}
+
 .IDX-page-listing #IDX-fieldsWrapper {
     padding: 20px 0 0 0;
 }
@@ -3847,5 +3852,21 @@ div.flex-grow {
 }
 
 /* END OF RESPONSIVE*/
+
+/* ANIMATIONS */
+
+/*END OF ANIMATIONS*/
+
+@keyframes bounce-up {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: -10px;
+    }
+    100% {
+        top: 0;
+    }
+}
 
 /*# sourceMappingURL=style.css.map */
