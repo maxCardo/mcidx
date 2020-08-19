@@ -1488,6 +1488,10 @@ a.IDX-psudolink {
     top: 4px;
 }
 
+.mat-form--body input:focus {
+    border-color: #6f9dd4;
+}
+
 .IDX-page-listing #IDX-fieldsWrapper {
     padding: 20px 0 0 0;
 }
