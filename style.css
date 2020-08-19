@@ -2474,6 +2474,8 @@ div.flex-grow {
 .alert.alert__client-feedback {
     position: absolute;
     display: flex;
+    left: 0;
+    top: 104px;
 }
 .client-feedback__items {
     display: flex;
