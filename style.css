@@ -2470,6 +2470,10 @@ div.flex-grow {
 #IDX-leadSignupContainer {
     margin-top: 120px;
 }
+
+.alert.alert__client-feedback {
+    position: absolute;
+}
 /*CLIENT AREAS*/
 
 /* RESPONSIVE */
