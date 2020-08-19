@@ -147,16 +147,28 @@
         };
 
 
-        const recomendation = $.urlParam('redirected');
-        const name = $.urlParam('name');
+        const mode = $.urlParam('mode');
+        const buyerID = $.urlParam('bid');
+        let visited, liked, disliked = null;
 
-        if (recomendation) {
+        if (mode === "recommend") {
+
             const userData = {
-                name: name,
-                response: 'shet',
-                somethingElse: 'shaize',
+                bid: buyerID,
+
             };
-            alert(userData.name)
+
+            const userFeedbackElement = '<div class="alert alert__client-feedback">' +
+                    '<h4>How do you like this property?</h4>' +
+                    '<div class="client-feedback__items">' +
+                        '<div class="client-feedback__item">' +
+                        '<input id="c2" type="checkbox" checked>' +
+                        '<label for="c2">Checkbox</label>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+
+            $("#IDX-detailsWrapper").prepend(userFeedbackElement);
         }
 
     });
