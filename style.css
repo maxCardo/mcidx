@@ -1496,8 +1496,12 @@ a.IDX-psudolink {
     position: relative;
 }
 
-.client-feedback__item:hover svg {
+.client-feedback__item:hover svg.fa-thumbs-up  {
     animation-name: bounce-up;
+    animation-duration: 675ms;
+}
+.client-feedback__item:hover svg.fa-thumbs-down  {
+    animation-name: bounce-down;
     animation-duration: 675ms;
 }
 
@@ -3867,6 +3871,17 @@ div.flex-grow {
     }
     50% {
         top: -10px;
+    }
+    100% {
+        top: 0;
+    }
+}
+@keyframes bounce-down {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 10px;
     }
     100% {
         top: 0;
