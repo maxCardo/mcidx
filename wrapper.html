@@ -441,8 +441,11 @@
     const email = $("#IDX-signupemail").val();
     const phone = $("#IDX-signupphone").val();
 
+    /*change here with API route*/
+    const APIUrl = "http://localhost";
+
     $.ajax({
-      url : "http://localhost",
+      url : APIUrl,
       type: "POST",
       crossDomain: true,
       dataType: "json",
@@ -451,7 +454,6 @@
         lastName: lastName,
         email: email,
         phone: phone,
-        event: "hapened",
       },
       success: function(data, textStatus, jqXHR)
       {

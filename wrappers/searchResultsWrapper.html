@@ -593,17 +593,24 @@
         /* SEARCH RESULTS MODAL*/
         $("#IDX-registrationSignup #IDX-submitBtn").on('click', function() {
 
-            const name = $("#IDX-firstName").val();
+            const firstName = $("#IDX-firstName").val();
+            const lastName = $("#IDX-lastName").val();
+            const email = $("#IDX-email").val();
+            const phone = $("#IDX-phone").val();
+
+            /*change here with API route*/
+            const APIUrl = "http://localhost";
 
             $.ajax({
-                url : "http://localhost",
+                url : APIUrl,
                 type: "POST",
                 crossDomain: true,
                 dataType: "json",
                 data : {
-                    firstName: name,
-                    event: "hapened",
-                    cooks: cooks,
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    phone: phone,
                 },
                 success: function(data, textStatus, jqXHR)
                 {
