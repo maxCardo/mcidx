@@ -457,8 +457,8 @@
     const email = $("#IDX-signupemail").val();
     const phone = $("#IDX-signupphone").val();
 
-    /*change here with API route*/
-    const APIUrl = "http://localhost";
+    /* change here with API route */
+    const APIUrl = "http://localhost:5000/web/newuser";
 
     if (ValidateEmail(email) && firstName.trim().length > 3 && firstName.trim().length < 16 && lastName.trim().length > 3 && lastName.trim().length < 20) {
 

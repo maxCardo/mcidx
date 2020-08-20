@@ -125,6 +125,45 @@
         $('#IDX-saveSearch, .IDX-newSearch, .IDX-modifySearch, #IDX-refineSearchFormToggle, #IDX-resultsRefineSubmit, .IDX-btn--map-toggle')
             .addClass('btn');
 
+        /* Signup Page Form */
+
+        $("#IDX-signupForm #IDX-submitBtn").on('click', function() {
+
+            const firstName = $("#IDX-firstName").val();
+            const lastName = $("#IDX-lastName").val();
+            const email = $("#IDX-email").val();
+            const phone = $("#IDX-phone").val();
+
+            /*change here with API route*/
+            const APIUrl = "http://localhost";
+
+            if (ValidateEmail(email) && firstName.trim().length > 3 && firstName.trim().length < 16 && lastName.trim().length > 3 && lastName.trim().length < 20) {
+
+                $.ajax({
+                    url: APIUrl,
+                    type: "POST",
+                    crossDomain: true,
+                    dataType: "json",
+                    data: {
+                        firstName: firstName,
+                        lastName: lastName,
+                        email: email,
+                        phone: phone,
+                    },
+                    success: function (data, textStatus, jqXHR) {
+                        //data - response from server
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log('it errored');
+                    }
+                });
+            } else {
+                console.log("failed cause form is invalid!");
+
+            }
+        });
+        /* END OF Signup Page Form */
+
         Waves.init();
         Waves.attach('.btn');
 
@@ -152,6 +191,7 @@
         const propertyID = window.location.pathname.split("/").pop();
         let visited, liked = null;
 
+        /* recomendation links code */
         if (mode === "recommend") {
             $('#IDX-detailsWrapper').addClass('recommend');
             $('#IDX-saveProperty').remove();
