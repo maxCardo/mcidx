@@ -468,12 +468,12 @@
         type: "POST",
         crossDomain: true,
         dataType: "json",
-        data: {
+        data: JSON.stringify({
           firstName: firstName,
           lastName: lastName,
           email: email,
           phone: phone,
-        },
+        }),
         success: function (data, textStatus, jqXHR) {
           //data - response from server
         },
