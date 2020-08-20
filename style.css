@@ -1498,11 +1498,11 @@ a.IDX-psudolink {
 
 .client-feedback__item:hover svg.fa-thumbs-up  {
     animation-name: bounce-up;
-    animation-duration: 675ms;
+    animation-duration: 375ms;
 }
 .client-feedback__item:hover svg.fa-thumbs-down  {
     animation-name: bounce-down;
-    animation-duration: 675ms;
+    animation-duration: 375ms;
 }
 
 .IDX-page-listing #IDX-fieldsWrapper {
