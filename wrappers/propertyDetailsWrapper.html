@@ -149,7 +149,7 @@
 
         const mode = $.urlParam('mode');
         const buyerID = $.urlParam('bid');
-        const propertyID = this.href.substring(this.href.lastIndexOf('/') + 1);
+        const propertyID = window.location.pathname.split("/").pop();
         let visited, liked = null;
 
         if (mode === "recommend") {
