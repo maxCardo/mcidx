@@ -163,7 +163,28 @@
             };
 
             /* TODO: change api url*/
-            const apiURL = 'http://localhost/5000';
+            const apiURL = 'http://localhost/5000/web/deal/';
+
+            $.ajax({
+                url : apiURL + 'view',
+                type: "POST",
+                crossDomain: true,
+                dataType: "json",
+                data : {
+                    bid: buyerID,
+                    propertyID: propertyID,
+                    viewed: true
+                },
+                success: function(data, textStatus, jqXHR)
+                {
+                    //data - response from server
+                    /* TODO: second ajax call from user story */
+                },
+                error: function (jqXHR, textStatus, errorThrown)
+                {
+                    console.log('it errored');
+                }
+            });
 
             const userFeedbackElement = '<div class="alert alert__client-feedback">' +
                     '<div class="client-feedback__items">' +
@@ -184,7 +205,7 @@
                 userData.liked = true;
 
                 $.ajax({
-                    url : apiURL,
+                    url : apiURL + 'like',
                     type: "POST",
                     crossDomain: true,
                     dataType: "json",
@@ -209,7 +230,7 @@
                 userData.liked = false;
 
                 $.ajax({
-                    url : apiURL,
+                    url : apiURL + 'like',
                     type: "POST",
                     crossDomain: true,
                     dataType: "json",
