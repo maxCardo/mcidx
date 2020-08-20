@@ -149,16 +149,21 @@
 
         const mode = $.urlParam('mode');
         const buyerID = $.urlParam('bid');
-        let visited, liked, disliked = null;
+        const propertyID = this.href.substring(this.href.lastIndexOf('/') + 1);
+        let visited, liked = null;
 
         if (mode === "recommend") {
 
             $('#IDX-saveProperty').remove();
 
-            const userData = {
+            let userData = {
                 bid: buyerID,
-
+                liked: null,
+                propertyID: propertyID
             };
+
+            /* TODO: change api url*/
+            const apiURL = 'http://localhost/5000';
 
             const userFeedbackElement = '<div class="alert alert__client-feedback">' +
                     '<div class="client-feedback__items">' +
@@ -176,7 +181,24 @@
 
 
             $('.client-feedback__item svg.fa-thumbs-up').on('click', function(){
-                alert('yes');
+                userData.liked = true;
+
+                $.ajax({
+                    url : apiURL,
+                    type: "POST",
+                    crossDomain: true,
+                    dataType: "json",
+                    data : userData,
+                    success: function(data, textStatus, jqXHR)
+                    {
+                        //data - response from server
+                    },
+                    error: function (jqXHR, textStatus, errorThrown)
+                    {
+                        console.log('it errored');
+                    }
+                });
+
                 $('.alert__client-feedback').remove();
             });
 
