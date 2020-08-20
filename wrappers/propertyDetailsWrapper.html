@@ -191,6 +191,7 @@
                     data : userData,
                     success: function(data, textStatus, jqXHR)
                     {
+                        $('.alert__client-feedback').remove();
                         //data - response from server
 
                         /* TODO: second ajax call from user story */
@@ -215,7 +216,7 @@
                     data : userData,
                     success: function(data, textStatus, jqXHR)
                     {
-                        //data - response from server
+                        $('.alert__client-feedback').remove();
                     },
                     error: function (jqXHR, textStatus, errorThrown)
                     {
@@ -223,7 +224,7 @@
                     }
                 });
 
-                $('.alert__client-feedback').remove();
+
             });
 
         }
