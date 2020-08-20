@@ -212,6 +212,7 @@
                     data : userData,
                     success: function(data, textStatus, jqXHR)
                     {
+                        $('#IDX-detailsWrapper').removeClass('recommend');
                         $('.alert__client-feedback').remove();
                         //data - response from server
 
@@ -237,6 +238,7 @@
                     data : userData,
                     success: function(data, textStatus, jqXHR)
                     {
+                        $('#IDX-detailsWrapper').removeClass('recommend');
                         $('.alert__client-feedback').remove();
                     },
                     error: function (jqXHR, textStatus, errorThrown)
