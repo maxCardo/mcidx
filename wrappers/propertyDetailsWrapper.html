@@ -181,6 +181,7 @@
 
 
             $('.client-feedback__item svg.fa-thumbs-up').on('click', function(){
+                $('#IDX-detailsWrapper').classList.add('recommend');
                 userData.liked = true;
 
                 $.ajax({

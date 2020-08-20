@@ -2814,6 +2814,11 @@ div.flex-grow {
 
 @media (max-width: 748px) {
 
+    .alert.alert__client-feedback {
+        left: calc(50% - 156px);
+        top: 68px;
+    }
+
     #IDX-leadToolsBar {
         flex-direction: row;
         flex-wrap: wrap;
@@ -3010,6 +3015,12 @@ div.flex-grow {
     .IDX-page-listing #IDX-detailsWrapper {
         position: static;
         padding: 3px 15px;
+        overflow-x: hidden;
+    }
+
+    .IDX-page-listing #IDX-detailsWrapper.recommend {
+        position: static;
+        padding: 30px 15px;
         overflow-x: hidden;
     }
 
