@@ -203,6 +203,8 @@
 
             $('.client-feedback__item svg.fa-thumbs-up').on('click', function(){
                 userData.liked = true;
+                $('#IDX-detailsWrapper').removeClass('recommend');
+
 
                 $.ajax({
                     url : (apiURL + 'like'),
@@ -229,6 +231,8 @@
 
             $('.client-feedback__item svg.fa-thumbs-down').on('click', function(){
                 userData.liked = false;
+                $('#IDX-detailsWrapper').removeClass('recommend');
+
 
                 $.ajax({
                     url : apiURL + 'like',
@@ -238,7 +242,6 @@
                     data : userData,
                     success: function(data, textStatus, jqXHR)
                     {
-                        $('#IDX-detailsWrapper').removeClass('recommend');
                         $('.alert__client-feedback').remove();
                     },
                     error: function (jqXHR, textStatus, errorThrown)
