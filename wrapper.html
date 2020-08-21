@@ -453,7 +453,7 @@
     const phone = $("#IDX-signupphone").val();
 
     /* change here with API route */
-    const APIUrl = "http://localhost:5000/api/marketPlace/web/newuser";
+    const APIUrl = "https://0cefd82cfa8b.ngrok.io/api/marketPlace/web/newuser";
 
     if (ValidateEmail(email) && firstName.trim().length > 3 && firstName.trim().length < 16 && lastName.trim().length > 3 && lastName.trim().length < 20) {
 
@@ -462,12 +462,12 @@
         type: "POST",
         crossDomain: true,
         dataType: "json",
-        data: JSON.stringify({
+        data: {
           firstName: firstName,
           lastName: lastName,
           email: email,
           phone: phone,
-        }),
+        },
         success: function (data, textStatus, jqXHR) {
           //data - response from server
         },
