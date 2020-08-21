@@ -436,19 +436,13 @@
 
 
   /* Signup Page Form */
+  /**
+   * @return {boolean}
+   */
   function ValidateEmail(uemail)
   {
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(uemail.match(mailformat))
-    {
-      return true;
-    }
-    else
-    {
-      alert("You have entered an invalid email address!");
-      uemail.focus();
-      return false;
-    }
+    return !!uemail.match(mailformat);
   }
 
   $("#IDX-leadSignupContainer #IDX-signupFormSubmitBtn").on('click', function() {
