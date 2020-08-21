@@ -2389,7 +2389,7 @@ div.flex-grow {
     bottom: 36px;
     z-index: 1000;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: unset;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
@@ -2397,6 +2397,10 @@ div.flex-grow {
     color: #222;
     padding: 20px;
     justify-content: space-between;
+    opacity: .475;
+}
+#IDX-leadToolsBar > div {
+    margin-right: 8px;
 }
 
 #IDX-leadToolsBar a {
