@@ -599,15 +599,6 @@
             return !!uemail.match(mailformat);
         }
 
-        /**
-         * @return {boolean}
-         */
-        function ValidatePhone(uphone) {
-            var phoneFormat = /\d/g;
-
-            return uphone.match(phoneFormat).length === 10;
-        }
-
         /* SEARCH RESULTS MODAL*/
         $("#IDX-registrationSignup #IDX-submitBtn").on('click', function() {
 
@@ -621,7 +612,7 @@
             /*change here with API route*/
             const APIUrl = "http://localhost:5000/api/marketPlace/web/newuser";
 
-            if (ValidateEmail(email) && ValidatePhone(phone) && firstName.trim().length > 3 && firstName.trim().length < 16 && lastName.trim().length > 3 && lastName.trim().length < 20) {
+            if (ValidateEmail(email) && firstName.trim().length > 3 && firstName.trim().length < 16 && lastName.trim().length > 3 && lastName.trim().length < 20) {
                 $.ajax({
                     url : APIUrl,
                     type: "POST",
