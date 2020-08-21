@@ -129,10 +129,10 @@
         /*Area field in property details box*/
         const areaName = $('#IDX-field-mlsareamajor .IDX-text').text().trim();
         const areaElement = '<div class="IDX-field-area IDX-field ">' +
-                '<span class="IDX-label">Area: </span>' +
+                '<span class="IDX-label">Area</span>' +
                 '<span class="IDX-text">' + areaName + '</span>' +
             '</div>';
-        $('.IDX-field-propStatus.IDX-field').before(areaElement);
+        $('.IDX-field-propStatus.IDX-field').after(areaElement);
 
         /**
          * @return {boolean}
