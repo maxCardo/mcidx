@@ -2388,7 +2388,7 @@ div.flex-grow {
     position: fixed;
     bottom: 36px;
     z-index: 1000;
-    display: flex;
+    display: flex !important;
     flex-direction: row;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
