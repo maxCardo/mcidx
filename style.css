@@ -2735,7 +2735,7 @@ div.flex-grow {
 @media (min-width: 640px) and (max-width: 1025px) {
     #IDX-leadToolsBar.open {
         max-width: 375px !important;
-        left: calc(50% - 190px);
+        left: calc(50% - 190px) !important;
     }
 }
 
