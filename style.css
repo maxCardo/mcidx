@@ -2909,7 +2909,7 @@ div.flex-grow {
     }
 
     #IDX-leadToolsBar > div {
-        margin-right: 0;
+        margin: 0 0 0 0;
     }
 
     .leaflet-top.leaflet-left {
