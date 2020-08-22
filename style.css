@@ -2732,6 +2732,15 @@ div.flex-grow {
     }
 }
 
+@media (min-width: 640px) and (max-width: 1025px) {
+    #IDX-leadToolsBar {
+        max-width: 375px;
+        left: calc(50% - 190px);
+    }
+}
+
+
+
 @media (min-width: 641px) {
     .IDX-wrapper-standard #IDX-resultsContent {
         transition: width .3s;
