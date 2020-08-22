@@ -2696,6 +2696,11 @@ div.flex-grow {
     text-align: center;
 }
 
+.IDX-wrapper-standard .IDX-panel-default {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
+    border-color: #ededed;
+}
+
 @media (min-width: 369px) {
     #IDX-detailsWrapper .slick-slide img {
         display: block;
