@@ -132,6 +132,10 @@
 
             theUserToolbar.prepend(userIcon);
             theUserToolbar.prepend(closeBtn);
+
+            $('#IDX-leadToolsBar svg:nth-child(2)').on('click', function() {
+                theUserToolbar.toggle('open');
+            });
         }
 
 

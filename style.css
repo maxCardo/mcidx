@@ -2390,7 +2390,6 @@ div.flex-grow {
     z-index: 1000;
     display: flex;
     flex-direction: row;
-    height: unset;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
     left: 16px;
@@ -2399,6 +2398,13 @@ div.flex-grow {
     justify-content: space-between;
     opacity: .475;
     transition: opacity 265ms;
+    width: 54px;
+    height: 54px;
+    overflow: hidden;
+}
+
+#IDX-leadToolsBar.open {
+    height: auto;
 }
 
 #IDX-leadToolsBar:hover {
