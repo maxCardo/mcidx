@@ -2386,7 +2386,7 @@ div.flex-grow {
 #IDX-leadToolsBar {
     background: #fff;
     position: fixed;
-    bottom: 36px;
+    bottom: 10px;
     z-index: 1000;
     display: flex !important;
     flex-direction: row;
@@ -2394,7 +2394,7 @@ div.flex-grow {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
     left: 16px;
     color: #222;
-    padding: 12px 12px 12px 60px;
+    padding: 12px 4px 12px 60px;
     justify-content: space-between;
     opacity: .475;
     max-width: 54px;
