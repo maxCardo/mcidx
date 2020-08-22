@@ -3974,6 +3974,9 @@ div.flex-grow {
     #IDX-resultsTopActions.IDX-topActions {
         top: 10px;
     }
+    #IDX-resultsRow .IDX-pageContainer .IDX-topActions > div {
+        height: 62px;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1240px) {
