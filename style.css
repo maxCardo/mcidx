@@ -2404,6 +2404,7 @@ div.flex-grow {
 }
 
 #IDX-leadToolsBar.open {
+    display: flex !important;
     overflow: unset;
     max-width: 80%;
 }
