@@ -2867,6 +2867,8 @@ div.flex-grow {
         bottom: 8px;
         width: 32px;
         cursor: pointer;
+        top: unset;
+        transition: bottom 225ms, top 225ms, left 225ms, right 225ms;
     }
 
 
@@ -2927,7 +2929,7 @@ div.flex-grow {
         position: relative;
     }
     #IDX-leadInfo {
-        margin-left: 6px;
+        margin-left: 6px !important;
     }
     .resultsMobileNav {
         position: relative;
