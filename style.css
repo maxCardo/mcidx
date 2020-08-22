@@ -2746,6 +2746,9 @@ div.flex-grow {
         transition: width .3s;
         z-index: 20;
     }
+    .IDX-wrapper-standard #IDX-resultsRefineSearchWrap {
+        min-width: 236px;
+    }
 }
 
 @media (min-width: 660px) {
