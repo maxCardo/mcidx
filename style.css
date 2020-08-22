@@ -2869,9 +2869,7 @@ div.flex-grow {
         cursor: pointer;
     }
 
-    #IDX-leadInfo {
-        margin-left: 6px;
-    }
+
 
     .alert.alert__client-feedback {
         left: calc(50% - 156px);
@@ -2928,7 +2926,9 @@ div.flex-grow {
         overflow: visible;
         position: relative;
     }
-
+    #IDX-leadInfo {
+        margin-left: 6px;
+    }
     .resultsMobileNav {
         position: relative;
         z-index: 10;
