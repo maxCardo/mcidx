@@ -2732,6 +2732,13 @@ div.flex-grow {
     }
 }
 
+@media (min-width: 641px) {
+    .IDX-wrapper-standard #IDX-resultsContent {
+        transition: width .3s;
+        z-index: 20;
+    }
+}
+
 @media (min-width: 660px) {
     .IDX-wrapper-standard #IDX-resultsContent {
         z-index: 5;
