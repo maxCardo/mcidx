@@ -2427,6 +2427,13 @@ div.flex-grow {
     color: #222;
 }
 
+#IDX-leadToolsBar svg:first-child {
+    position: absolute;
+    left: 16px;
+    top: 8px;
+    width: 32px;
+}
+
 #idx-mlm-app {
     padding-top: 86px;
 }
