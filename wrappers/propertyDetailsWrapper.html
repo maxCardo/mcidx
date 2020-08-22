@@ -172,7 +172,7 @@
             const phone = $("#IDX-phone").val();
 
             /*change here with API route*/
-            const APIUrl = "https://0cefd82cfa8b.ngrok.io/api/marketPlace/web/newuser";
+            const APIUrl = "http://localhost:5000/api/marketPlace/web/newuser";
 
             if (ValidateEmail(email) && firstName.trim().length > 3 && firstName.trim().length < 16 && lastName.trim().length > 3 && lastName.trim().length < 20) {
 
@@ -240,7 +240,7 @@
             };
 
             /* TODO: change api url*/
-            const apiURL = 'https://0cefd82cfa8b.ngrok.io/api/marketPlace/web/deal/';
+            const apiURL = 'http://localhost:5000/api/marketPlace/web/deal/';
 
             $.ajax({
                 url : (apiURL + 'view'),
