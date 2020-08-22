@@ -2912,6 +2912,18 @@ div.flex-grow {
         margin: 0 0 0 0;
     }
 
+    .IDX-notLoggedIn #IDX-leadLoginContainer {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .IDX-notLoggedIn #IDX-leadLoginContainer {
+        width: 100%;
+    }
+
     .leaflet-top.leaflet-left {
         z-index: 4;
     }
