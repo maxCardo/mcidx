@@ -2419,7 +2419,7 @@ div.flex-grow {
     display: none;
 }
 
-#IDX-leadToolsBar svg:first-child {
+#IDX-leadToolsBar.open svg:first-child {
     width: 10px;
     top: 2px;
     right: 4px;
@@ -2427,7 +2427,7 @@ div.flex-grow {
     color: #222;
 }
 
-#IDX-leadToolsBar svg:first-child {
+#IDX-leadToolsBar svg:nth-child(2) {
     position: absolute;
     left: 16px;
     top: 8px;
