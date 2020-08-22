@@ -2920,7 +2920,7 @@ div.flex-grow {
         justify-content: center;
     }
 
-    .IDX-notLoggedIn #IDX-leadLoginContainer {
+    .IDX-notLoggedIn #IDX-leadLoginContainer > div {
         width: 100%;
     }
 
