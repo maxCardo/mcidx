@@ -2584,7 +2584,7 @@ div.flex-grow {
 }
 
 
-@media (max-width: 640px) {
+@media (max-width: 748px) {
     .lds-ellipsis.in {
         left: 42%;
     }
@@ -2724,6 +2724,10 @@ div.flex-grow {
     #IDX-resultsActiveListings {
         margin-top: 0;
     }
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+
 }
 
 @media (min-width: 660px) {
@@ -3965,6 +3969,7 @@ div.flex-grow {
         margin: 0 1% !important;
     }
 }
+
 
 @media (min-width: 748px) and (max-width: 992px) {
     .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
