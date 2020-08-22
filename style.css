@@ -2850,6 +2850,28 @@ div.flex-grow {
 }
 
 @media (max-width: 748px) {
+    #IDX-leadToolsBar.open {
+        display: flex !important;
+        flex-direction: column;
+        overflow: unset;
+        max-width: 80%;
+        padding: 12px 12px 60px 12px;
+        max-height: unset;
+        height: unset;
+        left: 10%;
+    }
+
+    #IDX-leadToolsBar.open svg:nth-child(2) {
+        position: absolute;
+        left: calc(50% - 16px);
+        bottom: 8px;
+        width: 32px;
+        cursor: pointer;
+    }
+
+    #IDX-leadInfo {
+        margin-left: 6px;
+    }
 
     .alert.alert__client-feedback {
         left: calc(50% - 156px);
@@ -2857,11 +2879,10 @@ div.flex-grow {
     }
 
     #IDX-leadToolsBar {
-        flex-direction: row;
-        flex-wrap: wrap;
-        bottom: 66px;
+        flex-direction: column;
+        bottom: 36px;
         width: 90%;
-        left: 5%;
+        left: calc(50% - 32px);
     }
     #IDX-leadLogOutLink, #IDX-leadInfo {
         display: inline-block;
