@@ -2873,29 +2873,6 @@ div.flex-grow {
 }
 
 @media (max-width: 748px) {
-    #IDX-leadToolsBar.open {
-        display: flex !important;
-        flex-direction: column;
-        overflow: unset;
-        max-width: 80%;
-        padding: 12px 12px 60px 12px;
-        max-height: unset;
-        height: unset;
-        left: 10%;
-        background: #fff;
-    }
-
-    #IDX-leadToolsBar.open svg:nth-child(2) {
-        position: absolute;
-        left: calc(50% - 16px);
-        bottom: 8px;
-        width: 32px;
-        cursor: pointer;
-        top: unset;
-        color: #222;
-        transition: color 225ms, bottom 225ms, top 225ms, left 225ms, right 225ms;
-        color: #222;
-    }
 
     .IDX-notLoggedIn #IDX-leadLoginContainer {
         margin: 0;
@@ -3193,6 +3170,29 @@ div.flex-grow {
 
 @media (max-width: 1025px) {
 
+    #IDX-leadToolsBar.open {
+        display: flex !important;
+        flex-direction: column;
+        overflow: unset;
+        max-width: 80%;
+        padding: 12px 12px 60px 12px;
+        max-height: unset;
+        height: unset;
+        left: 10%;
+        background: #fff;
+    }
+
+    #IDX-leadToolsBar.open svg:nth-child(2) {
+        position: absolute;
+        left: calc(50% - 16px);
+        bottom: 8px;
+        width: 32px;
+        cursor: pointer;
+        top: unset;
+        color: #222;
+        transition: color 225ms, bottom 225ms, top 225ms, left 225ms, right 225ms;
+        color: #222;
+    }
 
     .alert.alert__client-feedback {
         left: calc(50% - 156px);
