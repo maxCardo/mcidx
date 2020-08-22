@@ -2395,7 +2395,7 @@ div.flex-grow {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
     left: 16px;
     color: #222;
-    padding: 20px;
+    padding: 12px 12px 12px 60px;
     justify-content: space-between;
     opacity: .475;
 }
@@ -2410,6 +2410,14 @@ div.flex-grow {
 
 #IDX-leadToolsBar .IDX-clear {
     display: none;
+}
+
+#IDX-leadToolsBar svg:first-child {
+    width: 10px;
+    top: 2px;
+    right: 4px;
+    position: absolute;
+    color: #222;
 }
 
 #idx-mlm-app {
