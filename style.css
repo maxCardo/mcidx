@@ -2871,7 +2871,9 @@ div.flex-grow {
         top: unset;
         color: #222;
         transition: color 225ms, bottom 225ms, top 225ms, left 225ms, right 225ms;
+        color: #222;
     }
+
 
 
 
@@ -2899,6 +2901,7 @@ div.flex-grow {
     }
     #IDX-leadInfo {
         width: 100%;
+        color: #222;
     }
     #IDX-leadAccountLink {
         margin: 0 0 0 0;
