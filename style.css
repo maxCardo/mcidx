@@ -2397,13 +2397,14 @@ div.flex-grow {
     padding: 12px 12px 12px 60px;
     justify-content: space-between;
     opacity: .475;
-    width: 54px;
+    max-width: 54px;
     height: 54px;
     overflow: hidden;
     transition: opacity 265ms, max-width 325ms;
 }
 
 #IDX-leadToolsBar.open {
+    overflow: unset;
     max-width: 80%;
 }
 
