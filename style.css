@@ -2859,6 +2859,7 @@ div.flex-grow {
         max-height: unset;
         height: unset;
         left: 10%;
+        background: #fff;
     }
 
     #IDX-leadToolsBar.open svg:nth-child(2) {
@@ -2883,6 +2884,11 @@ div.flex-grow {
         bottom: 36px;
         width: 90%;
         left: calc(50% - 32px);
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        border: 6px solid #FFF;
+        height: 66px;
+        transition: bottom 225ms, top 225ms, left 225ms, right 225ms, background 225ms;
     }
     #IDX-leadLogOutLink, #IDX-leadInfo {
         display: inline-block;
