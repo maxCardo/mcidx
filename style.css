@@ -2398,7 +2398,14 @@ div.flex-grow {
     padding: 12px 12px 12px 60px;
     justify-content: space-between;
     opacity: .475;
+    transition: opacity 265ms;
 }
+
+#IDX-leadToolsBar:hover {
+   opacity: 1;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.22);
+}
+
 #IDX-leadToolsBar > div {
     margin-right: 8px;
 }
