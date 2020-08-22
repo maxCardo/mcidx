@@ -3966,7 +3966,7 @@ div.flex-grow {
     }
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 748px) and (max-width: 992px) {
     .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
         top: 32px;
         padding-top: 0;
