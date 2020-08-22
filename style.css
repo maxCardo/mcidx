@@ -3976,6 +3976,15 @@ div.flex-grow {
     }
 }
 
+@media (min-width: 1025px) and (max-width: 1240px) {
+    .IDX-wrapper-standard #IDX-resultsContent {
+        top: 52px;
+    }
+    #IDX-resultsRow .IDX-pageContainer .IDX-topActions > div {
+        height: 62px;
+    }
+}
+
 /* END OF RESPONSIVE*/
 
 /* ANIMATIONS */
