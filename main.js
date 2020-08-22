@@ -3229,7 +3229,7 @@ $(document).ready(function () {
           var url = window.location.href;
           history.pushState(null, "", url);
 
-          let hrefBase = "http://cardo.idxbroker.com/idx/results/listings?";
+          let hrefBase = "http://cardo.idxbroker.com/idx/results/listings?srt=pra&";
 
           let searchTerm = $("#searchField")
               .val()
