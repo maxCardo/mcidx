@@ -2571,6 +2571,11 @@ div.flex-grow {
 .client-feedback__item svg:last-child {
     margin-left: 16px;
 }
+
+.IDX-wrapper-standard input[type=checkbox], .IDX-wrapper-standard input[type=radio] {
+    margin: 4px 12px 0;
+    line-height: normal;
+}
 /*CLIENT AREAS*/
 
 /* RESPONSIVE */
