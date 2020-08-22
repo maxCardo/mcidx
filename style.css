@@ -2883,11 +2883,11 @@ div.flex-grow {
     }
 
     #IDX-leadToolsBar {
-        opacity: 1;    
+        opacity: 1;
         flex-direction: column;
         bottom: 36px;
         width: 90%;
-        left: calc(50% - 32px);
+        left: calc(50% - 40px);
         background: rgba(0, 0, 0, 0.55);
         color: #fff;
         border: 6px solid #FFF;
