@@ -2727,7 +2727,9 @@ div.flex-grow {
 }
 
 @media (min-width: 640px) and (max-width: 768px) {
-
+    .IDX-wrapper-standard #IDX-resultsTopActions {
+        flex-wrap: wrap; !important;
+    }
 }
 
 @media (min-width: 660px) {
