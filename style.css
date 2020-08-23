@@ -2470,6 +2470,9 @@ div.flex-grow {
 #idx-mlm-saveButton {
     background-color: #428bca;
 }
+.mlm-button.mlm-button__default {
+    background-color: #f2f3f4;
+}
 
 #idx-mlm-verify-action,
 #idx-mlm-reset-password,
