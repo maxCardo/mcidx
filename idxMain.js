@@ -3433,6 +3433,13 @@ idx(document).ready(function() {
     /*END OF CHECKBOX MSG COMPONENT*/
   });
   /* END OF CONTACT FORM */
+
+  const appNameContainer = $('#idx-mlm-brand');
+
+  if (appNameContainer) {
+    appNameContainer.text('Rethink Manager')
+  }
+
 });
 
 if (idx(".menu__toggler").length && idx(".menu").length) {

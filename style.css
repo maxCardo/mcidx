@@ -2702,7 +2702,7 @@ div.flex-grow {
 }
 
 .IDX-wrapper-standard .IDX-panel-default {
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
     border-color: #ededed;
 }
 
