@@ -2616,7 +2616,7 @@ div.flex-grow {
     line-height: normal;
 }
 
-.IDX-page-myaccount #idx-mlm-reset-password {
+.IDX-page-myaccount .password-reset.row {
     margin: 0 0 40px;
     min-height: calc(100vh - 300px);
 }
