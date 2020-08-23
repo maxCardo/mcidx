@@ -2942,6 +2942,9 @@ div.flex-grow {
         padding: 10px 0 0 10px;
         width: 25%;
     }
+    .IDX-page-listing .detailsWrapper--left {
+        width: 75%;
+    }
 }
 
 @media (max-width: 748px) {
