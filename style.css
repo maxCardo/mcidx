@@ -2404,7 +2404,7 @@ div.flex-grow {
 #IDX-leadToolsBar {
     background: #fff;
     position: fixed;
-    bottom: 10px;
+    bottom: 5px;
     z-index: 1000;
     display: flex !important;
     flex-direction: row;
@@ -2412,7 +2412,7 @@ div.flex-grow {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
     left: 16px;
     color: #222;
-    padding: 12px 4px 12px 60px;
+    padding: 12px 4px 12px 51px;
     justify-content: space-between;
     opacity: .475;
     max-width: 54px;
@@ -3277,7 +3277,7 @@ div.flex-grow {
         background: rgba(0, 0, 0, 0.55);
         color: #fff;
         border: 6px solid #FFF;
-        height: 66px;
+        height: 55px;
         transition: bottom 225ms, top 225ms, left 225ms, right 225ms, background 225ms;
     }
 
@@ -4068,7 +4068,7 @@ div.flex-grow {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1239px) {
+@media (min-width: 748px) and (max-width: 1239px) {
     .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
         display: flex;
         width: 33.33%;
