@@ -4084,9 +4084,16 @@ div.flex-grow {
         width: 100%;
     }
 
-    #IDX-contentFields-core, #IDX-field-price {
+    #IDX-contentFields-core, .IDX-field-price {
         display: flex;
         flex-direction: row;
+    }
+    .IDX-field-price {
+        display: flex;
+        flex-direction: row;
+        left: 33.33%;
+        align-items: center;
+        justify-content: space-between;
     }
 }
 
