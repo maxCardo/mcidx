@@ -1095,7 +1095,7 @@ a.IDX-psudolink {
 .IDX-page-listing #IDX-detailsHead {
     display: flex;
     flex-wrap: wrap;
-    margin: 76px 0 0 0;
+    margin: 10px 0 0 0;
     justify-content: space-between;
     position: relative;
     width: 100%;
@@ -4094,6 +4094,10 @@ div.flex-grow {
         left: 33.33%;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .IDX-page-listing .detailsWrapper--left {
+        width: 70%;
     }
 }
 
