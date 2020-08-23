@@ -3454,6 +3454,7 @@ div.flex-grow {
 }
 
 @media (min-width: 1210px) {
+
     .header__links {
         margin: 0 12px 0 0;
     }
@@ -3485,6 +3486,10 @@ div.flex-grow {
     .container {
         max-width: 1140px;
         margin: 0 auto;
+    }
+    .IDX-page-listing #IDX-detailsWrapper #IDX-detailsMediaContaner--custom {
+        flex-grow: 1 !important;
+        margin-right: 16px !important;
     }
 }
 
