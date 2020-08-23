@@ -4034,13 +4034,17 @@ div.flex-grow {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .IDX-page-listing #IDX-contentFields-core {
+    .IDX-page-listing #IDX-contentFields-core,
+    .IDX-page-listing #IDX-detailsMediaContaner--custom,
+    .IDX-page-listing #IDX-detailsMainInfo {
         width: 100%;
     }
+
     #IDX-contentFields-core, #IDX-field-price {
         display: flex;
         flex-direction: row;
     }
+
 }
 
 @media (max-width: 374px) {
