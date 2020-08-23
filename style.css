@@ -671,6 +671,10 @@ a.IDX-psudolink {
     padding-top: 25px;
 }
 
+.IDX-btn {
+    overflow: hidden;
+}
+
 .IDX-wrapper-standard .IDX-btn.IDX-btn--results-refinement {
     background: #ccc !important;
 }
