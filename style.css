@@ -2469,9 +2469,6 @@ div.flex-grow {
 #idx-mlm-saveButton {
     background-color: #428bca;
 }
-.mlm-button.mlm-button__default {
-    background-color: #f2f3f4;
-}
 
 #idx-mlm-verify-action,
 #idx-mlm-reset-password,
@@ -2488,6 +2485,10 @@ div.flex-grow {
 #idx-mlm-cancelButton:hover,
 #idx-mlm-saveButton:hover {
     box-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.172), 0 1px 3px rgba(0, 0, 0, 0.24);
+}
+
+.mlm-button.mlm-button__default#idx-mlm-verify-action {
+    background-color: #f2f3f4;
 }
 
 .mlm-bar__link {
