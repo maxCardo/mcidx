@@ -2459,7 +2459,7 @@ div.flex-grow {
     position: absolute;
     left: 16px;
     top: 8px;
-    width: 32px;
+    width: 24px;
     cursor: pointer;
 }
 
@@ -3273,7 +3273,7 @@ div.flex-grow {
         flex-direction: column;
         bottom: 36px;
         width: 90%;
-        left: calc(50% - 40px);
+        left: calc(50% - 32px);
         background: rgba(0, 0, 0, 0.55);
         color: #fff;
         border: 6px solid #FFF;
