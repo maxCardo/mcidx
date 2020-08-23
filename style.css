@@ -235,6 +235,7 @@ a, a:hover {
     -ms-flex-pack: justify;
     justify-content: space-between;
     background-color: transparent;
+    width: 100%;
 }
 
 .header__links {
