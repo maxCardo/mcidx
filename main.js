@@ -3412,12 +3412,14 @@ $(document).ready(function () {
       });
   }
   /* END OF CONTACT PAGE CONTACT FORM */
+    setTimeout(funtion() {
+        const appNameContainer = $('#idx-mlm-brand');
 
-    const appNameContainer = $('#idx-mlm-brand');
+        if (appNameContainer) {
+            appNameContainer.text('Rethink Manager')
+        }
+    }, 275);
 
-    if (appNameContainer) {
-        appNameContainer.text('Rethink Manager')
-    }
 });
 
 if ($(".menu__toggler").length && $(".menu").length) {
