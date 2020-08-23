@@ -2937,6 +2937,11 @@ div.flex-grow {
     #IDX-resultsRow .IDX-pageContainer .IDX-topActions > div#IDX-resultsRefineSearchToggle a.IDX-refine-search--toggle#IDX-refineSearchFormToggle {
         line-height: 20px;
     }
+
+    .IDX-page-listing .detailsWrapper--right {
+        padding: 10px 0 0 10px;
+        width: 25%;
+    }
 }
 
 @media (max-width: 748px) {
@@ -4108,6 +4113,7 @@ div.flex-grow {
     .IDX-page-listing .detailsWrapper--left {
         width: 70%;
     }
+
 }
 
 @media (min-width: 1025px) and (max-width: 1240px) {
