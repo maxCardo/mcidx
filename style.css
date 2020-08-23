@@ -4024,7 +4024,7 @@ div.flex-grow {
         flex-direction: column;
     }
 }
-@media all and (device-width: 768px) and (device-height: 1239px) and (orientation: portrait) {
+@media all and (device-width: 768px) and (device-height: 1239px) {
     .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
         display: flex;
         width: 33.33%;
