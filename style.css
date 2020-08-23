@@ -3563,6 +3563,8 @@ div.flex-grow {
     }
     .IDX-page-listing #IDX-detailsWrapper #IDX-detailsMediaContaner--custom {
         width: 65%;
+        flex-grow: 1;
+        margin-right: 16px;
     }
 }
 
