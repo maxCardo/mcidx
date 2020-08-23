@@ -1168,6 +1168,14 @@ a.IDX-psudolink {
     line-height: 1.5;
 }
 
+.IDX-wrapper-standard .IDX-navbar {
+    margin-bottom: 16px;
+}
+
+.IDX-page-listing #IDX-detailsTopNav {
+    margin: 0 0 0 0;
+}
+
 .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-body .IDX-field-listingPrice {
     order: 2;
     border-bottom: none;
