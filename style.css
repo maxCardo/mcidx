@@ -3556,6 +3556,9 @@ div.flex-grow {
     .slick-next.slick-arrow {
         right: 32px;
     }
+    .IDX-page-listing #IDX-detailsWrapper #IDX-detailsMediaContaner--custom {
+        width: 65%;
+    }
 }
 
 @media (min-width: 1299px) and (max-width: 1580px) {
