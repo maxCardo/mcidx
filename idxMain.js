@@ -3434,11 +3434,7 @@ idx(document).ready(function() {
   });
   /* END OF CONTACT FORM */
 
-  const appNameContainer = idx('#idx-mlm-brand');
 
-  if (appNameContainer) {
-    appNameContainer.text('Rethink Manager')
-  }
 
 });
 
