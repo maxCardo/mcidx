@@ -4024,6 +4024,24 @@ div.flex-grow {
         flex-direction: column;
     }
 }
+@media all and (device-width: 768px) and (device-height: 1239px) and (orientation: portrait) {
+    .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
+        display: flex;
+        width: 33.33%;
+        flex-direction: column;
+    }
+    .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-body {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .IDX-page-listing #IDX-contentFields-core {
+        width: 100%;
+    }
+    #IDX-contentFields-core, #IDX-field-price {
+        display: flex;
+        flex-direction: row;
+    }
+}
 
 @media (max-width: 374px) {
     .IDX-page-listing .mat-form .mat-form--header,
