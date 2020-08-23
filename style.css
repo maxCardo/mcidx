@@ -2466,7 +2466,8 @@ div.flex-grow {
 .mlm-alert__info,
 #idx-mlm-verify-action,
 #idx-mlm-landing-search-button,
-#idx-mlm-saveButton {
+#idx-mlm-saveButton,
+.mlm-button__info  {
     background-color: #428bca;
 }
 
@@ -2474,7 +2475,8 @@ div.flex-grow {
 #idx-mlm-reset-password,
 #idx-mlm-landing-search-button,
 #idx-mlm-cancelButton,
-#idx-mlm-saveButton {
+#idx-mlm-saveButton,
+.mlm-button__info {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: box-shadow 225ms, color 225ms, border-shadow 225ms;
 }
@@ -2483,7 +2485,8 @@ div.flex-grow {
 #idx-mlm-reset-password:hover,
 #idx-mlm-landing-search-button:hover,
 #idx-mlm-cancelButton:hover,
-#idx-mlm-saveButton:hover {
+#idx-mlm-saveButton:hover,
+.mlm-button__info:hover {
     box-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.172), 0 1px 3px rgba(0, 0, 0, 0.24);
 }
 
