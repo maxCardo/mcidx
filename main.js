@@ -3412,7 +3412,7 @@ $(document).ready(function () {
       });
   }
   /* END OF CONTACT PAGE CONTACT FORM */
-    setTimeout(funtion() {
+    setTimeout(function () {
         const appNameContainer = $('#idx-mlm-brand');
 
         if (appNameContainer) {
