@@ -3461,6 +3461,7 @@ div.flex-grow {
 
     .IDX-page-listing .IDX-description-container {
         margin-right: 20px;
+        margin-top: 8px;
     }
 
     .IDX-page-listing #IDX-detailsMediaContaner--custom {
@@ -3521,6 +3522,7 @@ div.flex-grow {
 
     .IDX-page-listing #IDX-details-row-content {
         margin: 0 auto 20px auto;
+        min-height: unset;
     }
 
     .IDX-page-listing #IDX-detailsHead {
@@ -3713,7 +3715,8 @@ div.flex-grow {
     }
 
     .IDX-page-listing #IDX-details-row-content {
-        min-height: 810px !important;
+        min-height: unset;
+        margin-bottom: 0;
     }
 }
 
