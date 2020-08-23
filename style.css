@@ -4088,7 +4088,7 @@ div.flex-grow {
         display: flex;
         flex-direction: row;
     }
-    .IDX-field-price {
+    .IDX-page-listing #IDX-detailsMainInfo .IDX-field-price {
         display: flex;
         flex-direction: row;
         left: 33.33%;
