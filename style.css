@@ -2616,6 +2616,16 @@ div.flex-grow {
     line-height: normal;
 }
 
+.IDX-page-myaccount #idx-mlm-reset-password {
+    margin: 0 0 40px;
+    min-height: calc(100vh - 300px);
+}
+
+#idx-mlm-reset-password .panel-default hr {
+    margin: 15px 0;
+    border-top: 3px solid #428bca;
+}
+
 /*CLIENT AREAS*/
 
 /* RESPONSIVE */
