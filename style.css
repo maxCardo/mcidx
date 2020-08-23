@@ -45,7 +45,7 @@ a, a:hover {
 /* CUSTOM BTN */
 .btn {
     background: #6f9dd4 !important;
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     min-width: 70px;
     box-sizing: border-box;
     transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -56,7 +56,6 @@ a, a:hover {
     color: #FFF !important;
     overflow: hidden;
     outline: none;
-    border: transparent;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.55);
     text-decoration: none !important;
     letter-spacing: 0.125em;
@@ -64,7 +63,7 @@ a, a:hover {
 
 .btn:hover {
     background: #5088ca !important;
-    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 5px 0px rgba(0, 0, 0, 0.14), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     transition: all 0.3s ease;
     text-decoration: none !important;
 }
@@ -75,7 +74,7 @@ a, a:hover {
 
 .btn-cta {
     background: #E9D758 !important;
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     min-width: 70px;
     box-sizing: border-box;
     transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -88,7 +87,7 @@ a, a:hover {
 
 .btn-cta:hover {
     background: #e4ce34 !important;
-    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 5px 0px rgba(0, 0, 0, 0.14), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     transition: all 0.3s ease;
     text-decoration: none !important;
 }
@@ -265,7 +264,6 @@ a, a:hover {
 .header__link div {
     display: inline-block;
     position: absolute;
-    background: none repeat scroll 0 0 transparent;
     left: 50%;
     bottom: 0;
     height: 2px;
@@ -506,7 +504,7 @@ iframe {
 
 .IDX-pagination,
 #IDX-resultsRefineSubmit {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 .IDX-wrapper-standard .IDX-results-title {
@@ -530,7 +528,7 @@ iframe {
 .IDX-wrapper-standard .IDX-results--cell {
     padding: 10px 5px;
     margin-bottom: 15px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
     border-bottom: 4px solid #6f9dd4;
 }
 
@@ -556,7 +554,7 @@ iframe {
 #IDX-resultsTopActions.IDX-topActions {
     background: white;
     width: 100%;
-    margin: 0px auto 20px auto;
+    margin: 0 auto 20px auto;
     position: relative;
     top: -20px;
 }
@@ -663,7 +661,7 @@ a.IDX-psudolink {
 #IDX-results-pagination {
     display: flex;
     justify-content: center;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
@@ -768,7 +766,6 @@ a.IDX-psudolink {
 .header {
     width: 100vw;
     padding: 20px 0;
-    background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
@@ -777,8 +774,7 @@ a.IDX-psudolink {
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     background-color: white;
-    top: 0px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 2px 5px 0;
 }
 
 @media only screen and (max-width: 900px) {
@@ -832,7 +828,7 @@ a.IDX-psudolink {
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
     width: 85%;
     height: 100%;
-    padding: 0px 100px 0 50px;
+    padding: 0 100px 0 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1044,7 +1040,7 @@ a.IDX-psudolink {
 .IDX-page-listing #IDX-detailsHotActions > div {
     background: #fff;
     color: #fff;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
     padding: 0;
     transition: all 250ms;
     position: relative;
@@ -1118,7 +1114,7 @@ a.IDX-psudolink {
     bottom: -34px;
     color: black;
     text-decoration: underline;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 .IDX-page-listing #IDX-detailsMedia {
@@ -1138,7 +1134,7 @@ a.IDX-psudolink {
 }
 
 .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
     border: none;
     position: relative;
     margin-bottom: 0;
@@ -1214,7 +1210,7 @@ a.IDX-psudolink {
     display: flex;
     flex-direction: column;
     border: none;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
 }
 
 .IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer .IDX-panel-heading {
@@ -1649,7 +1645,7 @@ div.flex-grow {
 #IDX-detailsWrapper .slick-next:before {
     color: #fff;
     font-size: 25px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.375), 1px 0px 2px rgba(0, 0, 0, 0.875);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.375), 1px 0 2px rgba(0, 0, 0, 0.875);
     background: rgba(255, 255, 255, 0.12575);
     border-radius: 50%;
     padding: 5PX;
@@ -1695,11 +1691,11 @@ div.flex-grow {
 
 /* END OF LOADING SCREEN*/
 .IDX-category-map #IDX-navbar {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .IDX-category-map #IDX-mapHeader-Search {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 #IDX-mapLoading {
@@ -2309,7 +2305,7 @@ div.flex-grow {
 }
 
 #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well {
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22) !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22) !important;
     border: none;
     background: #fff !important;
     font-size: 1.35em;
@@ -2507,7 +2503,7 @@ div.flex-grow {
 }
 
 .mlm-card.mlm-card__default, .mlm-saved-property {
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
 }
 
 #idx-mlm-my-account .form-control {
@@ -2910,7 +2906,7 @@ div.flex-grow {
 
     #IDX-resultsContent > div > div:last-child {
         line-height: 1.25em;
-        padding-top: 0px;
+        padding-top: 0;
     }
 }
 
@@ -3132,7 +3128,7 @@ div.flex-grow {
     .IDX-category-search #IDX-search-property-content .IDX-control-group,
     .IDX-category-search #IDX-coreSearchFields .IDX-control-group {
         width: 100% !important;
-        padding: 0px !important;
+        padding: 0 !important;
     }
 
     .IDX-page-listing#IDX-main {
@@ -3271,7 +3267,6 @@ div.flex-grow {
         top: unset;
         color: #222;
         transition: color 225ms, bottom 225ms, top 225ms, left 225ms, right 225ms;
-        color: #222;
     }
 
     .alert.alert__client-feedback {
@@ -3550,7 +3545,7 @@ div.flex-grow {
     .slick-next:before {
         color: #fff;
         font-size: 35px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.375), 1px 0px 2px rgba(0, 0, 0, 0.875);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.375), 1px 0 2px rgba(0, 0, 0, 0.875);
         background: rgba(255, 255, 255, 0.12575);
         border-radius: 50%;
         padding: 5px;
@@ -3663,7 +3658,6 @@ div.flex-grow {
     .IDX-page-listing #IDX-details-row-content {
         margin: 0 auto 0 auto;
         min-height: unset !important;
-        margin-bottom: 0;
     }
 
     .IDX-page-listing .detailsWrapper--right {
@@ -4005,7 +3999,7 @@ div.flex-grow {
     }
 
     .IDX-page-listingid.IDX-category-search.IDX-type-listingID .IDX-searchFormContainer,
-    IDX-page-address.IDX-category-search.IDX-type-address .IDX-searchFormContainer {
+    .IDX-page-address.IDX-category-search.IDX-type-address .IDX-searchFormContainer {
         justify-content: center;
     }
 }
