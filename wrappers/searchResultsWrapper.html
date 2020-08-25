@@ -611,8 +611,8 @@
             const phone = $("#IDX-phone").val();
 
             /*change here with API route*/
-            //const APIUrl = "https://0cefd82cfa8b.ngrok.io/api/marketPlace/web/newuser";
-            const APIUrl = "http://localhost:5000/api/marketPlace/web/newuser";
+            const APIUrl = "https://36f5dbcded5d.ngrok.io/api/marketPlace/web/newuser";
+           // const APIUrl = "http://localhost:5000/api/marketPlace/web/newuser";
 
             if (ValidateEmail(email) && firstName.trim().length > 3 && firstName.trim().length < 16 && lastName.trim().length > 3 && lastName.trim().length < 20) {
                 $.ajax({
