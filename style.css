@@ -2478,9 +2478,11 @@ div.flex-grow {
 
 .mlm-property-favorite__inner .fa-stack .fa-heart {
     transition: color 225ms;
+    cursor: pointer;
 }
 .mlm-property-favorite__inner .fa-stack .fa-heart-o {
     opacity: 0;
+    cursor: pointer;
 }
 
 .mlm-alert__info,
