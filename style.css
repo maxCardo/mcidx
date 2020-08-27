@@ -2535,6 +2535,10 @@ i.fa-heart-o {
     color: #428bca;
 }
 
+.fa-edit {
+    color: #428bca;
+}
+
 .mlm-card.mlm-card__default, .mlm-saved-property {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
 }
