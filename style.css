@@ -2669,6 +2669,10 @@ i.fa-heart-o {
 
 
 @media (max-width: 748px) {
+    .IDX-page-listing .mat-form .mat-form--header a, .IDX-category-search .mat-form .mat-form--header a, .IDX-category-map .mat-form .mat-form--header a, .mortgageCalcContainer .mat-form .mat-form--header a {
+        font-size: 20px;
+    }
+
     .lds-ellipsis.in {
         left: 42%;
     }
