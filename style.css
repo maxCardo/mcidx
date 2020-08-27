@@ -2471,11 +2471,12 @@ div.flex-grow {
     position: relative;
     overflow: hidden;
 }
+
 .mlm-property-favorite__inner .fa-stack .fa-heart {
     cursor: pointer;
     transition: color 225ms;
 }
-.mlm-property-favorite__inner .fa-stack .fa-heart:nth-child(2) {
+.mlm-property-favorite__inner .fa-stack .fa-heart-o {
     opacity: 0;
 }
 
