@@ -2471,6 +2471,13 @@ div.flex-grow {
     position: relative;
     overflow: hidden;
 }
+.mlm-property-favorite__inner .fa-stack .fa-heart {
+    cursor: pointer;
+    transition: color 225ms;
+}
+.mlm-property-favorite__inner .fa-stack .fa-heart:nth-child(2) {
+    opacity: 0;
+}
 
 .mlm-alert__info,
 #idx-mlm-verify-action,
