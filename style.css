@@ -202,6 +202,11 @@ a, a:hover {
 }
 
 /* END OF CUSTOM CHECKBOX */
+
+.IDX-wrapper-standard .IDX-results--cell .IDX-results--card-content .IDX-propertyActions .IDX-propertySaved.IDX-propertySaved i.fa, .IDX-wrapper-standard .IDX-results--cell .IDX-results--card-content .IDX-propertyActions .IDX-propertySaved.IDX-removeProperty i.fa, .IDX-wrapper-standard .IDX-results--cell .IDX-results--card-content .IDX-propertyActions .IDX-propertySaved.IDX-resultsCellSaved i.fa, .IDX-wrapper-standard .IDX-results--cell .IDX-results--card-content .IDX-propertyActions .IDX-propertySaved:hover i.fa, .IDX-wrapper-standard .IDX-results--cell .IDX-results--card-content .IDX-propertyActions .IDX-removeProperty.IDX-propertySaved i.fa, .IDX-wrapper-standard .IDX-results--cell .IDX-results--card-content .IDX-propertyActions .IDX-removeProperty.IDX-removeProperty i.fa, .IDX-wrapper-standard .IDX-results--cell .IDX-results--card-content .IDX-propertyActions .IDX-removeProperty.IDX-resultsCellSaved i.fa, .IDX-wrapper-standard .IDX-results--cell .IDX-results--card-content .IDX-propertyActions .IDX-removeProperty:hover i.fa, .IDX-wrapper-standard .IDX-results--cell .IDX-results--card-content .IDX-propertyActions .IDX-saveProperty.IDX-propertySaved i.fa, .IDX-wrapper-standard .IDX-results--cell .IDX-results--card-content .IDX-propertyActions .IDX-saveProperty.IDX-removeProperty i.fa, .IDX-wrapper-standard .IDX-results--cell .IDX-results--card-content .IDX-propertyActions .IDX-saveProperty.IDX-resultsCellSaved i.fa, .IDX-wrapper-standard .IDX-results--cell .IDX-results--card-content .IDX-propertyActions .IDX-saveProperty:hover i.fa {
+    color: palevioletred;
+}
+
 /* UTILITIES */
 .flex-centered {
     display: flex;
