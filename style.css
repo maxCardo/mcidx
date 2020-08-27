@@ -2463,6 +2463,10 @@ div.flex-grow {
     padding-top: 86px;
 }
 
+#idx-mlm-app .mlm-dialog__body .mlm-button__confirm {
+    margin-bottom: 16px;
+}
+
 .mlm-alert__info,
 #idx-mlm-verify-action,
 #idx-mlm-landing-search-button,
