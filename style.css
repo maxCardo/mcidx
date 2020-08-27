@@ -2536,7 +2536,11 @@ i.fa-heart-o {
 }
 
 .fa-edit {
-    color: #428bca;
+    color: #414b51;
+}
+
+.mlm-card__body-titleText .fa {
+    display: block;
 }
 
 .mlm-card.mlm-card__default, .mlm-saved-property {
