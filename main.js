@@ -3415,6 +3415,10 @@ $(document).ready(function () {
     setTimeout(function () {
         const appNameContainer = $('#idx-mlm-brand');
 
+        if ($(".mlm-button ")) {
+            Waves.attach('.mlm-button');
+        }
+
         if (appNameContainer) {
             appNameContainer.text('Rethink Manager')
         }
