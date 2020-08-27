@@ -3419,6 +3419,10 @@ $(document).ready(function () {
             Waves.attach('.mlm-button');
         }
 
+        if ($('.fa-pencil')) {
+            $('.fa-pencil').removeClass('fa-pencil').addClass('fa-edit')
+        }
+
         if (appNameContainer) {
             appNameContainer.text('Rethink Manager')
         }
