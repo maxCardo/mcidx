@@ -2467,6 +2467,11 @@ div.flex-grow {
     margin-bottom: 16px;
 }
 
+.IDX-btn.waves-effect {
+    position: relative;
+    overflow: hidden;
+}
+
 .mlm-alert__info,
 #idx-mlm-verify-action,
 #idx-mlm-landing-search-button,
