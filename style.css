@@ -1573,7 +1573,7 @@ a.IDX-psudolink {
 }
 
 .IDX-page-listing .detailsWrapper--right {
-    padding: 76px 15px 18px 5px;
+    padding: 10px 0 0 0;
     width: 25%;
 }
 
@@ -3498,6 +3498,14 @@ i.fa-heart-o {
 
     .IDX-page-listing #IDX-detailsMainInfo {
         margin: 0 0 10px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .IDX-page-listing .alert.alert__client-feedback {
+        order: 2;
+        justify-content: space-around;
+        margin-top: 12px;
     }
 
     .IDX-page-listing #IDX-details-row-content {
