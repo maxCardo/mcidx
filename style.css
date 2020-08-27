@@ -2477,6 +2477,7 @@ div.flex-grow {
 }
 
 .mlm-property-favorite__inner .fa-stack .fa-heart {
+    color: palevioletred;
     transition: color 225ms;
     cursor: pointer;
 }
