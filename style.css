@@ -2472,8 +2472,11 @@ div.flex-grow {
     overflow: hidden;
 }
 
-.mlm-property-favorite__inner .fa-stack .fa-heart {
+.mlm-property-favorite__inner .fa-stack {
     cursor: pointer;
+}
+
+.mlm-property-favorite__inner .fa-stack .fa-heart {
     transition: color 225ms;
 }
 .mlm-property-favorite__inner .fa-stack .fa-heart-o {
