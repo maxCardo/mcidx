@@ -2799,6 +2799,11 @@ i.fa-heart-o {
     border-color: #ededed;
 }
 
+.IDX-category-search #IDX-leadToolsBar {
+    display: none;
+}
+
+
 @media (min-width: 369px) {
     #IDX-detailsWrapper .slick-slide img {
         display: block;
