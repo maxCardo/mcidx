@@ -2800,7 +2800,7 @@ i.fa-heart-o {
 }
 
 .IDX-category-search #IDX-leadToolsBar {
-    display: none;
+    display: none !important;
 }
 
 
