@@ -872,6 +872,9 @@ IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
     margin: 0;
     font-size: 1.75em;
 }
+.IDX-category-search #IDX-leadToolsBar {
+    display: none;
+}
 
 div.flex-grow {
     flex-grow:1;

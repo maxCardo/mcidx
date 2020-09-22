@@ -7,6 +7,7 @@
         {% if mlsRules.remarksPrefixText and mlsRules.remarksPrefixField %}
             {% set remarksConcat = mlsRules.remarksPrefixText ~ ' ' ~ attribute(_context, mlsRules.remarksPrefixField) ~ ' - ' ~ remarksConcat %}
         {% endif %}
+        {# CUSTOM LOADER#}
         <div class="loader">
             <svg class="thumb" width="1000" height="1000" viewBox="0,0,600,600" xmlns="http://www.w3.org/2000/svg"
                  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -369,6 +370,7 @@
                 <div></div>
             </div>
         </div>
+        {# END OF CUSTOM LOADER#}
         <script>
             var el = document.getElementsByTagName('g')[0];
 
@@ -524,13 +526,14 @@
                                             </div><!-- /.navbar-collapse -->
                                         </div><!-- /.container-fluid -->
                                     </nav>
+
                                 </div>
                             {% endblock %}
                             <div id="IDX-detailsMedia">
 
                                 <div id="IDX-detailsShowcaseSlides"
                                      style="overflow: hidden; height: auto; position: relative; padding: 8px 30px; max-width: 1620px; overflow-x: hidden; margin: 0 auto;"
-                                     class="{% if imageData.totalCount <= 1 %}IDX-hide{% endif %}">
+                                     class="{% if imageData.totalCount < 1 %}IDX-hide{% endif %}">
                                     <div class="bushafSlider" data-count="{{ imageData.totalCount }}"
                                          style="right: 0;">
                                         {% for key, img in imageData if img.url %}

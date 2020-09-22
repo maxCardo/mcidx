@@ -156,20 +156,13 @@
         $(mobileMenuResults).insertBefore("#IDX-resultsTopActions");
 
         $(".resultsBurgerBtn").on("click", function() {
-            console.log("wtf not owrking!");
+            console.log("it's ok!");
             if ($("#IDX-resultsTopActions").hasClass("open")) {
                 $("#IDX-resultsTopActions").removeClass("open");
             } else {
                 $("#IDX-resultsTopActions").addClass("open");
             }
         });
-
-        console.log('this works');
-
-        $("#IDX-signupForm #IDX-submitBtn").on('click', function() {
-            console.log('WTF');
-        });
-
 
         Waves.init();
         Waves.attach('.btn');
