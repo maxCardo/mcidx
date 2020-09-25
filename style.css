@@ -2467,7 +2467,9 @@ i.fa-heart-o {
 
 #IDX-leadToolsBar svg:nth-child(2) {
     position: absolute;
-    width: 38px;
+    left: 8px;
+    top: 2px;
+    width: 30px;
     cursor: pointer;
     padding: 8px 6px 6px 10px;
 }
