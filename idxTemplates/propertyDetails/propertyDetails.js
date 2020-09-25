@@ -315,19 +315,6 @@
             }
         });
 
-        // swipe
-        idx('#IDX-primaryPhoto a').click(function (e) {
-            e.preventDefault();
-        });
-        var primaryPhotoElement = document.getElementById('IDX-primaryPhoto');
-        var hammer = new idxHammer.Manager(primaryPhotoElement);
-        hammer.add(new idxHammer.Swipe({direction: idxHammer.DIRECTION_HORIZONTAL, velocity: 0.5}));
-        hammer.on('swipeleft', function () {
-            slideNext();
-        });
-        hammer.on('swiperight', function () {
-            slidePrev();
-        });
 
         // bankRate
         bankRateSetup();
@@ -338,228 +325,7 @@
          */
         var idxSlides = idxSlides || {};
 
-        if (!idxSlides.slideShow) {
-            idxSlides.slideShow = (function () {
-                var slideShowElement = undefined;
-                var slideShowContainer = '.IDX-carouselWrapper';
-                var slides = '.IDX-carouselThumb';
-                var prev = '.IDX-carouselLeft, #IDX-arrow-previous';
-                var next = '.IDX-carouselRight, #IDX-arrow-next';
-                var activeSlide = 'IDX-showcaseSlide-active';
-                var primaryPhotoId = 'IDX-detailsPrimaryImg'
-                var indexBoundaries = {
-                    min: undefined,
-                    max: undefined
-                };
-                var slideWidth = 65;
-                // Buffer time in ms to allow for animations to complete before next code execution.
-                var buffer = 200;
 
-                // Get a non-rounded number of visible images.
-                var getVisibleImages = function () {
-                    return slideShowElement.width() / slideWidth;
-                }
-
-                // Get a rounded-down number of images. We don't want partial images in this instance.
-                var getVisibleImagesRounded = function () {
-                    return Math.ceil(getVisibleImages());
-                }
-
-                // Determines how far we can scroll right.
-                var getMaxPosX = function () {
-                    return idx(slideShowContainer).width() - slideShowElement.width();
-                }
-
-                // Returns the CSS:right position of the carousel.
-                var position = function () {
-                    var pos = idx(slideShowContainer).css('right');
-                    return parseInt(pos.substr(0, pos.length - 2));
-                }
-
-                // calculate the minimum visible slide index.
-                var getIndexBoundaries = function () {
-                    var pos = position();
-                    // Determine if the position divides between slideWidth evenly or not.
-                    if (pos % slideWidth == 0) {
-                        indexBoundaries.min = pos / slideWidth;
-                    } else {
-                        indexBoundaries.min = ((pos - (pos % slideWidth)) / slideWidth);
-                    }
-                    indexBoundaries.max = indexBoundaries.min + getVisibleImages();
-                    return indexBoundaries;
-                }
-
-                // Replaces the thumbnail src attribute with the data-src attribute.
-                var loadSlideThumbnail = function (index) {
-                    var image = idx(slides).eq(index).children('img[data-loaded="false"]');
-                    if (image.length > 0) {
-                        image
-                            .attr('src', image.attr('data-src'))
-                            .attr('data-loaded', true);
-                    }
-                }
-
-                var removeActive = function (index, callback) {
-                    idx('.' + activeSlide).removeClass(activeSlide);
-                    if (callback) {
-                        callback();
-                    }
-                }
-
-                var setActive = function (index, callback) {
-                    idx(slides)
-                        .eq(index)
-                        .addClass(activeSlide);
-                    idx('#' + primaryPhotoId).attr('src', idx(slides).eq(index).children('img').attr('data-src'));
-                    if (callback) {
-                        callback();
-                    }
-                }
-
-                // Calculates a new position based on the selected index and current position.
-                var calcNewPosition = function (index) {
-                    var newPos, maxPosX, currentPos;
-                    newPos = {
-                        right: index * slideWidth,
-                        animate: false
-                    };
-                    maxPosX = getMaxPosX();
-                    currentPos = position();
-
-                    // Don't animate we're near the edge of our slides.
-                    if (index <= indexBoundaries.min || index >= Math.floor(indexBoundaries.max)) {
-                        newPos.animate = true;
-                    }
-                    if (newPos.right > maxPosX || currentPos > maxPosX) {
-                        // We're skipping from first image to last image.
-                        newPos.right = maxPosX;
-                    }
-
-                    if (currentPos > maxPosX) {
-                        newPos.animate = true;
-                    }
-
-                    // If we somehow fall below our minimum right position.
-                    if (newPos.right < 0) {
-                        newPos.right = 0;
-                    }
-
-                    // If newPos > maxPosX && pos > 0, don't animate it.
-                    if (newPos == maxPosX && currentPos > 0) {
-                        newPos.animate = false;
-                    }
-                    return newPos;
-                }
-
-                var animateSlide = function (index, callback) {
-                    var newPos = calcNewPosition(index);
-                    // If the newly calculated position falls within our slider boundaries.
-                    if (newPos.animate) {
-                        slideShowElement
-                            .find(slideShowContainer)
-                            .stop()
-                            .css({
-                                right: newPos.right
-                            });
-                        // Buffer to allow CSS transition to complete before we recalculate the boundaries.
-                        setTimeout(function () {
-                            indexBoundaries = getIndexBoundaries();
-                            lazyLoadImages();
-                        }, buffer)
-                    }
-                    if (callback) {
-                        callback();
-                    }
-                }
-
-                var lazyLoadImages = function () {
-                    for (var i = indexBoundaries.min; i <= Math.ceil(indexBoundaries.max); i++) {
-                        loadSlideThumbnail(i);
-                    }
-                }
-
-                var newSlide = function (index) {
-                    if (index < 0) {
-                        // Send to last slide instead.
-                        index = idx(slides).last().index();
-                    } else if (index > (idx(slides).length - 1)) {
-                        // Send to first slide.
-                        index = 0;
-                    }
-
-                    // Animate the slide.
-                    animateSlide(index, function () {
-                        removeActive(index, function () {
-                            setActive(index);
-                        });
-                    });
-                }
-
-                var setup = function () {
-                    // Set slide length.
-                    idx(slideShowContainer)
-                        .css({
-                            width: idx(slides).length * slideWidth
-                        });
-                    // Apply some CSS to override any client modifications, otherwise they could break the slider.
-                    idx(slides).children('img').slice(0, idx(slides).length).css({
-                        'box-sizing': 'border-box',
-                        'object-fit': 'cover',
-                        'max-width': slideWidth - 10
-                    });
-                    // Calc min/max visible indexes, loop through for lazy-loading.
-                    var visibleImages = getVisibleImagesRounded();
-                    for (var i = 0; i < visibleImages; i++) {
-                        loadSlideThumbnail(i);
-                    }
-                    // Set new index boundaries.
-                    indexBoundaries = getIndexBoundaries();
-                }
-
-                // Return the object literal w/ initiators.
-                return {
-                    init: function (el) {
-                        slideShowElement = el;
-                        setup();
-                        el.parent()
-                            // Previous/Next button click event handlers.
-                            .on('click', prev, function () {
-                                newSlide(el.find('.' + activeSlide).prev().index());
-                            })
-                            .on('click', next, function () {
-                                // Use activeSlide.index() + 1 here to avoid a possibility of -1.
-                                newSlide(el.find('.' + activeSlide).index() + 1);
-                            })
-                            // Individual slide click handler.
-                            .on('click', slides, function (e) {
-                                e.preventDefault();
-                                e.stopPropagation();
-                                var index = idx(this).index();
-                                if (index == indexBoundaries.min && index > 0) {
-                                    index = index - 1;
-                                }
-                                newSlide(index);
-                            });
-                        // Swipe support.
-                        var photoElement = document.getElementById(primaryPhotoId);
-                        var hammer = new idxHammer.Manager(photoElement);
-                        hammer.add(new idxHammer.Swipe({direction: idxHammer.DIRECTION_HORIZONTAL, velocity: 0.5}));
-                        hammer.on('swipeleft', function () {
-                            newSlide(el.find('.' + activeSlide).index() + 1);
-                        });
-                        hammer.on('swiperight', function () {
-                            newSlide(el.find('.' + activeSlide).prev().index());
-                        });
-                        // Resize handler.
-                        idx(window).smartresize(function () {
-                            setup();
-                            newSlide(el.find('.' + activeSlide).index());
-                        });
-                    }
-                }
-            })();
-        }
-        idxSlides.slideShow.init(idx('#IDX-detailsShowcaseSlides'));
     });
     // Close pannels on details page
     idx(document).ready(function () {
@@ -568,6 +334,18 @@
         });
         idx('.IDX-page-listing .IDX-panel-collapse-toggle').each(function () {
             this.classList.add('IDX-collapsed');
+        });
+
+        var isTablet = window.matchMedia("(min-width: 700px) and (max-width: 1250px)")
+        console.log(isTablet)
+        // the button
+        idx('.IDX-panel-collapse-toggle').on('click', function() {
+            if (isTablet) {
+                this.classList.toggle('row-expand');
+            }
+            console.log('clicked function')
+            console.log(this.classList);
+            console.log(isTablet);
         });
     });
 
