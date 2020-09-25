@@ -4153,6 +4153,10 @@ i.fa-heart-o {
 }
 
 @media (min-width: 748px) and (max-width: 1239px) {
+    .IDX-panel-collapse-toggle.IDX-collapsed +div:nth-child(2) {
+        display: block;
+    }
+
     .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
         display: flex;
         width: 33.33%;
