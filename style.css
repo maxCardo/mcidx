@@ -4230,10 +4230,11 @@ i.fa-heart-o {
     }
 }
 
-/* IFRAME SPECIFIC STYLING */
+/* IFRAME SPECIFIC STYLING .fromApp is class added when umt is present */
+
 
 .fromApp #IDX-main {
-    padding-top: 0;
+    padding-top: 0 !important;
 }
 
 .fromApp .IDX-page-listing .detailsWrapper--left {
