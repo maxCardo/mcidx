@@ -336,17 +336,33 @@
             this.classList.add('IDX-collapsed');
         });
 
-        var isTablet = window.matchMedia("(min-width: 700px) and (max-width: 1250px)")
-        console.log(isTablet)
-        // the button
-        idx('.IDX-panel-collapse-toggle').on('click', function() {
-            if (isTablet) {
-                this.classList.toggle('row-expand');
-            }
-            console.log('clicked function')
-            console.log(this.classList);
-            console.log(isTablet);
-        });
+        // var isTablet = window.matchMedia("(min-width: 700px) and (max-width: 1250px)")
+        // console.log(isTablet)
+        // // the button
+        // idx('.IDX-panel-collapse-toggle').on('click', function() {
+        //     if (isTablet) {
+        //         this.classList.toggle('row-expand');
+        //     }
+        //
+        //     idx.each(idx('.IDX-panel-collapse'), function (index, item) {
+        //         console.log(item)
+        //         console.log(item.classList.contains('IDX-in'))
+        //         if (item.classList.contains('IDX-in')) {
+        //                 if (index < 3) {
+        //                     idx('.IDX-panel-collapse')[0].classList.add('IDX-in');
+        //                     idx('.IDX-panel-collapse')[1].classList.add('IDX-in');
+        //                     idx('.IDX-panel-collapse')[2].classList.add('IDX-in');
+        //                 } else {
+        //                     idx('.IDX-panel-collapse')[3].classList.add('IDX-in');
+        //                     idx('.IDX-panel-collapse')[4].classList.add('IDX-in');
+        //                     idx('.IDX-panel-collapse')[5].classList.add('IDX-in');
+        //                 }
+        //         }
+        //     })
+        //     console.log('clicked function')
+        //     console.log(this.classList);
+        //     console.log(isTablet);
+        // });
     });
 
     function calcHeight(pixels, element, type, divide) {
