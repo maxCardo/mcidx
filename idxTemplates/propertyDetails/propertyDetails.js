@@ -381,7 +381,11 @@
 
         var source = getUrlParameter('source');
         if (source === 'fromApp') {
+            idx('body').addClass('fromApp');
             idx('.detailsWrapper--right').addClass('hidden');
+            idx('.header').addClass('hidden');
+            idx('.menu__toggler--container').addClass('hidden');
+            idx('.menu').addClass('hidden');
         }
 
         console.log(source);
