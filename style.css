@@ -2,6 +2,10 @@ a, a:hover {
     text-decoration: none !important;
 }
 
+.hidden {
+    display: none!important;
+}
+
 .bg-3 {
     background: #488dc8;
 }
