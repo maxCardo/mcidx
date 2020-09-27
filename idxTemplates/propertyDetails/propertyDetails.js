@@ -386,6 +386,7 @@
             idx('.header').addClass('hidden');
             idx('.menu__toggler--container').addClass('hidden');
             idx('.menu').addClass('hidden');
+            idx('#IDX-detailsTopNav').addClass('hidden');
         }
 
         console.log(source);
