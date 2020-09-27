@@ -4237,6 +4237,11 @@ i.fa-heart-o {
     padding-top: 0 !important;
 }
 
+.fromApp #IDX-detailsWrapper {
+    position: relative;
+    top: -86px;
+}
+
 .fromApp .IDX-page-listing .detailsWrapper--left {
     width: 100%;
 }
