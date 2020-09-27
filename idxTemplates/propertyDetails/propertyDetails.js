@@ -329,6 +329,21 @@
     });
     // Close pannels on details page
     idx(document).ready(function () {
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = window.location.search.substring(1),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                }
+            }
+        };
+
         idx('.IDX-page-listing .IDX-panel-collapse').each(function () {
             this.classList.remove('IDX-in');
         });
@@ -363,6 +378,13 @@
         //     console.log(this.classList);
         //     console.log(isTablet);
         // });
+
+        var source = getUrlParameter('source');
+        if (source === 'fromApp') {
+            idx('.detailsWrapper--right').addClass('hidden');
+        }
+
+        console.log(source);
     });
 
     function calcHeight(pixels, element, type, divide) {
