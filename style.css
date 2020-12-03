@@ -2808,8 +2808,9 @@ i.fa-heart-o {
     display: none !important;
 }
 
-‌.IDX-wrapper-standard #‌‌‌IDX-action-buttons a {
+#‌IDX-searchPageWrapper #‌‌‌IDX-action-buttons a {
     background-color:#6f9dd4 !important;
+    background:#6f9dd4 !important;
 }
 
 @media (min-width: 369px) {
