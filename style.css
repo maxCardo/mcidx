@@ -2811,6 +2811,7 @@ i.fa-heart-o {
 #‌IDX-searchPageWrapper #‌‌‌IDX-action-buttons a {
     background-color:#6f9dd4 !important;
     background:#6f9dd4 !important;
+    color: #333 !important;
 }
 
 @media (min-width: 369px) {
