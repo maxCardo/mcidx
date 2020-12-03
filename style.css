@@ -2811,6 +2811,7 @@ i.fa-heart-o {
 #IDX-action-buttons a.IDX-btn {
     background:#6f9dd4 !important;
     color: #333 !important;
+    text-shadow: unset;
 }
 
 @media (min-width: 369px) {
