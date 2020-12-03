@@ -3226,7 +3226,7 @@ idx(document).ready(function() {
       var url = window.location.href;
       history.pushState(null, "", url);
 
-      let hrefBase = "http://cardo.idxbroker.com/idx/results/listings?";
+      let hrefBase = "https://fifthgrant.idxbroker.com/idx/results/listings?";
 
       let searchTerm = idx("#searchField")
         .val()
