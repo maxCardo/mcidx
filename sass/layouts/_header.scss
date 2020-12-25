@@ -1,7 +1,8 @@
 /* HEADER */
 
+
 .header {
-    width: 100vw;
+    width: 100%;
     padding: 20px 0;
     background-color: transparent;
     position: fixed;
@@ -9,12 +10,16 @@
     z-index: 500;
     @include transitionAll2ms;
 
+    img {
+        max-width: 330px;
+    }
+
+
     .container {
         @include flexAlignItemsCenter;
         @include justifyContentSpaceBetween;
         background-color: transparent;
     }
-
 
     &__links {
         display: flex;

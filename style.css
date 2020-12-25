@@ -1,0 +1,3113 @@
+.bg-3 {
+  background: #488dc8;
+}
+
+.bg-2 {
+  background: #6f9dd4;
+}
+
+.bg-1 {
+  background: #96b2e0;
+}
+
+.bg-4 {
+  background: #337daa;
+}
+
+.bg-5 {
+  background: #276883;
+}
+
+.bg-3 {
+  background: #488dc8;
+}
+
+.bg-2 {
+  background: #6f9dd4;
+}
+
+.bg-1 {
+  background: #96b2e0;
+}
+
+.bg-4 {
+  background: #337daa;
+}
+
+.bg-5 {
+  background: #276883;
+}
+
+/* CUSTOM BTN */
+.btn {
+  background: #6f9dd4 !important;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  min-width: 70px;
+  box-sizing: border-box;
+  transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-weight: 500;
+  padding: 6px 16px;
+  font-size: 0.87rem;
+  border-color: transparent !important;
+  color: #FFF !important;
+  overflow: hidden;
+  outline: none;
+  border: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.55);
+  text-decoration: none !important;
+  letter-spacing: 0.125em;
+}
+.btn:hover {
+  background: #5088ca !important;
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 5px 0px rgba(0, 0, 0, 0.14), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+.btn:active {
+  background: #2d5d96;
+}
+
+.btn-cta {
+  background: #E9D758 !important;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  min-width: 70px;
+  box-sizing: border-box;
+  transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-weight: 500;
+  padding: 6px 16px;
+  font-size: 0.87rem;
+  border-color: transparent !important;
+  color: #FFF !important;
+}
+.btn-cta:hover {
+  background: #e4ce34 !important;
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 5px 0px rgba(0, 0, 0, 0.14), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+.btn-cta:active {
+  background: #ab9917;
+}
+
+.btn--full-width {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* END OF CUSTOM BTN */
+/* CUSTOM CHECKBOX */
+.checkbox {
+  --background: #fff;
+  --border: #D1D6EE;
+  --border-hover: #BBC1E1;
+  --border-active: #1E2235;
+  --tick: #fff;
+  position: relative;
+}
+.checkbox input,
+.checkbox svg {
+  width: 21px;
+  height: 21px;
+  display: block;
+}
+.checkbox input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  outline: none;
+  background: var(--background);
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: box-shadow 0.3s;
+  box-shadow: inset 0 0 0 var(--s, 1px) var(--b, var(--border));
+}
+.checkbox input:hover {
+  --s: 2px;
+  --b: var(--border-hover);
+}
+.checkbox input:checked {
+  --b: var(--border-active);
+}
+.checkbox svg {
+  pointer-events: none;
+  fill: none;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--stroke, var(--border-active));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  transform: scale(var(--scale, 1)) translateZ(0);
+}
+.checkbox.path {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.checkbox.path input {
+  margin: 0 0 0 0;
+}
+.checkbox.path input:checked {
+  --s: 2px;
+  transition-delay: 0.4s;
+}
+.checkbox.path input:checked + svg {
+  --a: 16.1 86.12;
+  --o: 102.22;
+}
+.checkbox.path svg {
+  stroke-dasharray: var(--a, 86.12);
+  stroke-dashoffset: var(--o, 86.12);
+  transition: stroke-dasharray 0.6s, stroke-dashoffset 0.6s;
+}
+.checkbox.bounce {
+  --stroke: var(--tick);
+}
+.checkbox.bounce input:checked {
+  --s: 11px;
+}
+.checkbox.bounce input:checked + svg {
+  animation: bounce 0.4s linear forwards 0.2s;
+}
+.checkbox.bounce svg {
+  --scale: 0;
+}
+
+/* END OF CUSTOM CHECKBOX */
+/* UTILITIES */
+.flex-centered {
+  display: flex;
+  justify-content: center;
+}
+
+/* END OF UTILITIES */
+/* HEADER */
+.header {
+  width: 100vw;
+  padding: 20px 0;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.header .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: transparent;
+}
+.header__links {
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  list-style: none;
+  margin: 0;
+}
+.header__link {
+  display: inline-block;
+  padding: 10px;
+  color: black !important;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.header__link:hover {
+  transform: scale(1.2);
+}
+.header__link div {
+  display: inline-block;
+  position: absolute;
+  background: none repeat scroll 0 0 transparent;
+  left: 50%;
+  bottom: 0;
+  height: 2px;
+  background-color: #000000;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 0;
+}
+.header__link:hover div {
+  width: 100%;
+  left: 0;
+}
+
+.mat-form--header a:hover,
+.mat-form--footer a:focus {
+  text-decoration: none;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+.bgimg-1 {
+  margin-top: 100px;
+  background-position: center;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.bgimg-2,
+.search-page {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/aptPicLr.jpeg");
+  min-height: 100%;
+}
+
+/* test */
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* NAVBAR COLORS BUGFIX */
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-collapse,
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-form {
+  border-color: lightgray;
+}
+
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-toggle .IDX-icon-bar {
+  background-color: #000;
+}
+
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-toggle:focus,
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-toggle:hover {
+  color: black;
+}
+
+.IDX-wrapper-standard .IDX-navbar-default .IDX-navbar-toggle:active {
+  background-color: lightgray;
+}
+
+/* END OF NAVBAR COLORS BUGFIX */
+#IDX-main.IDX-page-listings {
+  height: 100vh;
+}
+
+#IDX-main > div:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.w3-top {
+  z-index: 9999999999;
+}
+
+.IDX-wrapper-standard .IDX-results-title, .IDX-wrapper-standard .IDX-results-title--count {
+  display: none;
+}
+
+.IDX-category-results {
+  padding: 98px 15px 0;
+}
+
+.IDX-wrapper-standard #IDX-resultsTopActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  flex-direction: row;
+}
+
+.IDX-wrapper-standard #IDX-resultsTopActions > div {
+  width: 50%;
+}
+
+.IDX-wrapper-standard #IDX-resultsRefineSearchWrap {
+  max-width: unset;
+  top: 100%;
+  z-index: 5;
+}
+
+#IDX-resultsRefineSubmit {
+  margin: 10px;
+  width: 60%;
+  position: relative;
+  border: none;
+}
+
+.IDX-pagination,
+#IDX-resultsRefineSubmit {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.IDX-wrapper-standard .IDX-results-title {
+  margin: 15px 0 0 0;
+}
+
+.IDX-wrapper-standard .IDX-box-shadow--bottom {
+  box-shadow: unset;
+}
+
+.IDX-wrapper-standard .IDX-results-title--count {
+  line-height: 1.25em;
+  font-size: 18px;
+}
+
+.IDX-wrapper-standard .IDX-results-refine-search-wrap,
+.IDX-wrapper-standard .IDX-results--cell {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.22);
+}
+
+.IDX-wrapper-standard .IDX-results--cell {
+  padding: 10px 5px;
+  margin-bottom: 15px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
+  border-bottom: 4px solid #6f9dd4;
+}
+
+.IDX-resultsSeparatorTextActive {
+  text-align: center;
+  font-size: 1.75em;
+}
+
+.IDX-wrapper-standard .IDX-results--cell {
+  padding: 0 0 0 0;
+}
+
+.IDX-wrapper-standard .IDX-results--cell article.IDX-results--cell-inner-wrapper {
+  border: none;
+}
+
+.IDX-wrapper-standard .IDX-results--cell--disclaimer {
+  text-align: center;
+  color: black;
+  background: white;
+}
+
+#IDX-resultsTopActions.IDX-topActions {
+  background: white;
+  width: 100%;
+  margin: 0px auto 20px auto;
+  position: relative;
+  top: -20px;
+}
+
+.IDX-resultsActiveListings {
+  background: #efefef;
+}
+
+.IDX-wrapper-standard .IDX-control-group .IDX-controls .select2-container {
+  margin-bottom: 0;
+}
+
+.select2-choices,
+.select2-container,
+.select2-container-multi,
+.IDX-wrapper-standard .IDX-results-refine-search-wrap .IDX-control-group .select2-choice,
+.IDX-resultsCellsContainer {
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.22), inset -1px -1px 2px rgba(0, 0, 0, 0.22);
+}
+
+.IDX-wrapper-standard .select2-container .select2-choice .select2-arrow {
+  background: transparent;
+}
+
+.IDX-wrapper-standard .select2-container .select2-choice abbr {
+  top: 10px;
+}
+
+.IDX-wrapper-standard .select2-container .select2-choice .select2-arrow b {
+  position: absolute;
+  top: 60%;
+}
+
+.IDX-wrapper-standard .IDX-results--cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.IDX-results--cell .IDX-results--cell--disclaimer {
+  order: 2;
+  height: 50px;
+}
+
+.IDX-topAction, .IDX-resultsVirtualTour {
+  position: relative;
+}
+
+.IDX-wrapper-standard #IDX-refineSearchFormToggle::after {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  top: 40%;
+  right: 10px;
+  position: absolute;
+}
+
+.IDX-wrapper-standard #IDX-refineSearchFormToggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: lightgray;
+  color: #000;
+  transition: all 200ms;
+}
+
+a.IDX-psudolink {
+  padding: 2px;
+  font-size: 12px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.IDX-resultsAction:hover,
+.IDX-resultsAction:focus,
+.IDX-wrapper-standard #IDX-refineSearchFormToggle:focus,
+.IDX-wrapper-standard #IDX-refineSearchFormToggle:hover,
+.IDX-page-listings .IDX-topAction > a:hover,
+.IDX-page-listings .IDX-topAction > a:focus {
+  background: darkgray;
+  color: #000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.17);
+}
+
+#IDX-refineSearchFormToggle {
+  cursor: pointer;
+}
+
+.IDX-wrapper-standard .IDX-resultsCellsContainer {
+  justify-content: space-between;
+  padding: 1% 0;
+}
+
+#IDX-resultsTopActions.IDX-topActions {
+  margin: -10px auto 0 auto;
+  z-index: 10;
+}
+
+#IDX-results-pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
+  width: 100%;
+  padding-top: 25px;
+}
+
+.IDX-wrapper-standard .IDX-btn.IDX-btn--results-refinement {
+  background: #ccc !important;
+}
+.IDX-wrapper-standard .IDX-btn.IDX-btn--results-refinement input {
+  background-color: #6f9dd4 !important;
+  letter-spacing: 0.075em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.55);
+}
+
+#IDX-main > div:last-child {
+  line-height: 1.25em;
+  position: fixed;
+  bottom: 0;
+  background: white;
+  padding: 5px;
+  font-size: 10px;
+  z-index: 5;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25);
+}
+
+#IDX-resultsRow .IDX-pageContainer .IDX-topActions > div {
+  width: 25%;
+}
+
+.IDX-page-listings #IDX-resultsRefineSearchToggle {
+  position: relative;
+  min-width: 110px;
+  line-height: 20px;
+}
+
+.IDX-page-listings .IDX-results-refinement > #IDX-resultsRefineSearchWrap .IDX-control-group {
+  width: 100%;
+  padding: 5px;
+}
+
+.IDX-page-listings #IDX-resultsRefineSearchWrap #IDX-refinementSearchForm .IDX-controls,
+.IDX-page-listings #IDX-resultsRefineSearchWrap #IDX-refinementSearchForm .IDX-select,
+.IDX-page-listings #IDX-resultsRefineSearchWrap #IDX-refinementSearchForm .select2-container {
+  width: 100%;
+}
+
+.IDX-wrapper-standard #IDX-refineSearchFormToggle {
+  line-height: 50px;
+}
+
+#IDX-resultsRow .IDX-pageContainer .IDX-topActions div {
+  padding: 0px;
+}
+
+.IDX-page-listings .IDX-topAction > a {
+  display: block;
+  background: lightgray;
+  color: #000;
+  position: relative;
+}
+
+.IDX-page-listing div.IDX-searchNavItem.IDX-prevProperty,
+.IDX-page-listing div.IDX-searchNavItem.IDX-nextProperty {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.IDX-page-listing div.IDX-searchNavItem.IDX-nextProperty {
+  margin: 10px 10px 10px 0;
+}
+
+/* MAIN SITE MENU */
+.menu {
+  position: fixed;
+  left: -30%;
+  z-index: 998;
+  color: #005c9c;
+  background: rgba(250, 250, 250, 0.7);
+  -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  width: 30%;
+  height: 100%;
+  padding: 0px 100px 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
+}
+.menu ul {
+  list-style: none;
+}
+
+.header {
+  width: 100vw;
+  padding: 20px 0;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+  top: 0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .menu__link {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .menu {
+    padding: 0 50px 0 50px;
+  }
+
+  .menu__toggler {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media only screen and (max-width: 610px) {
+  .menu {
+    padding: 0 25px 0 25px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .menu {
+    width: 250px;
+    left: -250px;
+  }
+}
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .menu ul {
+    margin-bottom: 400px;
+  }
+}
+.menu {
+  position: fixed;
+  left: -85%;
+  z-index: 12;
+  color: #005c9c;
+  background: rgba(250, 250, 250, 0.7);
+  -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  width: 85%;
+  height: 100%;
+  padding: 0px 100px 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.menu.active {
+  left: 0;
+  position: fixed;
+  width: 85%;
+}
+
+.menu__link {
+  font-size: 1.125em;
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+  font-weight: 600;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+}
+
+.menu__link:hover {
+  color: white;
+}
+
+.menu__link:last-of-type {
+  margin-bottom: 20px;
+}
+
+.menu__toggler {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 99999999999;
+  height: 28px;
+  width: 28px;
+  outline: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menu__toggler span {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 2.5px;
+  background-color: black;
+  z-index: 999999999999999;
+  border-radius: 20px;
+  transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.menu__toggler span::before, .menu__toggler span::after {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 2.5px;
+  background-color: black;
+  z-index: 999999999999999;
+  border-radius: 20px;
+  transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.menu__toggler span::before {
+  top: -8px;
+}
+
+.menu__toggler span::after {
+  top: 8px;
+}
+
+.menu__toggler.active > span {
+  background-color: transparent;
+}
+
+.menu__toggler.active > span::before, .menu__toggler.active > span::after {
+  top: 50px;
+  position: fixed;
+  background-color: black;
+}
+
+.menu__toggler.active > span::before {
+  -webkit-transform: rotate(-225deg);
+  transform: rotate(-225deg);
+}
+
+.menu__toggler.active > span::after {
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+  .menu__links {
+    margin-bottom: 150px;
+  }
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .menu__links {
+    margin-bottom: 150px;
+  }
+}
+@media only screen and (device-width: 800px) and (device-height: 1280px) and (orientation: portrait) {
+  .menu__links {
+    margin-bottom: 550px;
+  }
+}
+/* END OF MAIN SITE MENU */
+.resultsBurgerBtn {
+  position: absolute;
+  top: 15px;
+  right: 12px;
+  z-index: 12;
+  height: 16px;
+  width: 22px;
+  outline: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  visibility: visible;
+  overflow: hidden;
+}
+
+.resultsBurgerBtn span {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 2.5px;
+  background-color: black;
+  z-index: 12;
+  border-radius: 20px;
+  transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.resultsBurgerBtn span::before,
+.resultsBurgerBtn span::after {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 2.5px;
+  background-color: black;
+  z-index: 12;
+  border-radius: 20px;
+  transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.resultsBurgerBtn span::before {
+  top: -6px;
+}
+
+.resultsBurgerBtn span::after {
+  top: 6px;
+}
+
+/* PROPERTY PAGE */
+.IDX-page-listing {
+  padding-top: 84px !important;
+  padding-bottom: 20px !important;
+}
+.IDX-page-listing .IDX-navbar-header {
+  display: flex;
+}
+
+.IDX-page-listing #IDX-detailsTopNav {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+
+.IDX-navbar-default .IDX-navbar-nav > li > a {
+  color: #000000;
+}
+
+.IDX-page-listing.IDX-wrapper-standard #IDX-detailsTopActions #IDX-detailsActionSave,
+.IDX-page-listing.IDX-wrapper-standard #IDX-detailsTopActions #IDX-detailsActionNew,
+.IDX-page-listing.IDX-wrapper-standard #IDX-detailsTopActions #IDX-detailsActionModify,
+.IDX-page-listing.IDX-wrapper-standard #IDX-detailsTopActions #IDX-detailsActionBack {
+  display: block;
+  float: none;
+  margin: 0 0 10px 0;
+}
+
+.IDX-page-listing #IDX-detailsTopActions {
+  display: flex;
+  justify-content: center;
+}
+
+.IDX-page-listing .IDX-wrapper-standard #IDX-detailsHotActions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.IDX-page-listing #IDX-detailsHotActions > div {
+  background: #fff;
+  color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  padding: 0;
+  transition: all 250ms;
+  position: relative;
+  top: 0;
+}
+
+.IDX-wrapper-standard #IDX-saveProperty,
+.IDX-wrapper-standard #IDX-newSearch,
+.IDX-wrapper-standard #IDX-modifySearch,
+.IDX-wrapper-standard #IDX-mortgageLink,
+.IDX-wrapper-standard #IDX-backToResults,
+.IDX-wrapper-standard .IDX-nextProperty > a.IDX-btn.IDX-btn-default,
+.IDX-wrapper-standard .IDX-searchNavItem.IDX-nav-advanced > a.IDX-btn.IDX-btn-default,
+.IDX-wrapper-standard #IDX-detailsHotAction-mortgage {
+  background-color: #e6e6e6;
+  color: #555;
+}
+
+.IDX-page-listing #IDX-navbar-collapse {
+  padding: 0;
+}
+.IDX-page-listing ul.IDX-nav.IDX-navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.IDX-page-listing ul.IDX-nav.IDX-navbar-nav #IDX-saveProperty,
+.IDX-page-listing ul.IDX-nav.IDX-navbar-nav .IDX-nav-address,
+.IDX-page-listing ul.IDX-nav.IDX-navbar-nav .IDX-nav-mapsearch,
+.IDX-page-listing ul.IDX-nav.IDX-navbar-nav #IDX-detailsHotAction-mortgage {
+  flex-grow: 1;
+}
+.IDX-page-listing #IDX-detailsHotActions > div > a {
+  font-size: 12px;
+  padding: 6px;
+  transition: all 250ms;
+}
+.IDX-page-listing #IDX-detailsHotActions > div:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.17), -2px 2px 5px rgba(0, 0, 0, 0.17);
+  top: -1px;
+}
+
+.IDX-page-listing #IDX-detailsHead {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0 0 0;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.IDX-page-listing #IDX-detailsHead hr {
+  display: none;
+}
+
+.IDX-page-listing #IDX-detailsAddress .IDX-psudolink {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  transition: all 200ms;
+}
+
+.IDX-page-listing #IDX-detailsAddress .IDX-psudolink:hover,
+.IDX-page-listing #IDX-detailsAddress .IDX-psudolink:focus {
+  bottom: -34px;
+  color: black;
+  text-decoration: underline;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.IDX-page-listing #IDX-detailsMedia {
+  width: 100%;
+}
+
+.IDX-page-listing #IDX-detailsMainInfo {
+  width: 360px;
+}
+
+.IDX-page-listing #IDX-photoGalleryLink {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+}
+
+.IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
+  border: none;
+  position: relative;
+  margin-bottom: 0;
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.IDX-page-listing #IDX-detailsMainInfo .IDX-panel-heading {
+  background: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 0 10px;
+}
+
+.IDX-page-listing #IDX-detailsMainInfo .IDX-panel-heading .IDX-field-listingID.IDX-field {
+  margin: 0;
+}
+
+.IDX-page-listing #IDX-detailsMainInfo .IDX-panel-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.IDX-page-listing #IDX-detailsMainInfo .IDX-field {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.IDX-page-listing #IDX-detailsMainInfo .IDX-panel-body .IDX-field-listingPrice {
+  order: 2;
+  border-bottom: none;
+  text-align: center;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.IDX-page-listing #IDX-description {
+  margin: 0 0 10px 0;
+  border: none;
+  background: #002984;
+  color: white;
+  font-size: 20px;
+  padding: 0;
+  line-height: 1.55;
+}
+
+.IDX-page-listing #IDX-description p {
+  padding: 40px 60px;
+  background: rgba(0, 0, 0, 0.38);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+}
+
+.IDX-page-listing #IDX-fieldsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer {
+  width: 32.5%;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22);
+}
+
+.IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer .IDX-panel-heading {
+  background: #fff;
+  font-weight: 600;
+}
+
+.IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer .IDX-panel-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer .IDX-panel-body .IDX-fieldContainerListRight {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer .IDX-panel-body .IDX-fieldContainerList {
+  width: 100%;
+}
+
+.IDX-page-listing #IDX-details-row-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: unset;
+  margin: 0 auto;
+}
+
+.IDX-page-listing #IDX-detailsHotActions {
+  display: flex;
+  width: 100%;
+  flex-direction: ROW;
+  margin-right: 1%;
+  top: 0;
+  position: relative;
+  padding: 0;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.IDX-page-listing #IDX-primaryPhoto .IDX-arrow {
+  border: none;
+  line-height: 1.65;
+  background: transparent;
+  box-shadow: none;
+}
+
+.IDX-page-listing #IDX-primaryPhoto .IDX-arrow,
+.IDX-page-listing #IDX-detailsShowcaseSlides .IDX-carouselNavWrapper {
+  color: #000;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  font-size: 25px;
+}
+
+.IDX-page-listing #IDX-detailsShowcaseSlides .IDX-carouselNavWrapper {
+  border: 1px solid transparent;
+  background: #fff;
+}
+
+.IDX-page-listing #IDX-detailsShowcaseSlides .IDX-carouselNavWrapper.IDX-carouselLeft {
+  box-shadow: -1px 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.IDX-page-listing #IDX-detailsShowcaseSlides .IDX-carouselNavWrapper.IDX-carouselRight {
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.IDX-page-listing #IDX-detailsMedia .IDX-carouselThumb {
+  transition: box-shadow 250ms;
+}
+
+.IDX-page-listing #IDX-detailsMedia .IDX-showcaseSlide-active {
+  transition: box-shadow 250ms;
+  border: none;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.13), inset -2px -2px 5px rgba(0, 0, 0, 0.13);
+}
+
+.IDX-page-listing #IDX-detailsMedia .IDX-thumbnail {
+  border: none;
+  margin-bottom: 10px;
+}
+
+.IDX-page-listing #IDX-detailscontactContent {
+  display: flex;
+}
+
+.IDX-page-listing #IDX-detailscontactContent .col-lg-6.col-md-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.IDX-page-listing .IDX-form-group input,
+.IDX-page-listing .IDX-form-group .IDX-controls textarea {
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.13), inset -1px -1px 5px rgba(0, 0, 0, 0.13);
+}
+
+.IDX-page-listing #IDX-detailsAddress {
+  font-size: 14px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.IDX-page-listing #IDX-primaryPhoto {
+  height: auto;
+  max-height: unset;
+}
+.IDX-page-listing #IDX-primaryPhoto img {
+  width: 100%;
+  height: auto;
+  max-height: unset;
+}
+
+#IDX-mapRefresh {
+  z-index: 11;
+}
+
+.IDX-page-listing .mat-form,
+.IDX-category-search .mat-form,
+.IDX-category-map .mat-form,
+.mortgageCalcContainer .mat-form {
+  width: 100%;
+  background: white;
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.16), 0 0 200px 1px rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 100px;
+}
+.IDX-page-listing .mat-form .mat-form--header,
+.IDX-category-search .mat-form .mat-form--header,
+.IDX-category-map .mat-form .mat-form--header,
+.mortgageCalcContainer .mat-form .mat-form--header {
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 30px;
+  background: #6f9dd4;
+  color: white;
+  letter-spacing: 5px;
+}
+.IDX-page-listing .mat-form .mat-form--header a,
+.IDX-category-search .mat-form .mat-form--header a,
+.IDX-category-map .mat-form .mat-form--header a,
+.mortgageCalcContainer .mat-form .mat-form--header a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
+}
+.IDX-page-listing .mat-form .mat-form--header .fa,
+.IDX-category-search .mat-form .mat-form--header .fa,
+.IDX-category-map .mat-form .mat-form--header .fa,
+.mortgageCalcContainer .mat-form .mat-form--header .fa {
+  position: relative;
+  top: 8px;
+  font-size: 40px;
+  transform: rotate(95deg);
+  color: white;
+}
+.IDX-page-listing .mat-form .mat-form--body,
+.IDX-category-search .mat-form .mat-form--body,
+.IDX-category-map .mat-form .mat-form--body,
+.mortgageCalcContainer .mat-form .mat-form--body {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  justify-content: space-between;
+  margin: -5px;
+}
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper,
+.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 10px);
+  position: relative;
+  margin: 5px;
+}
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper.flex-centered,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper.flex-centered,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper.flex-centered,
+.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper.flex-centered {
+  padding-bottom: 15px;
+}
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper.with--checkbox,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper.with--checkbox,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper.with--checkbox,
+.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper.with--checkbox {
+  min-height: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper label,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper label,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper label,
+.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper label {
+  position: absolute;
+  font-size: 14px;
+  left: 4px;
+}
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper input:not([type=checkbox]), .IDX-page-listing .mat-form .mat-form--body .element-wrapper textarea,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper input:not([type=checkbox]),
+.IDX-category-search .mat-form .mat-form--body .element-wrapper textarea,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper input:not([type=checkbox]),
+.IDX-category-map .mat-form .mat-form--body .element-wrapper textarea,
+.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper input:not([type=checkbox]),
+.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper textarea {
+  padding: 15px 5px 5px 5px;
+  border: 2px solid black;
+}
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper#customMessageContainer,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper#customMessageContainer,
+.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper#customMessageContainer {
+  height: 0;
+  overflow: hidden;
+  transition: height 200ms;
+  width: 100%;
+  max-height: 65px;
+}
+.IDX-page-listing .mat-form .mat-form--body .element-wrapper#customMessageContainer.open,
+.IDX-category-search .mat-form .mat-form--body .element-wrapper#customMessageContainer.open,
+.IDX-category-map .mat-form .mat-form--body .element-wrapper#customMessageContainer.open,
+.mortgageCalcContainer .mat-form .mat-form--body .element-wrapper#customMessageContainer.open {
+  height: 70px;
+}
+.IDX-page-listing .mat-form .contact-btn--send,
+.IDX-category-search .mat-form .contact-btn--send,
+.IDX-category-map .mat-form .contact-btn--send,
+.mortgageCalcContainer .mat-form .contact-btn--send {
+  margin: 0 15px 15px;
+  overflow: hidden;
+}
+.IDX-page-listing .mat-form .mat-form--footer,
+.IDX-category-search .mat-form .mat-form--footer,
+.IDX-category-map .mat-form .mat-form--footer,
+.mortgageCalcContainer .mat-form .mat-form--footer {
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  background: #6f9dd4;
+  color: white;
+  line-height: 2.5;
+  letter-spacing: 5px;
+}
+.IDX-page-listing .mat-form .mat-form--footer a,
+.IDX-category-search .mat-form .mat-form--footer a,
+.IDX-category-map .mat-form .mat-form--footer a,
+.mortgageCalcContainer .mat-form .mat-form--footer a {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
+}
+.IDX-page-listing .mat-form .mat-form--footer .fa,
+.IDX-category-search .mat-form .mat-form--footer .fa,
+.IDX-category-map .mat-form .mat-form--footer .fa,
+.mortgageCalcContainer .mat-form .mat-form--footer .fa {
+  font-size: 35px;
+  position: relative;
+  top: 4px;
+}
+
+.IDX-page-listing #IDX-fieldsWrapper {
+  padding: 20px 0 0 0;
+}
+
+.IDX-page-listing #IDX-similar-listings-result {
+  padding: 50px 0;
+  display: flex;
+  max-width: 1320px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.IDX-page-listing .IDX-similar-listings--item {
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.16), 0 0 200px 1px rgba(255, 255, 255, 0.15);
+  position: relative;
+  top: 0;
+  transition: top 200ms, box-shadow 200ms;
+}
+
+.IDX-page-listing .IDX-similar-listings--item:hover {
+  box-shadow: 0 7px 20px 1px rgba(0, 0, 0, 0.16), 0 0 300px 1px rgba(255, 255, 255, 0.15);
+  top: -2px;
+}
+
+.IDX-page-listing .IDX-similar-listings--item .IDX-similar-listings--info {
+  padding: 15px;
+}
+
+.IDX-page-listing .IDX-similar-listings--item .IDX-similar-listings--info img {
+  margin: 0 auto;
+  display: block;
+}
+
+.IDX-page-listing .IDX-similar-listings--item .IDX-mlsSelectorRulesCourtesy {
+  font-size: 9px;
+  text-align: center;
+  width: 100%;
+}
+
+.IDX-page-listing #IDX-detailsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px 15px;
+  overflow-x: unset;
+}
+
+.IDX-page-listing .detailsWrapper--left {
+  width: 75%;
+}
+
+.IDX-page-listing .detailsWrapper--right {
+  padding: 20px 15px 18px 5px;
+  width: 25%;
+}
+
+.IDX-page-listing .IDX-arrow {
+  background: transparent;
+  box-shadow: none;
+}
+
+.IDX-page-listing #IDX-arrow-next {
+  right: -25px;
+}
+
+.IDX-page-listing #IDX-arrow-previous {
+  left: -25px;
+}
+
+.IDX-page-listing .IDX-description-container {
+  margin-top: 20px;
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.16), 0 0 200px 1px rgba(255, 255, 255, 0.15);
+}
+
+.IDX-page-listing .IDX-description-container #IDX-description-headline {
+  padding: 30px 10px 0 10px;
+  text-align: center;
+  margin: 0;
+  font-size: 1.75em;
+  background: rgba(0, 0, 0, 0.38);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.IDX-page-listing .IDX-details--actions-and-address-container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+div.flex-grow {
+  flex-grow: 1;
+}
+
+.sm-contact-bar {
+  display: none;
+}
+
+#IDX-detailsMediaContaner--custom {
+  width: 70%;
+  align-self: flex-start;
+}
+
+.IDX-page-listing #IDX-detailsMedia {
+  width: 100%;
+}
+
+.IDX-page-listing .IDX-navbar-default.IDX-navbar-default--neutral {
+  background-color: #f0f0f0;
+  border-color: #ddd;
+}
+
+/* END OF PROPERTY PAGE */
+/* LOADING SCREEN */
+#IDX-loadingScreen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 99;
+}
+#IDX-loadingScreen .lds-ring {
+  top: 45%;
+}
+
+#IDX-searchFormContainer {
+  position: relative;
+}
+
+/* END OF LOADING SCREEN*/
+.IDX-category-map #IDX-navbar {
+  margin-bottom: 0px;
+}
+
+.IDX-category-map #IDX-mapHeader-Search {
+  margin-top: 0px;
+}
+
+#IDX-mapLoading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-results-page .mortgageCalcContainer {
+  padding-bottom: 0;
+  max-height: 96.5vh;
+}
+
+.mortgageCalcContainer,
+.IDX-category-search,
+.IDX-category-map {
+  overflow-x: hidden;
+  position: relative;
+}
+.mortgageCalcContainer .detailsWrapper--right,
+.IDX-category-search .detailsWrapper--right,
+.IDX-category-map .detailsWrapper--right {
+  padding: 20px 5px 18px 15px;
+  width: 85%;
+  position: fixed;
+  right: -100%;
+  top: 0;
+}
+.mortgageCalcContainer .detailsWrapper--right a,
+.IDX-category-search .detailsWrapper--right a,
+.IDX-category-map .detailsWrapper--right a {
+  text-decoration: none;
+}
+.mortgageCalcContainer .detailsWrapper--right.open,
+.IDX-category-search .detailsWrapper--right.open,
+.IDX-category-map .detailsWrapper--right.open {
+  right: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.75);
+  bottom: 0;
+  z-index: 19;
+  display: flex;
+  align-items: center;
+}
+
+/*BASIC SEARCH PAGE*/
+.IDX-category-search,
+.IDX-category-map {
+  /* ADVANCED SEARCH PAGE */
+}
+.IDX-category-search#IDX-main,
+.IDX-category-map#IDX-main {
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - 30px);
+}
+.IDX-category-search .select2-container.select2-container-multi .select2-choices,
+.IDX-category-search #IDX-listingID,
+.IDX-category-search #IDX-address,
+.IDX-category-map .select2-container.select2-container-multi .select2-choices,
+.IDX-category-map #IDX-listingID,
+.IDX-category-map #IDX-address {
+  box-shadow: none;
+  border-radius: 10px;
+}
+.IDX-category-search #IDX-searchPageWrapper,
+.IDX-category-map #IDX-searchPageWrapper {
+  height: calc(100vh - 37px) !important;
+}
+.IDX-category-search #IDX-action-buttons,
+.IDX-category-map #IDX-action-buttons {
+  display: flex;
+  justify-content: center;
+}
+.IDX-category-search #IDX-coreSearchFields,
+.IDX-category-map #IDX-coreSearchFields {
+  border: none;
+}
+.IDX-category-search #IDX-coreSearchFields .select2-choice,
+.IDX-category-map #IDX-coreSearchFields .select2-choice {
+  border-radius: 10px;
+}
+.IDX-category-search #IDX-coreSearchFields .select2-container,
+.IDX-category-map #IDX-coreSearchFields .select2-container {
+  border-color: transparent;
+  box-shadow: none;
+}
+.IDX-category-search #IDX-coreSearchFields #IDX-search-property-content,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-property-content {
+  display: flex;
+  justify-content: center;
+}
+.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content {
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
+.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
+.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres {
+  width: 25%;
+}
+.IDX-category-search #IDX-coreSearchFields #IDX-bd-group, .IDX-category-search #IDX-coreSearchFields #IDX-ccz-group, .IDX-category-search #IDX-coreSearchFields #IDX-reduced-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-bd-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-ccz-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-reduced-group {
+  padding: 0 10px 0 0;
+}
+.IDX-category-search #IDX-coreSearchFields #IDX-maxPrice-group, .IDX-category-search #IDX-coreSearchFields #IDX-acres-group, .IDX-category-search #IDX-coreSearchFields #IDX-srt-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-maxPrice-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-acres-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-srt-group {
+  padding: 0 0 0 10px;
+}
+.IDX-category-search #IDX-coreSearchFields #IDX-tb-group, .IDX-category-search #IDX-coreSearchFields #IDX-add-group, .IDX-category-search #IDX-coreSearchFields #IDX-minPrice-group, .IDX-category-search #IDX-coreSearchFields #IDX-sqft-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-tb-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-add-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-minPrice-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-sqft-group {
+  padding: 0 10px;
+}
+.IDX-category-search #IDX-coreSearchFields #IDX-srt-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-srt-group {
+  margin: 0 0 0 0;
+}
+.IDX-category-search #IDX-coreSearchFields #IDX-per-group,
+.IDX-category-search #IDX-coreSearchFields #IDX-searchRefinement-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-per-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-searchRefinement-group {
+  display: none;
+}
+.IDX-category-search #IDX-coreSearchFields #IDX-reduced-group, .IDX-category-search #IDX-coreSearchFields #IDX-srt-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-reduced-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-srt-group {
+  width: 40%;
+}
+.IDX-category-search #IDX-coreSearchFields #IDX-add-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-add-group {
+  width: 20%;
+}
+.IDX-category-search.IDX-page-advanced .IDX-searchFormContainer,
+.IDX-category-map.IDX-page-advanced .IDX-searchFormContainer {
+  max-height: 64vh;
+  overflow: auto;
+}
+.IDX-category-search.IDX-page-advanced #IDX-navbar,
+.IDX-category-map.IDX-page-advanced #IDX-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.IDX-category-search.IDX-page-advanced .select2-choices,
+.IDX-category-search.IDX-page-advanced .select2-container,
+.IDX-category-search.IDX-page-advanced .select2-container-multi,
+.IDX-category-map.IDX-page-advanced .select2-choices,
+.IDX-category-map.IDX-page-advanced .select2-container,
+.IDX-category-map.IDX-page-advanced .select2-container-multi {
+  box-shadow: unset;
+}
+@media (min-width: 642px) {
+  .IDX-category-search #IDX-action-buttons .IDX-btn,
+.IDX-category-map #IDX-action-buttons .IDX-btn {
+    max-width: 200px;
+    margin: 10px;
+  }
+  .IDX-category-search .IDX-wrapper-standard .IDX-advancedWrap input.IDX-advancedRange,
+.IDX-category-map .IDX-wrapper-standard .IDX-advancedWrap input.IDX-advancedRange {
+    width: 42%;
+    margin: 0 2.95%;
+  }
+  .IDX-category-search #IDX-coreSearchFields .IDX-control-group,
+.IDX-category-map #IDX-coreSearchFields .IDX-control-group {
+    margin: 0 0 20px 0;
+    border: none;
+  }
+  .IDX-category-search.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd), .IDX-category-search.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd), .IDX-category-search.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd),
+.IDX-category-map.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(odd),
+.IDX-category-map.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(odd),
+.IDX-category-map.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(odd) {
+    border-right: none;
+    padding-left: 0;
+  }
+  .IDX-category-search.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even), .IDX-category-search.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even), .IDX-category-search.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even),
+.IDX-category-map.IDX-wrapper-standard #IDX-search-property-content .IDX-control-group:nth-of-type(even),
+.IDX-category-map.IDX-wrapper-standard #IDX-search-primary-content .IDX-control-group:nth-of-type(even),
+.IDX-category-map.IDX-wrapper-standard #IDX-search-additional-content .IDX-control-group:nth-of-type(even) {
+    padding-right: 0;
+  }
+}
+.IDX-category-search .IDX-searchPageContainer,
+.IDX-category-map .IDX-searchPageContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.IDX-category-search .IDX-searchFormContainer,
+.IDX-category-map .IDX-searchFormContainer {
+  width: 76vw;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.65);
+}
+.IDX-category-search .IDX-searchFormContainer #IDX-action-buttons,
+.IDX-category-map .IDX-searchFormContainer #IDX-action-buttons {
+  width: 100% !important;
+}
+.IDX-category-search #IDX-searchForm,
+.IDX-category-map #IDX-searchForm {
+  width: 76%;
+  margin: 70px auto 40px auto;
+}
+.IDX-category-search #IDX-navbar,
+.IDX-category-map #IDX-navbar {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+}
+.IDX-category-search .IDX-help-block,
+.IDX-category-map .IDX-help-block {
+  color: #000;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+#IDX-main.IDX-page-advanced.IDX-category-search {
+  /*RADIO BTNS*/
+  /*END OF RADIO BTNS*/
+}
+#IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm #IDX-pt-group {
+  padding: 0 10px 0 0;
+}
+#IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm #IDX-propSubType-group {
+  padding: 0 10px 0 10px;
+}
+#IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm #s2id_IDX-propStatus {
+  padding: 0 0 0 10px;
+}
+#IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm #IDX-propStatus-group {
+  padding: 0;
+}
+#IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm .select2-search-choice {
+  margin: 5px 10px;
+}
+#IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm .IDX-advancedWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+#IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm .IDX-advancedWrap#IDX-boxLabel_garageyn, #IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm .IDX-advancedWrap#IDX-boxLabel_poolprivateyn {
+  display: flex;
+  justify-content: center;
+}
+#IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm .IDX-advancedWrap#IDX-boxLabel_garageyn label, #IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm .IDX-advancedWrap#IDX-boxLabel_poolprivateyn label {
+  text-align: center;
+}
+#IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm .IDX-advancedWrap input {
+  border-radius: 20px;
+  box-shadow: unset;
+  margin: 4px 10px;
+  padding: 5px;
+  line-height: 2em;
+}
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio] {
+    --active: #275EFE;
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, .3);
+    --border: #BBC1E1;
+    --border-hover: #275EFE;
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: .3s;
+    --d-t: .6s;
+    --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:disabled:checked {
+    --b: var(--disabled-inner);
+    --bc: var(--border);
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:disabled + label {
+    cursor: not-allowed;
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:hover:not(:checked):not(:disabled) {
+    --bc: var(--border-hover);
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:focus {
+    box-shadow: 0 0 0 var(--focus);
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:not(.switch) {
+    width: 19px;
+    margin-bottom: 15px !important;
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:not(.switch):after {
+    opacity: var(--o, 0);
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:not(.switch):checked {
+    --o: 1;
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio] + label {
+    font-size: 14px;
+    line-height: 21px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio] {
+    border-radius: 50%;
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:after {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: var(--active-inner);
+    opacity: 0;
+    transform: scale(var(--s, 0.7));
+    left: -1px;
+  }
+  #IDX-main.IDX-page-advanced.IDX-category-search input[type=radio]:checked {
+    --s: .5;
+  }
+}
+
+/*END OF BASIC SEARCH PAGE*/
+#IDX-main #IDX-addressWrap {
+  margin-bottom: 30px;
+}
+#IDX-main #IDX-addressWrap input {
+  padding: 5px 6px;
+  border-color: #ccc;
+}
+
+/*GALLERY PAGE*/
+.IDX-page-photogallery {
+  padding-top: 80px;
+}
+.IDX-page-photogallery #IDX-goToProperty,
+.IDX-page-photogallery #IDX-returnToPreviousPage {
+  width: 100%;
+  text-align: center;
+}
+.IDX-page-photogallery h2.IDX-photoGalleryTitle {
+  font-size: 3em;
+  margin: 40px 0 0 0;
+  text-align: center;
+}
+.IDX-page-photogallery #IDX-main > div:last-child a {
+  color: #6f9dd4;
+}
+.IDX-page-photogallery .sliderInfo {
+  margin: 0;
+  text-align: center;
+  color: gray;
+  padding-right: 15px;
+}
+.IDX-page-photogallery .galleryContent--container {
+  display: flex;
+}
+.IDX-page-photogallery .galleryContent--container .propertyInfo--container {
+  width: 20%;
+  padding: 0 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList {
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
+  list-style: none;
+  font-size: 1em;
+  margin: 0 0 0 0;
+}
+.IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList li {
+  margin-bottom: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+}
+.IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList li:first-child {
+  text-align: center;
+  font-size: 1.45em;
+}
+.IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList li:last-child {
+  border-bottom: none;
+}
+.IDX-page-photogallery .galleryContent--container .IDX-photoGallery {
+  width: 80%;
+}
+.IDX-page-photogallery .galleryContent--container .IDX-photoGallery .slick-list {
+  height: 65vh;
+}
+.IDX-page-photogallery #IDX-previousPage {
+  display: flex;
+  justify-content: space-between;
+}
+.IDX-page-photogallery #IDX-showcaseThumbnails-buttons {
+  display: none;
+}
+.IDX-page-photogallery hr {
+  display: none;
+}
+.IDX-page-photogallery .slick-slide {
+  height: 65vh;
+}
+.IDX-page-photogallery .slick-slide img {
+  height: 65vh;
+}
+
+/*END OF GALLERY PAGE*/
+/*MORTGAGE CALCULATOR*/
+#IDX-main.IDX-page-mortgage .IDX-input-group-addon {
+  background: #6f9dd4;
+  color: #fff;
+  font-weight: 600;
+  padding: 5px 12px;
+}
+#IDX-main.IDX-page-mortgage .IDX-input-group-addon:first-child {
+  border-radius: 20px 0 0 20px;
+}
+#IDX-main.IDX-page-mortgage .IDX-input-group-addon:last-child {
+  border-radius: 0 20px 20px 0;
+}
+#IDX-main.IDX-page-mortgage #IDX-mortgagePriceField,
+#IDX-main.IDX-page-mortgage #IDX-mortgageDownPriceField {
+  border-radius: 0 20px 20px 0;
+}
+#IDX-main.IDX-page-mortgage #IDX-mortgageDownPercentField,
+#IDX-main.IDX-page-mortgage #IDX-mortgageInterestField,
+#IDX-main.IDX-page-mortgage #IDX-mortgageTermField {
+  border-radius: 20px 0 0 20px;
+}
+#IDX-main.IDX-page-mortgage #IDX-mortgagePmiField {
+  border-radius: 20px;
+}
+#IDX-main.IDX-page-mortgage #IDX-mortgagePmiUnit {
+  top: 34px;
+}
+#IDX-main.IDX-page-mortgage #IDX-mortgageCalculatorContainer {
+  padding: 130px 0 0 0;
+}
+#IDX-main.IDX-page-mortgage .IDX-pageHeader {
+  margin: 0 0 30px 0;
+}
+#IDX-main.IDX-page-mortgage .mortgageCalculatorContent--container {
+  display: flex;
+  justify-content: center;
+}
+#IDX-main.IDX-page-mortgage .mortgageCalculatorContent--container #IDX-showAmortizationPagination {
+  display: flex;
+  margin-bottom: 10px;
+}
+#IDX-main.IDX-page-mortgage .mortgageCalculatorContent--container #IDX-pagination {
+  border-radius: 10px;
+  margin: 0 10px;
+}
+#IDX-main.IDX-page-mortgage .mortgageCalculatorContent--container .select2-container, #IDX-main.IDX-page-mortgage .mortgageCalculatorContent--container .select2-choice {
+  border-radius: 20px;
+}
+#IDX-main.IDX-page-mortgage .mortgageCalculatorContent--container #IDX-previousPage {
+  display: flex;
+  flex-direction: column;
+}
+#IDX-main.IDX-page-mortgage .mortgageCalculatorContent--container #IDX-previousPage .col-sm-6 {
+  width: 100%;
+}
+#IDX-main.IDX-page-mortgage .propertyInfoContent--container {
+  margin-right: 20px;
+  width: 20%;
+}
+#IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.22) !important;
+  border: none;
+  background: #fff !important;
+  font-size: 1.35em;
+  padding: 25px;
+  margin-bottom: 15px;
+}
+#IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well li, #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well .IDX-row {
+  margin-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+#IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well li:last-child, #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well .IDX-row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#IDX-main.IDX-page-mortgage #IDX-mortgageCalculatorContent {
+  min-width: 40%;
+}
+
+/*MORTGAGE CALCULATOR*/
+/* ALL INPUTS*/
+.IDX-wrapper-standard .IDX-advancedWrap input.IDX-advancedRange {
+  border: 1px solid lightgray;
+}
+
+#IDX-boxLabel_remarksConcat input {
+  width: 100%;
+}
+
+/* ALL INPUTS*/
+/* CUSTOM LOADER */
+.lds-ring {
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #6f9dd4;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #6f9dd4 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* END OF CUSTOM LOADER*/
+.IDX-wrapper-standard .IDX-mobileFirst--neutral .IDX-advancedBox:focus,
+.IDX-wrapper-standard .IDX-mobileFirst--neutral input {
+  outline-color: transparent;
+}
+
+.IDX-advancedWrap .IDX-advMinMax, .IDX-advancedWrap .IDX-advWildText {
+  border: 1px solid lightgray;
+}
+
+/* RESPONSIVE */
+#scroll-top {
+  display: none;
+}
+
+#IDX-leadToolsBar {
+  background: #6f9dd4;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  height: unset;
+  text-align: center;
+  padding: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 640px) {
+  .IDX-wrapper-standard #IDX-detailsGalleryAction {
+    margin: 10px 0;
+  }
+
+  .mortgageCalcContainer {
+    padding-bottom: 25px;
+  }
+
+  .mortgageCalcContainer .detailsWrapper--right.open .mat-form,
+.IDX-category-search .detailsWrapper--right.open .mat-form,
+.IDX-category-map .detailsWrapper--right.open .mat-form {
+    top: unset;
+  }
+  .mortgageCalcContainer .detailsWrapper--right.open .mat-form .mat-form--footer a,
+.IDX-category-search .detailsWrapper--right.open .mat-form .mat-form--footer a,
+.IDX-category-map .detailsWrapper--right.open .mat-form .mat-form--footer a {
+    font-size: 1em;
+  }
+  .mortgageCalcContainer .detailsWrapper--right.open .mat-form .mat-form--footer a i,
+.IDX-category-search .detailsWrapper--right.open .mat-form .mat-form--footer a i,
+.IDX-category-map .detailsWrapper--right.open .mat-form .mat-form--footer a i {
+    font-size: 25px;
+  }
+
+  #IDX-main.IDX-page-advanced.IDX-category-search #IDX-searchForm #s2id_IDX-propStatus {
+    padding: 0 0 0 0;
+  }
+
+  input.IDX-advMinMax {
+    width: 40%;
+  }
+
+  #IDX-aw_remarksConcat {
+    width: 100%;
+  }
+
+  .IDX-page-listing ul.IDX-nav.IDX-navbar-nav {
+    flex-direction: column;
+  }
+
+  #IDX-main.IDX-page-mortgage .mortgageCalculatorContent--container {
+    flex-direction: column;
+  }
+
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container {
+    margin-right: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    order: 2;
+    flex-direction: column;
+  }
+
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container #IDX-previousPage {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
+    margin-left: 0;
+  }
+
+  .IDX-wrapper-standard #IDX-refineSearchFormToggle {
+    line-height: 30px;
+  }
+
+  #IDX-resultsRow .IDX-pageContainer #IDX-resultsTopActions > div {
+    width: 50%;
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    border: 1px solid white;
+  }
+
+  #IDX-resultsRow .IDX-pageContainer #IDX-resultsTopActions > div > a {
+    color: #fff;
+    display: block;
+  }
+
+  #IDX-resultsRow .IDX-pageContainer #IDX-resultsTopActions > div:nth-child(5) {
+    width: 100%;
+  }
+
+  #IDX-resultsRow #IDX-resultsContainer #IDX-resultsRefineSearchWrap {
+    width: 204%;
+    left: -102%;
+  }
+
+  .IDX-page-listing .IDX-nav.IDX-navbar-nav {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+.IDX-page-listing .IDX-nav .IDX-nav-propertyArrows {
+  display: flex;
+  height: 52px;
+}
+
+.IDX-wrapper-standard .IDX-h2, .IDX-wrapper-standard h2 {
+  font-size: 30px;
+  margin: 20px;
+  text-align: center;
+}
+
+@media (min-width: 535px) and (max-width: 992px) {
+  #IDX-resultsRow .IDX-pageContainer .IDX-topActions div {
+    width: 20%;
+  }
+}
+@media (min-width: 640px) and (max-width: 660px) {
+  #IDX-resultsActiveListings {
+    margin-top: 0;
+  }
+}
+@media (min-width: 660px) {
+  .IDX-wrapper-standard #IDX-resultsContent {
+    z-index: 5;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsTopActions {
+    flex-wrap: nowrap;
+  }
+
+  .IDX-wrapper-standard .IDX-results--cell:nth-child(2n) {
+    margin-left: 10px;
+  }
+
+  .IDX-wrapper-standard .IDX-results--cell--disclaimer {
+    min-height: 50px;
+  }
+
+  .IDX-wrapper-standard .IDX-advancedWrap input.IDX-advancedRange {
+    display: inline-block;
+    width: 43%;
+    padding: 0 2.5% !important;
+  }
+}
+@media (min-width: 940px) {
+  .IDX-wrapper-standard .IDX-results--cell--disclaimer {
+    min-height: unset;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent {
+    max-height: unset;
+  }
+
+  #IDX-resultsActiveListings {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .IDX-wrapper-standard .IDX-results--cell:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  .IDX-resultsCellsContainer,
+#IDX-resultsCellsContent {
+    max-height: 59vh;
+    overflow-y: scroll;
+    background: transparent;
+  }
+
+  .IDX-wrapper-standard .IDX-custom-map {
+    max-height: 80.85vh;
+    top: -5px;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent {
+    height: calc(89.5vh - 62px);
+    top: 27px;
+  }
+
+  .IDX-resultsCellsContainer, #IDX-resultsCellsContent {
+    max-height: unset;
+    overflow-y: visible;
+  }
+
+  #IDX-resultsTopActions.IDX-topActions {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  #IDX-main > div:last-child {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -1px 0 5px rgba(0, 0, 0, 0.18);
+  }
+
+  #IDX-resultsTopActions.IDX-topActions {
+    margin: 15px auto 0 0;
+    top: -15px;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
+    width: 50%;
+    padding-top: 0;
+    background: #fff;
+  }
+  .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent > div {
+    width: 100%;
+    margin-left: auto;
+    background: white;
+  }
+}
+@media (min-width: 992px) and (max-width: 1599px) {
+  #IDX-main > div:last-child {
+    text-align: left !important;
+    padding-left: 90px !important;
+  }
+
+  #IDX-resultsContent > div > div:last-child {
+    line-height: 1.25em;
+    padding-top: 0px;
+  }
+}
+@media (min-width: 1240px) {
+  .IDX-wrapper-standard #IDX-resultsTopActions > div {
+    width: 49%;
+  }
+
+  .IDX-wrapper-standard .IDX-results--cell {
+    min-width: 49%;
+  }
+
+  .IDX-wrapper-standard ul.IDX-resultsCellsContainer {
+    padding: 5px;
+  }
+
+  #IDX-resultsTopActions.IDX-topActions {
+    width: 570px;
+    margin-right: auto;
+    height: unset;
+  }
+
+  #IDX-resultsRow .IDX-pageContainer .IDX-topActions > div,
+#IDX-resultsRow .IDX-pageContainer .IDX-topActions > div#IDX-resultsRefineSearchToggle a.IDX-refine-search--toggle#IDX-refineSearchFormToggle {
+    line-height: 20px;
+  }
+}
+@media (max-width: 748px) {
+  .leaflet-top.leaflet-left {
+    z-index: 4;
+  }
+
+  .IDX-category-results {
+    padding: 82px 15px 0;
+  }
+
+  #IDX-resultsTopActions.IDX-topActions {
+    margin: 15px auto 0 auto;
+    height: 0;
+    transition: all 200ms;
+    overflow: hidden;
+  }
+  #IDX-resultsTopActions.IDX-topActions + #IDX-resultsContent {
+    padding-top: 0;
+    background: white;
+  }
+  #IDX-resultsTopActions.IDX-topActions + #IDX-resultsContent > div > div:last-child {
+    padding: 10px 0 40px 0 !important;
+  }
+
+  #IDX-resultsTopActions.IDX-topActions.open {
+    margin: 25px auto 0 auto;
+    height: 132px;
+    overflow: visible;
+    position: relative;
+  }
+
+  .resultsMobileNav {
+    position: relative;
+    z-index: 10;
+    line-height: 40px;
+    padding-left: 10px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+  }
+
+  #IDX-resultsContainer {
+    position: relative;
+  }
+
+  .IDX-page-photogallery {
+    padding-top: 50px;
+  }
+
+  #IDX-returnToPreviousPage {
+    margin-bottom: 15px;
+  }
+
+  .header, .header__link, .header__down .container ul, .header .container .header__logo .logo {
+    display: none;
+  }
+
+  .menu__toggler {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu__toggler--container {
+    min-height: 64px;
+    position: fixed;
+    background: white;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 13;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 2px 5px 0;
+    top: 0;
+  }
+
+  .header__logo--mobile {
+    position: absolute;
+    right: 5px;
+    top: 15px;
+  }
+
+  .IDX-category-search #IDX-searchForm,
+.IDX-category-map #IDX-searchForm {
+    width: 85%;
+    margin: 20px auto 15px auto;
+  }
+
+  .IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
+.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
+.IDX-category-search #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres,
+.IDX-category-search #IDX-coreSearchFields #IDX-ccz-group,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-minPrice-maxPrice,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-bd-tb,
+.IDX-category-map #IDX-coreSearchFields #IDX-search-primary-content .IDX-sqft-acres {
+    width: 100%;
+    padding: 0;
+  }
+
+  .IDX-category-search .IDX-searchFormContainer #IDX-action-buttons,
+.IDX-category-map .IDX-searchFormContainer #IDX-action-buttons {
+    justify-content: space-between;
+  }
+
+  .disclaimer-container {
+    padding: 0 10px;
+  }
+
+  .IDX-category-map .IDX-searchPageContainer, .IDX-category-search .IDX-searchPageContainer {
+    height: 100vh;
+    align-items: center;
+  }
+  .IDX-category-map .IDX-searchFormContainer, .IDX-category-search .IDX-searchFormContainer {
+    height: 74vh;
+    width: 90vw !important;
+    max-height: unset !important;
+    overflow: auto;
+    align-self: center;
+    margin-top: 15px;
+  }
+
+  .IDX-category-map #IDX-map {
+    min-height: 380px;
+  }
+
+  .IDX-category-search .mat-form .mat-form--header {
+    padding: 5px 15px 10px 15px;
+    font-size: 15px;
+  }
+
+  .IDX-wrapper-standard #IDX-mapHeader-Search #IDX-mapCount {
+    padding-top: 5px;
+  }
+  .IDX-wrapper-standard #IDX-mapHeader-Search .IDX-control-group {
+    margin: 5px 0 0 0;
+  }
+
+  .IDX-container-navbar {
+    width: 100%;
+  }
+
+  .IDX-wrapper-standard .IDX-navbar-toggle {
+    margin-right: 5px !important;
+    border: none !important;
+  }
+
+  #IDX-detailsMediaContaner--custom {
+    width: 100%;
+  }
+
+  .IDX-category-search #IDX-search-additional-content,
+.IDX-category-search #IDX-search-property-content,
+.IDX-category-search #IDX-coreSearchFields {
+    flex-direction: column;
+    display: flex;
+  }
+  .IDX-category-search #IDX-search-additional-content .IDX-control-group,
+.IDX-category-search #IDX-search-property-content .IDX-control-group,
+.IDX-category-search #IDX-coreSearchFields .IDX-control-group {
+    width: 100% !important;
+    padding: 0px !important;
+  }
+
+  .IDX-page-listing#IDX-main {
+    position: relative;
+    overflow-x: hidden;
+  }
+  .IDX-page-listing #IDX-detailsWrapper {
+    position: static;
+    padding: 3px 15px;
+    overflow-x: hidden;
+  }
+  .IDX-page-listing #IDX-detailsTopActions {
+    flex-wrap: wrap;
+  }
+  .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionModify,
+.IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionBack {
+    order: 2;
+    flex-grow: 1;
+  }
+  .IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionNew,
+.IDX-page-listing #IDX-detailsTopActions #IDX-detailsActionSave {
+    width: 126px;
+  }
+  .IDX-page-listing #IDX-primaryPhoto {
+    height: unset;
+  }
+  .IDX-page-listing #IDX-detailsHotActions > div {
+    width: 50%;
+  }
+  .IDX-page-listing #IDX-detailsHotActions {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: stretch;
+  }
+  .IDX-page-listing #IDX-description p {
+    padding: 25px 15px;
+    background: rgba(0, 0, 0, 0.38);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  }
+  .IDX-page-listing #IDX-fieldsWrapper {
+    flex-direction: column;
+  }
+  .IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer {
+    width: 100%;
+  }
+  .IDX-page-listing #IDX-similar-listings-result {
+    padding: 25px 0;
+  }
+  .IDX-page-listing .IDX-similar-listings--item {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .IDX-page-listing .IDX-similar-listings--item .IDX-similar-listings--item-image {
+    width: 100%;
+    height: auto;
+  }
+  .IDX-page-listing .IDX-similar-listings--item .IDX-similar-listings--info {
+    flex-direction: column;
+  }
+  .IDX-page-listing .IDX-similar-listings--item .IDX-btn-default {
+    background: orange;
+    color: white;
+    border-color: transparent;
+    border-radius: 4px;
+  }
+  .IDX-page-listing .IDX-similar-listings--redirect {
+    justify-content: center;
+  }
+  .IDX-page-listing #IDX-openHouses {
+    text-align: center;
+    width: 100%;
+  }
+  .IDX-page-listing #IDX-detailsHead {
+    margin: 0 0 0 0;
+  }
+  .IDX-page-listing #IDX-detailsTopNav {
+    margin: 0 0 0 0;
+  }
+
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container .IDX-well {
+    font-size: 1em;
+    width: 100%;
+  }
+
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1025px) {
+  .IDX-page-photogallery .galleryContent--container .IDX-photoGallery,
+.IDX-page-listing #IDX-detailsMainInfo {
+    width: 100%;
+  }
+
+  .IDX-page-photogallery .galleryContent--container {
+    flex-direction: column;
+  }
+  .IDX-page-photogallery .galleryContent--container .propertyInfo--container {
+    order: 2;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList li {
+    font-size: 1rem;
+  }
+  .IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList li:first-child {
+    font-size: 1.25rem;
+  }
+  .IDX-page-photogallery .galleryContent--container .IDX-photoGallery .slick-list {
+    height: 30vh;
+  }
+  .IDX-page-photogallery h2.IDX-photoGalleryTitle {
+    font-size: 2.25em;
+    margin: 20px 0 0 0;
+  }
+  .IDX-page-photogallery .slick-slide {
+    height: 30vh;
+  }
+  .IDX-page-photogallery .slick-slide img {
+    height: 30vh;
+  }
+  .IDX-page-photogallery .show--desktop {
+    display: none;
+  }
+  .IDX-page-photogallery #IDX-previousPage {
+    margin-top: 15px;
+  }
+
+  #IDX-detailsMainInfo .IDX-field {
+    font-size: 14px;
+  }
+
+  #IDX-detailsMainInfo .IDX-panel-body {
+    padding-bottom: 50px;
+  }
+
+  .detailsWrapper--right {
+    padding: 20px 5px 18px 15px;
+    width: 90%;
+    position: fixed;
+    right: -100%;
+  }
+
+  .IDX-page-listing .detailsWrapper--left {
+    width: 100%;
+  }
+
+  .detailsWrapper--right.open {
+    right: 0;
+    width: 100%;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.75);
+    bottom: 0;
+    z-index: 6;
+    display: flex;
+    align-content: center;
+  }
+
+  .IDX-page-listing .sm-contact-bar, .IDX-category-search .sm-contact-bar, .IDX-category-map .sm-contact-bar, .mortgageCalcContainer .sm-contact-bar {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    font-size: 25px;
+    justify-content: space-between;
+    padding: 0 15px;
+    z-index: 20;
+  }
+  .IDX-page-listing .sm-contact-bar a,
+.IDX-page-listing .sm-contact-bar span, .IDX-category-search .sm-contact-bar a,
+.IDX-category-search .sm-contact-bar span, .IDX-category-map .sm-contact-bar a,
+.IDX-category-map .sm-contact-bar span, .mortgageCalcContainer .sm-contact-bar a,
+.mortgageCalcContainer .sm-contact-bar span {
+    padding: 0 15px;
+    border: 5px solid white;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  }
+  .IDX-page-listing .mat-form, .IDX-category-search .mat-form, .IDX-category-map .mat-form, .mortgageCalcContainer .mat-form {
+    top: 25px;
+    align-self: center;
+  }
+  .IDX-page-listing .mat-form .mat-form--header, .IDX-category-search .mat-form .mat-form--header, .IDX-category-map .mat-form .mat-form--header, .mortgageCalcContainer .mat-form .mat-form--header {
+    padding: 5px 15px 10px 15px;
+    font-size: 22px;
+  }
+  .IDX-page-listing .mat-form .mat-form--body .element-wrapper, .IDX-category-search .mat-form .mat-form--body .element-wrapper, .IDX-category-map .mat-form .mat-form--body .element-wrapper, .mortgageCalcContainer .mat-form .mat-form--body .element-wrapper {
+    width: calc(100% - 10px);
+  }
+  .IDX-page-listing .mat-form .mat-form--body .element-wrapper input, .IDX-page-listing .mat-form .mat-form--body .element-wrapper textarea, .IDX-category-search .mat-form .mat-form--body .element-wrapper input, .IDX-category-search .mat-form .mat-form--body .element-wrapper textarea, .IDX-category-map .mat-form .mat-form--body .element-wrapper input, .IDX-category-map .mat-form .mat-form--body .element-wrapper textarea, .mortgageCalcContainer .mat-form .mat-form--body .element-wrapper input, .mortgageCalcContainer .mat-form .mat-form--body .element-wrapper textarea {
+    border: 1px solid black;
+  }
+  .IDX-page-listing .detailsWrapper--right, .IDX-category-search .detailsWrapper--right, .IDX-category-map .detailsWrapper--right, .mortgageCalcContainer .detailsWrapper--right {
+    z-index: 12;
+    transition: all 200ms;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1209px) {
+  .IDX-page-listing #IDX-detailsMediaContaner--custom {
+    width: 57%;
+  }
+
+  .IDX-page-listing #IDX-detailsMainInfo {
+    margin: 0 20px 10px 40px;
+    width: 260px;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 1210px) {
+  .IDX-page-listing .IDX-description-container {
+    margin-right: 20px;
+  }
+
+  .IDX-page-listing #IDX-detailsMediaContaner--custom {
+    width: 52%;
+  }
+
+  .IDX-page-listing #IDX-detailsMainInfo {
+    margin: 0 20px 10px 40px;
+  }
+
+  .IDX-page-listing #IDX-details-row-content {
+    margin: 0 auto 40px auto;
+  }
+
+  .IDX-page-listing #IDX-fieldsWrapper {
+    padding: 20px 20px 0 0;
+  }
+
+  .IDX-page-listing #IDX-primaryPhoto .IDX-arrow {
+    top: 352px;
+  }
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1279px) {
+  .IDX-page-listing #IDX-detailsMediaContaner--custom {
+    width: 62%;
+    align-self: flex-start;
+  }
+
+  .IDX-page-photogallery h2.IDX-photoGalleryTitle {
+    font-size: 2em;
+    margin: 20px 0 0 0;
+  }
+}
+@media (min-width: 1359px) {
+  .IDX-page-listing #IDX-detailsMediaContaner--custom {
+    align-self: center;
+    padding-bottom: 40px;
+  }
+
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
+    position: sticky;
+    height: unset;
+    top: 100px;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+
+  .IDX-page-listing #IDX-details-row-content {
+    margin: 0 auto 40px auto;
+  }
+
+  .IDX-page-listing #IDX-detailsHead {
+    justify-content: space-evenly;
+  }
+
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
+    font-size: 16px;
+  }
+
+  .IDX-page-listing .disclaimer-container {
+    padding: 30px 70px;
+  }
+}
+@media (min-width: 1299px) and (max-width: 1580px) {
+  .IDX-page-listing #IDX-primaryPhoto .IDX-arrow {
+    top: 200px;
+  }
+
+  .IDX-page-listing #IDX-detailsMediaContaner--custom {
+    width: 55%;
+  }
+
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-field {
+    font-size: 12px;
+  }
+
+  .IDX-page-listing .mat-form .mat-form--body .element-wrapper.with--checkbox {
+    width: 100%;
+  }
+  .IDX-page-listing .mat-form .mat-form--header {
+    font-size: 20px;
+  }
+  .IDX-page-listing .mat-form .mat-form--header i {
+    font-size: 30px;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent {
+    height: calc(83.5vh - 62px);
+  }
+
+  .IDX-wrapper-standard .IDX-custom-map {
+    max-height: 72.85vh;
+  }
+
+  #IDX-main.IDX-page-listings {
+    height: 96vh;
+  }
+
+  .search-results-page .mortgageCalcContainer {
+    max-height: 100vh;
+  }
+}
+@media (min-width: 1599px) {
+  .IDX-page-listing #IDX-detailsMediaContaner--custom {
+    width: 52%;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent {
+    height: calc(83.5vh - 62px);
+    background: #ffffff;
+  }
+
+  .IDX-wrapper-standard .IDX-custom-map {
+    max-height: 80.85vh;
+  }
+
+  #IDX-main.IDX-page-listings {
+    height: 96vh;
+  }
+
+  .search-results-page .mortgageCalcContainer {
+    max-height: 100vh;
+  }
+}
+@media (min-width: 1899px) {
+  .IDX-page-listing #IDX-detailsMediaContaner--custom {
+    width: 70%;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent {
+    height: calc(87vh - 60px);
+    top: 27px;
+  }
+
+  #IDX-main.IDX-page-listings {
+    height: 96vh;
+  }
+
+  .search-results-page .mortgageCalcContainer {
+    max-height: 97.5vh;
+  }
+
+  .IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList {
+    font-size: 1.35em;
+  }
+
+  .IDX-page-photogallery h2.IDX-photoGalleryTitle {
+    font-size: 3em;
+    margin: 40px 0 0 0;
+    text-align: center;
+  }
+}
+@media all and (device-width: 2560px) and (device-height: 1440px) {
+  .IDX-wrapper-standard .IDX-custom-map {
+    max-height: 85.5vh;
+    top: -5px;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent {
+    height: calc(90vh - 60px);
+    top: 27px;
+    padding-top: 15px;
+  }
+
+  #IDX-main.IDX-page-listings {
+    height: 100vh;
+  }
+
+  .search-results-page .mortgageCalcContainer {
+    max-height: 100vh;
+  }
+}
+@media only screen and (min-device-width: 767px) and (max-device-width: 1025px) {
+  #IDX-main.IDX-page-listings {
+    height: calc(100vh - 50px);
+  }
+
+  #IDX-resultsRefineSearchToggle {
+    z-index: 8;
+  }
+
+  .IDX-btn--map-toggle {
+    z-index: 5;
+  }
+
+  .header {
+    padding: 20px 20px;
+  }
+
+  .IDX-page-listing #IDX-detailsMediaContaner--custom {
+    width: 100%;
+  }
+
+  .IDX-page-listing .detailsWrapper--left {
+    width: 100%;
+  }
+
+  .IDX-page-listing #IDX-fieldsWrapper .IDX-fieldContainer {
+    width: 49%;
+  }
+
+  .IDX-page-listing #IDX-detailsMainInfo {
+    margin: 0;
+    padding-bottom: 30px;
+    width: 100%;
+  }
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default {
+    margin: 40px 0 0 0;
+  }
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default #IDX-detailsAddress {
+    font-size: 1.25em;
+    padding: 10px;
+    line-height: 1.35;
+  }
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default .IDX-panel-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default .IDX-field {
+    font-size: 1.35em;
+    line-height: 1.5;
+    width: 33.3333333%;
+  }
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default .IDX-field.IDX-field-propSubType {
+    width: 100%;
+    text-align: center;
+  }
+  .IDX-page-listing #IDX-detailsMainInfo .IDX-panel-default .IDX-field-listingPrice {
+    order: 2;
+    width: 100%;
+    border-bottom: none;
+    text-align: center;
+    position: static;
+  }
+
+  .IDX-category-search.IDX-page-advanced .IDX-searchFormContainer,
+.IDX-category-map .IDX-searchFormContainer {
+    max-height: 85vh;
+    width: 93vw;
+  }
+
+  .IDX-category-map .IDX-searchFormContainer {
+    position: relative;
+    padding-top: 52px;
+  }
+
+  .IDX-category-search #IDX-searchForm, .IDX-category-map #IDX-searchForm {
+    width: 95%;
+    margin: 40px auto 40px auto;
+  }
+
+  .IDX-wrapper-standard .IDX-advancedWrap input.IDX-advancedRange {
+    width: 40%;
+  }
+
+  .IDX-page-listing #IDX-detailsWrapper {
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .IDX-page-listing .detailsWrapper--right {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  #IDX-main.IDX-page-mortgage .propertyInfoContent--container {
+    margin-right: 20px;
+    width: 50%;
+  }
+
+  #IDX-main.IDX-page-mortgage #IDX-mortgageCalculatorContent {
+    width: 49%;
+  }
+
+  #IDX-main.IDX-page-mortgage .mortgageCalculatorContent--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 76vh;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent {
+    height: calc(90.5vh - 62px);
+    top: 52px;
+  }
+
+  .IDX-wrapper-standard .IDX-custom-map {
+    max-height: 85.75vh;
+  }
+
+  .IDX-wrapper-standard #IDX-refineSearchFormToggle {
+    line-height: 50px;
+    height: 62px;
+  }
+
+  .IDX-category-search .IDX-searchFormContainer {
+    width: 95vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .IDX-category-search #IDX-navbar, .IDX-category-map #IDX-navbar {
+    position: absolute;
+    top: 0;
+  }
+
+  .IDX-page-listing #IDX-similar-listings-result {
+    padding: 0 0 0 0;
+  }
+
+  .IDX-wrapper-standard #IDX-detailsGalleryAction {
+    margin: 30px 0 0 0;
+  }
+
+  .IDX-similar-listings--item-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .IDX-page-listing .IDX-similar-listings--item {
+    width: 35%;
+    margin: 20px;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  #IDX-main.IDX-page-listings {
+    overflow: hidden;
+  }
+
+  .IDX-wrapper-standard .IDX-custom-map {
+    max-height: 84.75vh;
+  }
+
+  .IDX-page-photogallery .galleryContent--container .IDX-photoGallery .slick-list,
+.IDX-page-photogallery .slick-list {
+    height: 50vh;
+  }
+  .IDX-page-photogallery .galleryContent--container .IDX-photoGallery .slick-slide,
+.IDX-page-photogallery .slick-slide {
+    height: 50vh;
+  }
+  .IDX-page-photogallery .galleryContent--container .IDX-photoGallery .slick-slide img,
+.IDX-page-photogallery .slick-slide img {
+    height: 50vh;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsRefineSearchWrap {
+    top: 130%;
+    left: -25px;
+  }
+
+  .IDX-wrapper-standard #IDX-custom-resultsMap {
+    position: relative;
+    top: 10px;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 769px) {
+  .IDX-category-results {
+    padding: 124px 15px 0;
+  }
+
+  .IDX-wrapper-standard.IDX-page-listings .IDX-custom-map {
+    max-height: 81.75vh;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent {
+    top: 0;
+  }
+
+  .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
+    padding-top: 0;
+  }
+}
+@media (min-width: 748px) {
+  .header__logo--mobile {
+    position: absolute;
+    right: 5px;
+    top: 15px;
+  }
+
+  .resultsBurgerBtn, .resultsMobileNav {
+    display: none;
+  }
+
+  .IDX-category-search .IDX-searchPageContainer {
+    padding-top: 36px;
+  }
+}
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .IDX-category-search.IDX-page-advanced #IDX-searchForm {
+    padding-top: 440px;
+  }
+
+  .mortgageCalcContainer #IDX-previousPage {
+    flex-direction: column;
+  }
+}
+@media (max-width: 374px) {
+  .IDX-page-listing .mat-form .mat-form--header,
+.IDX-category-search .mat-form .mat-form--header,
+.IDX-category-map .mat-form .mat-form--header,
+.mortgageCalcContainer .mat-form .mat-form--header {
+    font-size: 16px;
+  }
+  .IDX-page-listing .mat-form .mat-form--header i.fa,
+.IDX-category-search .mat-form .mat-form--header i.fa,
+.IDX-category-map .mat-form .mat-form--header i.fa,
+.mortgageCalcContainer .mat-form .mat-form--header i.fa {
+    font-size: 26px;
+  }
+
+  .menu ul {
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  input.IDX-advMinMax {
+    width: 45%;
+    margin: 0 1% !important;
+  }
+}
+/* END OF RESPONSIVE*/
+
+/*# sourceMappingURL=style.css.map */

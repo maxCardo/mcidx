@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="search-results-page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="http://cardo.tech/fonts/css/all.css">
+    <link rel="stylesheet" href="https://maxcardo.github.io/mcidx/style.css">
+    <link rel="stylesheet" href="https://maxcardo.github.io/mcidx/assets/css/waves.min.css">
+    <title>Fifth & Grant Real Estate Services</title>
+</head>
+
+<body>
+    <div class="global-wrapper">
+        <!-- sidepanel -->
+        <div class="menu">
+          <ul class="menu__links">
+            <li>
+                <a href="http://cardo.tech" class="menu__link"><i class="fa fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="http://cardo.idxbroker.com/idx/search" class="menu__link"><i class="fa fa-search"></i> Search</a>
+            </li>
+            <li>
+              <a href="http://cardo.idxbroker.com/idx/map/mapsearch" class="menu__link"><i class="fa fa-map-marker"></i> Map Search</a>
+            </li>
+            <li>
+              <a href="http://cardo.tech/contact.html" class="menu__link"><i class="fa fa-envelope"></i> Contact Us</a>
+            </li>
+    
+            <li>
+              <a href="tel:412-444-5181" class="menu__link"><i class="fa fa-phone"></i>Call Us</a>
+            </li>
+          </ul>
+        </div>
+    
+        <div class="menu__toggler--container">
+          <!-- hamburger menu -->
+          <div class="menu__toggler"><span></span></div>
+          <div class="header__logo--mobile">
+            <a href="http://cardo.tech">
+              <img src="http://cardo.tech/images/small.png" alt="" class="logo">
+            </a>
+          </div>
+        </div>
+      
+        <!-- header -->
+        <header class="header" id="header">
+          <div class="container">
+            <div class="header__logo">
+              <a href="http://cardo.tech">
+                <img src="http://cardo.tech/images/small.png" alt="" class="logo">
+              </a>
+            </div>
+            <ul class="header__links">
+              <li>
+                <a href="http://cardo.idxbroker.com/idx/search" class="header__link link"><i class="fas fa-search"></i> Search
+                  <div></div></a>
+              </li>
+              <li>
+                <a href="http://cardo.idxbroker.com/idx/map/mapsearch" class="header__link link"><i class="fas fa-map-marker-alt"></i> Map Search
+                  <div></div></a>
+              </li>
+              <li>
+                <a href="http://cardo.tech/contact.html" class=" header__link link"><i class="fas fa-envelope"></i> Contact Us
+                  <div></div></a>
+              </li>
+    
+              <li>
+                <a href="tel:412-444-5181" class="header__link link"><i class="fas fa-phone"></i> 412-444-5181
+                  <div></div></a>
+              </li>
+            </ul>
+          </div>
+        </header>
+    <!-- Header with full-height image -->
+        <div class="bgimg-1 w3-display-container w3-grayscale-min" id="idxStart"></div>
+        <div id="idxStop"></div>
+    </div>
+
+    <script type="text/javascript" src="https://maxcardo.github.io/mcidx/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcardo.github.io/mcidx/idxMain.js"></script>
+    <script src="https://maxcardo.github.io/mcidx/assets/js/waves.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#IDX-saveSearch, .IDX-newSearch, .IDX-modifySearch, #IDX-refineSearchFormToggle, #IDX-resultsRefineSubmit, .IDX-btn--map-toggle')
+                .addClass('btn');
+
+            Waves.init();
+            Waves.attach('.btn');
+
+        });
+    </script>
+</body>
+
+</html>

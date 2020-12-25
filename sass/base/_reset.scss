@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -84,12 +84,14 @@ body {
     max-width: 100%;
     overflow: hidden;
 
+
     &:target {
         .bgDark {
             top: -500px;
         }
     }
-=======
+}
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -178,5 +180,4 @@ body {
 #mapDiv,
 .footer {
     overflow-x: hidden;
->>>>>>> master
 }

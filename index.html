@@ -7,31 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
-  <!-- bootstrap -->
+  <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-  <!-- animate on scroll -->
+  <!-- ANIMATE ON SCROLL LIBRARY -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- font -->
+  <!-- FONT -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
-  <!-- map -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
-    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-    crossorigin="" />
-  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
-    integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
-    crossorigin=""></script>
-
-  <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-
-  <!-- hamburger -->
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!-- HAMBURGER MENU -->
   <link href="BurgerRotate/dist/styles.css" rel="stylesheet" type="text/css" />
-  <!-- font -->
+  <!-- FONT -->
   <link rel="stylesheet" href="fonts/css/all.css" />
-
-  <!-- style -->
+<!-- CUSTOM STYLE -->
   <link rel="stylesheet" href="/assets/css/style.css" />
 
   <title>Max Cardo Ltd</title>
@@ -41,18 +31,16 @@
 
   <div class="wrapper">
 
-
-    <!-- sidepanel -->
+    <!-- SIDEPANEL -->
     <div class="menu">
       <ul class="menu__links">
+        
         <li>
-          <a href="#input" class="menu__link"><i class="fas fa-search"></i> Search</a>
+          <a href="http://cardo.idxbroker.com/idx/search/" class="menu__link"><i class="fas fa-search"></i> Search</a>
         </li>
         <li>
-          <a href="#mapDiv" class="menu__link"><i class="fas fa-map-marker-alt"></i> Map Search</a>
-        </li>
-        <li>
-          <a href="#" class="menu__link"><i class="fas fa-wrench"></i> My Portal</a>
+          <a href="http://cardo.idxbroker.com/idx/map/mapsearch" class="menu__link"><i
+              class="fas fa-map-marker-alt"></i> Map Search</a>
         </li>
         <li>
           <a href="contact.html" class="menu__link"><i class="fas fa-envelope"></i> Contact Us</a>
@@ -64,24 +52,27 @@
       </ul>
     </div>
 
-    <!-- hamburger menu -->
+    <!-- HAMBURGER MENU -->
     <div class="menu__toggler"><span></span></div>
 
-    <!-- header -->
+    <!-- HEADER -->
     <header class="header" id="header">
       <div class="container">
         <div class="header__logo">
-          <a href="#">
-            <img src="/images/small.png" alt="" class="logo">
+          <a href="index.html">
+            <img src="/images/mediumsmall.png" alt="" class="logo">
           </a>
         </div>
+        
         <ul class="header__links">
           <li>
-            <a href="#input" class="header__link link"><i class="fas fa-search"></i> Search
+            <a href="http://cardo.idxbroker.com/idx/search/" class="header__link link"><i class="fas fa-search"></i>
+              Search
               <div></div></a>
           </li>
           <li>
-            <a href="#mapDiv" class="header__link link"><i class="fas fa-map-marker-alt"></i> Map Search
+            <a href="http://cardo.idxbroker.com/idx/map/mapsearch" class="header__link link"><i
+                class="fas fa-map-marker-alt"></i> Map Search
               <div></div></a>
           </li>
           <li>
@@ -97,29 +88,34 @@
       </div>
     </header>
 
-    <!-- hero -->
+    <!-- HERO -->
     <section class="hero" id="input">
+      <a href="index.html" class='mobile-logo'>
+        <img src="/images/small.png" alt="">
+      </a>
       <div class="container">
         <form action="index.html">
           <p class="hero__paragraph">Start your search today</p>
 
           <div class="form-control">
-            <form action="index.php" method="get">
-              <input type="Search" placeholder="Enter an Address, Neighborhood, County, Zip or Agent"> </input>
-              <button type="submit" class='fas fa-search'></button>
+            <form action="#" method="get">
+              <input id="searchField" type="Search" placeholder="Enter an Address, Neighborhood, County or Zip">
+              </input>
+              <button id="initiateSearch" type="submit" class='fas fa-search'></button>
             </form>
           </div>
 
 
         </form>
-        <a href="#" class="hero__link">Advanced Search</a>
+        <a href="http://cardo.idxbroker.com/idx/search/advanced" class="hero__link">Advanced Search</a>
       </div>
     </section>
 
-    <!-- approach -->
-    <section id="approach" class="approach" data-aos-duration='1500' data-aos="fade-right">
+    <!-- SECTION APPROACH -->
 
-      <h2 class="approach__heading">Approach</h2>
+    <section id="approach" class="approach" data-aos-duration='1000' data-aos="fade-right">
+
+      <h2 class="approach__heading">Our Approach</h2>
 
       <div class="approach__grid">
 
@@ -135,10 +131,10 @@
               <h3>Integrity</h3>
 
             </div>
-            <div class="bottom">
-              <p>Lounge Lizard brandtenders and digital marketing mixologists have all the ingredients to create
-                intoxicating Websites and digital marketing programs that create customer addiction and insatiable
-                cravings.</p>
+            <div class="bottom bottom-1">
+              <p>Trust is critical in every business relationship and we take this to heart at Fifth & Grant. We value
+                the importance of decisions our clients are making in their search. It is our mission to provide advice
+                and support with the patience and integrity that we are known for.</p>
             </div>
 
           </div>
@@ -157,9 +153,10 @@
             </div>
 
             <div class="bottom">
-              <p>Our designers juices are always overflowing. Our creative mixologists stir up innovation with
-                creative
-                artistry, vision, flair and functionality that reflects your Web and Mobile identity and brand..</p>
+              <p>Our team brings a diverse amount of industry experience to the table from all Real Estate sectors.
+                Whether it's your goal is to buy your dream home, of find you next investment, our top-notch advisers
+                are up for the task.
+              </p>
             </div>
 
           </div>
@@ -175,11 +172,9 @@
               <h3>Innovation</h3>
             </div>
             <div class="bottom">
-              <p>Websites and mobile app technologies are constantly evolving. Our techies are constantly researching
-                and
-                exploring new and innovative ways to develop corporate websites, build mobile apps and shout them out
-                to
-                your target market.</p>
+              <p>Our experience and understanding of technology and data analysis sets us apart from the pack. At Fifth
+                & Grant we leverage innovation to help our clients reach their goals quickly, intelligently, and
+                efficiently.</p>
             </div>
 
           </div>
@@ -191,74 +186,90 @@
 
     </section>
 
-    <!-- home valuation -->
-
-    <section data-aos="fade-left" data-aos-duration='1500' class="homeValuation">
-      <!-- <div class="container"> -->
-      <div class="homeValuation__grid">
-        <div class="homeValuation__box">
-          <h2>Home Valuation</h2>
-          <p>Do you know what your home is really worth? Just fill out our form and we’ll gladly provide a
-            comprehensive
-            market overview report so you can decide to sell at a price thats right for both you and your market.</p>
-          <a href="#">FREE HOME VALUATION</a>
-        </div>
-        <div class="homeValuation__box">
-          <img src="/images/homevaluation.jpeg" alt="">
-        </div>
-      </div>
-
-      <!-- </div> -->
-    </section>
-
-    <!-- rental valuation -->
-
-    <section data-aos="fade-right" data-aos-duration='1500' class="rentalValuation">
+    <!-- GRID CONTAINER FOR RENTAL VALUATION AND HOME VALUATION -->
+    <div class="valuation">
       <div class="container-fluid">
-        <div class="rentalValuation__grid">
-          <div class="rentalValuation__box">
-            <img src="/images/rentalvaluation.jpeg" alt="">
-          </div>
-          <div class="rentalValuation__box">
-            <h2>Rental Rate Projections</h2>
-            <p>Whether you are buying a new investment property, moving in a new tenant or renewing and existing lease,
-              knowing the going rate for rent is key. Contact us today and let us help maximize you return on
-              investment.
-            </p>
-            <a href="#">FREE RENTAL PROJECTION</a>
+        <!-- home valuation -->
+        <section data-aos="fade-left" data-aos-duration='1000' class="homeValuation">
+
+          <div class="homeValuation__grid">
+            <div class="homeValuation__box">
+              <h2>Home Valuation</h2>
+              <p>Do you know what your home is really worth? Just fill out our form and we’ll gladly provide a
+                comprehensive
+                market overview report so you can decide to sell at a price thats right for both you and your market.
+              </p>
+              <a href="contact.html" class='homeValuation__btn'>FREE HOME VALUATION</a>
+            </div>
+            <div class="homeValuation__box">
+              <img src="/images/homevaluation.jpeg" alt="">
+            </div>
           </div>
 
-        </div>
 
+        </section>
+
+        <!-- rental valuation -->
+
+        <section data-aos="fade-right" data-aos-duration='1000' class="rentalValuation">
+
+          <div class="rentalValuation__grid">
+            <div class="rentalValuation__box">
+              <img src="/images/rentalvaluation.jpeg" alt="">
+            </div>
+            <div class="rentalValuation__box">
+              <h2>Rental Rate Projections</h2>
+              <p>Whether you are buying a new investment property, moving in a new tenant or renewing and existing
+                lease,
+                knowing the going rate for rent is key. Contact us today and let us help maximize you return on
+                investment.
+              </p>
+              <a href="contact.html" class='rentalValuation__btn'>FREE RENTAL PROJECTION</a>
+            </div>
+
+          </div>
+
+
+        </section>
       </div>
-    </section>
+
+    </div>
 
     <!-- strong leadership -->
 
-    <section data-aos="fade-right" data-aos-duration='1500' class="strongLeadership">
+    <section data-aos="fade-right" data-aos-duration='1000' class="strongLeadership">
       <h2 class="strongLeadership__heading">Strong Leadership</h2>
       <div class="container">
         <div class="strongLeadership__grid">
           <div class="strongLeadership__box">
-            <img src="/images/1.jpg" alt="">
-            <p>Claire Buchner, Esq</p>
-            <p>COO | General Counsel | Principal Broker DC | MD | VA</p>
-            <p> 301.674.6927claire@onestreet.one</p>
+            <img src="/images/adam.jpeg" alt="">
+            <h4>Adam Poznanski</h4>
+            <p>Senior Partner | PA Real Estate Broker</p>
+            <p class='p-grid'> <span>Commercial Sales</span> <span class='none'>|</span> <span>Asset Management</span>
+              <span class='none'>|</span>
+              <span>Investment
+                Analysis</span> </p>
+            <p>adamp@fifthgrant.com</p>
           </div>
           <div class="strongLeadership__box">
-            <img src="/images/1.jpg" alt="">
-            <p>Claire Buchner, Esq</p>
-            <p>COO | General Counsel | Principal Broker DC | MD | VA</p>
-            <p> 301.674.6927claire@onestreet.one</p>
+            <img src="/images/david.JPG" alt="">
+            <h4>David Knoll</h4>
+            <p>Senior Partner | PA Real Estate Sales</p>
+            <p class='p-grid'><span>Residential & Commercial Sales</span> <span class="none">|</span>
+              <span>Real
+                Estate
+                Development</span>
+            </p>
+            <p>davidk@fifthgrant.com</p>
           </div>
         </div>
-        <a href="#" class='strongLeadership__btn'>Meet The Team</a>
+        <!-- <a href="#" class='strongLeadership__btn'>Meet The Team</a> -->
       </div>
     </section>
 
     <!-- TESTIMONIALS -->
 
-    <section data-aos='fade-left' data-aos-duration='1500' class="testimonials">
+    <section data-aos='fade-left' data-aos-duration='1000' class="testimonials">
       <h2 class="testimonials__heading">Testimonials</h2>
 
       <div class="container">
@@ -268,7 +279,7 @@
             <p>— MAUREEN P.</p>
           </div>
           <div class="testimonials__box">
-            <p>"David was in our corner at all times in both finding us our new home and selling our old one. He was
+            <p>"Adam was in our corner at all times in both finding us our new home and selling our old one. He was
               always available and quickly responsive to our questions or concerns. I heartily recommend him to anyone
               who
               is either buying or selling a home. This guy is good!"</p>
@@ -283,27 +294,15 @@
       </div>
     </section>
 
-    <!-- listings -->
-    <section data-aos="fade-right" data-aos-duration='1500' class="listings" data-aos="fade-right">
-      <div class="container">
-        <h2 class='listings__heading'>Listings</h2>
-        <div class="listings__flex">
-          <div class="listings__box">
-            <a href="#">Apartments</a>
-          </div>
-          <div class="listings__box">
-            <a href="#">Luxury Homes</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- MAP -->
+    <div style="width: 100%; overflow: hidden; height: 300px;">
+      <iframe id='mapDiv' src=" https://maps.google.com/?q=40.46115,-79.92341&output=svembed" width="100%" height="600"
+        frameborder="0" style="border:0; margin-top: -150px;">
+      </iframe>
+    </div>
 
-
-    <!-- map -->
-    <section id="mapDiv" data-aos-duration='1500' data-aos="fade-right"></section>
-
-    <!-- footer -->
-    <footer class="footer" data-aos-duration='1500' data-aos="fade-left">
+    <!-- FOOTER -->
+    <footer class="footer" data-aos-duration='1000' data-aos="fade-left">
       <div class="bg-video">
         <video playsinline autoplay loop muted class="bg-video__content">
           <source src="/images/video.mp4" type="video/mp4" />
@@ -311,13 +310,6 @@
       </div>
       <div class="container">
         <div class="footer__flex">
-          <div class="footer__box">
-            <h3>Subscribe</h3>
-            <form action="#">
-              <input type="email" name="email" id="email" placeholder="E-mail address" />
-              <button type="submit" class="btn__block">Subscribe</button>
-            </form>
-          </div>
 
           <div class="footer__box">
             <h3>Where to find us</h3>
@@ -354,30 +346,40 @@
   </div>
 
   <script>
-    // position we will use later
-    var lat = 40.46115;
-    var lon = -79.92341;
-    // initialize map
-    map = L.map('mapDiv').setView([lat, lon], 13);
-    // set map tiles source
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-      maxZoom: 18
-    }).addTo(map);
-    // add marker to the map
-    marker = L.marker([lat, lon]).addTo(map);
-    // add popup to the marker
-    marker
-      .bindPopup('<b>Max Cardo Ltd</b><br />6101 Penn Ave<br />Pittsburgh')
-      .openPopup();
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      var uluru = {
+        lat: -25.344,
+        lng: 131.036
+      };
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+        document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
+  <!--Load the API from the specified URL
+        * The async attribute allows the browser to render the page while the API loads
+        * The key parameter will contain your own API key (which is not needed for this tutorial)
+        * The callback parameter executes the initMap() function
+        -->
+  <script async defer src="https://www.google.com/maps/embed/v1/place
+  ?key=AIzaSyD8Mqch9inDidK7TYMRP3gKJJPonVfpeJo
+  &q=6101+penn+ave+pittsburgh+pa+15206">
   </script>
 
   <script>
     AOS.init();
   </script>
   <script src="main.js"></script>
-
-
 </body>
 
 </html>

@@ -10,17 +10,22 @@
 
 .approach {
     &__grid {
-        column-gap: 50px;
+        column-gap: 20px;
     }
+}
+
+.valuation {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .homeValuation,
 .rentalValuation {
+
     &__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 
@@ -33,22 +38,77 @@
     }
 }
 
+.bgDark {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width:1900px) {
+    .approach {
+
+        &__box {
+            justify-self: center;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .approach {
+        &__grid {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 50px;
+            align-content: center;
+            justify-content: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+    }
+}
+
 @media only screen and (max-width:992px) {
 
 
-    .approach,
     .testimonials,
-    .homeValuation,
     .strongLeadership {
         &__grid {
             grid-template-columns: repeat(1, 1fr);
             row-gap: 50px;
         }
-
     }
 
+    .homeValuation,
+    .rentalValuation {
 
+        &__grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
 
+    .rentalValuation {
+        &__grid {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    .approach {
+        &__grid {
+            justify-items: center;
+            width: 90vw;
+            margin: 0 auto;
+        }
+    }
+
+    .bgDark {
+        &__grid {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 50px;
+        }
+    }
 }
 
 @media only screen and (max-width:900px) {
@@ -65,9 +125,9 @@
 }
 
 @media only screen and (max-width:768px) {
-    .blog {
+    .approach {
         &__grid {
-            grid-template-columns: repeat(1, 1fr);
+            margin-top: 30px;
         }
     }
 }

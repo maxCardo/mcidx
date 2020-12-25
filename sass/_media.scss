@@ -1,0 +1,268 @@
+/* MEDIA QUERIES */
+@media only screen and (max-width:1024px) {
+    .approach {
+        &__box {
+            height: 700px !important;
+
+            .bottom {
+                top: 25%;
+
+                p {
+                    line-height: 1.8;
+                }
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width:991px) {
+    .bgDark {
+        height: 100%;
+    }
+
+    .mobile-logo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:993px) {
+    .bgDark {
+        min-height: 900px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    .header {
+
+        &,
+        &__link,
+        & .container .header__logo .logo {
+            display: none;
+        }
+
+    }
+
+    .menu__toggler {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .approach {
+        padding: 50px 0;
+
+        &__box {
+            width: 100%;
+
+
+            img {
+                width: 100%;
+            }
+
+            .bottom {
+                top: 35%;
+            }
+        }
+    }
+
+    .homeValuation {
+        &__box {
+            &:first-of-type {
+                padding: 30px;
+            }
+        }
+    }
+
+    .rentalValuation {
+        &__box {
+            &:nth-of-type(2) {
+                padding: 30px;
+
+            }
+        }
+    }
+
+    .bgDark {
+        height: 100vh;
+
+        &__box {
+            a {
+                &:first-of-type {
+                    margin-bottom: 15px;
+                }
+            }
+
+            p {
+
+                &:nth-of-type(2),
+                &:last-of-type {
+                    margin-bottom: 15px;
+                }
+            }
+
+            h5 {
+                margin-bottom: 15px;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .menu__link {
+        @include flexAlignItemsCenter;
+        flex-direction: column;
+    }
+
+    .footer {
+
+        &__box {
+            text-align: center;
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 780px) {
+    .menu {
+        padding: 0 50px 0 50px;
+    }
+}
+
+@media only screen and (max-width:610px) {
+    .menu {
+        padding: 0 25px 0 25px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        width: 250px;
+        left: -250px;
+    }
+
+    .footer {
+
+        &__flex,
+        &__box {
+            width: 100%;
+        }
+
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .footer {
+        &__box {
+
+            li {
+                margin-bottom: 15px;
+                border: 1px solid black;
+                padding: 10px;
+            }
+
+            i {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .footer {
+        &__copyright {
+            max-width: 250px;
+            margin: 0 auto;
+        }
+    }
+
+    .approach {
+
+        &__box {
+            height: 450px !important;
+
+
+            &:hover {
+                .bottom {
+                    top: 25%;
+
+                    p {
+
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .homeValuation,
+    .rentalValuation {
+        box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.75);
+
+        img {
+            display: none;
+        }
+    }
+
+
+
+}
+
+@media only screen and (max-width:400px) {
+    .hero {
+        &__input {
+            min-width: 280px;
+            font-size: 13px;
+        }
+
+    }
+
+    .footer {
+        &__copyright {
+            max-width: 240px;
+        }
+    }
+
+    .approach {
+        &__grid {
+            width: 100vw;
+        }
+
+    }
+}
+
+// IPAD PRO MEDIA QUERY FOR CONTACT FORM
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .bgDark {
+        height: 100vh;
+    }
+
+    .menu {
+        display: none;
+    }
+
+
+}
+
+// IPAD MEDIA QUERY FOR CONTACT FORM
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation : portrait) {
+    .menu {
+        ul {
+            margin-bottom: 400px;
+        }
+    }
+
+    .bgDark {
+        height: 100vh;
+    }
+
+    .bgDark {
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

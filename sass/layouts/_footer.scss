@@ -3,64 +3,21 @@
 
 .footer {
     padding: 50px;
-    color: white;
-    position: relative;
     width: 100vw;
-
-
-    * {
-        text-shadow: 2px 4px 3px rgba(0, 0, 0, .3);
-    }
+    position: relative;
+    color: white;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, .3);
 
     &__flex {
         display: flex;
-        @include justifyContentSpaceBetween;
-    }
-
-    &__box {
-        max-width: 350px;
-        color: black;
-
-
-        h3 {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid black;
-
-        }
-
-        li {
-
-            i,
-            a {
-                color: black;
-                font-weight: bold;
-            }
-        }
-
-        h3,
-        span,
-        button {
-            color: black;
-            font-weight: bold;
-        }
-
-        input {
-
-            &::placeholder,
-            &:hover {
-                color: black;
-                font-weight: bold;
-            }
-        }
+        justify-content: space-around;
     }
 
     &__copyright {
         text-align: center;
-        color: black;
-        font-weight: bold;
         padding-top: 20px;
-
+        font-weight: bold;
+        color: black;
     }
 
     &__line {
@@ -70,25 +27,21 @@
         margin-top: 20px;
     }
 
-    form input[type='email'] {
-        max-width: 250px;
-        transition: all 0.5s ease-in-out;
-        border: none;
-        background-color: transparent;
-        border-bottom: 1px solid black;
-    }
 }
 
 .bg-video {
     position: absolute;
-    @include topleft0;
-    @include heightWidth100;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     z-index: -1;
     opacity: .7;
     overflow: hidden;
 
     &__content {
-        @include heightWidth100;
+        height: 100%;
+        width: 100%;
         object-fit: cover;
     }
 }
@@ -102,7 +55,8 @@
         min-height: 100%;
         width: auto;
         height: auto;
-        @include leftTop50;
+        left: 50%;
+        top: 50%;
         transform: translate(-50%, -50%);
     }
 
