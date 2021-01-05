@@ -5282,7 +5282,7 @@ body {
   bottom: 0;
   background: white;
   z-index: 999999999;
-  transition: opacity 50s, z-index 75s; }
+  transition: opacity 5000s, z-index 7500s; }
 
 .loader.loaderHidden {
   opacity: 0;
