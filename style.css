@@ -297,7 +297,7 @@ a, a:hover {
     bottom: 0;
     background: white;
     z-index: 999999999;
-    transition: opacity 5000ms, z-index 7500ms;
+    transition: opacity 50s, z-index 75s;
 }
 
 .loader.loaderHidden {
