@@ -5294,8 +5294,8 @@ svg.thumb {
 
 .transition {
   transition: all 1.2s ease-in-out;
-  -webkit-transition: all 1.2 ease-in-out;
-  -moz-transition: all 1.2 ease-in-out; }
+  -webkit-transition: all 1.2s ease-in-out;
+  -moz-transition: all 1.2s ease-in-out; }
 
 .logoTagLine {
   opacity: 0;
