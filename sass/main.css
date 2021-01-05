@@ -1164,6 +1164,19 @@ svg.thumb {
   }
 }
 /*LOADER DOTS*/
+
+.buildings {
+  animation: buildingAnimation 1.25s;
+}
+
+@keyframes buildingAnimation {
+  0% {
+    transform: scale(.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*END OF LOADER CSS*/
 
 /*# sourceMappingURL=main.css.map */
