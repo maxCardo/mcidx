@@ -5393,4 +5393,9 @@ svg.thumb {
     transform: translate(24px, 0); } }
 
 /*LOADER DOTS*/
+
+.buildings {
+  animation: buildingAnimation 1.25s;
+}
+
 /*END OF LOADER CSS*/
