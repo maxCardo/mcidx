@@ -391,10 +391,12 @@
           el.classList.remove('transform');
       }, 800);
       setTimeout(function () {
-          document.getElementsByClassName('logoTagLine')[0].classList.add('showIt');
+          document.querySelectorAll('.logoTagLine').forEach(item => {
+            item.classList.add('showIt')
+          });
       }, 2050);
       setTimeout(function () {
-          document.getElementsByClassName('loader')[0].classList.add('loaderHidden');
+          document.querySelector('.loader').classList.add('loaderHidden');
       }, 3050);
 
   </script>
