@@ -621,7 +621,7 @@ body {
   font-size: 50px;
   text-align: center;
   margin-bottom: 30px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 @media only screen and (max-width: 768px) {
   .strongLeadership__heading,
@@ -1057,7 +1057,7 @@ body {
   bottom: 0;
   background: white;
   z-index: 999999999;
-  transition: opacity 500ms, z-index 750ms;
+  transition: opacity 5000ms, z-index 7500ms;
 }
 
 .loader.loaderHidden {
