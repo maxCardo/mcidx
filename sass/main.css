@@ -1078,7 +1078,7 @@ svg.thumb {
 
 .logoTagLine {
   opacity: 0;
-  transition: opacity 250ms;
+  transition: opacity 1250ms;
 }
 
 .showIt {
