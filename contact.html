@@ -385,28 +385,28 @@
 </svg>
     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 </div>
-  <script>
-      var el = document.getElementsByTagName('g')[0];
+<script>
+    var el = document.getElementsByTagName('g')[0];
 
-      setTimeout(function () {
-          el.classList.add('transition');
-      }, 50);
-      setTimeout(function () {
-          document.getElementsByClassName('lds-ellipsis')[0].classList.add('in');
-      }, 50);
-      setTimeout(function () {
-          el.classList.remove('transform');
-      }, 800);
-      setTimeout(function () {
-          document.querySelectorAll('.logoTagLine').forEach(item => {
+    setTimeout(function() {
+        el.classList.add('transition');
+    }, 50);
+    setTimeout(function() {
+        document.getElementsByClassName('lds-ellipsis')[0].classList.add('in');
+    }, 50);
+    setTimeout(function() {
+        el.classList.remove('transform');
+    }, 800);
+    setTimeout(function () {
+        document.querySelectorAll('.logoTagLine').forEach(item => {
             item.classList.add('showIt')
-          });
-      }, 2050);
-      setTimeout(function () {
-          document.querySelector('.loader').classList.add('loaderHidden');
-      }, 3050);
+        });
+    }, 2050);
+    setTimeout(function() {
+        document.getElementsByClassName('loader')[0].classList.add('loaderHidden');
+    }, 3050);
 
-  </script>
+</script>
   <div class="bgDark" id="bgDark">
     <a href="index.html" class="close">X</a>
     <div class="container">
