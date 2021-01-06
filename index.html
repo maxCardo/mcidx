@@ -430,7 +430,9 @@
     });
   }, 2050);
   setTimeout(function() {
-      document.getElementsByClassName('loader')[0].classList.add('loaderHidden');
+      document.querySelector('.loader').forEach(item => {
+        item.classList.add('loaderHidden');
+      });
   }, 3050);
 
 </script>

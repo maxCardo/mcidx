@@ -431,6 +431,9 @@ body {
   -ms-flex-line-pack: center;
   align-content: center;
 }
+.header__logo img {
+  max-height: 60px;
+}
 .header__link {
   display: inline-block;
   padding: 10px;
@@ -1071,9 +1074,9 @@ svg.thumb {
 }
 
 .transition {
-  transition: all 120s ease-in-out;
-  -webkit-transition: all 120s ease-in-out;
-  -moz-transition: all 120s ease-in-out;
+  transition: all 1.2s ease-in-out;
+  -webkit-transition: all 1.2s ease-in-out;
+  -moz-transition: all 1.2s ease-in-out;
 }
 
 .logoTagLine {
@@ -1164,19 +1167,6 @@ svg.thumb {
   }
 }
 /*LOADER DOTS*/
-
-.buildings {
-  animation: buildingAnimation 1.25s;
-}
-
-@keyframes buildingAnimation {
-  0% {
-    transform: scale(.25);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 /*END OF LOADER CSS*/
 
 /*# sourceMappingURL=main.css.map */
