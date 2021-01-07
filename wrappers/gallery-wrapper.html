@@ -578,11 +578,7 @@
     $(window).on('load', function () {
 
 
-        $.each($.grep(document.styleSheets, function (n) {
-            return n.href.search(/graphical/) != -1;
-        }), function (i, n) {
-            n.disabled = true;
-        });
+
         $('.IDX-arrow').remove();
 
         $('.IDX-showcaseSlide').removeClass('IDX-active');
