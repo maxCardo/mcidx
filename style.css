@@ -4248,6 +4248,9 @@ i.fa-heart-o {
 #IDX-showcaseSlides .IDX-showcaseSlide img {
     position: static !important;
 }
+#IDX-showcaseSlides .IDX-showcaseSlide {
+    width: unset;
+}
 
 .fromApp #IDX-main {
     padding-top: 0 !important;
