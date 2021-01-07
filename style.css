@@ -4245,6 +4245,9 @@ i.fa-heart-o {
 #IDX-showcaseSlides .slick-track {
     display: flex;
 }
+#IDX-showcaseSlides .IDX-showcaseSlide img {
+    position: static !important;
+}
 
 .fromApp #IDX-main {
     padding-top: 0 !important;
