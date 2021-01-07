@@ -4255,3 +4255,16 @@ i.fa-heart-o {
 .buildings {
     animation: buildingAnimation 1.25s;
 }
+
+.houses {
+    animation: housesAnimation 1s;
+}
+
+@keyframes housesAnimation {
+    0% {
+        transform: translate(12500px, 12500px);
+    }
+    100% {
+        transform: translate(12500px, 12500px);
+    }
+}
