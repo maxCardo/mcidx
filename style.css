@@ -4251,21 +4251,3 @@ i.fa-heart-o {
 .fromApp .IDX-page-listing .detailsWrapper--left {
     width: 100%;
 }
-
-.buildings {
-    animation: buildingAnimation 1.25s;
-}
-
-.houses {
-    animation: housesAnimation 1s;
-    transition: transform 1s;
-}
-
-@keyframes housesAnimation {
-    0% {
-        transform: translate(1250px, 1250px);
-    }
-    100% {
-        transform: translate(1250px, 1250px);
-    }
-}
