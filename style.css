@@ -4258,13 +4258,14 @@ i.fa-heart-o {
 
 .houses {
     animation: housesAnimation 1s;
+    transition: transform 1s;
 }
 
 @keyframes housesAnimation {
     0% {
-        transform: translate(12500px, 12500px);
+        transform: translate(1250px, 1250px);
     }
     100% {
-        transform: translate(12500px, 12500px);
+        transform: translate(1250px, 1250px);
     }
 }
