@@ -46,7 +46,10 @@ a, a:hover {
     background: #276883;
 }
 .global-wrapper .header__logo img {
-    max-height: 56px;
+    max-height: 46px;
+}
+.header__logo--mobile img {
+    max-height: 46px;
 }
 /* CUSTOM BTN */
 .btn {
@@ -3106,7 +3109,7 @@ i.fa-heart-o {
     .header__logo--mobile {
         position: absolute;
         right: 5px;
-        top: 15px;
+        top: 8px;
     }
 
     .IDX-category-search #IDX-searchForm,
