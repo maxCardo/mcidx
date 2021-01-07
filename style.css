@@ -4242,7 +4242,9 @@ i.fa-heart-o {
 }
 
 /* IFRAME SPECIFIC STYLING .fromApp is class added when umt is present */
-
+.IDX-showcaseSlides .slick-track {
+    display: flex;
+}
 
 .fromApp #IDX-main {
     padding-top: 0 !important;
