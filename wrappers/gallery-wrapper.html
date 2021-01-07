@@ -438,7 +438,7 @@
     <div class="menu">
         <ul class="menu__links">
             <li>
-                <a href="https://maxcardo.github.io/mcidx/" class="menu__link"><i class="fa fa-home"></i> Home</a>
+                <a href="https://fifthgrant.com" class="menu__link"><i class="fa fa-home"></i> Home</a>
             </li>
             <li>
                 <a href="http://fifthgrant.idxbroker.com/idx/search" class="menu__link"><i class="fa fa-search"></i>
@@ -463,8 +463,8 @@
         <!-- hamburger menu -->
         <div class="menu__toggler"><span></span></div>
         <div class="header__logo--mobile">
-            <a href="https://maxcardo.github.io/mcidx/">
-                <img src="https://maxcardo.github.io/mcidx/images/revampedSmall.png" alt="" class="logo">
+            <a href="https://fifthgrant.com">
+                <img src="https://maxcardo.github.io/mcidx/images/logoHorizontal.png" alt="" class="logo">
             </a>
         </div>
     </div>
@@ -473,8 +473,8 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header__logo">
-                <a href="https://maxcardo.github.io/mcidx/">
-                    <img src="https://maxcardo.github.io/mcidx/images/revampedSmall.png" alt="" class="logo">
+                <a href="https://fifthgrant.com">
+                    <img src="https://maxcardo.github.io/mcidx/images/logoHorizontal.png" alt="" class="logo">
                 </a>
             </div>
             <ul class="header__links">
@@ -491,7 +491,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://maxcardo.github.io/mcidx/contact.html" class=" header__link link"><i
+                    <a href="https://fifthgrant.com/contact.html" class=" header__link link"><i
                             class="fa fa-envelope"></i> Contact Us
                         <div></div>
                     </a>
@@ -507,7 +507,6 @@
     </header>
 
     <div class="mortgageCalcContainer">
-
         <div class="bgimg-1 w3-display-container w3-grayscale-min" id="idxStart"></div>
         <div id="idxStop"></div>
 
@@ -587,7 +586,11 @@
 <script>
     $(document).ready(function () {
 
-
+          $.each($.grep(document.styleSheets, function (n) {
+            return n.href.search(/graphical/) != -1;
+          }), function (i, n) {
+            n.disabled = true;
+          });
 
 
         $('.IDX-arrow').remove();

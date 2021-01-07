@@ -3763,6 +3763,7 @@ i.fa-heart-o {
 
     .search-results-page .mortgageCalcContainer {
         max-height: 97.5vh;
+        overflow: hidden;
     }
 
     .IDX-page-photogallery .galleryContent--container .propertyInfo--container .IDX-propertyInfoList {
