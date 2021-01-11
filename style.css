@@ -4246,7 +4246,9 @@ i.fa-heart-o {
     display: flex;
 }
 #IDX-showcaseSlides .IDX-showcaseSlide img {
+    margin: 0 0 0 0 !important;
     position: static !important;
+    padding: 0 0 0 0 !important;
 }
 #IDX-showcaseSlides .IDX-showcaseSlide {
     width: unset;
