@@ -2235,6 +2235,7 @@ div.flex-grow {
 
 .IDX-page-photogallery .slick-slide {
     height: 65vh;
+    padding: 0 0 0 0 !important;
 }
 
 .IDX-page-photogallery .slick-slide img {
@@ -4249,6 +4250,7 @@ i.fa-heart-o {
     margin: 0 0 0 0 !important;
     position: static !important;
     padding: 0 0 0 0 !important;
+    max-width: unset !important;
 }
 #IDX-showcaseSlides .IDX-showcaseSlide {
     width: unset;
