@@ -4270,7 +4270,7 @@ only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2),
 only screen and (min-resolution: 2dppx) and (min-width: 1399px) and (max-width: 1970px) {
     .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
-        height: calc(87vh - 62px);
+        height: calc(87.5vh - 62px);
         background: #ffffff;
     }
 }
