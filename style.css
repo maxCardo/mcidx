@@ -4254,6 +4254,7 @@ i.fa-heart-o {
 }
 #IDX-showcaseSlides .IDX-showcaseSlide {
     width: unset;
+    border: unset;
 }
 
 .fromApp #IDX-main {
