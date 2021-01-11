@@ -23,7 +23,7 @@ $(document).ready(function () {
               $(".logo").css("color", "white");
               $("#header").css("box-shadow", "none");
               $(".header__link div").css("background-color", "white");
-              $(".logo").css('width', '350px');
+              $(".logo").css('width', '206px');
           }
       });
   }
