@@ -4264,8 +4264,8 @@ i.fa-heart-o {
     width: 100%;
 }
 
-@media (min-width: 2000px) {
-    .IDX-wrapper-standard #IDX-resultsContent {
+@media (min-width: 1981px) {
+    .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
         height: calc(87vh - 62px);
         background: #ffffff;
     }
