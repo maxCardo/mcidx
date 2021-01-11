@@ -4264,7 +4264,11 @@ i.fa-heart-o {
     width: 100%;
 }
 
-@media (min-width: 1981px) {
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx) and (min-width: 1399px) and (max-width: 1970px) {
     .IDX-wrapper-standard #IDX-resultsContent.IDX-resultsContent {
         height: calc(87vh - 62px);
         background: #ffffff;
