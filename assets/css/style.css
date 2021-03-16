@@ -7181,3 +7181,46 @@ svg.thumb {
     background-size: cover;
     padding-top: 190px;
 }
+
+
+.HomeValueEstimation__bg-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background: rgba(66,66,175, .45);
+}
+
+.HomeValueEstimation__page .menu,
+.HomeValueEstimation__page .menu__toggler,
+.HomeValueEstimation__page .header,
+.HomeValueEstimation__page .container {
+    z-index: 7;
+}
+.HomeValueEstimation__bg > .container {
+    position: relative;
+}
+
+.HomeValueEstimation__page .bgDark__btn {
+    max-width: 90px;
+    padding: 5px 24px;
+    margin-left: 8px;
+    max-height: 34px;
+    line-height: 24px;
+}
+#gss_address_form .form-group {
+    display: flex;
+    max-width: 360px;
+    justify-content: space-between;
+}
+#gss_address_form .form-control {
+    padding: 0 8px;
+    line-height: 34px;
+    height: 34px;
+}
+.HomeValueEstimation__page h2 {
+    margin-bottom: 16px;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, .48);
+}
