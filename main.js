@@ -3412,8 +3412,7 @@ $(document).ready(function () {
         });
     }
     /* END OF CONTACT PAGE CONTACT FORM */
-
-
+    
 });
 
 if ($(".menu__toggler").length && $(".menu").length) {
