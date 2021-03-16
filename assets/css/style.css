@@ -7179,4 +7179,5 @@ svg.thumb {
     background: url('../../images/estimationBG-1920.jpg') no-repeat 10% bottom;
     height: 100vh;
     background-size: cover;
+    padding-top: 190px;
 }
