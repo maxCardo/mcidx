@@ -587,7 +587,7 @@
     </div>
 </div>
 <!-- google places api logic -->
-<script>
+<!-- <script>
     let autocomplete;
     function initAutocomplete() {
         autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), {componentRestrictions: { country: "us" }, fields: ["address_components", "geometry"],})
@@ -597,14 +597,24 @@
         });
     }
 
-</script>
+</script> -->
 <script>
+    let autocomplete;
+    var places = {}
+    function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), { componentRestrictions: { country: "us" }, fields: ["address_components", "geometry"], })
+        autocomplete.addListener("place_changed", () => {
+            places = autocomplete.getPlace()
+            // console.log('places: ', places)
+        });
+    }
     $( document ).ready(function() {
         console.log('doc ready')
          // testing google varify output
-        $("#autocomplete").on('change', function (event) {
+        $("#submitAddressForm").on('click', function (event) {
             console.log('change made on address input')
-            console.log('event: ', $(this).val())
+            console.log(places)
+            console.log($('#autocomplete').val())
         })
         let isNameValid, isEmailValid, isPhoneValid;
 
