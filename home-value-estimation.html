@@ -748,10 +748,10 @@
 
                     if (isNameValid && isEmailValid && isPhoneValid) {
                         $.ajax({
-                            headers: { "Accept": "application/json", "Referrer-Policy": "origin"},
+                            type: "POST",
+                            headers: { "Accept": "application/json"},
                             crossDomain: true,
                             url: "https://more-black-magic.herokuapp.com/api/web/homevalue/submit",
-                            type: "post",
                             data: JSON.stringify(data)
                         })
                             .done(function () {
