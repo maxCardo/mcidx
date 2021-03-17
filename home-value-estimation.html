@@ -550,7 +550,7 @@
         <div class="bgDark__box">
             <form class='form' action="#" id="gss_address_form">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="gss_address" placeholder="Enter Google Verified Address" required/>
+                    <input type="text" class="form-control" id="autocomplete" placeholder="Enter Google Verified Address" required/>
                     <button id="submitAddressForm" class='bgDark__btn'>Search</button>
                 </div>
             </form>
@@ -586,6 +586,13 @@
         </div>
     </div>
 </div>
+<!-- google places api logic -->
+<script>
+    let autocomplete;
+    function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'))
+    }
+</script>
 <script>
     $( document ).ready(function() {
         let isNameValid, isEmailValid, isPhoneValid;
@@ -681,7 +688,7 @@
                 console.log('really')
 
 
-                const address = $("#gss_address").val();
+                const address = $("#autocomplete").val();
                 console.log('address')
                 console.log(address)
 
@@ -732,6 +739,7 @@
 
 </script>
 <script src="./main.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBstulfD1ZeHsTc46ecb4vdgagrTpXNACw&libraries=places&callback=initAutocomplete" async ></script>
 </body>
 
 </html>
