@@ -590,11 +590,22 @@
 <script>
     let autocomplete;
     function initAutocomplete() {
-        autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'))
+        autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'), {componentRestrictions: { country: "us" }, fields: ["address_components", "geometry"],})
+        autocomplete.addListener("place_changed", () => {
+            const places = autocomplete.getPlace()
+            console.log('places: ', places)
+        });
     }
+
 </script>
 <script>
     $( document ).ready(function() {
+        console.log('doc ready')
+         // testing google varify output
+        $("#autocomplete").on('change', function (event) {
+            console.log('change made on address input')
+            console.log('event: ', $(this).val())
+        })
         let isNameValid, isEmailValid, isPhoneValid;
 
         const nameInput = $("#gss_name")
