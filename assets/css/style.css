@@ -6551,6 +6551,7 @@ body {
     color: #212529;
     background: rgba(255,255,255,.6666);
     font-weight: 600;
+    margin-top: auto;
 }
 #gss_address_form .form-group {
     display: flex;
@@ -6570,8 +6571,12 @@ body {
 .form-step-2 {
     transition: opacity 230ms;
     opacity: 1;
+    padding: 20px;
+    background: rgba(255,255,255, .675);
+    top: -164px;
+    position: relative;
 }
-.hidden.form-step-2 {
+.hidden.form-step-2, .hidden {
     height: 0;
     overflow: hidden;
     opacity: 0;
@@ -6585,6 +6590,12 @@ body {
     }
     div.HomeValueEstimation__bg {
         padding-top: 225px;
+    }
+    .HomeValueEstimation__bg > .container {
+        top: 304px;
+    }
+    #gss_address_form .form-group {
+        max-width: 540px;
     }
 }
 

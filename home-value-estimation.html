@@ -546,7 +546,7 @@
     </header>
 
     <div class="container">
-        <h2>Get a price value estimation <br>for your home</h2>
+        <h2 class="form-title">Get a price value estimation for your home</h2>
         <div class="bgDark__box">
             <form class='form' action="#" id="gss_address_form">
                 <div class="form-group">
@@ -555,6 +555,7 @@
                 </div>
             </form>
             <div class="form-step-2 hidden">
+                <h2 class="form-title-2">Enter your details and we will contact you with the results of your analysis</h2>
                 <form class="form" action="#" id="gss_contact_form">
                     <div class="form-group">
                         <input type="text" class="form-control" id="gss_name" placeholder="Enter name" required />
@@ -697,7 +698,13 @@
             event.preventDefault()
             console.log('clicked address form')
 
-            const step2 = $('.form-step-2').removeClass('hidden')
+            const step1 = $('#gss_address_form')
+            step1.addClass('hidden')
+            const headline = $('.form-title')
+            headline.addClass('hidden')
+            const step2 = $('.form-step-2')
+            step2.removeClass('hidden')
+
         })
 
         $("#submitHomeValuationForm").on('click', function(event) {
