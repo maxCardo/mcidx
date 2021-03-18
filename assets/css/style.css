@@ -6522,7 +6522,7 @@ body {
     left: 0;
     right: 0;
     z-index: 5;
-    background: rgba(255,255,255, .45);
+    background: rgba(255,255,255, .675);
 }
 
 .HomeValueEstimation__page .menu,
@@ -6664,6 +6664,9 @@ body {
     }
     .HomeValueEstimation__page .bgDark__btn {
         margin: 24px auto;
+    }
+    .form-step-2 {
+        top: -40vh;
     }
 }
 
