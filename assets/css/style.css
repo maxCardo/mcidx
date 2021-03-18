@@ -6650,7 +6650,7 @@ body {
 
 @media only screen and (max-width: 768px) {
     .HomeValueEstimation__bg > .container {
-        top: 242px;
+        top: 30vh;
     }
     .approach__grid {
         margin-top: 30px
