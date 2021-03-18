@@ -6594,7 +6594,7 @@ body {
         padding-top: 225px;
     }
     .HomeValueEstimation__bg > .container {
-        top: 304px;
+        top: 320px;
     }
     #gss_address_form .form-group {
         max-width: 540px;
@@ -6649,6 +6649,9 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+    .HomeValueEstimation__bg > .container {
+        top: 200px;
+    }
     .approach__grid {
         margin-top: 30px
     }
