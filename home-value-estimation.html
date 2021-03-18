@@ -752,7 +752,13 @@
                             headers: { "Accept": "application/json"},
                             crossDomain: true,
                             url: "https://more-black-magic.herokuapp.com/api/web/homevalue/submit",
-                            data: JSON.stringify(data)
+                            data: JSON.stringify(data),
+                            success: function(responseData) {
+                                var value = responseData;
+                            },
+                            error: function (responseData,  errorThrown) {
+                                alert('POST failed.');
+                            }
                         })
                             .done(function () {
                                 window.location.replace("https://fifthgrant.com/thankyou.html");

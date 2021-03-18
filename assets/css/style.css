@@ -6540,6 +6540,7 @@ body {
 }
 .HomeValueEstimation__bg > .container {
     position: relative;
+    transform: rotate(-0.2deg);
 }
 .HomeValueEstimation__page .bgDark__btn {
     max-width: 110px;
@@ -6573,8 +6574,9 @@ body {
     opacity: 1;
     padding: 20px;
     background: rgba(255,255,255, .675);
-    top: -164px;
+    top: -172px;
     position: relative;
+    transform: rotate(-0.1deg);
 }
 .hidden.form-step-2, .hidden {
     height: 0;
