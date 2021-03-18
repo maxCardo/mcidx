@@ -6650,10 +6650,20 @@ body {
 
 @media only screen and (max-width: 768px) {
     .HomeValueEstimation__bg > .container {
-        top: 200px;
+        top: 242px;
     }
     .approach__grid {
         margin-top: 30px
+    }
+    .HomeValueEstimation__page h2 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    #gss_address_form .form-group {
+        flex-direction: column;
+    }
+    .HomeValueEstimation__page .bgDark__btn {
+        margin: 24px auto;
     }
 }
 
