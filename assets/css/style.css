@@ -7190,13 +7190,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
         background-size: cover;
     }
     .HomeValueEstimation__bg > .container {
-        top: 41vh;
+        top: 45vh;
     }
     .HomeValueEstimation__page .bgDark__btn {
         margin: 0 0 0 12px;
     }
     .HomeValueEstimation__page h2.form-title {
-        max-width: 520px;
+        max-width: 420px;
     }
     #gss_address_form .form-group {
         max-width: 420px;
