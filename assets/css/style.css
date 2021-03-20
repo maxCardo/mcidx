@@ -7148,6 +7148,12 @@ body {
         background-size: cover;
         padding-top: 190px;
     }
+    .HomeValueEstimation__page .bgDark__btn {
+        margin: 24px auto 0 0;
+    }
+    .HomeValueEstimation__page h2.form-title {
+        max-width: 360px;
+    }
 }
 
 .loader {
@@ -7310,5 +7316,6 @@ svg.thumb {
     }
     .HomeValueEstimation__bg {
         background: url('../../images/estimationBG-1920.jpg') no-repeat 10% bottom;
+        background-size: cover;
     }
 }
