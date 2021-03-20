@@ -6513,8 +6513,9 @@ body {
     background-size: cover;
     padding-top: 190px;
 }
-
-
+#gss_message {
+    min-height: 50px;
+}
 .HomeValueEstimation__bg-overlay {
     position: fixed;
     top: 0;
@@ -6592,6 +6593,10 @@ body {
         font-size: 24px;
         line-height: 30px;
         margin-bottom: 10px;
+    }
+    .HomeValueEstimation__page #submitHomeValuationForm {
+        margin: 20px 0 0 auto;
+        display: block;
     }
 }
 @media only screen and (min-width: 1900px) {
