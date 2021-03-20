@@ -6589,7 +6589,8 @@ body {
     .HomeValueEstimation__bg > div.container {
         top: 16vh;
     }
-    .HomeValueEstimation__page h2.form-title-2 {
+    .HomeValueEstimation__page h2.form-title-2,
+    .HomeValueEstimation__page h2.form-title {
         font-size: 24px;
         line-height: 30px;
         margin-bottom: 10px;
