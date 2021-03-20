@@ -7198,10 +7198,16 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .HomeValueEstimation__page h2.form-title {
         max-width: 520px;
     }
+    #gss_address_form .form-group {
+        max-width: 420px;
+    }
 }
 @media only screen and (min-width: 1140px) and (max-width: 1598px) {
     .HomeValueEstimation__bg > .container {
-        top: 38vh;
+        top: 45vh;
+    }
+    #gss_address_form .form-group {
+        max-width: 420px;
     }
 }
 .loader {
