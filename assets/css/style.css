@@ -7159,7 +7159,9 @@ body {
     }
 }
 @media only screen and (min-width: 1140px) and (max-width: 1598px) {
-
+    .HomeValueEstimation__bg > .container {
+        top: 38vh;
+    }
 }
 .loader {
     position: fixed;
