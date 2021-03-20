@@ -6584,7 +6584,16 @@ body {
     opacity: 0;
 }
 /* END OF Home Value Estimation CSS */
-
+@media only screen and (max-width:325px) {
+    .HomeValueEstimation__bg > div.container {
+        top: 16vh;
+    }
+    .HomeValueEstimation__page h2 {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+}
 @media only screen and (min-width: 1900px) {
     .approach__box {
         justify-self: center;
@@ -6595,6 +6604,7 @@ body {
     }
     .HomeValueEstimation__bg > .container {
         top: 320px;
+        transform: rotate(-0.395deg);
     }
     #gss_address_form .form-group {
         max-width: 540px;
