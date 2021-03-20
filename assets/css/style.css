@@ -7142,7 +7142,7 @@ body {
     .bgDark__grid {
         grid-template-columns: repeat(2, 1fr)
     }
-    .HomeValueEstimation__bg {
+    div.HomeValueEstimation__bg {
         background: url(../../images/estimationBG-tabletPortrait.jpg) no-repeat top center;
         height: 100vh;
         background-size: cover;
