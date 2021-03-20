@@ -6507,7 +6507,6 @@ body {
 /* Home Value Estimation CSS */
 
 .HomeValueEstimation__bg {
-    /*background: url('../../images/estimationBG-1920.jpg') no-repeat 10% bottom;*/
     background: url('../../images/estimationBG-mobile.jpg') no-repeat 10% bottom;
     height: 100vh;
     background-size: cover;
@@ -7314,8 +7313,14 @@ svg.thumb {
     #gss_contact_form .form-group {
         width: 48.5%;
     }
-    .HomeValueEstimation__bg {
+
+}
+
+@media (min-width: 1599px) {
+    div.HomeValueEstimation__bg {
         background: url('../../images/estimationBG-1920.jpg') no-repeat 10% bottom;
+        height: 100vh;
         background-size: cover;
+        padding-top: 190px;
     }
 }
