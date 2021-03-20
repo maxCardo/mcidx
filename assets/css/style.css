@@ -7187,12 +7187,13 @@ and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 2) {
     div.HomeValueEstimation__bg {
         background: url(../../images/estimationBG-tabletPortrait.jpg) no-repeat center center;
+        background-size: cover;
     }
     .HomeValueEstimation__bg > .container {
-        top: 42vh;
+        top: 41vh;
     }
     .HomeValueEstimation__page .bgDark__btn {
-        margin: 24px auto 0 0;
+        margin: 0 0 0 12px;
     }
     .HomeValueEstimation__page h2.form-title {
         max-width: 520px;
