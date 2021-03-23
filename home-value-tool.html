@@ -554,36 +554,102 @@
                     <button id="submitAddressForm" class='bgDark__btn'>Search</button>
                 </div>
             </form>
-            <div class="form-step-2 hidden">
-                <h2 class="form-title-2">Enter your details and we will contact you with the results of your analysis</h2>
-                <form class="form" action="#" id="gss_contact_form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="gss_name" placeholder="Enter name" required />
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="gss_email" placeholder="Email" required />
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" class="form-control" id="gss_phone" placeholder="Enter phone number" required />
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control" id="gss_interest" required>
-                            <option value="" disabled selected>What are you intrested in?</option>
-                            <option value="buying">Buying</option>
-                            <option value="selling">Selling</option>
-                            <option value="media">Media</option>
-                            <option value="info">Info</option>
-                        </select>
-                    </div>
+            <div class="form-steps hidden">
+                <div class="form-step-2 hidden">
+                    <h2 class="form-title-2">Which phrase best descirbes you?</h2>
+                    <form class="form" action="#" id="gss_contact_form">
+                        <div class="form-group">
+                            <select class="form-control" id="gss_interest_type" required>
+                                <option value="" disabled selected>--select--</option>
+                                <option value="selling">I am the property owner</option>
+                                <option value="buying">I am interested in buying this or similar property.</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+               
+                <div class="form-step-3 hidden" id="step-3-sell">
+                    <h2 class="form-title-2">Tell us about yor property.</h2>
+                    <form class="form" action="#" id="gss_contact_form">
+                        <div class="form-group">
+                            <select class="form-control" id="gss_interest" required>
+                                <option value="" disabled selected>When are you looking to sell your property?</option>
+                                <option value="asap">ASAP</option>
+                                <option value="1-6">In the next 1-6 months</option>
+                                <option value="6-12">In the next 6-12 months </option>
+                                <option value="+12">More then 12 months from now </option>
+                                <option value="just shopping">I am not interested in selling at the moment</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="gss_interest" required>
+                                <option value="" disabled selected>Which statment best reflects your properties condition?</option>
+                                <option value="a">Updated: The home has been built or renovated in the last 10 years and is in excelent condition</option>
+                                <option value="b">Move In Ready: Finishes are of average age (10-20 years old) and in great condition</option>
+                                <option value="c">Aged Well: Older home but still in good condition. May need a little TLC.   </option>
+                                <option value="c-">Needs Work: Home has good bones but is in need of updates and improvments.  </option>
+                                <option value="d">Distressed: Home is not livable and need a considerable amount of work. </option>
+                            </select>
+                        </div>
+                        <button class='bgDark__btn next-3'>Next</button>
+                    </form>
+                </div>
 
-                    <div class="form-group">
-                        <textarea placeholder="Message" class="form-control" name="message" id="gss_message" required cols="30"
-                        rows="3"></textarea>
-                    </div>
+                <div class="form-step-3 hidden" id="step-3-buy">
+                    <h2 class="form-title-2">Tell us about your real estate interests. </h2>
+                    <form class="form" action="#" id="gss_contact_form">
+                        <div class="form-group">
+                            <select class="form-control" id="gss_interest" required>
+                                <option value="" disabled selected>Which statment best describes you.</option>
+                                <option value="buying">I am looking to buy a new home for myself or a family member</option>
+                                <option value="selling">I am an investor looking for my next income property.</option>
+                                <option value="media">I am a real estate pro doing some research  </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="gss_interest" required>
+                                <option value="" disabled selected>Do you own other properties</option>
+                                <option value="0">I do not own any property at the moement</option>
+                                <option value="1">I own my own home but nothing else</option>
+                                <option value="2-5">I own 2-5 properties </option>
+                                <option value="6-10">I own 6-10 properties </option>
+                                <option value="+10">I own +10 properties </option>
+                            </select>
+                        </div>
 
-                    <button id="submitHomeValuationForm" class='bgDark__btn'>Send</button>
-                </form>
+                        <div class="form-group">
+                            <select class="form-control" id="gss_interest" required>
+                                <option value="" disabled selected>When are you looking to buy a new property?</option>
+                                <option value="asap">ASAP</option>
+                                <option value="1-6">In the next 1-6 months</option>
+                                <option value="6-12">In the next 6-12 months </option>
+                                <option value="+12">More then 12 months from now </option>
+                                <option value="just shopping">I am not interested in buying at the moment</option>
+                            </select>
+                        </div>
+                
+                        <button class='bgDark__btn next-3'>Next</button>
+                    </form>
+                </div>
+                
+                <div class="form-step-4 hidden">
+                    <h2 class="form-title-2">Where can we send your report?</h2>
+                    <form class="form" action="#" id="gss_contact_form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="gss_name" placeholder="Enter name" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="gss_email" placeholder="Email" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" id="gss_phone" placeholder="Enter phone number" required />
+                        </div>
+                        <button id="submitHomeValuationForm" class='bgDark__btn'>Send</button>
+                    </form>
+                </div>
+
             </div>
+            
         </div>
     </div>
 </div>

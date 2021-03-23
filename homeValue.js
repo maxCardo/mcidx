@@ -1,13 +1,14 @@
 $(document).ready(function () {
-    console.log('doc ready')
     // testing google varify output
     $("#submitAddressForm").on('click', function (event) {
         console.log('change made on address input')
         console.log(places)
         console.log($('#autocomplete').val())
     })
-    let isNameValid, isEmailValid, isPhoneValid;
 
+    let isAddressSelect, isNameValid, isEmailValid, isPhoneValid;
+
+    //validation
     const nameInput = $("#gss_name")
     nameInput.on("keyup", function () {
         if ($(this).val().match(/^[a-zA-Z ]{3,}$/)) {
@@ -91,10 +92,33 @@ $(document).ready(function () {
         step1.addClass('hidden')
         const headline = $('.form-title')
         headline.addClass('hidden')
+        $('.form-steps').removeClass('hidden')
         const step2 = $('.form-step-2')
         step2.removeClass('hidden')
 
     })
+    const type = $("#gss_interest_type")
+    type.on('change', function () {
+        console.log('changes: '), type.val();
+        if (type.val() === 'buying') {
+            console.log('buy: '), type.val();
+            $('.form-step-2').addClass('hidden')
+            $('#step-3-buy').removeClass('hidden')
+        } else if (type.val() === 'selling') {
+            console.log('sell: '), type.val();
+            $('.form-step-2').addClass('hidden')
+            $('#step-3-sell').removeClass('hidden')
+        }
+    })
+
+    const next = $(".next-3")
+    next.on('click', function (e) {
+        e.preventDefault()
+        console.log('next button hit');
+        $('.form-step-3').addClass('hidden')
+        $('.form-step-4').removeClass('hidden')
+    })
+
 
     $("#submitHomeValuationForm").on('click', function (event) {
         event.preventDefault()
@@ -118,10 +142,6 @@ $(document).ready(function () {
             let phone = $("#gss_phone")
                 .val()
                 .trim();
-            let message = $("#gss_message")
-                .val()
-                .trim();
-
             let data = {
                 name: name,
                 email: email,
