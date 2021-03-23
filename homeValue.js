@@ -1,12 +1,18 @@
 $(document).ready(function () {
-    // testing google varify output
-    $("#submitAddressForm").on('click', function (event) {
-        console.log('change made on address input')
-        console.log(places)
-        console.log($('#autocomplete').val())
-    })
 
     let isAddressSelect, isNameValid, isEmailValid, isPhoneValid;
+
+    const leadData = {
+        buyer: {
+            buyer_type: {required: true, valid: false, value: ''},
+            buyer_exp: { required: true, valid: false, value: '' },
+            buyer_timeframe: { required: true, valid: false, value: '' },
+        }, 
+        seller: {
+            seller_timeframe: { required: true, valid: false, value: '' },
+            property_condition: { required: true, valid: false, value: '' },
+        }
+    }
 
     //validation
     const nameInput = $("#gss_name")
@@ -84,39 +90,61 @@ $(document).ready(function () {
         }
     });
 
+    
+    //submit page/form
     $("#submitAddressForm").on('click', function (event) {
         event.preventDefault()
-        console.log('clicked address form')
-
-        const step1 = $('#gss_address_form')
-        step1.addClass('hidden')
-        const headline = $('.form-title')
-        headline.addClass('hidden')
-        $('.form-steps').removeClass('hidden')
-        const step2 = $('.form-step-2')
-        step2.removeClass('hidden')
-
+        const valid = places.address_components
+        const address = $("#autocomplete")
+        console.log('adress: ', address.val());
+        if (valid) {
+            //console.log('invalid:', invalid);
+            console.log(places);
+            const step1 = $('#gss_address_form')
+            step1.addClass('hidden')
+            const headline = $('.form-title')
+            headline.addClass('hidden')
+            $('.form-steps').removeClass('hidden')
+            const step2 = $('.form-step-2')
+            step2.removeClass('hidden')
+        }else if(!valid && !address.val()){
+            console.log($("#autocomplete").val());
+            alert('Please Enter A Valid Address')
+        }
     })
+
     const type = $("#gss_interest_type")
     type.on('change', function () {
-        console.log('changes: '), type.val();
-        if (type.val() === 'buying') {
-            console.log('buy: '), type.val();
+        if (type.val() === 'buyer') {
             $('.form-step-2').addClass('hidden')
             $('#step-3-buy').removeClass('hidden')
-        } else if (type.val() === 'selling') {
-            console.log('sell: '), type.val();
+        } else if (type.val() === 'seller') {
             $('.form-step-2').addClass('hidden')
             $('#step-3-sell').removeClass('hidden')
         }
     })
 
+    //update form data
+    $(".form-update").on('change', function (e) {
+        console.log(type.val());
+        leadData[type.val()][e.target.id.replace('gss_', '')].value = e.target.value
+        leadData[type.val()][e.target.id.replace('gss_', '')].valid = true
+        console.log(leadData[type.val()]);
+    })
+
     const next = $(".next-3")
     next.on('click', function (e) {
         e.preventDefault()
-        console.log('next button hit');
-        $('.form-step-3').addClass('hidden')
-        $('.form-step-4').removeClass('hidden')
+        const allClear = Object.entries(leadData[type.val()]).map(x => x[1].valid).every(x => x === true) 
+        console.log('all clear: ', allClear);
+        if (allClear) {
+            $('.form-step-3').addClass('hidden')
+            $('.form-step-4').removeClass('hidden')
+        }else{
+            alert('Please complete selections below')
+        }
+        
+        
     })
 
 
@@ -146,9 +174,10 @@ $(document).ready(function () {
                 name: name,
                 email: email,
                 phone: phone,
-                subject: 'homeEvaluation',
-                address: address,
-                message: message
+                subject: 'home-value',
+                propertyAddress: address,
+                leadType: type.val(),
+                leadData: leadData[type.val()] 
             };
 
             console.log(address);
