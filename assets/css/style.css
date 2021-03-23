@@ -6599,22 +6599,6 @@ body {
         display: block;
     }
 }
-@media only screen and (min-width: 1900px) {
-    .approach__box {
-        justify-self: center;
-        width: 100%
-    }
-    div.HomeValueEstimation__bg {
-        padding-top: 225px;
-    }
-    .HomeValueEstimation__bg > .container {
-        top: 320px;
-        transform: rotate(-0.395deg);
-    }
-    #gss_address_form .form-group {
-        max-width: 540px;
-    }
-}
 
 @media only screen and (max-width: 1024px) {
     .approach__grid {
@@ -6664,24 +6648,8 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-    .HomeValueEstimation__bg > .container {
-        top: 30vh;
-    }
     .approach__grid {
         margin-top: 30px
-    }
-    .HomeValueEstimation__page h2 {
-        font-size: 30px;
-        line-height: 36px;
-    }
-    #gss_address_form .form-group {
-        flex-direction: column;
-    }
-    .HomeValueEstimation__page .bgDark__btn {
-        margin: 24px auto;
-    }
-    .form-steps {
-        top: -40vh;
     }
 }
 
@@ -7142,74 +7110,15 @@ body {
     .bgDark__grid {
         grid-template-columns: repeat(2, 1fr)
     }
-    div.HomeValueEstimation__bg {
-        background: url(../../images/estimationBG-tabletPortrait.jpg) no-repeat top center;
-        height: 100vh;
-        background-size: cover;
-        padding-top: 190px;
-    }
-    .HomeValueEstimation__bg > .container {
-        top: 38vh;
-    }
-    .HomeValueEstimation__page .bgDark__btn {
-        margin: 24px auto 0 0;
-    }
-    .HomeValueEstimation__page h2.form-title {
-        max-width: 360px;
+}
+
+@media only screen and (min-width: 1900px) {
+    .approach__box {
+        justify-self: center;
+        width: 100%
     }
 }
-@media only screen
-and (min-device-width: 834px)
-and (max-device-width: 834px)
-and (orientation: portrait)
-and (-webkit-min-device-pixel-ratio: 2) {
-    div.HomeValueEstimation__bg {
-        background: url(../../images/estimationBG-tabletPortrait.jpg) no-repeat center center;
-    }
-    .HomeValueEstimation__bg > .container {
-        top: 42vh;
-    }
-    .HomeValueEstimation__page .bgDark__btn {
-        margin: 24px auto 0 0;
-    }
-    .HomeValueEstimation__page h2.form-title {
-        max-width: 520px;
-    }
-}
-/*ipad PRo 12.9"*/
-/* Portrait */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen
-and (min-device-width: 1024px)
-and (max-device-width: 1024px)
-and (orientation: portrait)
-and (-webkit-min-device-pixel-ratio: 2) {
-    div.HomeValueEstimation__bg {
-        background: url(../../images/estimationBG-tabletPortrait.jpg) no-repeat center center;
-        background-size: cover;
-    }
-    .HomeValueEstimation__bg > .container {
-        top: 45vh;
-    }
-    .HomeValueEstimation__page .bgDark__btn {
-        margin: 0 0 0 12px;
-    }
-    .HomeValueEstimation__page h2.form-title {
-        max-width: 420px;
-    }
-    #gss_address_form .form-group {
-        max-width: 420px;
-    }
-}
-@media only screen and (min-width: 1140px) and (max-width: 1598px) {
-    .HomeValueEstimation__bg > .container {
-        top: 45vh;
-    }
-    #gss_address_form .form-group {
-        max-width: 420px;
-    }
-}
+
 .loader {
     position: fixed;
     top: 0;
@@ -7356,26 +7265,5 @@ svg.thumb {
     }
     100% {
         transform: translate(24px, 0)
-    }
-}
-
-@media (min-width: 768px) {
-    #gss_contact_form {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    #gss_contact_form .form-group {
-        width: 48.5%;
-    }
-
-}
-
-@media (min-width: 1599px) {
-    div.HomeValueEstimation__bg {
-        background: url('../../images/estimationBG-1920.jpg') no-repeat 10% bottom;
-        height: 100vh;
-        background-size: cover;
-        padding-top: 190px;
     }
 }
