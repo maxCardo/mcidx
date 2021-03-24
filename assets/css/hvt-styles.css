@@ -190,6 +190,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
         z-index: 12;
         max-width: unset;
         top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }
