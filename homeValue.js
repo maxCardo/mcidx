@@ -152,7 +152,7 @@ $(document).ready(function () {
         event.preventDefault()
         console.log('start pls')
         /* Home Valuation PAGE CONTACT FORM */
-        if ($("#gss_contact_form").length) {
+        if ($(".gss_contact_form").length) {
 
             console.log('really')
 

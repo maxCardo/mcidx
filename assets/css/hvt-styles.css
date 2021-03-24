@@ -43,6 +43,12 @@ body.HomeValueEstimation__page {
     position: relative;
     transform: rotate(-0.2deg);
 }
+.HomeValueEstimation__page-thankyou {
+    text-align: center;
+}
+.HomeValueEstimation__page-thankyou.HomeValueEstimation__page .bgDark__btn {
+    max-width: unset;
+}
 .HomeValueEstimation__page .bgDark__btn {
     max-width: 110px;
     padding: 5px 24px;
@@ -61,10 +67,11 @@ body.HomeValueEstimation__page {
     justify-content: space-between;
 }
 #gss_address_form .form-control,
-#gss_contact_form .form-control  {
+.gss_contact_form .form-control  {
     padding: 0 8px;
     line-height: 34px;
     height: 34px;
+    font-size: 14px;
 }
 .HomeValueEstimation__page h2 {
     margin-bottom: 16px;
@@ -92,9 +99,9 @@ body.HomeValueEstimation__page {
     }
     .HomeValueEstimation__page h2.form-title-2,
     .HomeValueEstimation__page h2.form-title {
-        font-size: 24px;
-        line-height: 30px;
-        margin-bottom: 10px;
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 7px;
     }
     .HomeValueEstimation__page #submitHomeValuationForm {
         margin: 20px 0 0 auto;
@@ -173,21 +180,21 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .HomeValueEstimation__page .bgDark__btn {
         margin: 24px auto;
     }
+    .HomeValueEstimation__page-thankyou.HomeValueEstimation__page .bgDark__btn {
+        margin: 0 auto;
+    }
 }
 @media (min-width: 768px) {
-
-    #gss_contact_form {
+    .gss_contact_form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
-    #gss_contact_form .form-group {
+    .gss_contact_form .form-group {
         width: 100%;
     }
-
-    .form-step-4 #gss_contact_form .btn {
+    .form-step-4 .gss_contact_form .btn {
         margin: 0 0 0 12px;
     }
     .HomeValueEstimation__bg .bgDark__box,
@@ -215,6 +222,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
     #submitAddressForm {
         margin-left: 12px;
+    }
+    .HomeValueEstimation__bg .bgDark__box,
+    .HomeValueEstimation__bg .form-title {
+        max-width: 464px;
     }
 }
 
@@ -247,8 +258,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
         padding-top: 225px;
     }
     .HomeValueEstimation__bg > .container {
-        top: 320px;
+        top: 280px;
         transform: rotate(-0.395deg);
+    }
+    .HomeValueEstimation__page-thankyou .HomeValueEstimation__bg > .container {
+        top: 324px;
     }
     #gss_address_form .form-group {
         max-width: 540px;
