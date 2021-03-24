@@ -19,6 +19,9 @@
 
 
 <body class='HomeValueEstimation__page'>
+
+
+<!-----------------------------------------------------   Loader    ----------------------------------------------------------->
 <div class="loader">
     <svg class="thumb" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
          x="0px" y="0px"
@@ -475,6 +478,8 @@
     }, 3050);
 
 </script>
+<!---------------------------------------------------    End Loader ------------------------------------------------------------>
+
 <div class="HomeValueEstimation__bg">
     <div class="HomeValueEstimation__bg-overlay"></div>
     <!-- SIDEPANEL -->
@@ -562,8 +567,8 @@
                         <div class="form-group">
                             <select class="form-control" id="gss_interest_type" required>
                                 <option value="" disabled selected>--select--</option>
-                                <option value="selling">I am the property owner</option>
-                                <option value="buying">I am interested in buying this or similar property.</option>
+                                <option value="seller">I am the property owner</option>
+                                <option value="buyer">I am interested in buying this or similar property.</option>
                             </select>
                         </div>
                     </form>
@@ -573,7 +578,7 @@
                     <h2 class="form-title-2">Tell us about yor property.</h2>
                     <form class="form" action="#" id="gss_contact_form">
                         <div class="form-group">
-                            <select class="form-control" id="gss_interest" required>
+                            <select class="form-control form-update" id="gss_seller_timeframe" required>
                                 <option value="" disabled selected>When are you looking to sell your property?</option>
                                 <option value="asap">ASAP</option>
                                 <option value="1-6">In the next 1-6 months</option>
@@ -583,7 +588,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <select class="form-control" id="gss_interest" required>
+                            <select class="form-control form-update" id="gss_property_condition" required>
                                 <option value="" disabled selected>Which statment best reflects your properties condition?</option>
                                 <option value="a">Updated: The home has been built or renovated in the last 10 years and is in excelent condition</option>
                                 <option value="b">Move In Ready: Finishes are of average age (10-20 years old) and in great condition</option>
@@ -600,7 +605,7 @@
                     <h2 class="form-title-2">Tell us about your real estate interests. </h2>
                     <form class="form" action="#" id="gss_contact_form">
                         <div class="form-group">
-                            <select class="form-control" id="gss_interest" required>
+                            <select class="form-control form-update" id="gss_buyer_type" required>
                                 <option value="" disabled selected>Which statment best describes you.</option>
                                 <option value="buying">I am looking to buy a new home for myself or a family member</option>
                                 <option value="selling">I am an investor looking for my next income property.</option>
@@ -608,9 +613,9 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <select class="form-control" id="gss_interest" required>
+                            <select class="form-control form-update" id="gss_buyer_exp" required>
                                 <option value="" disabled selected>Do you own other properties</option>
-                                <option value="0">I do not own any property at the moement</option>
+                                <option value="0">I do not own any property at the moment</option>
                                 <option value="1">I own my own home but nothing else</option>
                                 <option value="2-5">I own 2-5 properties </option>
                                 <option value="6-10">I own 6-10 properties </option>
@@ -619,7 +624,7 @@
                         </div>
 
                         <div class="form-group">
-                            <select class="form-control" id="gss_interest" required>
+                            <select class="form-control form-update" id="gss_buyer_timeframe" required>
                                 <option value="" disabled selected>When are you looking to buy a new property?</option>
                                 <option value="asap">ASAP</option>
                                 <option value="1-6">In the next 1-6 months</option>
