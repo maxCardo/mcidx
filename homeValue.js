@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    let isAddressSelect, isNameValid, isEmailValid, isPhoneValid;
+    let isNameValid, isEmailValid, isPhoneValid;
 
     const leadData = {
         buyer: {
@@ -96,9 +96,7 @@ $(document).ready(function () {
         event.preventDefault()
         const valid = places.address_components
         const address = $("#autocomplete")
-        console.log('adress: ', address.val());
         if (valid) {
-            //console.log('invalid:', invalid);
             console.log(places);
             const step1 = $('#gss_address_form')
             step1.addClass('hidden')
@@ -175,13 +173,12 @@ $(document).ready(function () {
                 email: email,
                 phone: phone,
                 subject: 'home-value',
-                propertyAddress: address,
+                propertyAddress: places.address_components,
                 leadType: type.val(),
                 leadData: leadData[type.val()] 
             };
 
-            console.log(address);
-            console.log(data)
+            console.log('data: ', data)
 
             //""
 
@@ -200,7 +197,7 @@ $(document).ready(function () {
                     }
                 })
                     .done(function () {
-                        window.location.replace("https://fifthgrant.com/thankyou.html");
+                        //window.location.replace("https://fifthgrant.com/thankyou.html");
                     });
 
             }
