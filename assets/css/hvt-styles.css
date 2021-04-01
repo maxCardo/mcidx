@@ -4,6 +4,7 @@
 html.hvt,
 body.HomeValueEstimation__page {
     overflow: hidden;
+    max-height: 100vh;
 }
 
 /* Home Value Estimation CSS */
