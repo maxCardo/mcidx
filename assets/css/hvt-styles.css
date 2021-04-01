@@ -168,7 +168,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 @media (max-width: 768px) {
     .HomeValueEstimation__bg > .container {
-        top: 30vh;
+        top: 180px;
     }
     .HomeValueEstimation__page h2 {
         font-size: 30px;
