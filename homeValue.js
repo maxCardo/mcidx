@@ -94,7 +94,8 @@ $(document).ready(function () {
     //submit page/form
     $("#submitAddressForm").on('click', function (event) {
         event.preventDefault()
-        const valid = places.address_components
+        const valid = true
+        //places.address_components
         const address = $("#autocomplete")
         if (valid) {
             console.log(places);
@@ -123,27 +124,54 @@ $(document).ready(function () {
     })
 
     //update form data
-    $(".form-update").on('change', function (e) {
-        console.log(type.val());
-        leadData[type.val()][e.target.id.replace('gss_', '')].value = e.target.value
-        leadData[type.val()][e.target.id.replace('gss_', '')].valid = true
-        console.log(leadData[type.val()]);
-    })
+    const selection = $(".form-update")
+    selection.on('click', function (e) {
+        console.log(e.target);
+        console.log(type.val()); //object field
+        console.log(selection.parent().attr('id')); // subfield
+        console.log(selection.val()); //value
+        console.log(selection.parent().attr('next')); //next id to open
+        const current = selection.parent().attr('id')
+        const next = selection.parent().attr('next')
+        
+        //update the value
+        leadData[type.val()][selection.parent().attr('id')].value = e.target.value
+        leadData[type.val()][selection.parent().attr('id')].valid = true
 
-    const next = $(".next-3")
-    next.on('click', function (e) {
-        e.preventDefault()
-        const allClear = Object.entries(leadData[type.val()]).map(x => x[1].valid).every(x => x === true) 
-        console.log('all clear: ', allClear);
-        if (allClear) {
+        //go to next quastion or if no other go to next step
+        if (next != 'false') {
+            $(`#${current}`).addClass('hidden')
+            $(`#${next}`).removeClass('hidden')
+        }else{
             $('.form-step-3').addClass('hidden')
             $('.form-step-4').removeClass('hidden')
-        }else{
-            alert('Please complete selections below')
         }
-        
-        
+
+
+        //leadData[type.val()][e.target.id.replace('gss_', '')].value = e.target.value
+        //leadData[type.val()][e.target.id.replace('gss_', '')].valid = true
+        //console.log(leadData[type.val()]);
     })
+
+    // const next = $(".next-3")
+    // next.on('click', function (e) {
+    //     e.preventDefault()
+    //     const allClear = Object.entries(leadData[type.val()]).map(x => x[1].valid).every(x => x === true) 
+    //     console.log('all clear: ', allClear);
+    //     if (allClear) {
+    //         $('.form-step-3').addClass('hidden')
+    //         $('.form-step-4').removeClass('hidden')
+    //     }else{
+    //         alert('Please complete selections below')
+    //     }
+          
+    // })
+
+    $('.option_select').on('click', (e) => {
+        console.log(e.value);
+    })
+
+
 
 
     $("#submitHomeValuationForm").on('click', function (event) {
@@ -181,11 +209,11 @@ $(document).ready(function () {
             console.log('data: ', data)
 
             //""
-
+            const testURL = "http://localhost:8080/api/web/homevalue/submit" 
 
             if (isNameValid && isEmailValid && isPhoneValid) {
                 $.ajax({
-                    url: "https://more-black-magic.herokuapp.com/api/web/homevalue/submit",
+                    url: "https://more-black-magic.herokuapp.com/api/web/homevalue/submit", 
                     type: "post",
                     contentType: "application/json",
                     data: JSON.stringify(data),
@@ -197,7 +225,7 @@ $(document).ready(function () {
                     }
                 })
                     .done(function () {
-                        //window.location.replace("https://fifthgrant.com/thankyou.html");
+                        window.location.replace("https://fifthgrant.com/thankyou.html");
                     });
 
             }

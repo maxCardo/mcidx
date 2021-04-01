@@ -573,29 +573,47 @@
                             <select class="form-control" id="gss_interest_type" required>
                                 <option value="" disabled selected>Select an option</option>
                                 <option value="seller">I am the property owner</option>
-                                <option value="buyer">I am interested in buying this or similar property.</option>
+                                <option value="buyer">I am interested buyer.</option>
                             </select>
                         </div>
                     </form>
                 </div>
-               
                 <div class="form-step-3 hidden" id="step-3-sell">
+                    <div class="form-step-quastion" id = seller_timeframe next='property_condition'>
+                        <h3 class="form-title-2">When are you looking to sell your property?</h3>
+                        <button type="button" value='asap' class="btn btn-secondary btn-lg btn-block form-update">ASAP</button>
+                        <button type="button" value='1-6' class="btn btn-secondary btn-lg btn-block">1-6 Months</button>
+                        <button type="button" value='6-12' class="btn btn-secondary btn-lg btn-block">6-12 Months</button>
+                        <button type="button" value='+12' class="btn btn-secondary btn-lg btn-block">+12 Months</button>
+                        <button type="button" value='Not Interested' class="btn btn-secondary btn-lg btn-block">I am not interested in selling</button>
+                    </div>
+                    <div class="form-step-quastion hidden" id='property_condition' next=false>
+                        <h3 class="form-title-2">Which statment best reflects your properties condition?</h3><br>
+                        <button type="button" value='a' class="btn btn-secondary btn-lg btn-block" style = "font-size: 80%">Updated:<br>The home was built or renovated recently and is in excellent condition</button>
+                        <button type="button" value='b' class="btn btn-secondary btn-lg btn-block" style = "font-size: 80%">Move In Ready: <br> Finishes are of average age (10-20 years old), in great condition</button>
+                        <button type="button" value='c' class="btn btn-secondary btn-lg btn-block" style = "font-size: 80%">Aged Well: <br> Older home but still in good condition. May need a little TLC.</button>
+                        <button type="button" value='c-' class="btn btn-secondary btn-lg btn-block" style = "font-size: 80%">Needs Work: <br> Home has good bones but is in need of updates and improvments.</button>
+                        <button type="button" value='d' class="btn btn-secondary btn-lg btn-block" style = "font-size: 80%">Distressed: <br> Home is not livable and need a considerable amount of work.</button>
+                    </div>
+                </div>
+                
+                <div class="form-step-33 hidden" id="step-3-sell">
                     <h2 class="form-title-2">Tell us about yor property.</h2>
                     <form class="form gss_contact_form" action="#">
                         <div class="form-group">
                             <select class="form-control form-update" id="gss_seller_timeframe" required>
                                 <option value="" disabled selected>When are you looking to sell your property?</option>
                                 <option value="asap">ASAP</option>
-                                <option value="1-6">In the next 1-6 months</option>
-                                <option value="6-12">In the next 6-12 months </option>
-                                <option value="+12">More then 12 months from now </option>
-                                <option value="just shopping">I am not interested in selling at the moment</option>
+                                <option value="1-6">1-6 months</option>
+                                <option value="6-12">6-12 months </option>
+                                <option value="+12">+12 months  </option>
+                                <option value="just shopping">Not interested in selling</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <select class="form-control form-update" id="gss_property_condition" required>
                                 <option value="" disabled selected>Which statment best reflects your properties condition?</option>
-                                <option value="a">Updated: The home has been built or renovated in the last 10 years and is in excelent condition</option>
+                                <option value="a">Updated: The home was built or renovated in the last 10 years and is in excelent condition</option>
                                 <option value="b">Move In Ready: Finishes are of average age (10-20 years old) and in great condition</option>
                                 <option value="c">Aged Well: Older home but still in good condition. May need a little TLC.   </option>
                                 <option value="c-">Needs Work: Home has good bones but is in need of updates and improvments.  </option>
