@@ -10,7 +10,7 @@ body.HomeValueEstimation__page {
 /* Home Value Estimation CSS */
 
 .HomeValueEstimation__bg {
-    background: url('../../images/estimationBG-mobile.jpg') no-repeat 10% bottom;
+    background: url('../../images/estimationBG-mobile.jpg') no-repeat top center;
     height: 100vh;
     background-size: cover;
     padding-top: 190px;
