@@ -166,7 +166,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         max-width: unset;
     }
     .HomeValueEstimation__bg {
-        padding-top: 60px;
+        padding-top: 120px;
     }
 }
 @media (max-width: 768px) {
