@@ -17,9 +17,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous"></script>
-    <script>
-        document.ontouchmove = function(e){ e.preventDefault(); }
-    </script>
+
     <title>FifthGrant | Home Value Estimation Tool</title>
 </head>
 
@@ -647,6 +645,9 @@
 <script src="./homeValue.js"></script>
 <script src="./main.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBstulfD1ZeHsTc46ecb4vdgagrTpXNACw&libraries=places&callback=initAutocomplete" async ></script>
+<script type="text/javascript">
+    document.ontouchmove = function(e){ e.preventDefault(); }
+</script>
 </body>
 
 </html>
