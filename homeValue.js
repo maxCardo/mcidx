@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    let isAddressSelect, isNameValid, isEmailValid, isPhoneValid;
+    let isNameValid, isEmailValid, isPhoneValid;
 
     const leadData = {
         buyer: {
@@ -96,9 +96,7 @@ $(document).ready(function () {
         event.preventDefault()
         const valid = places.address_components
         const address = $("#autocomplete")
-        console.log('adress: ', address.val());
         if (valid) {
-            //console.log('invalid:', invalid);
             console.log(places);
             const step1 = $('#gss_address_form')
             step1.addClass('hidden')
@@ -113,40 +111,41 @@ $(document).ready(function () {
         }
     })
 
-    const type = $("#gss_interest_type")
-    type.on('change', function () {
-        if (type.val() === 'buyer') {
+    let type 
+    $(".gss_interest_type").on('click', function (e) {
+        type = $(e.target)
+        if ($(e.target).val() === 'buyer') {
             $('.form-step-2').addClass('hidden')
             $('#step-3-buy').removeClass('hidden')
-        } else if (type.val() === 'seller') {
+        } else if ($(e.target).val() === 'seller') {
             $('.form-step-2').addClass('hidden')
             $('#step-3-sell').removeClass('hidden')
         }
     })
 
-    //update form data
-    $(".form-update").on('change', function (e) {
-        console.log(type.val());
-        leadData[type.val()][e.target.id.replace('gss_', '')].value = e.target.value
-        leadData[type.val()][e.target.id.replace('gss_', '')].valid = true
-        console.log(leadData[type.val()]);
-    })
+    //update form data 
+    $(".form-update").on('click', function (e) {
+        const current = $(e.target).parent().attr('id')
+        let next = $(e.target).parent().attr('next')
 
-    const next = $(".next-3")
-    next.on('click', function (e) {
-        e.preventDefault()
-        const allClear = Object.entries(leadData[type.val()]).map(x => x[1].valid).every(x => x === true) 
-        console.log('all clear: ', allClear);
-        if (allClear) {
+        console.log(e.target.value);
+        
+        //update the value
+        leadData[type.val()][$(e.target).parent().attr('id')].value = e.target.value
+        leadData[type.val()][$(e.target).parent().attr('id')].valid = true
+
+        //go to next quastion or if no other go to next step
+        if (next != 'false') {
+            console.log(`#${current}`);
+            $(`#${current}`).addClass('hidden')
+            $(`#${next}`).removeClass('hidden')
+        }else{
             $('.form-step-3').addClass('hidden')
             $('.form-step-4').removeClass('hidden')
-        }else{
-            alert('Please complete selections below')
+            console.log('leadData: ', leadData);
         }
-        
-        
     })
-
+    
 
     $("#submitHomeValuationForm").on('click', function (event) {
         event.preventDefault()
@@ -175,20 +174,19 @@ $(document).ready(function () {
                 email: email,
                 phone: phone,
                 subject: 'home-value',
-                propertyAddress: address,
+                propertyAddress: places.address_components,
                 leadType: type.val(),
                 leadData: leadData[type.val()] 
             };
 
-            console.log(address);
-            console.log(data)
+            console.log('data: ', data)
 
             //""
-
+            const testURL = "http://localhost:8080/api/web/homevalue/submit" 
 
             if (isNameValid && isEmailValid && isPhoneValid) {
                 $.ajax({
-                    url: "https://more-black-magic.herokuapp.com/api/web/homevalue/submit",
+                    url: "https://more-black-magic.herokuapp.com/api/web/homevalue/submit", 
                     type: "post",
                     contentType: "application/json",
                     data: JSON.stringify(data),
