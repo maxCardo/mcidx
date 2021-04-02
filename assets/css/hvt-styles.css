@@ -168,6 +168,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .HomeValueEstimation__bg {
         padding-top: 120px;
     }
+    .form-steps {
+        top: -60px;
+    }
 }
 @media (max-width: 768px) {
     .HomeValueEstimation__bg > .container {
