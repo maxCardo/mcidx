@@ -557,7 +557,7 @@
         <img src="/images/revampedSmall.png" alt="">
     </a>
     <div class="container">
-        <h2 class="form-title">Get a price value estimation for your home</h2>
+        <h4 class="form-title">Get a price value estimation for your home</h4>
         <div class="bgDark__box">
             <form class='form' action="#" id="gss_address_form">
                 <div class="form-group">
@@ -567,98 +567,45 @@
             </form>
             <div class="form-steps hidden">
                 <div class="form-step-2 hidden">
-                    <h2 class="form-title-2">Which phrase best describes you?</h2>
-                    <form class="form gss_contact_form" action="#">
-                        <div class="form-group">
-                            <select class="form-control" id="gss_interest_type" required>
-                                <option value="" disabled selected>Select an option</option>
-                                <option value="seller">I am the property owner</option>
-                                <option value="buyer">I am interested buyer.</option>
-                            </select>
-                        </div>
-                    </form>
+                    <div class="form-step-quastion">
+                        <h5 class="form-title-2">Which phrase best describes you?</h5><br>
+                        <button type="button" value='seller' class="btn btn-secondary btn-lg btn-block gss_interest_type">I am the property owner</button>
+                        <button type="button" value='buyer' class="btn btn-secondary btn-lg btn-block gss_interest_type">I am interested buyer</button>
+                    </div>
                 </div>
                 <div class="form-step-3 hidden" id="step-3-sell">
-                    <div class="form-step-quastion" id = seller_timeframe next='property_condition'>
-                        <h3 class="form-title-2">When are you looking to sell your property?</h3>
+                    <div class="form-step-quastion" id = 'seller_timeframe' next='property_condition'>
+                        <h4 class="form-title-2">When are you looking to sell your property?</h4><br>
                         <button type="button" value='asap' class="btn btn-secondary btn-lg btn-block form-update">ASAP</button>
-                        <button type="button" value='1-6' class="btn btn-secondary btn-lg btn-block">1-6 Months</button>
-                        <button type="button" value='6-12' class="btn btn-secondary btn-lg btn-block">6-12 Months</button>
-                        <button type="button" value='+12' class="btn btn-secondary btn-lg btn-block">+12 Months</button>
-                        <button type="button" value='Not Interested' class="btn btn-secondary btn-lg btn-block">I am not interested in selling</button>
+                        <button type="button" value='1-6' class="btn btn-secondary btn-lg btn-block form-update">1-6 Months</button>
+                        <button type="button" value='6-12' class="btn btn-secondary btn-lg btn-block form-update">6-12 Months</button>
+                        <button type="button" value='+12' class="btn btn-secondary btn-lg btn-block form-update">+12 Months</button>
+                        <button type="button" value='Not Interested' class="btn btn-secondary btn-lg btn-block form-update">I am not interested in selling</button>
                     </div>
-                    <div class="form-step-quastion hidden" id='property_condition' next=false>
-                        <h3 class="form-title-2">Which statment best reflects your properties condition?</h3><br>
-                        <button type="button" value='a' class="btn btn-secondary btn-lg btn-block" style = "font-size: 80%">Updated:<br>The home was built or renovated recently and is in excellent condition</button>
-                        <button type="button" value='b' class="btn btn-secondary btn-lg btn-block" style = "font-size: 80%">Move In Ready: <br> Finishes are of average age (10-20 years old), in great condition</button>
-                        <button type="button" value='c' class="btn btn-secondary btn-lg btn-block" style = "font-size: 80%">Aged Well: <br> Older home but still in good condition. May need a little TLC.</button>
-                        <button type="button" value='c-' class="btn btn-secondary btn-lg btn-block" style = "font-size: 80%">Needs Work: <br> Home has good bones but is in need of updates and improvments.</button>
-                        <button type="button" value='d' class="btn btn-secondary btn-lg btn-block" style = "font-size: 80%">Distressed: <br> Home is not livable and need a considerable amount of work.</button>
+                    <div class="form-step-quastion hidden " id='property_condition' next=false>
+                        <h4 class="form-title-2">Which statment best reflects your properties condition?</h4><br>
+                        <button type="button" value='a' class="btn btn-secondary btn-lg btn-block form-update">Needs noting.</button>
+                        <button type="button" value='b' class="btn btn-secondary btn-lg btn-block form-update" >Needs a little work.</button>
+                        <button type="button" value='c' class="btn btn-secondary btn-lg btn-block form-update" >Needs Significant work.</button>
+                        <button type="button" value='d' class="btn btn-secondary btn-lg btn-block form-update" >Distressed: Not livable.</button>
                     </div>
-                </div>
-                
-                <div class="form-step-33 hidden" id="step-3-sell">
-                    <h2 class="form-title-2">Tell us about yor property.</h2>
-                    <form class="form gss_contact_form" action="#">
-                        <div class="form-group">
-                            <select class="form-control form-update" id="gss_seller_timeframe" required>
-                                <option value="" disabled selected>When are you looking to sell your property?</option>
-                                <option value="asap">ASAP</option>
-                                <option value="1-6">1-6 months</option>
-                                <option value="6-12">6-12 months </option>
-                                <option value="+12">+12 months  </option>
-                                <option value="just shopping">Not interested in selling</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control form-update" id="gss_property_condition" required>
-                                <option value="" disabled selected>Which statment best reflects your properties condition?</option>
-                                <option value="a">Updated: The home was built or renovated in the last 10 years and is in excelent condition</option>
-                                <option value="b">Move In Ready: Finishes are of average age (10-20 years old) and in great condition</option>
-                                <option value="c">Aged Well: Older home but still in good condition. May need a little TLC.   </option>
-                                <option value="c-">Needs Work: Home has good bones but is in need of updates and improvments.  </option>
-                                <option value="d">Distressed: Home is not livable and need a considerable amount of work. </option>
-                            </select>
-                        </div>
-                        <button class='bgDark__btn next-3'>Next</button>
-                    </form>
                 </div>
 
                 <div class="form-step-3 hidden" id="step-3-buy">
-                    <h2 class="form-title-2">Tell us about your real estate interests. </h2>
-                    <form class="form gss_contact_form" action="#">
-                        <div class="form-group">
-                            <select class="form-control form-update" id="gss_buyer_type" required>
-                                <option value="" disabled selected>Tells us about yourself.</option>
-                                <option value="buying">I am looking to buy a new home for myself or a family member</option>
-                                <option value="selling">I am an investor looking for my next income property.</option>
-                                <option value="media">I am a real estate pro doing some research  </option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control form-update" id="gss_buyer_exp" required>
-                                <option value="" disabled selected>Do you own other properties</option>
-                                <option value="0">I do not own any property at the moment</option>
-                                <option value="1">I own my own home but nothing else</option>
-                                <option value="2-5">I own 2-5 properties </option>
-                                <option value="6-10">I own 6-10 properties </option>
-                                <option value="+10">I own +10 properties </option>
-                            </select>
-                        </div>
 
-                        <div class="form-group">
-                            <select class="form-control form-update" id="gss_buyer_timeframe" required>
-                                <option value="" disabled selected>When are you looking to buy a new property?</option>
-                                <option value="asap">ASAP</option>
-                                <option value="1-6">In the next 1-6 months</option>
-                                <option value="6-12">In the next 6-12 months </option>
-                                <option value="+12">More then 12 months from now </option>
-                                <option value="just shopping">I am not interested in buying at the moment</option>
-                            </select>
-                        </div>
-                
-                        <button class='bgDark__btn next-3'>Next</button>
-                    </form>
+                    <div class="form-step-quastion" id = 'buyer_type' next='buyer_exp'>
+                        <h4 class="form-title-2">Tell us about yourself.</h4><br>
+                        <button type="button" value='homeOwner' class="btn btn-secondary btn-lg btn-block form-update">I am buying home for myself</button>
+                        <button type="button" value='investor' class="btn btn-secondary btn-lg btn-block form-update">I am an investor.</button>
+                        <button type="button" value='agent' class="btn btn-secondary btn-lg btn-block form-update">I am a agent</button>
+                    </div>
+                    <div class="form-step-quastion hidden " id='buyer_exp' next=false>
+                        <h4 class="form-title-2">Do you own other properties?</h4><br>
+                        <button type="button" value='0' class="btn btn-secondary btn-lg btn-block form-update">Not yet.</button>
+                        <button type="button" value='1' class="btn btn-secondary btn-lg btn-block form-update" >My own home.</button>
+                        <button type="button" value='2-10' class="btn btn-secondary btn-lg btn-block form-update" >I own 2-10 properties.</button>
+                        <button type="button" value='+10' class="btn btn-secondary btn-lg btn-block form-update" >I own 10+ properties.</button>
+                    </div>
                 </div>
                 
                 <div class="form-step-4 hidden">

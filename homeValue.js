@@ -94,8 +94,7 @@ $(document).ready(function () {
     //submit page/form
     $("#submitAddressForm").on('click', function (event) {
         event.preventDefault()
-        const valid = true
-        //places.address_components
+        const valid = places.address_components
         const address = $("#autocomplete")
         if (valid) {
             console.log(places);
@@ -112,67 +111,41 @@ $(document).ready(function () {
         }
     })
 
-    const type = $("#gss_interest_type")
-    type.on('change', function () {
-        if (type.val() === 'buyer') {
+    let type 
+    $(".gss_interest_type").on('click', function (e) {
+        type = $(e.target)
+        if ($(e.target).val() === 'buyer') {
             $('.form-step-2').addClass('hidden')
             $('#step-3-buy').removeClass('hidden')
-        } else if (type.val() === 'seller') {
+        } else if ($(e.target).val() === 'seller') {
             $('.form-step-2').addClass('hidden')
             $('#step-3-sell').removeClass('hidden')
         }
     })
 
-    //update form data
-    const selection = $(".form-update")
-    selection.on('click', function (e) {
-        console.log(e.target);
-        console.log(type.val()); //object field
-        console.log(selection.parent().attr('id')); // subfield
-        console.log(selection.val()); //value
-        console.log(selection.parent().attr('next')); //next id to open
-        const current = selection.parent().attr('id')
-        const next = selection.parent().attr('next')
+    //update form data 
+    $(".form-update").on('click', function (e) {
+        const current = $(e.target).parent().attr('id')
+        let next = $(e.target).parent().attr('next')
+
+        console.log(e.target.value);
         
         //update the value
-        leadData[type.val()][selection.parent().attr('id')].value = e.target.value
-        leadData[type.val()][selection.parent().attr('id')].valid = true
+        leadData[type.val()][$(e.target).parent().attr('id')].value = e.target.value
+        leadData[type.val()][$(e.target).parent().attr('id')].valid = true
 
         //go to next quastion or if no other go to next step
         if (next != 'false') {
+            console.log(`#${current}`);
             $(`#${current}`).addClass('hidden')
             $(`#${next}`).removeClass('hidden')
         }else{
             $('.form-step-3').addClass('hidden')
             $('.form-step-4').removeClass('hidden')
+            console.log('leadData: ', leadData);
         }
-
-
-        //leadData[type.val()][e.target.id.replace('gss_', '')].value = e.target.value
-        //leadData[type.val()][e.target.id.replace('gss_', '')].valid = true
-        //console.log(leadData[type.val()]);
     })
-
-    // const next = $(".next-3")
-    // next.on('click', function (e) {
-    //     e.preventDefault()
-    //     const allClear = Object.entries(leadData[type.val()]).map(x => x[1].valid).every(x => x === true) 
-    //     console.log('all clear: ', allClear);
-    //     if (allClear) {
-    //         $('.form-step-3').addClass('hidden')
-    //         $('.form-step-4').removeClass('hidden')
-    //     }else{
-    //         alert('Please complete selections below')
-    //     }
-          
-    // })
-
-    $('.option_select').on('click', (e) => {
-        console.log(e.value);
-    })
-
-
-
+    
 
     $("#submitHomeValuationForm").on('click', function (event) {
         event.preventDefault()
