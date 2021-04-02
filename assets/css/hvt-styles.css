@@ -174,7 +174,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 @media (max-width: 768px) {
     .HomeValueEstimation__bg > .container {
-        top: 180px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
     }
     .HomeValueEstimation__page h2 {
         font-size: 30px;
