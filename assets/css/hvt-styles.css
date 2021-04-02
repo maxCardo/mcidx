@@ -165,6 +165,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
         display: flex;
         max-width: unset;
     }
+    .HomeValueEstimation__bg {
+        padding-top: 60px;
+    }
 }
 @media (max-width: 768px) {
     .HomeValueEstimation__bg > .container {
