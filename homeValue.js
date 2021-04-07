@@ -148,6 +148,7 @@ $(document).ready(function () {
     
 
     $("#submitHomeValuationForm").on('click', function (event) {
+        $("#submitHomeValuationForm").addClass('disabled').text('....')
         event.preventDefault()
         console.log('start pls')
         /* Home Valuation PAGE CONTACT FORM */
