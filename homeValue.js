@@ -148,7 +148,7 @@ $(document).ready(function () {
     
 
     $("#submitHomeValuationForm").on('click', function (event) {
-        $("#submitHomeValuationForm").addClass('disabled').text('....')
+        $("#submitHomeValuationForm").prop('disabled', true).text('....')
         event.preventDefault()
         console.log('start pls')
         /* Home Valuation PAGE CONTACT FORM */
@@ -187,7 +187,8 @@ $(document).ready(function () {
 
             if (isNameValid && isEmailValid && isPhoneValid) {
                 $.ajax({
-                    url: "https://more-black-magic.herokuapp.com/api/web/homevalue/submit", 
+                    url: testURL, 
+                    //"https://more-black-magic.herokuapp.com/api/web/homevalue/submit", 
                     type: "post",
                     contentType: "application/json",
                     data: JSON.stringify(data),
@@ -199,7 +200,7 @@ $(document).ready(function () {
                     }
                 })
                     .done(function () {
-                        window.location.replace("https://fifthgrant.com/thankyou.html");
+                        //window.location.replace("https://fifthgrant.com/thankyou.html");
                     });
 
             }
