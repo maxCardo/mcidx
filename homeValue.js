@@ -187,8 +187,7 @@ $(document).ready(function () {
 
             if (isNameValid && isEmailValid && isPhoneValid) {
                 $.ajax({
-                    url: testURL, 
-                    //"https://more-black-magic.herokuapp.com/api/web/homevalue/submit", 
+                    url: "https://more-black-magic.herokuapp.com/api/web/homevalue/submit", 
                     type: "post",
                     contentType: "application/json",
                     data: JSON.stringify(data),
@@ -200,7 +199,7 @@ $(document).ready(function () {
                     }
                 })
                     .done(function () {
-                        //window.location.replace("https://fifthgrant.com/thankyou.html");
+                        window.location.replace("https://fifthgrant.com/thankyou.html");
                     });
 
             }
