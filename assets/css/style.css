@@ -6285,13 +6285,24 @@ body {
         margin-bottom: 550px
     }
 }
+/*TEAM PAGE SPECIFIC CSS*/
+.teamMembers__container {
+    display: flex;
+}
+@media (min-width: 1025px) {
+    .teamMember__box {
+        width: 33.333%
+    }
+}
+
+/*END OF TEAM PAGE CSS*/
+
 
 .valuation .container-fluid {
     padding: 0 !important
 }
-
-.bgDark {
-    background-color: rgba(0, 0, 0, 0.8);
+.bgDark,
+.bgWhite {
     position: absolute;
     padding: 50px 0;
     top: 0;
@@ -6302,6 +6313,13 @@ body {
     color: white;
     transition: all 0.4s ease-in-out;
     text-align: center
+}
+.bgDark {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.bgWhite {
+    background-color: rgba(255,255,255,.35);
+    height: unset;
 }
 
 .bgDark:target {
