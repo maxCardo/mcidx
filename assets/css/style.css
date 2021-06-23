@@ -6293,6 +6293,7 @@ body {
 }
 .teamMember__box {
     color: #212529;
+    margin-bottom: 40px;
 }
 .teamMember__box img {
     width: 100%;
@@ -6332,7 +6333,7 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 .bgWhite {
-    background-color: rgba(255,255,255,.35);
+    background-color: rgba(255,255,255,.65);
     height: unset;
 }
 
