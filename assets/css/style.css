@@ -6299,8 +6299,8 @@ body {
     width: 100%;
     margin-bottom: 30px;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     -o-object-fit: cover;
     object-fit: cover;
 }
@@ -6319,7 +6319,7 @@ body {
 .bgDark,
 .bgWhite {
     position: absolute;
-    padding: 50px 0;
+    padding: 30px 0 0 0;
     top: 0;
     left: 0;
     z-index: 15;
@@ -6700,16 +6700,22 @@ body {
 .about .container p {
     text-align: center
 }
-
-.bgDark__heading {
+.bgDark__heading,
+.bgWhite__heading {
     font-size: 50px;
     text-align: center;
     margin-bottom: 30px;
-    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-    color: white;
     font-weight: bold;
     position: relative;
-    z-index: 999999999999999999999999999999999;
+    z-index: 5;
+}
+.bgWhite__heading {
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    color: #212529;
+}
+.bgDark__heading {
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    color: white;
 }
 
 @media only screen and (max-width: 768px) {
