@@ -579,7 +579,8 @@
 
             if (teamMembers[i].socialLinks && teamMembers[i].socialLinks.facebook) {
                 let fbIcon = "<a href='" + teamMembers[i].socialLinks.facebook + "' class='tm__socialIcon'><i class='fab fa-facebook-square'></i></a>";
-                $(`teamMember__box:nth-child(${i}) .tm__socialIconBar`).append(fbIcon);
+                document.getElementById(name+'id').innerHTML += fbIcon;
+
             }
         }
     })
