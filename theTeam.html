@@ -449,18 +449,7 @@
                 <div class="tm__separator"></div>
                 <p class="tm__bio">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots...</p>
                 <div class="tm__socialIconBar">
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-instagram-square"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-twitter-square"></i>
-                    </a>
+
                 </div>
             </div>
             <div class="teamMember__box">
@@ -471,18 +460,7 @@
                 <p class="tm__bio">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots...</p>
 
                 <div class="tm__socialIconBar">
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-instagram-square"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-twitter-square"></i>
-                    </a>
+
                 </div>
             </div>
             <div class="teamMember__box">
@@ -492,18 +470,7 @@
                 <div class="tm__separator"></div>
                 <p class="tm__bio">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica'l Latin'</p>
                 <div class="tm__socialIconBar">
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-instagram-square"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-twitter-square"></i>
-                    </a>
+
                 </div>
             </div>
             <div class="teamMember__box">
@@ -512,18 +479,7 @@
                 <p class="tm__title">Agent</p>
                 <p class="tm__bio">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin</p>
                 <div class="tm__socialIconBar">
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-instagram-square"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-twitter-square"></i>
-                    </a>
+
                 </div>
             </div>
             <div class="teamMember__box">
@@ -532,18 +488,7 @@
                 <p class="tm__title">Agent</p>
                 <p class="tm__bio">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin</p>
                 <div class="tm__socialIconBar">
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-instagram-square"></i>
-                    </a>
-                    <a href="#" class="tm__socialIcon">
-                        <i class="fab fa-twitter-square"></i>
-                    </a>
+
                 </div>
             </div>
         </div>
@@ -597,9 +542,6 @@
             image: "david.JPG",
             socialLinks: {
                 facebook: "#",
-                linkedin: "#",
-                instagram: "#",
-                twitter: "#",
             },
         },
         {
@@ -609,8 +551,7 @@
             image: "adam.jpeg",
             socialLinks: {
                 facebook: "#",
-                linkedin: "#",
-                instagram: "#",
+
                 twitter: "#",
             },
         },
@@ -623,20 +564,23 @@
                 facebook: "#",
                 linkedin: "#",
                 instagram: "#",
-                twitter: "#",
             },
         },
     ];
 
     $(document).ready(() => {
-        console.log('this works');
-        console.log(teamMembers);
         for (let i = 0; i < teamMembers.length; i++) {
             $('.teamMember__box .tm__name').text(teamMembers[i].name);
             $('.teamMember__box .tm__title').text(teamMembers[i].title);
             $('.teamMember__box .tm__bio').text(teamMembers[i].bio);
-            $('.teamMember__box .tm__img').attr("href", `/images/${teamMembers[i].image}`);;
-            console.log('this hits')
+            $('.teamMember__box .tm__img').attr("href", `/images/${teamMembers[i].image}`);
+
+            console.log('this hits');
+
+            if (teamMembers[i].socialLinks && teamMembers[i].socialLinks.facebook) {
+                const fbIcon = `<a href=${teamMembers[i].socialLinks.facebook} class="tm__socialIcon"><i class="fab fa-facebook-square"></i></a>`;
+                $('.tm__socialIconBar').append(fbIcon);
+            }
         }
     })
 </script>
