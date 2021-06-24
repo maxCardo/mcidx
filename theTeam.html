@@ -578,7 +578,7 @@
             console.log('this hits');
 
             if (teamMembers[i].socialLinks && teamMembers[i].socialLinks.facebook) {
-                const fbIcon = `<a href=${teamMembers[i].socialLinks.facebook} class="tm__socialIcon"><i class="fab fa-facebook-square"></i></a>`;
+                const fbIcon = `<a href="${teamMembers[i].socialLinks.facebook}" class="tm__socialIcon"><i class="fab fa-facebook-square"></i></a>`;
                 $('.tm__socialIconBar')[i].append(fbIcon);
             }
         }
