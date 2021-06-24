@@ -6297,7 +6297,7 @@ body {
 }
 .teamMember__box img {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-radius: 50%;
     width: 200px;
     height: 200px;
@@ -6319,12 +6319,12 @@ body {
 .bgDark,
 .bgWhite {
     position: absolute;
-    padding: 30px 0 0 0;
+    padding: 30px 0 20px;
     top: 0;
     left: 0;
     z-index: 15;
     width: 100vw;
-    height: auto;
+    height: 100vh;
     color: white;
     transition: all 0.4s ease-in-out;
     text-align: center
@@ -6725,7 +6725,8 @@ body {
     }
 }
 
-.bgDark .close {
+.bgDark .close,
+.bgWhite .close {
     font-size: 35px;
     position: absolute;
     top: 30px;
