@@ -561,7 +561,7 @@
             bio: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots...",
             image: "adam.jpeg",
             socialLinks: {
-                facebook: "#",
+                facebook: "vat",
                 linkedin: "#",
                 instagram: "#",
             },
@@ -578,7 +578,7 @@
             console.log('this hits');
 
             if (teamMembers[i].socialLinks && teamMembers[i].socialLinks.facebook) {
-                const fbIcon = `<a href="${teamMembers[i].socialLinks.facebook}" class="tm__socialIcon"><i class="fab fa-facebook-square"></i></a>`;
+                let fbIcon = "<a href='" + teamMembers[i].socialLinks.facebook + "' class='tm__socialIcon'><i class='fab fa-facebook-square'></i></a>";
                 $('.tm__socialIconBar')[i].append(fbIcon);
             }
         }
