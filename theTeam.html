@@ -633,6 +633,10 @@
         console.log(teamMembers);
         for (let i = 0; i < teamMembers.length; i++) {
             $('.teamMember__box .tm__name').text(teamMembers[i].name);
+            $('.teamMember__box .tm__title').text(teamMembers[i].title);
+            $('.teamMember__box .tm__bio').text(teamMembers[i].bio);
+            $('.teamMember__box .tm__img').attr("href", `/images/${teamMembers[i].image}`);;
+            console.log('this hits')
         }
     })
 </script>
