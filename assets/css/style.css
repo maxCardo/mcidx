@@ -6330,6 +6330,10 @@ body {
     align-items: center;
     justify-content: center;
 }
+.tm__socialIcon {
+    margin: 6px 4px;
+    font-size: 24px;
+}
 @media (min-width: 1025px) {
     .teamMember__box {
         width: 33.333%
