@@ -631,6 +631,9 @@
     $(document).ready(() => {
         console.log('this works');
         console.log(teamMembers);
+        for (let i = 0; i < teamMembers.length; i++) {
+            $('.teamMember__box .tm__name').text(teamMembers[i].name);
+        }
     })
 </script>
 </body>
