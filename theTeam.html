@@ -459,6 +459,7 @@
                 <img src="/images/adam.jpeg" alt="">
                 <p class="tm__name">James Bond</p>
                 <p class="tm__title">Agent</p>
+                <div class="tm__separator"></div>
                 <p class="tm__bio">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin</p>
                 <div class="tm__socialIconBar"></div>
             </div>
@@ -466,6 +467,7 @@
                 <img class="tm__img" src="/images/david.JPG" alt="">
                 <p class="tm__name">Sterling Archer</p>
                 <p class="tm__title">Agent</p>
+                <div class="tm__separator"></div>
                 <p class="tm__bio">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin</p>
                 <div class="tm__socialIconBar"></div>
             </div>
@@ -548,10 +550,10 @@
 
     $(document).ready(() => {
         for (let i = 0; i < teamMembers.length; i++) {
-            $('.teamMember__box .tm__name').text(teamMembers[i].name);
-            $('.teamMember__box .tm__title').text(teamMembers[i].title);
-            $('.teamMember__box .tm__bio').text(teamMembers[i].bio);
-            $('.teamMember__box .tm__img').attr("href", `/images/${teamMembers[i].image}`);
+            $(`.teamMember__box:nth-child(${i+1}) .tm__name`).text(teamMembers[i].name);
+            $(`.teamMember__box:nth-child(${i+1}) .tm__title`).text(teamMembers[i].title);
+            $(`.teamMember__box:nth-child(${i+1}) .tm__bio`).text(teamMembers[i].bio);
+            $(`.teamMember__box:nth-child(${i+1}) .tm__img`).attr("href", `/images/${teamMembers[i].image}`);
 
             if (teamMembers[i].socialLinks && teamMembers[i].socialLinks.facebook) {
                 let fbIcon = "<a href='" + teamMembers[i].socialLinks.facebook + "' class='tm__socialIcon'><i class='fab fa-facebook-square'></i></a>";
