@@ -6332,7 +6332,11 @@ body {
         margin-bottom: 40px;
     }
 }
-
+@media (min-width: 768px) and (max-width: 1024px) {
+    .teamMember__box {
+        width: 50%;
+    }
+}
 /*END OF TEAM PAGE CSS*/
 
 
@@ -6761,6 +6765,7 @@ body {
 
 .bgWhite .close {
     color: #252525;
+    opacity: 1;
 }
 
 .bgDark__box h5 {
