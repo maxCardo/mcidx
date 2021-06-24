@@ -6770,7 +6770,8 @@ body {
     position: absolute;
     top: 30px;
     right: 5%;
-    color: white
+    color: white;
+    z-index: 95;
 }
 
 .bgWhite .close {
