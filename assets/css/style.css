@@ -6333,6 +6333,7 @@ body {
 .tm__socialIcon {
     margin: 6px 4px;
     font-size: 24px;
+    color: #6f9dd4;
 }
 @media (min-width: 1025px) {
     .teamMember__box {
