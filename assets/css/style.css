@@ -6777,6 +6777,7 @@ body {
 .bgWhite .close {
     color: #252525;
     opacity: 1;
+    position: fixed;
 }
 
 .bgDark__box h5 {
