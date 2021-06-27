@@ -6289,7 +6289,7 @@ body {
 .teamMembers__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .teamMember__box {
     margin-bottom: 20px;
