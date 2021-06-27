@@ -1777,9 +1777,11 @@ div.flex-grow {
 .IDX-category-map#IDX-main {
     position: relative;
     overflow: hidden;
-    height: calc(100vh - 30px);
+    height: 100vh;
 }
-
+.isSearchPage {
+    overflow: hidden;
+}
 .IDX-category-search .select2-container.select2-container-multi .select2-choices,
 .IDX-category-search #IDX-listingID,
 .IDX-category-search #IDX-address,
@@ -1792,7 +1794,7 @@ div.flex-grow {
 
 .IDX-category-search #IDX-searchPageWrapper,
 .IDX-category-map #IDX-searchPageWrapper {
-    height: calc(100vh - 37px) !important;
+    height: 100vh !important;
 }
 
 .IDX-category-search #IDX-action-buttons,

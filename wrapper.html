@@ -547,6 +547,11 @@
   });
   /* END OF Signup Page Form */
 
+    const isSearchPage = $('#IDX-searchPageWrapper');
+    if (isSearchPage.length > 0) {
+      $('html').addClass('isSearchPage');
+    }
+
     Waves.init();
     Waves.attach('.btn');
     Waves.attach('.mlm-button');
