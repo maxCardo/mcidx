@@ -4537,6 +4537,11 @@ body {
       height: 100%; }
     .hero .form-control button {
       background-color: transparent; }
+  .hero .mobile-logo {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%); }
 
 .approach {
   width: 100vw;
@@ -4568,7 +4573,8 @@ body {
       visibility: hidden;
       opacity: 1;
       top: 0;
-      padding: 50px; }
+      padding: 50px;
+      overflow: hidden; }
       .approach__box--back .top,
       .approach__box--back .bottom {
         transition: all 0.4s ease-in;
@@ -4625,10 +4631,11 @@ body {
   .testimonials__box {
     padding: 20px;
     height: fit-content;
+    border: 1px solid transparent;
     transition: all 0.5s ease-out; }
     .testimonials__box:hover {
       border: 1px solid black;
-      box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75); }
+      box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.35); }
 
 .homeValuation__box,
 .rentalValuation__box {
@@ -4708,15 +4715,18 @@ body {
       .menu__toggler.active > span::after {
         -webkit-transform: rotate(225deg);
         transform: rotate(225deg); }
-  @media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
-    .menu__links {
-      margin-bottom: 150px; } }
-  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-    .menu__links {
-      margin-bottom: 150px; } }
-  @media only screen and (device-width: 800px) and (device-height: 1280px) and (orientation: portrait) {
-    .menu__links {
-      margin-bottom: 550px; } }
+  .menu__links {
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35); }
+    @media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+      .menu__links {
+        margin-bottom: 150px; } }
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+      .menu__links {
+        margin-bottom: 150px; } }
+    @media only screen and (device-width: 800px) and (device-height: 1280px) and (orientation: portrait) {
+      .menu__links {
+        margin-bottom: 550px; } }
 
 .valuation .container-fluid {
   padding: 0 !important; }
@@ -4727,7 +4737,7 @@ body {
   padding: 50px 0;
   top: 0;
   left: 0;
-  z-index: 9999999999999999;
+  z-index: 15;
   width: 100vw;
   height: auto;
   color: white;
@@ -4739,6 +4749,10 @@ body {
     display: flex;
     text-align: center;
     justify-content: center; }
+    .bgDark__box ul a:hover {
+      color: black;
+      background: white;
+      border-color: white; }
 
 .contactBody {
   overflow-x: hidden;
@@ -4746,6 +4760,8 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center center; }
+  .contactBody input {
+    border: 2px solid transparent; }
 
 /* width */
 ::-webkit-scrollbar {
@@ -4822,7 +4838,7 @@ body {
   width: 100vw;
   position: relative;
   color: white;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.47); }
   .footer__flex {
     display: flex;
     justify-content: space-around; }
@@ -4947,7 +4963,7 @@ body {
   font-size: 50px;
   text-align: center;
   margin-bottom: 30px;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3); }
   @media only screen and (max-width: 768px) {
     .strongLeadership__heading,
     .testimonials__heading,
@@ -5020,7 +5036,8 @@ body {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  font-size: 14px; }
+  font-size: 14px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); }
   .hero__link:hover {
     color: rgba(255, 255, 255, 0.8); }
 
@@ -5155,8 +5172,8 @@ body {
   background-color: transparent;
   color: white; }
   .bgDark__btn:hover {
-    border-color: black;
-    background-color: transparent;
+    border-color: white;
+    background-color: white;
     color: black; }
 
 /* MEDIA QUERIES */
@@ -5170,7 +5187,9 @@ body {
 
 @media only screen and (min-width: 991px) {
   .bgDark {
-    height: 100%; } }
+    height: 100%; }
+  .mobile-logo {
+    display: none; } }
 
 @media only screen and (max-width: 993px) {
   .bgDark {
@@ -5178,7 +5197,6 @@ body {
 
 @media only screen and (max-width: 992px) {
   .header, .header__link,
-  .header__down .container ul,
   .header .container .header__logo .logo {
     display: none; }
   .menu__toggler {
@@ -5279,3 +5297,105 @@ body {
     height: 100vh; }
   .bgDark__grid {
     grid-template-columns: repeat(2, 1fr); } }
+
+/* LOADER CSS */
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: white;
+  z-index: 999999999;
+  transition: opacity 1250s, z-index 1500s; }
+
+.loader.loaderHidden {
+  opacity: 0;
+  z-index: -1; }
+
+svg.thumb {
+  width: 100%;
+  height: 100%; }
+
+.transition {
+  transition: all 1.2s ease-in-out;
+  -webkit-transition: all 1.2s ease-in-out;
+  -moz-transition: all 1.2s ease-in-out; }
+
+.logoTagLine {
+  opacity: 0;
+  transition: opacity 1250ms; }
+
+.showIt {
+  opacity: 1; }
+
+/*LOADER DOTS*/
+.lds-ellipsis {
+  z-index: 10;
+  display: inline-block;
+  position: absolute;
+  top: 56%;
+  left: -100%;
+  width: 200px;
+  height: 100px;
+  transition: left 1.2s; }
+  @media (max-width: 460px) {
+    .lds-ellipsis.in {
+      left: calc(50% - 35px) !important;
+      align-items: center;
+      justify-content: center;
+      max-width: 100px; } }
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #6f9dd4;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0); }
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite; }
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite; }
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite; }
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite; }
+
+.lds-ellipsis.in {
+  left: 48%; }
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(24px, 0); } }
+
+/*LOADER DOTS*/
+
+.buildings {
+  animation: buildingAnimation 1.25s;
+}
+
+/*END OF LOADER CSS*/
