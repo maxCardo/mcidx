@@ -3410,9 +3410,93 @@ $(document).ready(function () {
             }
 
         });
+        /* END OF CONTACT PAGE CONTACT FORM */
     }
-    /* END OF CONTACT PAGE CONTACT FORM */
+    /*Agent Contact Form*/
+    let isFirstNameValid,isLastNameValid, isEmailValid, isPhoneValid;
+    let fault = false
     
+    if(fault){
+        console.log(running);
+      
+    }
+
+    $("#submitAgentForm").on("click", function (event) {
+        event.preventDefault();
+
+        //validate form
+        if ($("#af_first_name").val().match(/^[a-zA-Z ]{1,}$/)) {isFirstNameValid = true;
+        } else {
+            isFirstNameValid = false;
+            $("#af_first_name").css('border-color', 'red');
+        }
+        if ($("#af_last_name").val().match(/^[a-zA-Z ]{2,}$/)) {isLastNameValid = true;
+        } else {
+            isLastNameValid = false;
+            $("#af_last_name").css('border-color', 'red');
+        }
+        if ($("#af_email").val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+            isEmailValid = true;
+        } else {
+            isEmailValid = false;
+            $("#af_email").css('border-color', 'red');
+        }
+        if ($("#af_phone").val().match(/^([2-9][0-9]{2}[\-]{0,1}){2}[0-9]{4}$/)) {
+            isPhoneValid = true;
+        } else {
+            isPhoneValid = false;
+            $("#af_phone").css('border-color', 'red');
+        }
+        
+        
+        let firstName = $("#af_first_name")
+            .val()
+            .trim();
+        let lastName= $("#af_last_name")
+            .val()
+            .trim();
+        let email = $("#af_email")
+            .val()
+            .trim();
+        let phone = $("#af_phone")
+            .val()
+            .trim();
+        let message = $("#af_message")
+            .val()
+            .trim();
+
+        let data = {
+            firstName,
+            lastName, 
+            email,
+            phone,
+            message,
+        };
+
+        if(isFirstNameValid && isLastNameValid  && isEmailValid && isPhoneValid){
+            console.log('submitting agent form: ', data);
+            $.ajax({
+                url: "https://rethink-dev.herokuapp.com/api/sales/agent_lead",
+                type: "post",
+                contentType: "application/json",
+                data: JSON.stringify(data)
+            })
+            .done(function () {
+                window.location.replace("https://fifthgrant.com");
+            })
+        }else{
+            alert('Please check and insure all your information is accurate')
+            $("#af_first_name").on("keyup", function () {if ($(this).val().match(/^[a-zA-Z ]{1,}$/)) {$("#af_first_name").css('border-color', 'green')}});
+            $("#af_last_name").on("keyup", function () {if ($(this).val().match(/^[a-zA-Z ]{3,}$/)) {$("#af_last_name").css('border-color', 'green')}});
+            $("#af_email").on("keyup", function () {
+                if ($(this).val().match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+                    $("#af_email").css('border-color', 'green');
+                } 
+            });
+            $("#af_phone").on("keyup", function () {if ($(this).val().match(/^([2-9][0-9]{2}[\-]{0,1}){2}[0-9]{4}$/)) {$("#af_phone").css('border-color', 'green')}})
+        }
+    });
+
 });
 
 if ($(".menu__toggler").length && $(".menu").length) {
